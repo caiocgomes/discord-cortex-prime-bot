@@ -55,6 +55,7 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         name="Nome da campanha",
         players="Jogadores (mencoes separadas por espaco, ex: @Alice @Bob)",
         stress_types="Tipos de stress separados por virgula (ex: Physical,Mental,Social)",
+        gm="Mestre da campanha (default: quem executa o comando)",
         doom_pool="Habilitar Doom Pool (default: nao)",
         hero_dice="Habilitar Hero Dice (default: nao)",
         trauma="Habilitar Trauma (default: nao)",
@@ -66,6 +67,7 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         name: str,
         players: str,
         stress_types: str,
+        gm: Member | None = None,
         doom_pool: bool = False,
         hero_dice: bool = False,
         trauma: bool = False,
@@ -104,7 +106,8 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             "best_mode": best_mode,
         }
 
-        gm_discord_id = str(interaction.user.id)
+        gm_member = gm or interaction.user
+        gm_discord_id = str(gm_member.id)
 
         async with self.db.connect() as conn:
             cursor = await conn.execute(
@@ -113,18 +116,21 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             )
             campaign_id = cursor.lastrowid
 
-            # Register the creator as GM.
+            # Register the GM.
             await conn.execute(
                 "INSERT INTO players (campaign_id, discord_user_id, name, is_gm) VALUES (?, ?, ?, 1)",
-                (campaign_id, gm_discord_id, interaction.user.display_name),
+                (campaign_id, gm_discord_id, gm_member.display_name),
             )
 
-            # Register mentioned players. Skip the creator if they mentioned themselves.
+            # Register mentioned players. Skip the GM if mentioned.
             for uid in player_ids:
                 if uid == gm_discord_id:
                     continue
-                member = interaction.guild.get_member(int(uid))
-                member_name = member.display_name if member else f"User#{uid}"
+                try:
+                    member = await interaction.guild.fetch_member(int(uid))
+                    member_name = member.display_name
+                except discord.NotFound:
+                    member_name = f"User#{uid}"
                 await conn.execute(
                     "INSERT OR IGNORE INTO players (campaign_id, discord_user_id, name, is_gm) VALUES (?, ?, ?, 0)",
                     (campaign_id, uid, member_name),
@@ -145,7 +151,7 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
 
         await interaction.response.send_message(
             f"Campanha '{name}' criada. "
-            f"GM: {interaction.user.display_name}. "
+            f"GM: {gm_member.display_name}. "
             f"Jogadores: {', '.join(player_names)}. "
             f"Stress: {', '.join(stress_names)}. "
             f"Modulos ativos: {modules_str}."
