@@ -15,6 +15,7 @@ from cortex_bot.views.base import (
 from cortex_bot.models.dice import die_label, parse_single_die
 from cortex_bot.services.state_manager import StateManager
 from cortex_bot.services.formatter import format_action_confirm
+from cortex_bot.utils import has_gm_permission
 
 
 # ---------------------------------------------------------------------------
@@ -610,6 +611,302 @@ class CompDieSelectView(CortexView):
 
 
 # ---------------------------------------------------------------------------
+# PP chain
+# ---------------------------------------------------------------------------
+
+
+class PPStartButton(
+    discord.ui.DynamicItem[discord.ui.Button],
+    template=r"cortex:pp_start:(?P<campaign_id>\d+)",
+):
+    """Button to start PP adjust chain: player select (GM) or direct adjust (player)."""
+
+    def __init__(self, campaign_id: int) -> None:
+        self.campaign_id = campaign_id
+        super().__init__(
+            discord.ui.Button(
+                label="PP",
+                style=discord.ButtonStyle.primary,
+                custom_id=make_custom_id("pp_start", campaign_id),
+            )
+        )
+
+    @classmethod
+    async def from_custom_id(cls, interaction, item, match):
+        return cls(int(match["campaign_id"]))
+
+    async def callback(self, interaction: discord.Interaction) -> None:
+        db = interaction.client.db
+        player = await db.get_player(self.campaign_id, str(interaction.user.id))
+        if player is None:
+            await interaction.response.send_message(
+                "Voce nao esta registrado nesta campanha.", ephemeral=True
+            )
+            return
+
+        if has_gm_permission(player):
+            players = await db.get_players(self.campaign_id)
+            non_gm = [p for p in players if not p["is_gm"]]
+
+            if not non_gm:
+                await interaction.response.send_message(
+                    "Nenhum jogador registrado na campanha.", ephemeral=True
+                )
+                return
+
+            view = PPPlayerSelectView(self.campaign_id, str(interaction.user.id))
+
+            async def on_player(interaction: discord.Interaction, value: str) -> None:
+                await view._on_player_selected(interaction, int(value))
+
+            add_player_options(view, non_gm, on_player)
+            await interaction.response.send_message(
+                "Selecione o jogador para PP.", view=view, ephemeral=True
+            )
+        else:
+            view = PPAdjustView(
+                self.campaign_id,
+                str(interaction.user.id),
+                player["id"],
+                player["name"],
+            )
+            await interaction.response.send_message(
+                f"Ajustar PP de {player['name']}.",
+                view=view,
+                ephemeral=True,
+            )
+
+
+class PPPlayerSelectView(CortexView):
+    """Select player for PP adjust."""
+
+    def __init__(self, campaign_id: int, actor_id: str) -> None:
+        super().__init__()
+        self.campaign_id = campaign_id
+        self.actor_id = actor_id
+
+    async def _on_player_selected(
+        self, interaction: discord.Interaction, player_id: int
+    ) -> None:
+        db = interaction.client.db
+        async with db.connect() as conn:
+            cursor = await conn.execute(
+                "SELECT name FROM players WHERE id = ?", (player_id,)
+            )
+            row = await cursor.fetchone()
+            player_name = row["name"] if row else "Jogador"
+
+        view = PPAdjustView(
+            self.campaign_id, self.actor_id, player_id, player_name
+        )
+        await interaction.response.edit_message(
+            content=f"Ajustar PP de {player_name}.", view=view
+        )
+
+
+class PPAdjustView(CortexView):
+    """PP +1 / -1 buttons. Keeps active after each action."""
+
+    def __init__(
+        self, campaign_id: int, actor_id: str, player_id: int, player_name: str
+    ) -> None:
+        super().__init__()
+        self.campaign_id = campaign_id
+        self.actor_id = actor_id
+        self.player_id = player_id
+        self.player_name = player_name
+
+        uid = uuid.uuid4().hex[:8]
+        plus_btn = discord.ui.Button(
+            label="PP +1",
+            style=discord.ButtonStyle.success,
+            custom_id=f"ephemeral:pp_plus:{uid}",
+        )
+        minus_btn = discord.ui.Button(
+            label="PP -1",
+            style=discord.ButtonStyle.danger,
+            custom_id=f"ephemeral:pp_minus:{uid}",
+        )
+        plus_btn.callback = self._on_plus
+        minus_btn.callback = self._on_minus
+        self.add_item(plus_btn)
+        self.add_item(minus_btn)
+
+    async def _on_plus(self, interaction: discord.Interaction) -> None:
+        db = interaction.client.db
+        sm = StateManager(db)
+        result = await sm.update_pp(
+            self.campaign_id, self.actor_id, self.player_id, 1,
+            player_name=self.player_name,
+        )
+        msg = format_action_confirm(
+            "PP adicionado",
+            f"{self.player_name}: {result['from']} para {result['to']} PP (+1).",
+        )
+        await interaction.response.edit_message(content=msg, view=self)
+        post_view = PostPPView(self.campaign_id)
+        await interaction.followup.send(msg, view=post_view)
+
+    async def _on_minus(self, interaction: discord.Interaction) -> None:
+        db = interaction.client.db
+        sm = StateManager(db)
+        result = await sm.update_pp(
+            self.campaign_id, self.actor_id, self.player_id, -1,
+            player_name=self.player_name,
+        )
+        if result.get("error") == "insufficient":
+            await interaction.response.edit_message(
+                content=f"{self.player_name} tem 0 PP, nao pode remover.",
+                view=self,
+            )
+            return
+        msg = format_action_confirm(
+            "PP removido",
+            f"{self.player_name}: {result['from']} para {result['to']} PP (-1).",
+        )
+        await interaction.response.edit_message(content=msg, view=self)
+        post_view = PostPPView(self.campaign_id)
+        await interaction.followup.send(msg, view=post_view)
+
+
+# ---------------------------------------------------------------------------
+# XP chain
+# ---------------------------------------------------------------------------
+
+
+class XPStartButton(
+    discord.ui.DynamicItem[discord.ui.Button],
+    template=r"cortex:xp_start:(?P<campaign_id>\d+)",
+):
+    """Button to start XP add chain: player select (GM) or direct modal (player)."""
+
+    def __init__(self, campaign_id: int) -> None:
+        self.campaign_id = campaign_id
+        super().__init__(
+            discord.ui.Button(
+                label="XP",
+                style=discord.ButtonStyle.primary,
+                custom_id=make_custom_id("xp_start", campaign_id),
+            )
+        )
+
+    @classmethod
+    async def from_custom_id(cls, interaction, item, match):
+        return cls(int(match["campaign_id"]))
+
+    async def callback(self, interaction: discord.Interaction) -> None:
+        db = interaction.client.db
+        player = await db.get_player(self.campaign_id, str(interaction.user.id))
+        if player is None:
+            await interaction.response.send_message(
+                "Voce nao esta registrado nesta campanha.", ephemeral=True
+            )
+            return
+
+        if has_gm_permission(player):
+            players = await db.get_players(self.campaign_id)
+            non_gm = [p for p in players if not p["is_gm"]]
+
+            if not non_gm:
+                await interaction.response.send_message(
+                    "Nenhum jogador registrado na campanha.", ephemeral=True
+                )
+                return
+
+            view = XPPlayerSelectView(self.campaign_id, str(interaction.user.id))
+
+            async def on_player(interaction: discord.Interaction, value: str) -> None:
+                await view._on_player_selected(interaction, int(value))
+
+            add_player_options(view, non_gm, on_player)
+            await interaction.response.send_message(
+                "Selecione o jogador para XP.", view=view, ephemeral=True
+            )
+        else:
+            modal = XPAmountModal(
+                self.campaign_id,
+                str(interaction.user.id),
+                player["id"],
+                player["name"],
+            )
+            await interaction.response.send_modal(modal)
+
+
+class XPPlayerSelectView(CortexView):
+    """Select player for XP add."""
+
+    def __init__(self, campaign_id: int, actor_id: str) -> None:
+        super().__init__()
+        self.campaign_id = campaign_id
+        self.actor_id = actor_id
+
+    async def _on_player_selected(
+        self, interaction: discord.Interaction, player_id: int
+    ) -> None:
+        db = interaction.client.db
+        async with db.connect() as conn:
+            cursor = await conn.execute(
+                "SELECT name FROM players WHERE id = ?", (player_id,)
+            )
+            row = await cursor.fetchone()
+            player_name = row["name"] if row else "Jogador"
+
+        modal = XPAmountModal(
+            self.campaign_id, self.actor_id, player_id, player_name
+        )
+        await interaction.response.send_modal(modal)
+
+
+class XPAmountModal(discord.ui.Modal, title="Adicionar XP"):
+    """Modal for entering XP amount."""
+
+    amount = discord.ui.TextInput(
+        label="Quantidade de XP",
+        placeholder="Ex: 5",
+        required=True,
+        max_length=4,
+    )
+
+    def __init__(
+        self,
+        campaign_id: int,
+        actor_id: str,
+        player_id: int,
+        player_name: str,
+    ) -> None:
+        super().__init__()
+        self.campaign_id = campaign_id
+        self.actor_id = actor_id
+        self.player_id = player_id
+        self.player_name = player_name
+
+    async def on_submit(self, interaction: discord.Interaction) -> None:
+        try:
+            value = int(self.amount.value)
+            if value <= 0:
+                raise ValueError
+        except ValueError:
+            await interaction.response.send_message(
+                "Quantidade deve ser um numero positivo.", ephemeral=True
+            )
+            return
+
+        db = interaction.client.db
+        sm = StateManager(db)
+        result = await sm.update_xp(
+            self.campaign_id, self.actor_id, self.player_id, value,
+            player_name=self.player_name,
+        )
+        msg = format_action_confirm(
+            "XP adicionado",
+            f"{self.player_name}: {result['from']} para {result['to']} XP (+{value}).",
+        )
+        post_view = PostXPView(self.campaign_id)
+        await interaction.response.send_message(msg, ephemeral=True)
+        await interaction.followup.send(msg, view=post_view)
+
+
+# ---------------------------------------------------------------------------
 # Post-action views
 # ---------------------------------------------------------------------------
 
@@ -645,4 +942,26 @@ class PostComplicationView(CortexView):
         from cortex_bot.views.common import UndoButton
 
         self.add_item(ComplicationAddStartButton(campaign_id))
+        self.add_item(UndoButton(campaign_id))
+
+
+class PostPPView(CortexView):
+    """View after PP action: PP + Undo."""
+
+    def __init__(self, campaign_id: int) -> None:
+        super().__init__()
+        from cortex_bot.views.common import UndoButton
+
+        self.add_item(PPStartButton(campaign_id))
+        self.add_item(UndoButton(campaign_id))
+
+
+class PostXPView(CortexView):
+    """View after XP action: XP + Undo."""
+
+    def __init__(self, campaign_id: int) -> None:
+        super().__init__()
+        from cortex_bot.views.common import UndoButton
+
+        self.add_item(XPStartButton(campaign_id))
         self.add_item(UndoButton(campaign_id))

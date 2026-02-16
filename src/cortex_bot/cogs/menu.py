@@ -24,6 +24,8 @@ class MenuView(CortexView):
                 StressAddStartButton,
                 AssetAddStartButton,
                 ComplicationAddStartButton,
+                PPStartButton,
+                XPStartButton,
             )
             from cortex_bot.views.common import UndoButton, CampaignInfoButton
 
@@ -31,6 +33,8 @@ class MenuView(CortexView):
             self.add_item(StressAddStartButton(campaign_id))
             self.add_item(AssetAddStartButton(campaign_id))
             self.add_item(ComplicationAddStartButton(campaign_id))
+            self.add_item(PPStartButton(campaign_id))
+            self.add_item(XPStartButton(campaign_id))
             self.add_item(UndoButton(campaign_id))
             self.add_item(CampaignInfoButton(campaign_id))
 

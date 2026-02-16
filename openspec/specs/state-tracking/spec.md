@@ -32,7 +32,12 @@ O sistema SHALL suportar operações de add, step up, step down e remove em asse
 #### Scenario: GM cria asset de cena (sem dono)
 
 - **WHEN** GM executa `/asset add name:"Slippery Floor" die:d8 scene_asset:yes`
-- **THEN** asset de cena "Slippery Floor" d8 é criado sem dono específico.
+- **THEN** asset de cena "Slippery Floor" d8 e criado sem dono especifico.
+
+#### Scenario: Description do parametro player
+
+- **WHEN** usuario visualiza a description do parametro `player` em `/asset add`
+- **THEN** description SHALL ser "Jogador dono do asset (default: voce)" sem mencao a "asset de cena".
 
 ### Requirement: Gerenciar stress
 

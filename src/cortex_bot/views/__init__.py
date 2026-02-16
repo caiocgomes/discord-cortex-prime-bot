@@ -15,6 +15,8 @@ def register_persistent_views(bot) -> None:
         StressAddStartButton,
         AssetAddStartButton,
         ComplicationAddStartButton,
+        PPStartButton,
+        XPStartButton,
     )
     from cortex_bot.views.doom_views import DoomAddStartButton
 
@@ -26,5 +28,7 @@ def register_persistent_views(bot) -> None:
         StressAddStartButton,
         AssetAddStartButton,
         ComplicationAddStartButton,
+        PPStartButton,
+        XPStartButton,
         DoomAddStartButton,
     )

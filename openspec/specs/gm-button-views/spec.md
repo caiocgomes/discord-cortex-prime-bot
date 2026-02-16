@@ -41,47 +41,56 @@ Toda resposta de sucesso do bot SHALL incluir uma View com botões representando
 - **WHEN** bot envia mensagem de erro (campanha não encontrada, permissão negada, etc.)
 - **THEN** resposta SHALL NOT incluir View com botões
 
-### Requirement: Select menu chains para comandos multi-parâmetro
+### Requirement: Chains de botoes para comandos multi-parametro
 
-Comandos que exigem múltiplos parâmetros (stress add, complication add, asset add) SHALL usar sequência de select menus onde cada seleção leva ao próximo parâmetro, até completar a ação. Opções dos selects SHALL ser populadas a partir do estado atual da campanha no banco de dados.
+Comandos que exigem multiplos parametros (stress add, complication add, asset add) SHALL usar sequencia de botoes e/ou selects dinamicos para coletar cada parametro. Selecao de dado (d4-d12) SHALL usar 5 botoes individuais em 1 ActionRow. Selecao de jogador SHALL usar botoes quando <= 5 jogadores, ou select quando > 5. Selecao de tipo de stress SHALL usar botoes (maximo 4 tipos). Listas longas (nomes de assets/complications comuns) SHALL manter select. Cada etapa intermediaria SHALL ser efemera.
 
-#### Scenario: Chain de stress add completa
+#### Scenario: Chain de stress add completa com botoes
 
-- **WHEN** GM clica botão "Stress Add"
-- **THEN** bot apresenta select menu com jogadores da campanha (excluindo GM)
+- **WHEN** GM clica botao "Stress Add"
+- **AND** campanha tem 4 jogadores (excluindo GM)
+- **THEN** bot apresenta 4 botoes com nomes dos jogadores (1 por botao)
+- **WHEN** GM clica botao do jogador
+- **THEN** bot apresenta botoes com tipos de stress da campanha (ex: Physical, Mental)
+- **WHEN** GM clica botao do tipo
+- **THEN** bot apresenta 5 botoes de dado: d4, d6, d8, d10, d12
+- **WHEN** GM clica botao do dado
+- **THEN** bot executa stress add e exibe resultado com botoes contextuais
+
+#### Scenario: Chain de stress add com > 5 jogadores usa select
+
+- **WHEN** GM clica botao "Stress Add"
+- **AND** campanha tem 7 jogadores (excluindo GM)
+- **THEN** bot apresenta select menu com 7 jogadores como opcoes
 - **WHEN** GM seleciona jogador
-- **THEN** bot apresenta select menu com tipos de stress da campanha
-- **WHEN** GM seleciona tipo de stress
-- **THEN** bot apresenta select menu com tamanhos de dado (d4, d6, d8, d10, d12)
-- **WHEN** GM seleciona dado
-- **THEN** bot executa stress add e exibe resultado com botões contextuais
+- **THEN** chain continua com botoes para tipo e dado
 
 #### Scenario: Chain de asset add completa
 
-- **WHEN** GM clica botão "Asset Add"
-- **THEN** bot apresenta select menu com jogadores da campanha mais opção "Asset de Cena"
+- **WHEN** GM clica botao "Asset Add"
+- **THEN** bot apresenta botoes de jogadores (ou select se > 5) mais botao "Asset de Cena"
 - **WHEN** GM seleciona jogador ou cena
-- **THEN** bot apresenta select menu solicitando nome do asset (opções: assets comuns pré-definidos + "Outro")
-- **WHEN** GM seleciona ou digita nome
-- **THEN** bot apresenta select menu com tamanhos de dado
+- **THEN** bot apresenta select menu com nomes de assets comuns pre-definidos
+- **WHEN** GM seleciona nome
+- **THEN** bot apresenta 5 botoes de dado: d4, d6, d8, d10, d12
 - **WHEN** GM seleciona dado
-- **THEN** bot executa asset add e exibe resultado com botões contextuais
+- **THEN** bot executa asset add e exibe resultado com botoes contextuais
 
 #### Scenario: Chain de complication add completa
 
-- **WHEN** GM clica botão "Complication Add"
-- **THEN** bot apresenta select menu com jogadores da campanha mais opção "Complicação de Cena"
+- **WHEN** GM clica botao "Complication Add"
+- **THEN** bot apresenta botoes de jogadores (ou select se > 5) mais botao "Complicacao de Cena"
 - **WHEN** GM seleciona alvo
-- **THEN** bot solicita nome da complication via select ou input
-- **WHEN** GM fornece nome
-- **THEN** bot apresenta select com tamanhos de dado
+- **THEN** bot apresenta select com nomes de complication comuns
+- **WHEN** GM seleciona nome
+- **THEN** bot apresenta 5 botoes de dado: d4, d6, d8, d10, d12
 - **WHEN** GM seleciona dado
-- **THEN** bot executa complication add e exibe resultado com botões contextuais
+- **THEN** bot executa complication add e exibe resultado com botoes contextuais
 
-#### Scenario: Mensagens intermediárias são efêmeras
+#### Scenario: Mensagens intermediarias sao efemeras
 
-- **WHEN** bot envia select menu intermediário durante uma chain
-- **THEN** mensagem SHALL ser efêmera (visível apenas para quem clicou)
+- **WHEN** bot envia botoes ou select intermediario durante uma chain
+- **THEN** mensagem SHALL ser efemera (visivel apenas para quem clicou)
 
 ### Requirement: Persistent views sobrevivem restart
 
@@ -113,21 +122,20 @@ Callbacks de botões e selects que executam ações GM-only SHALL verificar `has
 - **WHEN** GM ou delegate clica botão "Stress Add"
 - **THEN** bot inicia a select chain normalmente
 
-### Requirement: Botão Roll executa rolagem direta
+### Requirement: Botao Roll abre pool builder
 
-O botão Roll SHALL abrir uma select chain onde o GM/jogador monta o dice pool via selects: quantidade e tipo de dados, assets para incluir, dificuldade opcional. Para rolagens simples, o botão SHALL oferecer opção de rolagem rápida com o último pool usado.
+O botao Roll SHALL abrir o pool builder interativo (conforme spec pool-builder) com conteudo diferenciado por papel. O botao SHALL NOT usar select menus para composicao de pool.
 
-#### Scenario: Roll via botões com pool novo
+#### Scenario: Roll via botao abre pool builder
 
-- **WHEN** jogador clica botão "Roll"
-- **THEN** bot apresenta select para compor dice pool (selects de dados, com opção de adicionar mais)
-- **WHEN** jogador confirma pool
-- **THEN** bot executa rolagem e exibe resultado com botões contextuais
+- **WHEN** jogador clica botao "Roll"
+- **THEN** bot abre pool builder com botoes de dado, botoes de toggles, e controles
+- **AND** bot SHALL NOT apresentar select menus para composicao de pool
 
-#### Scenario: Assets disponíveis aparecem no select de roll
+#### Scenario: Assets disponiveis aparecem como botoes no pool builder
 
-- **WHEN** jogador inicia roll via botão e tem assets ativos
-- **THEN** select de include oferece assets do jogador como opções selecionáveis
+- **WHEN** jogador inicia roll via botao e tem assets ativos
+- **THEN** pool builder mostra assets como botoes toggle individuais
 
 ### Requirement: Botão Undo executa desfazer imediato
 
@@ -145,18 +153,26 @@ O botão Undo SHALL executar a operação de undo diretamente, sem confirmação
 - **AND** a última ação não-desfeita é de outro jogador
 - **THEN** bot responde com mensagem efêmera informando que só pode desfazer ações próprias
 
-### Requirement: Doom pool via botões
+### Requirement: Doom pool via botoes
 
-Botões de doom (add, remove, step up, step down, roll, spend) SHALL estar disponíveis apenas quando o módulo doom_pool está habilitado na campanha. Doom add via botão SHALL apresentar select com tamanhos de dado. Doom roll SHALL executar diretamente e exibir resultado.
+Botoes de doom (add, remove, roll) SHALL estar disponiveis apenas quando o modulo doom_pool esta habilitado na campanha. Doom add via botao SHALL apresentar 5 botoes de dado (d4-d12) em vez de select. Doom remove SHALL apresentar botoes com dados presentes no pool (deduplicados por tamanho). Doom roll SHALL executar diretamente.
 
-#### Scenario: Doom add via botão
+#### Scenario: Doom add via botao
 
-- **WHEN** GM clica botão "Doom Add"
-- **THEN** bot apresenta select com tamanhos de dado (d4 a d12)
-- **WHEN** GM seleciona dado
-- **THEN** bot adiciona ao doom pool e exibe resultado com botões de doom
+- **WHEN** GM clica botao "Doom Add"
+- **THEN** bot apresenta 5 botoes de dado: d4, d6, d8, d10, d12
+- **WHEN** GM clica botao de dado
+- **THEN** bot adiciona ao doom pool e exibe resultado com botoes de doom
 
-#### Scenario: Botões de doom não aparecem sem módulo
+#### Scenario: Doom remove via botao
 
-- **WHEN** campanha não tem doom_pool habilitado
-- **THEN** nenhuma resposta SHALL incluir botões relacionados a doom
+- **WHEN** GM clica botao "Doom Remove"
+- **AND** doom pool contem d6, d8, d8
+- **THEN** bot apresenta botoes: d6, d8 (deduplicados por tamanho)
+- **WHEN** GM clica d8
+- **THEN** bot remove um d8 do pool e exibe resultado
+
+#### Scenario: Botoes de doom nao aparecem sem modulo
+
+- **WHEN** campanha nao tem doom_pool habilitado
+- **THEN** nenhuma resposta SHALL incluir botoes relacionados a doom

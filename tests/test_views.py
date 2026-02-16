@@ -126,6 +126,20 @@ class TestCustomIdRegexPatterns:
         assert match is not None
         assert match["campaign_id"] == "8"
 
+    def test_pp_start_pattern(self):
+        pattern = r"cortex:pp_start:(?P<campaign_id>\d+)"
+        custom_id = make_custom_id("pp_start", 13)
+        match = re.match(pattern, custom_id)
+        assert match is not None
+        assert match["campaign_id"] == "13"
+
+    def test_xp_start_pattern(self):
+        pattern = r"cortex:xp_start:(?P<campaign_id>\d+)"
+        custom_id = make_custom_id("xp_start", 14)
+        match = re.match(pattern, custom_id)
+        assert match is not None
+        assert match["campaign_id"] == "14"
+
     def test_doom_add_start_pattern(self):
         pattern = r"cortex:doom_add_start:(?P<campaign_id>\d+)"
         custom_id = make_custom_id("doom_add_start", 11)
@@ -331,6 +345,22 @@ class TestViewComposition:
         view = PostComplicationView(campaign_id=1)
         custom_ids = [item.custom_id for item in view.children]
         assert "cortex:comp_add_start:1" in custom_ids
+        assert "cortex:undo:1" in custom_ids
+
+    async def test_post_pp_view(self):
+        from cortex_bot.views.state_views import PostPPView
+
+        view = PostPPView(campaign_id=1)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:pp_start:1" in custom_ids
+        assert "cortex:undo:1" in custom_ids
+
+    async def test_post_xp_view(self):
+        from cortex_bot.views.state_views import PostXPView
+
+        view = PostXPView(campaign_id=1)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:xp_start:1" in custom_ids
         assert "cortex:undo:1" in custom_ids
 
     async def test_post_doom_action_view(self):
@@ -668,6 +698,8 @@ class TestMenuView:
         assert "cortex:stress_add_start:1" in custom_ids
         assert "cortex:asset_add_start:1" in custom_ids
         assert "cortex:comp_add_start:1" in custom_ids
+        assert "cortex:pp_start:1" in custom_ids
+        assert "cortex:xp_start:1" in custom_ids
         assert "cortex:undo:1" in custom_ids
         assert "cortex:campaign_info:1" in custom_ids
         assert "cortex:doom_add_start:1" not in custom_ids
@@ -678,6 +710,8 @@ class TestMenuView:
         view = MenuView(campaign_id=1, has_active_scene=True, doom_enabled=True)
         custom_ids = [item.custom_id for item in view.children]
         assert "cortex:roll_start:1" in custom_ids
+        assert "cortex:pp_start:1" in custom_ids
+        assert "cortex:xp_start:1" in custom_ids
         assert "cortex:doom_add_start:1" in custom_ids
 
     async def test_menu_without_active_scene(self):
@@ -750,6 +784,8 @@ class TestDynamicItemRegistration:
             StressAddStartButton,
             AssetAddStartButton,
             ComplicationAddStartButton,
+            PPStartButton,
+            XPStartButton,
         )
         from cortex_bot.views.doom_views import DoomAddStartButton
 
@@ -761,6 +797,8 @@ class TestDynamicItemRegistration:
             (StressAddStartButton, 1),
             (AssetAddStartButton, 1),
             (ComplicationAddStartButton, 1),
+            (PPStartButton, 1),
+            (XPStartButton, 1),
             (DoomAddStartButton, 1),
         ]:
             item = cls(cid)
@@ -775,6 +813,8 @@ class TestDynamicItemRegistration:
             StressAddStartButton,
             AssetAddStartButton,
             ComplicationAddStartButton,
+            PPStartButton,
+            XPStartButton,
         )
         from cortex_bot.views.doom_views import DoomAddStartButton
 
@@ -786,6 +826,8 @@ class TestDynamicItemRegistration:
             StressAddStartButton(1),
             AssetAddStartButton(1),
             ComplicationAddStartButton(1),
+            PPStartButton(1),
+            XPStartButton(1),
             DoomAddStartButton(1),
         ]
         custom_ids = [item.item.custom_id for item in items]
@@ -845,6 +887,16 @@ class TestPersistenceCustomIdParsing:
         from cortex_bot.views.state_views import ComplicationAddStartButton
 
         self._verify_pattern_matches(ComplicationAddStartButton, 8)
+
+    async def test_pp_start_button_persistence(self):
+        from cortex_bot.views.state_views import PPStartButton
+
+        self._verify_pattern_matches(PPStartButton, 13)
+
+    async def test_xp_start_button_persistence(self):
+        from cortex_bot.views.state_views import XPStartButton
+
+        self._verify_pattern_matches(XPStartButton, 14)
 
     async def test_doom_add_start_button_persistence(self):
         from cortex_bot.views.doom_views import DoomAddStartButton
@@ -1090,3 +1142,233 @@ class TestToggleTruncation:
         )
         status = view.build_status_text()
         assert "de" not in status or "dados" in status
+
+
+# ---------------------------------------------------------------------------
+# PP button chain tests (tasks 4.1, 4.2)
+# ---------------------------------------------------------------------------
+
+from cortex_bot.services.state_manager import StateManager
+
+
+class TestPPStartButton:
+    """Task 4.1: PPStartButton GM sees player select, player goes to adjust."""
+
+    async def test_pp_start_button_label(self):
+        from cortex_bot.views.state_views import PPStartButton
+
+        btn = PPStartButton(1)
+        assert btn.item.label == "PP"
+
+    async def test_pp_start_button_custom_id(self):
+        from cortex_bot.views.state_views import PPStartButton
+
+        btn = PPStartButton(42)
+        assert btn.item.custom_id == "cortex:pp_start:42"
+
+    async def test_pp_player_select_view_is_cortex_view(self):
+        from cortex_bot.views.state_views import PPPlayerSelectView
+
+        view = PPPlayerSelectView(campaign_id=1, actor_id="gm1")
+        assert view.timeout is None
+
+    async def test_pp_player_select_with_few_players(self):
+        from cortex_bot.views.state_views import PPPlayerSelectView
+
+        view = PPPlayerSelectView(campaign_id=1, actor_id="gm1")
+        players = [{"id": i, "name": f"P{i}"} for i in range(1, 4)]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb)
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 3
+
+    async def test_pp_player_select_with_many_players(self):
+        from cortex_bot.views.state_views import PPPlayerSelectView
+
+        view = PPPlayerSelectView(campaign_id=1, actor_id="gm1")
+        players = [{"id": i, "name": f"P{i}"} for i in range(1, 8)]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb)
+        selects = [c for c in view.children if isinstance(c, discord.ui.Select)]
+        assert len(selects) == 1
+        assert len(selects[0].options) == 7
+
+
+class TestPPAdjustView:
+    """Task 4.2: PPAdjustView +1/-1 buttons and StateManager integration."""
+
+    async def test_adjust_view_has_plus_minus_buttons(self):
+        from cortex_bot.views.state_views import PPAdjustView
+
+        view = PPAdjustView(
+            campaign_id=1, actor_id="123", player_id=1, player_name="Alice"
+        )
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        assert "PP +1" in labels
+        assert "PP -1" in labels
+
+    async def test_adjust_view_uses_ephemeral_ids(self):
+        from cortex_bot.views.state_views import PPAdjustView
+
+        view = PPAdjustView(
+            campaign_id=1, actor_id="123", player_id=1, player_name="Alice"
+        )
+        for child in view.children:
+            assert child.custom_id.startswith("ephemeral:pp_")
+
+    async def test_adjust_view_buttons_have_correct_styles(self):
+        from cortex_bot.views.state_views import PPAdjustView
+
+        view = PPAdjustView(
+            campaign_id=1, actor_id="123", player_id=1, player_name="Alice"
+        )
+        buttons = {c.label: c for c in view.children if isinstance(c, discord.ui.Button)}
+        assert buttons["PP +1"].style == discord.ButtonStyle.success
+        assert buttons["PP -1"].style == discord.ButtonStyle.danger
+
+    async def test_pp_increment(self, db, gm_campaign):
+        """PP +1 increments player PP."""
+        sm = StateManager(db)
+        alice = await db.get_player(gm_campaign, "user1")
+        result = await sm.update_pp(
+            gm_campaign, "gm1", alice["id"], 1, player_name="Alice"
+        )
+        assert result["from"] == 3
+        assert result["to"] == 4
+
+    async def test_pp_decrement(self, db, gm_campaign):
+        """PP -1 decrements player PP."""
+        sm = StateManager(db)
+        alice = await db.get_player(gm_campaign, "user1")
+        result = await sm.update_pp(
+            gm_campaign, "gm1", alice["id"], -1, player_name="Alice"
+        )
+        assert result["from"] == 3
+        assert result["to"] == 2
+
+    async def test_pp_insufficient_returns_error(self, db, gm_campaign):
+        """PP -1 with 0 PP returns error."""
+        sm = StateManager(db)
+        alice = await db.get_player(gm_campaign, "user1")
+        async with db.connect() as conn:
+            await conn.execute(
+                "UPDATE players SET pp = 0 WHERE id = ?", (alice["id"],)
+            )
+            await conn.commit()
+        result = await sm.update_pp(
+            gm_campaign, "gm1", alice["id"], -1, player_name="Alice"
+        )
+        assert result.get("error") == "insufficient"
+        assert result["current"] == 0
+
+
+# ---------------------------------------------------------------------------
+# XP button chain tests (tasks 4.3, 4.4)
+# ---------------------------------------------------------------------------
+
+
+class TestXPStartButton:
+    """Task 4.3: XPStartButton GM sees player select, player opens modal."""
+
+    async def test_xp_start_button_label(self):
+        from cortex_bot.views.state_views import XPStartButton
+
+        btn = XPStartButton(1)
+        assert btn.item.label == "XP"
+
+    async def test_xp_start_button_custom_id(self):
+        from cortex_bot.views.state_views import XPStartButton
+
+        btn = XPStartButton(42)
+        assert btn.item.custom_id == "cortex:xp_start:42"
+
+    async def test_xp_player_select_view_is_cortex_view(self):
+        from cortex_bot.views.state_views import XPPlayerSelectView
+
+        view = XPPlayerSelectView(campaign_id=1, actor_id="gm1")
+        assert view.timeout is None
+
+    async def test_xp_player_select_with_few_players(self):
+        from cortex_bot.views.state_views import XPPlayerSelectView
+
+        view = XPPlayerSelectView(campaign_id=1, actor_id="gm1")
+        players = [{"id": i, "name": f"P{i}"} for i in range(1, 4)]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb)
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 3
+
+    async def test_xp_player_select_with_many_players(self):
+        from cortex_bot.views.state_views import XPPlayerSelectView
+
+        view = XPPlayerSelectView(campaign_id=1, actor_id="gm1")
+        players = [{"id": i, "name": f"P{i}"} for i in range(1, 8)]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb)
+        selects = [c for c in view.children if isinstance(c, discord.ui.Select)]
+        assert len(selects) == 1
+
+
+class TestXPAmountModal:
+    """Task 4.4: XPAmountModal validation and execution."""
+
+    async def test_modal_title(self):
+        from cortex_bot.views.state_views import XPAmountModal
+
+        modal = XPAmountModal(
+            campaign_id=1, actor_id="123", player_id=1, player_name="Alice"
+        )
+        assert modal.title == "Adicionar XP"
+
+    async def test_modal_has_text_input(self):
+        from cortex_bot.views.state_views import XPAmountModal
+
+        modal = XPAmountModal(
+            campaign_id=1, actor_id="123", player_id=1, player_name="Alice"
+        )
+        assert modal.amount.label == "Quantidade de XP"
+        assert modal.amount.required is True
+
+    async def test_modal_stores_context(self):
+        from cortex_bot.views.state_views import XPAmountModal
+
+        modal = XPAmountModal(
+            campaign_id=5, actor_id="gm1", player_id=3, player_name="Bob"
+        )
+        assert modal.campaign_id == 5
+        assert modal.actor_id == "gm1"
+        assert modal.player_id == 3
+        assert modal.player_name == "Bob"
+
+    async def test_xp_add_valid(self, db, gm_campaign):
+        """Valid XP amount increments player XP."""
+        sm = StateManager(db)
+        alice = await db.get_player(gm_campaign, "user1")
+        result = await sm.update_xp(
+            gm_campaign, "gm1", alice["id"], 5, player_name="Alice"
+        )
+        assert result["from"] == 0
+        assert result["to"] == 5
+
+    async def test_xp_add_multiple(self, db, gm_campaign):
+        """Multiple XP adds accumulate correctly."""
+        sm = StateManager(db)
+        alice = await db.get_player(gm_campaign, "user1")
+        await sm.update_xp(gm_campaign, "gm1", alice["id"], 3, player_name="Alice")
+        result = await sm.update_xp(
+            gm_campaign, "gm1", alice["id"], 2, player_name="Alice"
+        )
+        assert result["from"] == 3
+        assert result["to"] == 5
