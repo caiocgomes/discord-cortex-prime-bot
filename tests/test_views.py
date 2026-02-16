@@ -374,17 +374,17 @@ class TestPoolBuilderView:
         from cortex_bot.views.rolling_views import PoolBuilderView
 
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         assert view.pool == []
-        assert view.included_assets == set()
+        assert view.included_toggles == set()
         assert view.build_status_text() == "Pool vazio. Clique nos dados para montar o pool."
 
     async def test_add_die_updates_pool(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
 
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         view.pool.append(8)
         view.history.append(("die", 8))
@@ -395,46 +395,44 @@ class TestPoolBuilderView:
         from cortex_bot.views.rolling_views import PoolBuilderView
 
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         view.pool.extend([8, 8, 6])
         assert "2x d8" in view.build_status_text()
         assert "1x d6" in view.build_status_text()
 
-    async def test_asset_toggle_on(self):
+    async def test_toggle_on(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
 
-        assets = [{"id": 10, "name": "Sword", "die_size": 8}]
+        toggles = [{"id": "asset:10", "label": "Sword d8", "die_size": 8}]
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=assets
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=toggles
         )
-        # Simulate asset toggle on
-        view.included_assets.add(10)
+        view.included_toggles.add("asset:10")
         view.pool.append(8)
-        view.history.append(("asset_on", 10))
-        assert 10 in view.included_assets
+        view.history.append(("toggle_on", "asset:10"))
+        assert "asset:10" in view.included_toggles
         assert 8 in view.pool
 
-    async def test_asset_toggle_off(self):
+    async def test_toggle_off(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
 
-        assets = [{"id": 10, "name": "Sword", "die_size": 8}]
+        toggles = [{"id": "asset:10", "label": "Sword d8", "die_size": 8}]
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=assets
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=toggles
         )
-        # Toggle on then off
-        view.included_assets.add(10)
+        view.included_toggles.add("asset:10")
         view.pool.append(8)
-        view.included_assets.discard(10)
+        view.included_toggles.discard("asset:10")
         view.pool.remove(8)
-        assert 10 not in view.included_assets
+        assert "asset:10" not in view.included_toggles
         assert 8 not in view.pool
 
     async def test_remove_last_die(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
 
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         view.pool.extend([8, 6])
         view.history.extend([("die", 8), ("die", 6)])
@@ -447,20 +445,20 @@ class TestPoolBuilderView:
     async def test_clear_resets_everything(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
 
-        assets = [{"id": 10, "name": "Sword", "die_size": 8}]
+        toggles = [{"id": "asset:10", "label": "Sword d8", "die_size": 8}]
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=assets
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=toggles
         )
         view.pool.extend([8, 6])
-        view.included_assets.add(10)
-        view.history.extend([("die", 8), ("die", 6), ("asset_on", 10)])
+        view.included_toggles.add("asset:10")
+        view.history.extend([("die", 8), ("die", 6), ("toggle_on", "asset:10")])
 
         view.pool.clear()
-        view.included_assets.clear()
+        view.included_toggles.clear()
         view.history.clear()
 
         assert view.pool == []
-        assert view.included_assets == set()
+        assert view.included_toggles == set()
         assert view.history == []
         assert "Pool vazio" in view.build_status_text()
 
@@ -468,7 +466,7 @@ class TestPoolBuilderView:
         from cortex_bot.views.rolling_views import PoolBuilderView
 
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
         assert "+d4" in labels
@@ -477,47 +475,45 @@ class TestPoolBuilderView:
         assert "+d10" in labels
         assert "+d12" in labels
 
-    async def test_asset_buttons_present(self):
+    async def test_toggle_buttons_present(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
 
-        assets = [
-            {"id": 10, "name": "Sword", "die_size": 8},
-            {"id": 11, "name": "Shield", "die_size": 6},
+        toggles = [
+            {"id": "asset:10", "label": "Sword d8", "die_size": 8},
+            {"id": "asset:11", "label": "Shield d6", "die_size": 6},
         ]
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=assets
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=toggles
         )
         labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
         assert "Sword d8" in labels
         assert "Shield d6" in labels
 
-    async def test_no_asset_row_without_assets(self):
+    async def test_no_toggle_row_without_toggles(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
 
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
-        # Should have die buttons + controls, no asset buttons
         assert not any("Sword" in l or "Shield" in l for l in labels)
 
     async def test_control_buttons_present(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
 
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
         assert "Rolar" in labels
         assert "Limpar" in labels
-        # "Remover ultimo" only shows when history is non-empty
         assert "Remover ultimo" not in labels
 
     async def test_remover_ultimo_appears_with_history(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
 
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         view.pool.append(8)
         view.history.append(("die", 8))
@@ -529,7 +525,7 @@ class TestPoolBuilderView:
         from cortex_bot.views.rolling_views import PoolBuilderView
 
         view = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         view.pool.extend([8, 6, 8])
         view._build_components()
@@ -540,14 +536,13 @@ class TestPoolBuilderView:
         from cortex_bot.views.rolling_views import PoolBuilderView
 
         v1 = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         v2 = PoolBuilderView(
-            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         ids1 = {c.custom_id for c in v1.children}
         ids2 = {c.custom_id for c in v2.children}
-        # No overlap between two separate view instances
         assert ids1.isdisjoint(ids2)
 
 
@@ -855,3 +850,243 @@ class TestPersistenceCustomIdParsing:
         from cortex_bot.views.doom_views import DoomAddStartButton
 
         self._verify_pattern_matches(DoomAddStartButton, 11)
+
+
+# ---------------------------------------------------------------------------
+# GM Pool Builder tests (tasks 4.1-4.8)
+# ---------------------------------------------------------------------------
+
+from cortex_bot.models.database import Database
+
+
+@pytest.fixture
+async def db(tmp_path):
+    db_path = str(tmp_path / "test.db")
+    database = Database(path=db_path)
+    await database.initialize()
+    return database
+
+
+@pytest.fixture
+async def gm_campaign(db):
+    """Campaign with GM, two players, stress types, active scene."""
+    async with db.connect() as conn:
+        cursor = await conn.execute(
+            "INSERT INTO campaigns (server_id, channel_id, name, config) VALUES (?, ?, ?, ?)",
+            ("srv1", "ch1", "Test Campaign", '{}'),
+        )
+        cid = cursor.lastrowid
+        await conn.execute(
+            "INSERT INTO players (campaign_id, discord_user_id, name, is_gm, pp, xp) VALUES (?, ?, ?, ?, ?, ?)",
+            (cid, "gm1", "GameMaster", 1, 5, 0),
+        )
+        await conn.execute(
+            "INSERT INTO players (campaign_id, discord_user_id, name, is_gm, pp, xp) VALUES (?, ?, ?, ?, ?, ?)",
+            (cid, "user1", "Alice", 0, 3, 0),
+        )
+        await conn.execute(
+            "INSERT INTO players (campaign_id, discord_user_id, name, is_gm, pp, xp) VALUES (?, ?, ?, ?, ?, ?)",
+            (cid, "user2", "Bob", 0, 3, 0),
+        )
+        await conn.execute(
+            "INSERT INTO stress_types (campaign_id, name) VALUES (?, ?)",
+            (cid, "Physical"),
+        )
+        await conn.execute(
+            "INSERT INTO stress_types (campaign_id, name) VALUES (?, ?)",
+            (cid, "Mental"),
+        )
+        await conn.execute(
+            "INSERT INTO scenes (campaign_id, name, is_active) VALUES (?, ?, ?)",
+            (cid, "Battle", 1),
+        )
+        await conn.commit()
+    return cid
+
+
+class TestPoolBuilderToggleItems:
+    """Task 4.1: PoolBuilderView accepts toggle_items with string id and formatted label."""
+
+    async def test_accepts_string_ids_and_labels(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        toggles = [
+            {"id": "stress:1", "label": "Alice: Physical d8", "die_size": 8},
+            {"id": "comp:5", "label": "Cena: Trapped d6", "die_size": 6},
+        ]
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="GM", toggle_items=toggles
+        )
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        assert "Alice: Physical d8" in labels
+        assert "Cena: Trapped d6" in labels
+
+    async def test_toggle_on_adds_to_pool_and_shows_in_pool_label(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        toggles = [{"id": "stress:1", "label": "Alice: Physical d8", "die_size": 8}]
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="GM", toggle_items=toggles
+        )
+        view.included_toggles.add("stress:1")
+        view.pool.append(8)
+        view._build_components()
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        assert any("(no pool)" in l for l in labels)
+
+
+class TestGMPoolBuilderToggles:
+    """Tasks 4.2, 4.4, 4.5: _build_gm_toggles returns correct items."""
+
+    async def test_gm_gets_stress_and_complications(self, db, gm_campaign):
+        from cortex_bot.views.rolling_views import _build_gm_toggles
+
+        alice = await db.get_player(gm_campaign, "user1")
+        stress_types = await db.get_stress_types(gm_campaign)
+        phys_id = next(st["id"] for st in stress_types if st["name"] == "Physical")
+
+        async with db.connect() as conn:
+            await conn.execute(
+                "INSERT INTO stress (campaign_id, player_id, stress_type_id, die_size) VALUES (?, ?, ?, ?)",
+                (gm_campaign, alice["id"], phys_id, 8),
+            )
+            scene = await db.get_active_scene(gm_campaign)
+            await conn.execute(
+                "INSERT INTO complications (campaign_id, player_id, scene_id, name, die_size) VALUES (?, ?, ?, ?, ?)",
+                (gm_campaign, alice["id"], scene["id"], "Wounded", 6),
+            )
+            # Scene complication (no player)
+            await conn.execute(
+                "INSERT INTO complications (campaign_id, player_id, scene_id, name, die_size) VALUES (?, ?, ?, ?, ?)",
+                (gm_campaign, None, scene["id"], "Trapped", 6),
+            )
+            await conn.commit()
+
+        toggles = await _build_gm_toggles(db, gm_campaign)
+
+        labels = [t["label"] for t in toggles]
+        ids = [t["id"] for t in toggles]
+
+        # Stress label
+        assert any("Alice: Physical d8" in l for l in labels)
+        # Player complication label
+        assert any("Alice: Wounded d6" in l for l in labels)
+        # Scene complication label
+        assert any("Cena: Trapped d6" in l for l in labels)
+        # IDs use correct prefixes
+        assert any(i.startswith("stress:") for i in ids)
+        assert any(i.startswith("comp:") for i in ids)
+
+    async def test_gm_no_stress_or_complications_returns_empty(self, db, gm_campaign):
+        from cortex_bot.views.rolling_views import _build_gm_toggles
+
+        toggles = await _build_gm_toggles(db, gm_campaign)
+        assert toggles == []
+
+    async def test_labels_follow_correct_format(self, db, gm_campaign):
+        from cortex_bot.views.rolling_views import _build_gm_toggles
+
+        bob = await db.get_player(gm_campaign, "user2")
+        stress_types = await db.get_stress_types(gm_campaign)
+        mental_id = next(st["id"] for st in stress_types if st["name"] == "Mental")
+
+        async with db.connect() as conn:
+            await conn.execute(
+                "INSERT INTO stress (campaign_id, player_id, stress_type_id, die_size) VALUES (?, ?, ?, ?)",
+                (gm_campaign, bob["id"], mental_id, 10),
+            )
+            await conn.commit()
+
+        toggles = await _build_gm_toggles(db, gm_campaign)
+        assert any(t["label"] == "Bob: Mental d10" for t in toggles)
+
+
+class TestPlayerPoolBuilderToggles:
+    """Task 4.3: Player gets only their own assets as toggles."""
+
+    async def test_player_toggles_are_assets_only(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        toggles = [
+            {"id": "asset:1", "label": "Sword d8", "die_size": 8},
+            {"id": "asset:2", "label": "Shield d6", "die_size": 6},
+        ]
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", toggle_items=toggles
+        )
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        assert "Sword d8" in labels
+        assert "Shield d6" in labels
+        # No stress/comp labels
+        assert not any(":" in l and "d" in l.split(":")[-1] for l in labels
+                       if l not in ("Sword d8", "Shield d6") and not l.startswith("+"))
+
+
+class TestGMRollResult:
+    """Tasks 4.6, 4.7: GM roll result formatting."""
+
+    async def test_gm_roll_with_toggles_shows_incluidos(self, db, gm_campaign):
+        from cortex_bot.views.rolling_views import execute_player_roll
+
+        gm = await db.get_player(gm_campaign, "gm1")
+        text, _view = await execute_player_roll(
+            db, gm_campaign, gm["id"], gm["name"],
+            pool=[8, 6],
+            included_assets=["Alice: Physical d8", "Cena: Trapped d6"],
+            is_gm_roll=True,
+        )
+        assert "Incluidos:" in text
+        assert "Alice: Physical d8" in text
+        assert "Cena: Trapped d6" in text
+        # GM roll has no opposition_elements
+        assert "Pool da oposicao" not in text
+
+    async def test_gm_roll_without_toggles_no_incluidos(self, db, gm_campaign):
+        from cortex_bot.views.rolling_views import execute_player_roll
+
+        gm = await db.get_player(gm_campaign, "gm1")
+        text, _view = await execute_player_roll(
+            db, gm_campaign, gm["id"], gm["name"],
+            pool=[8, 10],
+            is_gm_roll=True,
+        )
+        assert "Incluidos:" not in text
+        assert "Pool da oposicao" not in text
+
+
+class TestToggleTruncation:
+    """Task 4.8: Truncation at 15 toggle items with message."""
+
+    async def test_truncation_at_15_items(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        toggles = [
+            {"id": f"stress:{i}", "label": f"Player{i}: Stress d{(i % 5 + 1) * 2}", "die_size": (i % 5 + 1) * 2}
+            for i in range(20)
+        ]
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="GM", toggle_items=toggles
+        )
+        # Only 15 toggle buttons should be rendered
+        toggle_buttons = [
+            c for c in view.children
+            if isinstance(c, discord.ui.Button) and c.custom_id.startswith("ephemeral:pb_toggle:")
+        ]
+        assert len(toggle_buttons) == 15
+
+        # Status text should mention truncation
+        status = view.build_status_text()
+        assert "15 de 20" in status
+
+    async def test_no_truncation_message_under_15(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        toggles = [
+            {"id": f"stress:{i}", "label": f"Item{i} d6", "die_size": 6}
+            for i in range(5)
+        ]
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="GM", toggle_items=toggles
+        )
+        status = view.build_status_text()
+        assert "de" not in status or "dados" in status
