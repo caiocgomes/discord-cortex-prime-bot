@@ -118,7 +118,10 @@ class UndoCog(commands.Cog):
         await self.db.mark_action_undone(action["id"])
 
         msg = _format_undo_message(action["action_type"], action["action_data"])
-        await interaction.response.send_message(f"Desfeito: {msg}")
+        from cortex_bot.views.common import PostUndoView
+
+        view = PostUndoView(campaign_id)
+        await interaction.response.send_message(f"Desfeito: {msg}", view=view)
 
 
 async def setup(bot: commands.Bot) -> None:

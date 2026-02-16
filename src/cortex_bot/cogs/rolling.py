@@ -223,7 +223,10 @@ class RollingCog(commands.Cog):
             available_assets=available_assets or None,
             opposition_elements=opposition_elements or None,
         )
-        await interaction.response.send_message(text)
+        from cortex_bot.views.rolling_views import PostRollView
+
+        view = PostRollView(campaign_id)
+        await interaction.response.send_message(text, view=view)
 
 
     @app_commands.command(
@@ -282,7 +285,10 @@ class RollingCog(commands.Cog):
             best_options=best_options,
             difficulty=difficulty,
         )
-        await interaction.response.send_message(text)
+        from cortex_bot.views.rolling_views import PostRollView
+
+        view = PostRollView(campaign["id"])
+        await interaction.response.send_message(text, view=view)
 
 
 async def setup(bot: commands.Bot) -> None:

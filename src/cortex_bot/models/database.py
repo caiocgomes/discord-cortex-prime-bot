@@ -177,6 +177,19 @@ class Database:
             result["config"] = json.loads(result["config"])
             return result
 
+    async def get_campaign_by_id(self, campaign_id: int) -> dict | None:
+        async with self.connect() as conn:
+            cursor = await conn.execute(
+                "SELECT * FROM campaigns WHERE id = ?",
+                (campaign_id,),
+            )
+            row = await cursor.fetchone()
+            if row is None:
+                return None
+            result = dict(row)
+            result["config"] = json.loads(result["config"])
+            return result
+
     async def get_player(
         self, campaign_id: int, discord_user_id: str
     ) -> dict | None:

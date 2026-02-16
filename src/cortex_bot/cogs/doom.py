@@ -160,8 +160,12 @@ class DoomCog(commands.Cog):
         )
 
         pool = await self.db.get_doom_pool(campaign_id)
+        from cortex_bot.views.doom_views import PostDoomActionView
+
+        view = PostDoomActionView(campaign_id)
         await interaction.response.send_message(
-            f"Adicionado {die_label(size)} ao Doom Pool. {self._format_doom_pool(pool)}"
+            f"Adicionado {die_label(size)} ao Doom Pool. {self._format_doom_pool(pool)}",
+            view=view,
         )
 
     async def _doom_remove(self, interaction: Interaction, die: str) -> None:
@@ -212,8 +216,12 @@ class DoomCog(commands.Cog):
         )
 
         pool = await self.db.get_doom_pool(campaign_id)
+        from cortex_bot.views.doom_views import PostDoomActionView
+
+        view = PostDoomActionView(campaign_id)
         await interaction.response.send_message(
-            f"Removido {die_label(size)} do Doom Pool. {self._format_doom_pool(pool)}"
+            f"Removido {die_label(size)} do Doom Pool. {self._format_doom_pool(pool)}",
+            view=view,
         )
 
     async def _doom_stepup(self, interaction: Interaction, die: str) -> None:
@@ -269,8 +277,12 @@ class DoomCog(commands.Cog):
         )
 
         pool = await self.db.get_doom_pool(campaign_id)
+        from cortex_bot.views.doom_views import PostDoomActionView
+
+        view = PostDoomActionView(campaign_id)
         await interaction.response.send_message(
-            f"Step up no Doom Pool: {die_label(size)} para {die_label(new_size)}. {self._format_doom_pool(pool)}"
+            f"Step up no Doom Pool: {die_label(size)} para {die_label(new_size)}. {self._format_doom_pool(pool)}",
+            view=view,
         )
 
     async def _doom_stepdown(self, interaction: Interaction, die: str) -> None:
@@ -324,8 +336,12 @@ class DoomCog(commands.Cog):
             )
 
             pool = await self.db.get_doom_pool(campaign_id)
+            from cortex_bot.views.doom_views import PostDoomActionView
+
+            view = PostDoomActionView(campaign_id)
             await interaction.response.send_message(
-                f"Step down no Doom Pool: {die_label(size)} eliminado. {self._format_doom_pool(pool)}"
+                f"Step down no Doom Pool: {die_label(size)} eliminado. {self._format_doom_pool(pool)}",
+                view=view,
             )
             return
 
@@ -343,8 +359,12 @@ class DoomCog(commands.Cog):
         )
 
         pool = await self.db.get_doom_pool(campaign_id)
+        from cortex_bot.views.doom_views import PostDoomActionView
+
+        view = PostDoomActionView(campaign_id)
         await interaction.response.send_message(
-            f"Step down no Doom Pool: {die_label(size)} para {die_label(new_size)}. {self._format_doom_pool(pool)}"
+            f"Step down no Doom Pool: {die_label(size)} para {die_label(new_size)}. {self._format_doom_pool(pool)}",
+            view=view,
         )
 
     async def _doom_roll(self, interaction: Interaction, dice: Optional[str]) -> None:
@@ -406,7 +426,10 @@ class DoomCog(commands.Cog):
                 else:
                     lines.append(f"Sugestao de dificuldade: {non_hitch[0]}.")
 
-        await interaction.response.send_message("\n".join(lines))
+        from cortex_bot.views.doom_views import PostDoomActionView
+
+        view = PostDoomActionView(campaign_id)
+        await interaction.response.send_message("\n".join(lines), view=view)
 
     async def _doom_spend(self, interaction: Interaction, die: str) -> None:
         campaign = await self._resolve_campaign(interaction)
@@ -446,8 +469,12 @@ class DoomCog(commands.Cog):
             await conn.commit()
 
         pool = await self.db.get_doom_pool(campaign_id)
+        from cortex_bot.views.doom_views import PostDoomActionView
+
+        view = PostDoomActionView(campaign_id)
         await interaction.response.send_message(
-            f"Gasto {die_label(size)} do Doom Pool. {self._format_doom_pool(pool)}"
+            f"Gasto {die_label(size)} do Doom Pool. {self._format_doom_pool(pool)}",
+            view=view,
         )
 
     # ── crisis commands ──────────────────────────────────────────────

@@ -109,7 +109,12 @@ class SceneCog(commands.Cog):
         else:
             guide += " GM: /stress add, /complication add."
 
-        await interaction.response.send_message(f"Cena iniciada: {label}.{guide}")
+        from cortex_bot.views.scene_views import PostSceneStartView
+
+        view = PostSceneStartView(campaign["id"], doom_enabled=doom_enabled)
+        await interaction.response.send_message(
+            f"Cena iniciada: {label}.{guide}", view=view
+        )
 
     async def _end(
         self, interaction: discord.Interaction, bridge: bool
@@ -232,7 +237,10 @@ class SceneCog(commands.Cog):
             "\n\nUse /scene start para iniciar nova cena, "
             "ou /campaign info para ver estado persistente."
         )
-        await interaction.followup.send(summary)
+        from cortex_bot.views.scene_views import PostSceneEndView
+
+        view = PostSceneEndView(campaign["id"])
+        await interaction.followup.send(summary, view=view)
 
     async def _info(self, interaction: discord.Interaction) -> None:
         campaign = await self._resolve_campaign(interaction)
@@ -281,7 +289,10 @@ class SceneCog(commands.Cog):
             scene_complications=scene_complications,
             crisis_pools=crisis_pools,
         )
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.common import PostInfoView
+
+        view = PostInfoView(campaign["id"], has_active_scene=True)
+        await interaction.response.send_message(msg, view=view)
 
 
 async def setup(bot: commands.Bot) -> None:

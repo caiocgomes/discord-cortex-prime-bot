@@ -299,7 +299,10 @@ class AssetGroup(app_commands.Group):
                 f"{name} {die_label(die_size)} para {label}, duracao {duration}.",
             )
 
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostAssetView
+
+        view = PostAssetView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
     @app_commands.command(name="stepup", description="Step up de um asset.")
     @app_commands.describe(
@@ -353,7 +356,10 @@ class AssetGroup(app_commands.Group):
             "Asset step up",
             f"{result['name']} de {die_label(result['from'])} para {die_label(result['to'])} ({label}).",
         )
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostAssetView
+
+        view = PostAssetView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
     @app_commands.command(name="stepdown", description="Step down de um asset.")
     @app_commands.describe(
@@ -407,7 +413,10 @@ class AssetGroup(app_commands.Group):
                 "Asset step down",
                 f"{result['name']} de {die_label(result['from'])} para {die_label(result['to'])} ({label}).",
             )
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostAssetView
+
+        view = PostAssetView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
     @app_commands.command(name="remove", description="Remover um asset.")
     @app_commands.describe(
@@ -455,7 +464,10 @@ class AssetGroup(app_commands.Group):
             "Asset removido",
             f"{result['name']} {die_label(result['die_size'])} de {label}.",
         )
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostAssetView
+
+        view = PostAssetView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
 
 # ---------------------------------------------------------------------------
@@ -561,7 +573,10 @@ class StressGroup(app_commands.Group):
         else:
             msg = f"Stress processado para {target['name']}."
 
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostStressView
+
+        view = PostStressView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
     @app_commands.command(name="stepup", description="Step up do stress de um jogador (GM only).")
     @app_commands.describe(
@@ -653,7 +668,10 @@ class StressGroup(app_commands.Group):
             "Stress step up",
             f"{target['name']} {stress_type['name']} de {die_label(existing['die_size'])} para {die_label(new_size)}.",
         )
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostStressView
+
+        view = PostStressView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
     @app_commands.command(name="stepdown", description="Step down do stress de um jogador.")
     @app_commands.describe(
@@ -728,7 +746,10 @@ class StressGroup(app_commands.Group):
                     "Stress eliminado",
                     f"{stress_type['name']} de {label} era d4, step down remove o stress.",
                 )
-                await interaction.response.send_message(msg)
+                from cortex_bot.views.state_views import PostStressView
+
+                view = PostStressView(campaign["id"])
+                await interaction.response.send_message(msg, view=view)
                 return
 
             await conn.execute(
@@ -749,7 +770,10 @@ class StressGroup(app_commands.Group):
             "Stress step down",
             f"{label} {stress_type['name']} de {die_label(existing['die_size'])} para {die_label(new_size)}.",
         )
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostStressView
+
+        view = PostStressView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
     @app_commands.command(name="remove", description="Remover stress de um jogador.")
     @app_commands.describe(
@@ -810,7 +834,10 @@ class StressGroup(app_commands.Group):
             "Stress removido",
             f"{stress_type['name']} {die_label(result['die_size'])} de {label}.",
         )
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostStressView
+
+        view = PostStressView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
 
 # ---------------------------------------------------------------------------
@@ -1303,7 +1330,10 @@ class ComplicationGroup(app_commands.Group):
                 f"{name} {die_label(die_size)} para {label}.",
             )
 
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostComplicationView
+
+        view = PostComplicationView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
     @app_commands.command(name="stepup", description="Step up de uma complication.")
     @app_commands.describe(
@@ -1357,7 +1387,10 @@ class ComplicationGroup(app_commands.Group):
                 "Complication step up",
                 f"{result['name']} de {die_label(result['from'])} para {die_label(result['to'])} ({label}).",
             )
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostComplicationView
+
+        view = PostComplicationView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
     @app_commands.command(name="stepdown", description="Step down de uma complication.")
     @app_commands.describe(
@@ -1411,7 +1444,10 @@ class ComplicationGroup(app_commands.Group):
                 "Complication step down",
                 f"{result['name']} de {die_label(result['from'])} para {die_label(result['to'])} ({label}).",
             )
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostComplicationView
+
+        view = PostComplicationView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
     @app_commands.command(name="remove", description="Remover uma complication.")
     @app_commands.describe(
@@ -1459,7 +1495,10 @@ class ComplicationGroup(app_commands.Group):
             "Complication removida",
             f"{result['name']} {die_label(result['die_size'])} de {label}.",
         )
-        await interaction.response.send_message(msg)
+        from cortex_bot.views.state_views import PostComplicationView
+
+        view = PostComplicationView(campaign["id"])
+        await interaction.response.send_message(msg, view=view)
 
 
 # ---------------------------------------------------------------------------

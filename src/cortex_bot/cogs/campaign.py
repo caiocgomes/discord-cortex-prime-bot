@@ -149,6 +149,8 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         modules_on = [k for k, v in config.items() if v]
         modules_str = ", ".join(modules_on) if modules_on else "nenhum modulo extra"
 
+        from cortex_bot.views.scene_views import PostSetupView
+
         await interaction.response.send_message(
             f"Campanha '{name}' criada. "
             f"GM: {gm_member.display_name}. "
@@ -159,7 +161,8 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             "Proximos passos: use /scene start para iniciar uma cena. "
             "Jogadores podem usar /roll para rolar dados. "
             "/campaign info mostra o estado completo. "
-            "/help para referencia de comandos."
+            "/help para referencia de comandos.",
+            view=PostSetupView(campaign_id),
         )
 
     @app_commands.command(name="info", description="Exibir estado completo da campanha.")
@@ -208,7 +211,10 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             scene_complications=scene_complications,
             crisis_pools=crisis_pools,
         )
-        await interaction.response.send_message(text)
+        from cortex_bot.views.common import PostInfoView
+
+        view = PostInfoView(campaign_id, has_active_scene=scene is not None)
+        await interaction.response.send_message(text, view=view)
 
     @app_commands.command(name="delegate", description="Promover um jogador a delegado (apenas GM).")
     @app_commands.describe(player="Jogador para promover a delegado")

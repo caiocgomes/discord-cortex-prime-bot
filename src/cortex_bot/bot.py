@@ -6,6 +6,7 @@ from discord.ext import commands
 
 from cortex_bot.config import settings
 from cortex_bot.models.database import Database
+from cortex_bot.views import register_persistent_views
 
 log = logging.getLogger("cortex_bot")
 
@@ -28,6 +29,7 @@ class CortexBot(commands.Bot):
 
     async def setup_hook(self) -> None:
         await self.db.initialize()
+        register_persistent_views(self)
         for cog in COGS:
             await self.load_extension(cog)
         await self.tree.sync()
