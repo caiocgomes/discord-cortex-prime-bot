@@ -18,6 +18,7 @@ COGS = [
     "cortex_bot.cogs.doom",
     "cortex_bot.cogs.undo",
     "cortex_bot.cogs.help",
+    "cortex_bot.cogs.menu",
 ]
 
 

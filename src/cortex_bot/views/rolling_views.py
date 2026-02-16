@@ -3,8 +3,9 @@
 import re
 
 import discord
+from discord.ui import TextInput
 
-from cortex_bot.views.base import CortexView, make_custom_id, get_campaign_from_channel
+from cortex_bot.views.base import CortexView, make_custom_id
 from cortex_bot.models.dice import parse_dice_notation, die_label
 from cortex_bot.services.roller import (
     roll_pool,
@@ -15,11 +16,148 @@ from cortex_bot.services.roller import (
 from cortex_bot.services.formatter import format_roll_result
 
 
+async def execute_player_roll(
+    interaction: discord.Interaction,
+    campaign_id: int,
+    player_id: int,
+    player_name: str,
+    pool: list[int],
+    included_assets: list[str] | None = None,
+    responded: bool = False,
+) -> None:
+    """Execute a dice roll and send the formatted result.
+
+    If responded=True, uses interaction.followup.send (response already consumed).
+    If responded=False, uses interaction.response.send_message.
+    """
+    db = interaction.client.db
+    campaign = await db.get_campaign_by_id(campaign_id)
+    config = campaign["config"] if campaign else {}
+
+    results = roll_pool(pool)
+    hitches = find_hitches(results)
+    botch = is_botch(results)
+
+    best_options: list[dict] | None = None
+    if config.get("best_mode") and not botch:
+        best_options = calculate_best_options(results)
+
+    stress_list = await db.get_player_stress(campaign_id, player_id)
+    complication_list = await db.get_player_complications(campaign_id, player_id)
+    opposition_elements: list[str] = []
+    for s in stress_list:
+        opposition_elements.append(
+            f"{s['stress_type_name']} {die_label(s['die_size'])}"
+        )
+    for c in complication_list:
+        opposition_elements.append(
+            f"{c['name']} {die_label(c['die_size'])}"
+        )
+
+    text = format_roll_result(
+        player_name=player_name,
+        results=results,
+        included_assets=included_assets or None,
+        hitches=hitches or None,
+        is_botch=botch,
+        best_options=best_options,
+        opposition_elements=opposition_elements or None,
+    )
+    view = PostRollView(campaign_id)
+
+    if responded:
+        await interaction.followup.send(text, view=view)
+    else:
+        await interaction.response.send_message(text, view=view)
+
+
+class DicePoolModal(discord.ui.Modal, title="Montar Pool"):
+    """Modal for composing a dice pool via text input."""
+
+    dice_field = TextInput(
+        label="Dados",
+        placeholder="Ex: 2d8 1d6 1d10",
+        style=discord.TextStyle.short,
+        required=True,
+    )
+    assets_field = TextInput(
+        label="Assets para incluir",
+        placeholder="Nenhum asset ativo",
+        style=discord.TextStyle.short,
+        required=False,
+    )
+
+    def __init__(
+        self,
+        campaign_id: int,
+        player_id: int,
+        player_name: str,
+        asset_hint: str,
+    ) -> None:
+        super().__init__()
+        self.campaign_id = campaign_id
+        self.player_id = player_id
+        self.player_name = player_name
+        self.assets_field.placeholder = asset_hint
+
+    async def on_submit(self, interaction: discord.Interaction) -> None:
+        # Parse dice notation
+        try:
+            pool = parse_dice_notation(self.dice_field.value)
+        except ValueError as exc:
+            await interaction.response.send_message(str(exc), ephemeral=True)
+            return
+
+        included_assets: list[str] = []
+        assets_text = self.assets_field.value.strip() if self.assets_field.value else ""
+
+        if assets_text:
+            db = interaction.client.db
+            player_assets = await db.get_player_assets(self.campaign_id, self.player_id)
+            asset_lookup = {a["name"].lower(): a for a in player_assets}
+
+            requested_names = [n.strip() for n in assets_text.split(",") if n.strip()]
+            not_found: list[str] = []
+
+            for name in requested_names:
+                asset = asset_lookup.get(name.lower())
+                if asset is None:
+                    not_found.append(name)
+
+            if not_found:
+                available = ", ".join(
+                    f"{a['name']} ({die_label(a['die_size'])})" for a in player_assets
+                ) if player_assets else "nenhum"
+                await interaction.response.send_message(
+                    f"Assets nao encontrados: {', '.join(not_found)}. "
+                    f"Disponiveis: {available}",
+                    ephemeral=True,
+                )
+                return
+
+            for name in requested_names:
+                asset = asset_lookup[name.lower()]
+                pool.append(asset["die_size"])
+                included_assets.append(
+                    f"{asset['name']} {die_label(asset['die_size'])}"
+                )
+
+        await execute_player_roll(
+            interaction,
+            self.campaign_id,
+            self.player_id,
+            self.player_name,
+            pool,
+            included_assets or None,
+            responded=False,
+        )
+
+
 class RollStartButton(
     discord.ui.DynamicItem[discord.ui.Button],
     template=r"cortex:roll_start:(?P<campaign_id>\d+)",
 ):
-    """Persistent button to initiate a dice roll via select chain."""
+    """Persistent button to initiate a dice roll via modal."""
 
     def __init__(self, campaign_id: int) -> None:
         self.campaign_id = campaign_id
@@ -49,215 +187,21 @@ class RollStartButton(
             )
             return
 
-        view = DicePoolSelectView(self.campaign_id, player["id"], player["name"])
-        await interaction.response.send_message(
-            "Selecione os dados para o pool de rolagem.",
-            view=view,
-            ephemeral=True,
-        )
-
-
-DIE_OPTIONS = [
-    discord.SelectOption(label="d4", value="4"),
-    discord.SelectOption(label="d6", value="6"),
-    discord.SelectOption(label="d8", value="8"),
-    discord.SelectOption(label="d10", value="10"),
-    discord.SelectOption(label="d12", value="12"),
-]
-
-
-class DicePoolSelectView(CortexView):
-    """Ephemeral view for selecting dice to roll."""
-
-    def __init__(
-        self, campaign_id: int, player_id: int, player_name: str
-    ) -> None:
-        super().__init__()
-        self.campaign_id = campaign_id
-        self.player_id = player_id
-        self.player_name = player_name
-
-    @discord.ui.select(
-        placeholder="Selecione dados para o pool (multiplos permitidos)",
-        options=DIE_OPTIONS,
-        min_values=1,
-        max_values=5,
-        custom_id="cortex:dice_pool_select",
-    )
-    async def dice_select(
-        self, interaction: discord.Interaction, select: discord.ui.Select
-    ) -> None:
-        pool = [int(v) for v in select.values]
-
-        db = interaction.client.db
-        assets = await db.get_player_assets(self.campaign_id, self.player_id)
-
+        assets = await db.get_player_assets(self.campaign_id, player["id"])
         if assets:
-            view = AssetIncludeSelectView(
-                self.campaign_id, self.player_id, self.player_name, pool, assets
-            )
-            asset_labels = [
-                f"{a['name']} ({die_label(a['die_size'])})" for a in assets
-            ]
-            await interaction.response.edit_message(
-                content=f"Pool: {', '.join(die_label(d) for d in pool)}. Incluir assets?",
-                view=view,
+            asset_hint = "Disponiveis: " + ", ".join(
+                f"{a['name']} {die_label(a['die_size'])}" for a in assets
             )
         else:
-            await self._execute_roll(interaction, pool, [])
+            asset_hint = "Nenhum asset ativo"
 
-    async def _execute_roll(
-        self,
-        interaction: discord.Interaction,
-        pool: list[int],
-        included_assets: list[str],
-    ) -> None:
-        db = interaction.client.db
-        campaign = await db.get_campaign_by_id(self.campaign_id)
-        config = campaign["config"] if campaign else {}
-
-        results = roll_pool(pool)
-        hitches = find_hitches(results)
-        botch = is_botch(results)
-
-        best_options: list[dict] | None = None
-        if config.get("best_mode") and not botch:
-            best_options = calculate_best_options(results)
-
-        stress_list = await db.get_player_stress(self.campaign_id, self.player_id)
-        complication_list = await db.get_player_complications(
-            self.campaign_id, self.player_id
+        modal = DicePoolModal(
+            campaign_id=self.campaign_id,
+            player_id=player["id"],
+            player_name=player["name"],
+            asset_hint=asset_hint,
         )
-        opposition_elements: list[str] = []
-        for s in stress_list:
-            opposition_elements.append(
-                f"{s['stress_type_name']} {die_label(s['die_size'])}"
-            )
-        for c in complication_list:
-            opposition_elements.append(
-                f"{c['name']} {die_label(c['die_size'])}"
-            )
-
-        text = format_roll_result(
-            player_name=self.player_name,
-            results=results,
-            included_assets=included_assets or None,
-            hitches=hitches or None,
-            is_botch=botch,
-            best_options=best_options,
-            opposition_elements=opposition_elements or None,
-        )
-        view = PostRollView(self.campaign_id)
-        await interaction.response.edit_message(content=text, view=None)
-        await interaction.followup.send(text, view=view)
-
-
-class AssetIncludeSelectView(CortexView):
-    """Ephemeral view for optionally including assets in the roll."""
-
-    def __init__(
-        self,
-        campaign_id: int,
-        player_id: int,
-        player_name: str,
-        pool: list[int],
-        assets: list[dict],
-    ) -> None:
-        super().__init__()
-        self.campaign_id = campaign_id
-        self.player_id = player_id
-        self.player_name = player_name
-        self.pool = pool
-        self.assets = assets
-
-        options = [
-            discord.SelectOption(
-                label=f"{a['name']} ({die_label(a['die_size'])})",
-                value=str(a["id"]),
-            )
-            for a in assets[:25]
-        ]
-        self.asset_select = discord.ui.Select(
-            placeholder="Incluir assets (opcional, pode pular)",
-            options=options,
-            min_values=0,
-            max_values=len(options),
-            custom_id="cortex:asset_include_select",
-        )
-        self.asset_select.callback = self._on_select
-        self.add_item(self.asset_select)
-
-        skip_btn = discord.ui.Button(
-            label="Rolar sem assets",
-            style=discord.ButtonStyle.secondary,
-            custom_id="cortex:roll_skip_assets",
-        )
-        skip_btn.callback = self._on_skip
-        self.add_item(skip_btn)
-
-    async def _on_select(self, interaction: discord.Interaction) -> None:
-        selected_ids = {int(v) for v in self.asset_select.values}
-        asset_map = {a["id"]: a for a in self.assets}
-        included_assets: list[str] = []
-        full_pool = list(self.pool)
-
-        for aid in selected_ids:
-            asset = asset_map.get(aid)
-            if asset:
-                full_pool.append(asset["die_size"])
-                included_assets.append(
-                    f"{asset['name']} {die_label(asset['die_size'])}"
-                )
-
-        await self._execute_roll(interaction, full_pool, included_assets)
-
-    async def _on_skip(self, interaction: discord.Interaction) -> None:
-        await self._execute_roll(interaction, self.pool, [])
-
-    async def _execute_roll(
-        self,
-        interaction: discord.Interaction,
-        pool: list[int],
-        included_assets: list[str],
-    ) -> None:
-        db = interaction.client.db
-        campaign = await db.get_campaign_by_id(self.campaign_id)
-        config = campaign["config"] if campaign else {}
-
-        results = roll_pool(pool)
-        hitches = find_hitches(results)
-        botch = is_botch(results)
-
-        best_options: list[dict] | None = None
-        if config.get("best_mode") and not botch:
-            best_options = calculate_best_options(results)
-
-        stress_list = await db.get_player_stress(self.campaign_id, self.player_id)
-        complication_list = await db.get_player_complications(
-            self.campaign_id, self.player_id
-        )
-        opposition_elements: list[str] = []
-        for s in stress_list:
-            opposition_elements.append(
-                f"{s['stress_type_name']} {die_label(s['die_size'])}"
-            )
-        for c in complication_list:
-            opposition_elements.append(
-                f"{c['name']} {die_label(c['die_size'])}"
-            )
-
-        text = format_roll_result(
-            player_name=self.player_name,
-            results=results,
-            included_assets=included_assets or None,
-            hitches=hitches or None,
-            is_botch=botch,
-            best_options=best_options,
-            opposition_elements=opposition_elements or None,
-        )
-        view = PostRollView(self.campaign_id)
-        await interaction.response.edit_message(content=text, view=None)
-        await interaction.followup.send(text, view=view)
+        await interaction.response.send_modal(modal)
 
 
 class PostRollView(CortexView):
