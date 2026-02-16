@@ -1,8 +1,14 @@
 """Base classes and utilities for Discord UI views."""
 
+import uuid
+from collections.abc import Callable, Coroutine
+from typing import Any
+
 import discord
 
 from cortex_bot.utils import has_gm_permission
+
+DIE_SIZES = [4, 6, 8, 10, 12]
 
 
 class CortexView(discord.ui.View):
@@ -74,3 +80,108 @@ async def get_campaign_from_channel(
             ephemeral=True,
         )
     return campaign
+
+
+# Type alias for button callbacks: async fn(interaction, value) -> None
+ButtonCallback = Callable[
+    [discord.Interaction, int], Coroutine[Any, Any, None]
+]
+PlayerCallback = Callable[
+    [discord.Interaction, str], Coroutine[Any, Any, None]
+]
+
+
+def add_die_buttons(
+    view: discord.ui.View,
+    callback: ButtonCallback,
+) -> None:
+    """Add 5 die buttons (d4-d12) to the view in a single ActionRow."""
+    for size in DIE_SIZES:
+        btn = discord.ui.Button(
+            label=f"d{size}",
+            style=discord.ButtonStyle.primary,
+            custom_id=f"ephemeral:die:{size}:{uuid.uuid4().hex[:8]}",
+            row=0,
+        )
+
+        async def make_callback(
+            interaction: discord.Interaction,
+            _btn: discord.ui.Button = btn,
+            _size: int = size,
+        ) -> None:
+            await callback(interaction, _size)
+
+        btn.callback = make_callback
+        view.add_item(btn)
+
+
+def add_player_options(
+    view: discord.ui.View,
+    players: list[dict],
+    callback: PlayerCallback,
+    extra_buttons: list[tuple[str, str]] | None = None,
+) -> None:
+    """Add player selection to a view.
+
+    Uses buttons when total options (players + extra) <= 5, select when > 5.
+    extra_buttons: list of (label, value) tuples for extra options like "Asset de Cena".
+    """
+    extras = extra_buttons or []
+    total = len(players) + len(extras)
+
+    if total <= 5:
+        for p in players:
+            btn = discord.ui.Button(
+                label=p["name"],
+                style=discord.ButtonStyle.primary,
+                custom_id=f"ephemeral:player:{p['id']}:{uuid.uuid4().hex[:8]}",
+            )
+
+            async def make_player_cb(
+                interaction: discord.Interaction,
+                _btn: discord.ui.Button = btn,
+                _val: str = str(p["id"]),
+            ) -> None:
+                await callback(interaction, _val)
+
+            btn.callback = make_player_cb
+            view.add_item(btn)
+
+        for label, value in extras:
+            btn = discord.ui.Button(
+                label=label,
+                style=discord.ButtonStyle.secondary,
+                custom_id=f"ephemeral:extra:{value}:{uuid.uuid4().hex[:8]}",
+            )
+
+            async def make_extra_cb(
+                interaction: discord.Interaction,
+                _btn: discord.ui.Button = btn,
+                _val: str = value,
+            ) -> None:
+                await callback(interaction, _val)
+
+            btn.callback = make_extra_cb
+            view.add_item(btn)
+    else:
+        options = [
+            discord.SelectOption(label=p["name"], value=str(p["id"]))
+            for p in players[:25]
+        ]
+        for label, value in extras:
+            options.append(discord.SelectOption(label=label, value=value))
+
+        select = discord.ui.Select(
+            placeholder="Selecione jogador",
+            options=options[:25],
+            custom_id=f"ephemeral:player_sel:{uuid.uuid4().hex[:8]}",
+        )
+
+        async def on_select(
+            interaction: discord.Interaction,
+            _select: discord.ui.Select = select,
+        ) -> None:
+            await callback(interaction, _select.values[0])
+
+        select.callback = on_select
+        view.add_item(select)

@@ -1,10 +1,17 @@
 """State-related views: stress, asset, complication select chains."""
 
 import re
+import uuid
 
 import discord
 
-from cortex_bot.views.base import CortexView, make_custom_id, check_gm_permission
+from cortex_bot.views.base import (
+    CortexView,
+    make_custom_id,
+    check_gm_permission,
+    add_die_buttons,
+    add_player_options,
+)
 from cortex_bot.models.dice import die_label, parse_single_die
 from cortex_bot.services.state_manager import StateManager
 from cortex_bot.services.formatter import format_action_confirm
@@ -50,12 +57,12 @@ class StressAddStartButton(
             )
             return
 
-        options = [
-            discord.SelectOption(label=p["name"], value=str(p["id"]))
-            for p in non_gm[:25]
-        ]
         view = StressPlayerSelectView(self.campaign_id, str(interaction.user.id))
-        view.add_player_select(options)
+
+        async def on_player(interaction: discord.Interaction, value: str) -> None:
+            await view._on_player_selected(interaction, int(value))
+
+        add_player_options(view, non_gm, on_player)
         await interaction.response.send_message(
             "Selecione o jogador para receber stress.",
             view=view,
@@ -71,17 +78,9 @@ class StressPlayerSelectView(CortexView):
         self.campaign_id = campaign_id
         self.actor_id = actor_id
 
-    def add_player_select(self, options: list[discord.SelectOption]) -> None:
-        select = discord.ui.Select(
-            placeholder="Selecione jogador",
-            options=options,
-            custom_id="cortex:stress_player_sel",
-        )
-        select.callback = self._on_select
-        self.add_item(select)
-
-    async def _on_select(self, interaction: discord.Interaction) -> None:
-        player_id = int(interaction.data["values"][0])
+    async def _on_player_selected(
+        self, interaction: discord.Interaction, player_id: int
+    ) -> None:
         db = interaction.client.db
         stress_types = await db.get_stress_types(self.campaign_id)
 
@@ -91,21 +90,35 @@ class StressPlayerSelectView(CortexView):
             )
             return
 
-        options = [
-            discord.SelectOption(label=st["name"], value=str(st["id"]))
-            for st in stress_types[:25]
-        ]
         view = StressTypeSelectView(
             self.campaign_id, self.actor_id, player_id
         )
-        view.add_type_select(options)
+
+        uid = uuid.uuid4().hex[:8]
+        for st in stress_types[:4]:
+            btn = discord.ui.Button(
+                label=st["name"],
+                style=discord.ButtonStyle.primary,
+                custom_id=f"ephemeral:stress_type:{st['id']}:{uid}",
+            )
+
+            async def make_cb(
+                interaction: discord.Interaction,
+                _btn: discord.ui.Button = btn,
+                _type_id: int = st["id"],
+            ) -> None:
+                await view._on_type_selected(interaction, _type_id)
+
+            btn.callback = make_cb
+            view.add_item(btn)
+
         await interaction.response.edit_message(
             content="Selecione o tipo de stress.", view=view
         )
 
 
 class StressTypeSelectView(CortexView):
-    """Select stress type."""
+    """Select stress type via dynamic buttons."""
 
     def __init__(self, campaign_id: int, actor_id: str, player_id: int) -> None:
         super().__init__()
@@ -113,25 +126,17 @@ class StressTypeSelectView(CortexView):
         self.actor_id = actor_id
         self.player_id = player_id
 
-    def add_type_select(self, options: list[discord.SelectOption]) -> None:
-        select = discord.ui.Select(
-            placeholder="Selecione tipo de stress",
-            options=options,
-            custom_id="cortex:stress_type_sel",
-        )
-        select.callback = self._on_select
-        self.add_item(select)
-
-    async def _on_select(self, interaction: discord.Interaction) -> None:
-        stress_type_id = int(interaction.data["values"][0])
-        options = [
-            discord.SelectOption(label=f"d{s}", value=str(s))
-            for s in [4, 6, 8, 10, 12]
-        ]
+    async def _on_type_selected(
+        self, interaction: discord.Interaction, stress_type_id: int
+    ) -> None:
         view = StressDieSelectView(
             self.campaign_id, self.actor_id, self.player_id, stress_type_id
         )
-        view.add_die_select(options)
+
+        async def on_die(interaction: discord.Interaction, die_size: int) -> None:
+            await view._on_die_selected(interaction, die_size)
+
+        add_die_buttons(view, on_die)
         await interaction.response.edit_message(
             content="Selecione o dado de stress.", view=view
         )
@@ -149,21 +154,11 @@ class StressDieSelectView(CortexView):
         self.player_id = player_id
         self.stress_type_id = stress_type_id
 
-    def add_die_select(self, options: list[discord.SelectOption]) -> None:
-        select = discord.ui.Select(
-            placeholder="Selecione dado",
-            options=options,
-            custom_id="cortex:stress_die_sel",
-        )
-        select.callback = self._on_select
-        self.add_item(select)
-
-    async def _on_select(self, interaction: discord.Interaction) -> None:
-        die_size = int(interaction.data["values"][0])
+    async def _on_die_selected(
+        self, interaction: discord.Interaction, die_size: int
+    ) -> None:
         db = interaction.client.db
 
-        # Get names for the confirmation message
-        player = None
         async with db.connect() as conn:
             cursor = await conn.execute(
                 "SELECT name FROM players WHERE id = ?", (self.player_id,)
@@ -252,18 +247,20 @@ class AssetAddStartButton(
             return
 
         players = await db.get_players(self.campaign_id)
-        options = [
-            discord.SelectOption(label=p["name"], value=str(p["id"]))
-            for p in players[:24]
-        ]
-        options.append(
-            discord.SelectOption(label="Asset de Cena", value="scene")
-        )
 
         view = AssetOwnerSelectView(
             self.campaign_id, str(interaction.user.id), player
         )
-        view.add_owner_select(options)
+
+        async def on_owner(interaction: discord.Interaction, value: str) -> None:
+            await view._on_owner_selected(interaction, value)
+
+        add_player_options(
+            view,
+            players,
+            on_owner,
+            extra_buttons=[("Asset de Cena", "scene")],
+        )
         await interaction.response.send_message(
             "Para quem e o asset?", view=view, ephemeral=True
         )
@@ -278,17 +275,9 @@ class AssetOwnerSelectView(CortexView):
         self.actor_id = actor_id
         self.actor = actor
 
-    def add_owner_select(self, options: list[discord.SelectOption]) -> None:
-        select = discord.ui.Select(
-            placeholder="Dono do asset",
-            options=options,
-            custom_id="cortex:asset_owner_sel",
-        )
-        select.callback = self._on_select
-        self.add_item(select)
-
-    async def _on_select(self, interaction: discord.Interaction) -> None:
-        val = interaction.data["values"][0]
+    async def _on_owner_selected(
+        self, interaction: discord.Interaction, val: str
+    ) -> None:
         is_scene = val == "scene"
         player_id = None if is_scene else int(val)
 
@@ -301,7 +290,6 @@ class AssetOwnerSelectView(CortexView):
                 )
                 return
 
-        # Common asset names as select options + "Outro" to type custom
         common_names = [
             "Advantage", "Cover", "Weapon", "Shield", "Tool",
             "Ally", "Position", "Knowledge", "Preparation",
@@ -340,21 +328,21 @@ class AssetNameSelectView(CortexView):
         select = discord.ui.Select(
             placeholder="Nome do asset",
             options=options,
-            custom_id="cortex:asset_name_sel",
+            custom_id=f"ephemeral:asset_name_sel:{uuid.uuid4().hex[:8]}",
         )
         select.callback = self._on_select
         self.add_item(select)
 
     async def _on_select(self, interaction: discord.Interaction) -> None:
         name = interaction.data["values"][0]
-        options = [
-            discord.SelectOption(label=f"d{s}", value=str(s))
-            for s in [4, 6, 8, 10, 12]
-        ]
         view = AssetDieSelectView(
             self.campaign_id, self.actor_id, self.player_id, self.is_scene, name
         )
-        view.add_die_select(options)
+
+        async def on_die(interaction: discord.Interaction, die_size: int) -> None:
+            await view._on_die_selected(interaction, die_size)
+
+        add_die_buttons(view, on_die)
         await interaction.response.edit_message(
             content=f"Asset: {name}. Selecione o dado.", view=view
         )
@@ -378,17 +366,9 @@ class AssetDieSelectView(CortexView):
         self.is_scene = is_scene
         self.name = name
 
-    def add_die_select(self, options: list[discord.SelectOption]) -> None:
-        select = discord.ui.Select(
-            placeholder="Selecione dado",
-            options=options,
-            custom_id="cortex:asset_die_sel",
-        )
-        select.callback = self._on_select
-        self.add_item(select)
-
-    async def _on_select(self, interaction: discord.Interaction) -> None:
-        die_size = int(interaction.data["values"][0])
+    async def _on_die_selected(
+        self, interaction: discord.Interaction, die_size: int
+    ) -> None:
         db = interaction.client.db
 
         scene = await db.get_active_scene(self.campaign_id)
@@ -464,18 +444,20 @@ class ComplicationAddStartButton(
             return
 
         players = await db.get_players(self.campaign_id)
-        options = [
-            discord.SelectOption(label=p["name"], value=str(p["id"]))
-            for p in players[:24]
-        ]
-        options.append(
-            discord.SelectOption(label="Complicacao de Cena", value="scene")
-        )
 
         view = CompTargetSelectView(
             self.campaign_id, str(interaction.user.id), player
         )
-        view.add_target_select(options)
+
+        async def on_target(interaction: discord.Interaction, value: str) -> None:
+            await view._on_target_selected(interaction, value)
+
+        add_player_options(
+            view,
+            players,
+            on_target,
+            extra_buttons=[("Complicacao de Cena", "scene")],
+        )
         await interaction.response.send_message(
             "Quem recebe a complication?", view=view, ephemeral=True
         )
@@ -490,17 +472,9 @@ class CompTargetSelectView(CortexView):
         self.actor_id = actor_id
         self.actor = actor
 
-    def add_target_select(self, options: list[discord.SelectOption]) -> None:
-        select = discord.ui.Select(
-            placeholder="Alvo da complication",
-            options=options,
-            custom_id="cortex:comp_target_sel",
-        )
-        select.callback = self._on_select
-        self.add_item(select)
-
-    async def _on_select(self, interaction: discord.Interaction) -> None:
-        val = interaction.data["values"][0]
+    async def _on_target_selected(
+        self, interaction: discord.Interaction, val: str
+    ) -> None:
         is_scene = val == "scene"
         player_id = None if is_scene else int(val)
 
@@ -551,21 +525,21 @@ class CompNameSelectView(CortexView):
         select = discord.ui.Select(
             placeholder="Nome da complication",
             options=options,
-            custom_id="cortex:comp_name_sel",
+            custom_id=f"ephemeral:comp_name_sel:{uuid.uuid4().hex[:8]}",
         )
         select.callback = self._on_select
         self.add_item(select)
 
     async def _on_select(self, interaction: discord.Interaction) -> None:
         name = interaction.data["values"][0]
-        options = [
-            discord.SelectOption(label=f"d{s}", value=str(s))
-            for s in [4, 6, 8, 10, 12]
-        ]
         view = CompDieSelectView(
             self.campaign_id, self.actor_id, self.player_id, self.is_scene, name
         )
-        view.add_die_select(options)
+
+        async def on_die(interaction: discord.Interaction, die_size: int) -> None:
+            await view._on_die_selected(interaction, die_size)
+
+        add_die_buttons(view, on_die)
         await interaction.response.edit_message(
             content=f"Complication: {name}. Selecione o dado.", view=view
         )
@@ -589,17 +563,9 @@ class CompDieSelectView(CortexView):
         self.is_scene = is_scene
         self.name = name
 
-    def add_die_select(self, options: list[discord.SelectOption]) -> None:
-        select = discord.ui.Select(
-            placeholder="Selecione dado",
-            options=options,
-            custom_id="cortex:comp_die_sel",
-        )
-        select.callback = self._on_select
-        self.add_item(select)
-
-    async def _on_select(self, interaction: discord.Interaction) -> None:
-        die_size = int(interaction.data["values"][0])
+    async def _on_die_selected(
+        self, interaction: discord.Interaction, die_size: int
+    ) -> None:
         db = interaction.client.db
 
         scene = await db.get_active_scene(self.campaign_id)

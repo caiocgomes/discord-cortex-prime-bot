@@ -1,10 +1,11 @@
 """Doom pool and crisis pool views."""
 
 import re
+import uuid
 
 import discord
 
-from cortex_bot.views.base import CortexView, make_custom_id, check_gm_permission
+from cortex_bot.views.base import CortexView, make_custom_id, check_gm_permission, add_die_buttons
 from cortex_bot.models.dice import die_label, parse_single_die
 from cortex_bot.services.roller import roll_pool, calculate_best_options
 
@@ -42,12 +43,12 @@ class DoomAddStartButton(
             )
             return
 
-        options = [
-            discord.SelectOption(label=f"d{s}", value=str(s))
-            for s in [4, 6, 8, 10, 12]
-        ]
         view = DoomDieSelectView(self.campaign_id, str(interaction.user.id))
-        view.add_die_select(options)
+
+        async def on_die(interaction: discord.Interaction, die_size: int) -> None:
+            await view._on_die_selected(interaction, die_size)
+
+        add_die_buttons(view, on_die)
         await interaction.response.send_message(
             "Selecione o dado para adicionar ao Doom Pool.",
             view=view,
@@ -63,23 +64,15 @@ class DoomDieSelectView(CortexView):
         self.campaign_id = campaign_id
         self.actor_id = actor_id
 
-    def add_die_select(self, options: list[discord.SelectOption]) -> None:
-        select = discord.ui.Select(
-            placeholder="Dado para doom pool",
-            options=options,
-            custom_id="cortex:doom_die_sel",
-        )
-        select.callback = self._on_select
-        self.add_item(select)
-
-    async def _on_select(self, interaction: discord.Interaction) -> None:
-        size = int(interaction.data["values"][0])
+    async def _on_die_selected(
+        self, interaction: discord.Interaction, die_size: int
+    ) -> None:
         db = interaction.client.db
 
         async with db.connect() as conn:
             cursor = await conn.execute(
                 "INSERT INTO doom_pool_dice (campaign_id, die_size) VALUES (?, ?)",
-                (self.campaign_id, size),
+                (self.campaign_id, die_size),
             )
             doom_die_id = cursor.lastrowid
             await conn.commit()
@@ -88,14 +81,14 @@ class DoomDieSelectView(CortexView):
             self.campaign_id,
             self.actor_id,
             "doom_add",
-            {"die_size": size},
+            {"die_size": die_size},
             {"action": "delete", "table": "doom_pool_dice", "id": doom_die_id},
         )
 
         pool = await db.get_doom_pool(self.campaign_id)
         labels = [die_label(d["die_size"]) for d in pool]
         pool_str = ", ".join(labels) if labels else "vazio"
-        msg = f"Adicionado {die_label(size)} ao Doom Pool. Doom Pool: {pool_str}."
+        msg = f"Adicionado {die_label(die_size)} ao Doom Pool. Doom Pool: {pool_str}."
 
         view = PostDoomActionView(self.campaign_id)
         await interaction.response.edit_message(content=msg, view=None)
@@ -126,21 +119,34 @@ class DoomRemoveButton(discord.ui.Button):
             )
             return
 
-        # Deduplicate die sizes for options
-        seen = set()
-        options = []
+        # Deduplicate die sizes for buttons
+        seen: set[int] = set()
+        unique_sizes: list[int] = []
         for d in pool:
-            label = die_label(d["die_size"])
-            if label not in seen:
-                seen.add(label)
-                options.append(
-                    discord.SelectOption(
-                        label=label, value=str(d["die_size"])
-                    )
-                )
+            if d["die_size"] not in seen:
+                seen.add(d["die_size"])
+                unique_sizes.append(d["die_size"])
 
         view = DoomRemoveSelectView(self.campaign_id, str(interaction.user.id))
-        view.add_die_select(options)
+
+        uid = uuid.uuid4().hex[:8]
+        for size in sorted(unique_sizes):
+            btn = discord.ui.Button(
+                label=die_label(size),
+                style=discord.ButtonStyle.primary,
+                custom_id=f"ephemeral:doom_remove:{size}:{uid}",
+            )
+
+            async def make_cb(
+                interaction: discord.Interaction,
+                _btn: discord.ui.Button = btn,
+                _size: int = size,
+            ) -> None:
+                await view._on_die_selected(interaction, _size)
+
+            btn.callback = make_cb
+            view.add_item(btn)
+
         await interaction.response.send_message(
             "Selecione o dado para remover do Doom Pool.",
             view=view,
@@ -149,24 +155,16 @@ class DoomRemoveButton(discord.ui.Button):
 
 
 class DoomRemoveSelectView(CortexView):
-    """Select die to remove from doom pool."""
+    """Handles die removal from doom pool."""
 
     def __init__(self, campaign_id: int, actor_id: str) -> None:
         super().__init__()
         self.campaign_id = campaign_id
         self.actor_id = actor_id
 
-    def add_die_select(self, options: list[discord.SelectOption]) -> None:
-        select = discord.ui.Select(
-            placeholder="Dado para remover",
-            options=options,
-            custom_id="cortex:doom_remove_sel",
-        )
-        select.callback = self._on_select
-        self.add_item(select)
-
-    async def _on_select(self, interaction: discord.Interaction) -> None:
-        size = int(interaction.data["values"][0])
+    async def _on_die_selected(
+        self, interaction: discord.Interaction, size: int
+    ) -> None:
         db = interaction.client.db
         pool = await db.get_doom_pool(self.campaign_id)
 
@@ -277,8 +275,6 @@ class PostCrisisActionView(CortexView):
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
-        # Crisis operations are rare enough that buttons are optional;
-        # we just show a Campaign Info button.
         from cortex_bot.views.common import CampaignInfoButton
 
         self.add_item(CampaignInfoButton(campaign_id))

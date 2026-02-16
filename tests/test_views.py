@@ -2,9 +2,16 @@
 
 import re
 
+import discord
 import pytest
 
-from cortex_bot.views.base import parse_custom_id, make_custom_id, CortexView
+from cortex_bot.views.base import (
+    parse_custom_id,
+    make_custom_id,
+    CortexView,
+    add_die_buttons,
+    add_player_options,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -132,6 +139,119 @@ class TestCustomIdRegexPatterns:
 # ---------------------------------------------------------------------------
 
 
+class TestAddDieButtons:
+    """Test the add_die_buttons helper."""
+
+    async def test_creates_five_buttons(self):
+        view = CortexView()
+        callback_log: list[int] = []
+
+        async def cb(interaction, die_size):
+            callback_log.append(die_size)
+
+        add_die_buttons(view, cb)
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 5
+
+    async def test_button_labels(self):
+        view = CortexView()
+
+        async def cb(interaction, die_size):
+            pass
+
+        add_die_buttons(view, cb)
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        assert labels == ["d4", "d6", "d8", "d10", "d12"]
+
+    async def test_buttons_use_ephemeral_custom_ids(self):
+        view = CortexView()
+
+        async def cb(interaction, die_size):
+            pass
+
+        add_die_buttons(view, cb)
+        for child in view.children:
+            assert child.custom_id.startswith("ephemeral:die:")
+
+    async def test_all_buttons_in_row_zero(self):
+        view = CortexView()
+
+        async def cb(interaction, die_size):
+            pass
+
+        add_die_buttons(view, cb)
+        for child in view.children:
+            assert child.row == 0
+
+
+class TestAddPlayerOptions:
+    """Test the add_player_options helper."""
+
+    async def test_buttons_when_lte_5_players(self):
+        view = CortexView()
+        players = [{"id": i, "name": f"Player{i}"} for i in range(1, 4)]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb)
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 3
+        assert buttons[0].label == "Player1"
+
+    async def test_select_when_gt_5_players(self):
+        view = CortexView()
+        players = [{"id": i, "name": f"Player{i}"} for i in range(1, 8)]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb)
+        selects = [c for c in view.children if isinstance(c, discord.ui.Select)]
+        assert len(selects) == 1
+        assert len(selects[0].options) == 7
+
+    async def test_extra_buttons_count_toward_threshold(self):
+        view = CortexView()
+        players = [{"id": i, "name": f"P{i}"} for i in range(1, 5)]
+        extras = [("Cena", "scene"), ("Extra", "extra")]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb, extra_buttons=extras)
+        # 4 players + 2 extras = 6 > 5, so should use select
+        selects = [c for c in view.children if isinstance(c, discord.ui.Select)]
+        assert len(selects) == 1
+
+    async def test_extra_buttons_as_buttons_when_under_threshold(self):
+        view = CortexView()
+        players = [{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]
+        extras = [("Cena", "scene")]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb, extra_buttons=extras)
+        # 2 + 1 = 3 <= 5, uses buttons
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 3
+        labels = [b.label for b in buttons]
+        assert "Alice" in labels
+        assert "Cena" in labels
+
+    async def test_exactly_5_uses_buttons(self):
+        view = CortexView()
+        players = [{"id": i, "name": f"P{i}"} for i in range(1, 6)]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb)
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 5
+
+
 class TestCortexView:
     async def test_timeout_is_none(self):
         view = CortexView()
@@ -245,6 +365,383 @@ class TestViewComposition:
         custom_ids = [item.custom_id for item in view.children]
         assert "cortex:scene_start:1" in custom_ids
         assert "cortex:roll_start:1" not in custom_ids
+
+
+class TestPoolBuilderView:
+    """Test PoolBuilderView state management."""
+
+    async def test_initial_state_empty_pool(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        assert view.pool == []
+        assert view.included_assets == set()
+        assert view.build_status_text() == "Pool vazio. Clique nos dados para montar o pool."
+
+    async def test_add_die_updates_pool(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        view.pool.append(8)
+        view.history.append(("die", 8))
+        assert view.pool == [8]
+        assert "1x d8" in view.build_status_text()
+
+    async def test_add_multiple_dice(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        view.pool.extend([8, 8, 6])
+        assert "2x d8" in view.build_status_text()
+        assert "1x d6" in view.build_status_text()
+
+    async def test_asset_toggle_on(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        assets = [{"id": 10, "name": "Sword", "die_size": 8}]
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=assets
+        )
+        # Simulate asset toggle on
+        view.included_assets.add(10)
+        view.pool.append(8)
+        view.history.append(("asset_on", 10))
+        assert 10 in view.included_assets
+        assert 8 in view.pool
+
+    async def test_asset_toggle_off(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        assets = [{"id": 10, "name": "Sword", "die_size": 8}]
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=assets
+        )
+        # Toggle on then off
+        view.included_assets.add(10)
+        view.pool.append(8)
+        view.included_assets.discard(10)
+        view.pool.remove(8)
+        assert 10 not in view.included_assets
+        assert 8 not in view.pool
+
+    async def test_remove_last_die(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        view.pool.extend([8, 6])
+        view.history.extend([("die", 8), ("die", 6)])
+
+        # Remove last (d6)
+        action_type, value = view.history.pop()
+        view.pool.remove(value)
+        assert view.pool == [8]
+
+    async def test_clear_resets_everything(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        assets = [{"id": 10, "name": "Sword", "die_size": 8}]
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=assets
+        )
+        view.pool.extend([8, 6])
+        view.included_assets.add(10)
+        view.history.extend([("die", 8), ("die", 6), ("asset_on", 10)])
+
+        view.pool.clear()
+        view.included_assets.clear()
+        view.history.clear()
+
+        assert view.pool == []
+        assert view.included_assets == set()
+        assert view.history == []
+        assert "Pool vazio" in view.build_status_text()
+
+    async def test_die_buttons_present(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        assert "+d4" in labels
+        assert "+d6" in labels
+        assert "+d8" in labels
+        assert "+d10" in labels
+        assert "+d12" in labels
+
+    async def test_asset_buttons_present(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        assets = [
+            {"id": 10, "name": "Sword", "die_size": 8},
+            {"id": 11, "name": "Shield", "die_size": 6},
+        ]
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=assets
+        )
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        assert "Sword d8" in labels
+        assert "Shield d6" in labels
+
+    async def test_no_asset_row_without_assets(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        # Should have die buttons + controls, no asset buttons
+        assert not any("Sword" in l or "Shield" in l for l in labels)
+
+    async def test_control_buttons_present(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        assert "Rolar" in labels
+        assert "Limpar" in labels
+        # "Remover ultimo" only shows when history is non-empty
+        assert "Remover ultimo" not in labels
+
+    async def test_remover_ultimo_appears_with_history(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        view.pool.append(8)
+        view.history.append(("die", 8))
+        view._build_components()
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        assert "Remover ultimo" in labels
+
+    async def test_roll_button_label_updates_with_pool_size(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        view = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        view.pool.extend([8, 6, 8])
+        view._build_components()
+        labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
+        assert "Rolar 3 dados" in labels
+
+    async def test_ephemeral_custom_ids_use_uuid(self):
+        from cortex_bot.views.rolling_views import PoolBuilderView
+
+        v1 = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        v2 = PoolBuilderView(
+            campaign_id=1, player_id=1, player_name="Alice", assets_data=[]
+        )
+        ids1 = {c.custom_id for c in v1.children}
+        ids2 = {c.custom_id for c in v2.children}
+        # No overlap between two separate view instances
+        assert ids1.isdisjoint(ids2)
+
+
+class TestStateViewButtonChains:
+    """Test that state views use buttons for die selection and player selection."""
+
+    async def test_stress_die_view_uses_buttons(self):
+        from cortex_bot.views.state_views import StressDieSelectView
+
+        view = StressDieSelectView(
+            campaign_id=1, actor_id="123", player_id=1, stress_type_id=1
+        )
+
+        async def on_die(interaction, die_size):
+            pass
+
+        add_die_buttons(view, on_die)
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 5
+        labels = [b.label for b in buttons]
+        assert "d4" in labels
+        assert "d12" in labels
+
+    async def test_asset_die_view_uses_buttons(self):
+        from cortex_bot.views.state_views import AssetDieSelectView
+
+        view = AssetDieSelectView(
+            campaign_id=1, actor_id="123", player_id=1, is_scene=False, name="Sword"
+        )
+
+        async def on_die(interaction, die_size):
+            pass
+
+        add_die_buttons(view, on_die)
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 5
+
+    async def test_comp_die_view_uses_buttons(self):
+        from cortex_bot.views.state_views import CompDieSelectView
+
+        view = CompDieSelectView(
+            campaign_id=1, actor_id="123", player_id=1, is_scene=False, name="Wounded"
+        )
+
+        async def on_die(interaction, die_size):
+            pass
+
+        add_die_buttons(view, on_die)
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 5
+
+    async def test_stress_player_view_buttons_with_few_players(self):
+        from cortex_bot.views.state_views import StressPlayerSelectView
+
+        view = StressPlayerSelectView(campaign_id=1, actor_id="123")
+        players = [{"id": i, "name": f"P{i}"} for i in range(1, 4)]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb)
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 3
+
+    async def test_stress_player_view_select_with_many_players(self):
+        from cortex_bot.views.state_views import StressPlayerSelectView
+
+        view = StressPlayerSelectView(campaign_id=1, actor_id="123")
+        players = [{"id": i, "name": f"P{i}"} for i in range(1, 8)]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb)
+        selects = [c for c in view.children if isinstance(c, discord.ui.Select)]
+        assert len(selects) == 1
+        assert len(selects[0].options) == 7
+
+    async def test_asset_owner_view_with_scene_extra_button(self):
+        from cortex_bot.views.state_views import AssetOwnerSelectView
+
+        view = AssetOwnerSelectView(
+            campaign_id=1, actor_id="123", actor={"is_gm": 1}
+        )
+        players = [{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb, extra_buttons=[("Asset de Cena", "scene")])
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        labels = [b.label for b in buttons]
+        assert "Alice" in labels
+        assert "Asset de Cena" in labels
+
+    async def test_comp_target_view_with_scene_extra_button(self):
+        from cortex_bot.views.state_views import CompTargetSelectView
+
+        view = CompTargetSelectView(
+            campaign_id=1, actor_id="123", actor={"is_gm": 1}
+        )
+        players = [{"id": 1, "name": "Alice"}]
+
+        async def cb(interaction, val):
+            pass
+
+        add_player_options(view, players, cb, extra_buttons=[("Complicacao de Cena", "scene")])
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        labels = [b.label for b in buttons]
+        assert "Alice" in labels
+        assert "Complicacao de Cena" in labels
+
+
+class TestMenuView:
+    """Test MenuView composition based on campaign state."""
+
+    async def test_menu_with_active_scene_no_doom(self):
+        from cortex_bot.cogs.menu import MenuView
+
+        view = MenuView(campaign_id=1, has_active_scene=True, doom_enabled=False)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:roll_start:1" in custom_ids
+        assert "cortex:stress_add_start:1" in custom_ids
+        assert "cortex:asset_add_start:1" in custom_ids
+        assert "cortex:comp_add_start:1" in custom_ids
+        assert "cortex:undo:1" in custom_ids
+        assert "cortex:campaign_info:1" in custom_ids
+        assert "cortex:doom_add_start:1" not in custom_ids
+
+    async def test_menu_with_active_scene_and_doom(self):
+        from cortex_bot.cogs.menu import MenuView
+
+        view = MenuView(campaign_id=1, has_active_scene=True, doom_enabled=True)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:roll_start:1" in custom_ids
+        assert "cortex:doom_add_start:1" in custom_ids
+
+    async def test_menu_without_active_scene(self):
+        from cortex_bot.cogs.menu import MenuView
+
+        view = MenuView(campaign_id=1, has_active_scene=False, doom_enabled=False)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:scene_start:1" in custom_ids
+        assert "cortex:campaign_info:1" in custom_ids
+        assert "cortex:roll_start:1" not in custom_ids
+
+    async def test_menu_without_active_scene_ignores_doom(self):
+        from cortex_bot.cogs.menu import MenuView
+
+        view = MenuView(campaign_id=1, has_active_scene=False, doom_enabled=True)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:doom_add_start:1" not in custom_ids
+        assert "cortex:scene_start:1" in custom_ids
+
+
+class TestDoomViewButtons:
+    """Test that doom views use buttons instead of selects."""
+
+    async def test_doom_die_select_view_has_no_selects(self):
+        from cortex_bot.views.doom_views import DoomDieSelectView
+
+        view = DoomDieSelectView(campaign_id=1, actor_id="123")
+
+        async def on_die(interaction, die_size):
+            pass
+
+        add_die_buttons(view, on_die)
+        selects = [c for c in view.children if isinstance(c, discord.ui.Select)]
+        assert len(selects) == 0
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 5
+
+    async def test_doom_remove_view_uses_buttons(self):
+        from cortex_bot.views.doom_views import DoomRemoveSelectView
+        import uuid as _uuid
+
+        view = DoomRemoveSelectView(campaign_id=1, actor_id="123")
+        # Simulate adding deduped buttons for d6 and d8
+        uid = _uuid.uuid4().hex[:8]
+        for size in [6, 8]:
+            btn = discord.ui.Button(
+                label=f"d{size}",
+                style=discord.ButtonStyle.primary,
+                custom_id=f"ephemeral:doom_remove:{size}:{uid}",
+            )
+            view.add_item(btn)
+
+        buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
+        assert len(buttons) == 2
+        labels = [b.label for b in buttons]
+        assert "d6" in labels
+        assert "d8" in labels
+        selects = [c for c in view.children if isinstance(c, discord.ui.Select)]
+        assert len(selects) == 0
 
 
 class TestDynamicItemRegistration:
