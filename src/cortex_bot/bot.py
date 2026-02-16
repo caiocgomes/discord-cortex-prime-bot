@@ -4,7 +4,7 @@ import logging
 import discord
 from discord.ext import commands
 
-from cortex_bot.config import DISCORD_TOKEN
+from cortex_bot.config import settings
 from cortex_bot.models.database import Database
 
 log = logging.getLogger("cortex_bot")
@@ -38,13 +38,14 @@ class CortexBot(commands.Bot):
 async def main() -> None:
     logging.basicConfig(level=logging.INFO)
 
-    if not DISCORD_TOKEN:
+    token = settings.token.get_secret_value()
+    if not token:
         raise RuntimeError("CORTEX_BOT_TOKEN environment variable not set")
 
     db = Database()
     bot = CortexBot(db)
     async with bot:
-        await bot.start(DISCORD_TOKEN)
+        await bot.start(token)
 
 
 if __name__ == "__main__":

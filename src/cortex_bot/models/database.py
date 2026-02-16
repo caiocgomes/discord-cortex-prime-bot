@@ -5,7 +5,7 @@ from pathlib import Path
 
 import aiosqlite
 
-from cortex_bot.config import DATABASE_PATH
+from cortex_bot.config import settings
 
 log = logging.getLogger(__name__)
 
@@ -136,7 +136,7 @@ CREATE INDEX IF NOT EXISTS idx_scenes_active ON scenes(campaign_id, is_active);
 
 class Database:
     def __init__(self, path: str | None = None) -> None:
-        self.path = path or DATABASE_PATH
+        self.path = path or settings.db
 
     async def initialize(self) -> None:
         async with aiosqlite.connect(self.path) as conn:

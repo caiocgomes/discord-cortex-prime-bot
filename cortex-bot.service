@@ -1,0 +1,17 @@
+[Unit]
+Description=Cortex Prime Discord Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=cortex-bot
+Group=cortex-bot
+WorkingDirectory=/opt/cortex-bot
+EnvironmentFile=/etc/cortex-bot/env
+ExecStart=/opt/cortex-bot/.venv/bin/python -m cortex_bot.bot
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
