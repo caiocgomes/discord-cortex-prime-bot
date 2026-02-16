@@ -1,0 +1,3228 @@
+
+=== PAGE 49 ===
+45
+CHAPTER 2 PRIME CHARACTERS
+CHAPTER BREAKDOWN
+This chapter explains how characters work, what a character 
+file includes, and how to create characters for your game. 
+Here’s how it breaks down.
+Defining Characters: Choosing which traits to use and
+which of those will be your prime sets.
+Creating Characters: Creating a character from concept
+to character file.
+Growing Characters: Representing character growth, 
+advancement, and experience.
+Characters are the beating heart of Cortex Prime, waiting to be brought to life by the players and to inhabit 
+your shared world. Like with everything else in this toolkit, the traits that define a character in your game 
+are part of a veritable buffet of options. Your choice of prime sets, like attributes or skills, and how and 
+where they interact with modular elements like SFX, assets, and die ratings is one of the most important 
+decisions you need to make before you even get a game off the ground.
+Once you’ve settled on how characters in your game are defined, your next decision is how each player 
+creates their own character for the game. Which method (or methods) you use can inform the way the 
+game plays out over time and what the first session of play looks like. Are characters made together at 
+the table? Are they based mostly on pre-built archetypes?
+Finally, you should also determine how characters grow and change over multiple sessions, if at all. Some 
+groups want to see a noticeable change in game traits, others just want to record what happened in the 
+session to use later on for flashbacks. There are several methods included in this chapter and you can 
+pick and choose parts of them as you and your group like. 
+CHAPTER 2
+PRIME
+CHARACTERS
+
+
+=== PAGE 50 ===
+CHAPTER 2 PRIME CHARACTERS
+46
+DEFINING 
+CHARACTERS
+It’s important that PCs are defined in a way that helps 
+players get into their fictional roles and also have a good 
+time at the table. If you’re keen on playing sessions that 
+feel like blockbuster action movies or thrilling adventure 
+stories, you want your characters defined by traits that 
+are action-adventure oriented. On the other hand, if you 
+want to play a more dramatic kind of game, then you want 
+your characters loaded up with traits representing rela­
+tionships with other characters and the values that drive 
+them toward challenging social situations.
+There’s no right or wrong way to define characters in 
+Cortex Prime. You should figure out what trait sets make 
+the most sense for the genre you want to play in, the style 
+of play you like, and the sorts of things you want to use to 
+tell characters apart from one another.
+RAFAEL SARMENTO
+
+
+=== PAGE 51 ===
+ TRACE 2.0
+AFFILIATIONS
+DISTINCTIONS
+TALENTS
+STRESS
+ROLES
+RESOURCES
+For best results, use pencil.
+NAME:
+HISTORY:
+DESCRIPTION:
+CHARACTER FILE
+Solo
+Partner
+Squad
+Forensics
+Investigation
+Legal
+Medicine
+Psychology
+Tactics
+Technology
+Distinction #1:
+Talent #1:
+Talent #4
+Distinction #2:
+Talent #2:
+Talent #5:
+Distinction #3:
+Talent #3:
+Talent #6:
+Afraid
+Angry
+Anxious
+Exhausted
+Injured
+GROWTH POOL
+Base ⑥⑥
+Hinder: Gain a 
+ when you switch out your distinction’s rating
+of ⑧ for a ④.
+HAMMERHEADS
+DISTINCTIONS
+RELATIONSHIPS
+TRAINING PACKAGES
+ATTRIBUTES
+NAME:
+CALL-SIGN:
+DESCRIPTION:
+CHARACTER FILE
+For best results, use pencil.
+High-Altitude Recovery
+Legal Specialist
+Hammerhead Pilot
+HAZMAT
+Crowd Control
+Emergency Medical
+Firefighting
+Logistics
+Network Specialist
+Mechanic
+Tactical Response
+Technical Analyst
+Urban Recovery
+Marine Recovery
+Physical
+STRESS
+Mental
+STRESS
+Social
+STRESS
+Your Life Before:
+Your Approach/Attitude:
+Your Quirk/Quality:
+Hinder: Gain a 
+ when you switch out your distinction’s 
+rating of ⑧ for a ④.
+Hinder: Gain a 
+ when you switch out your distinction’s 
+rating of ⑧ for a ④.
+Hinder: Gain a 
+ when you switch out your distinction’s 
+rating of ⑧ for a ④.
+Spend a 
+ to step up an attribute when you connect to your 
+old life.
+Spend a 
+ to reroll your dice when you align with your
+true nature.
+Spend a 
+ to double your relationship die when your 
+assistance embraces your quirk or quality.
+Add ⑥ to the crisis pool to double your attribute die when 
+you connect to your old life.
+Add ⑥ to the crisis pool to step up your training package 
+die when you align with your true nature.
+Add ⑥ to the crisis pool to step up a relationship die you 
+include in your pool when you embrace your quirk or quality.
+SFX
+SFX
+SFX
+saved my life
+is good for a laugh
+is dependable
+knows their stuff
+is a troublemaker
+owes me big
+is a liability
+XP
+EIDOLON ALPHA
+ROLES
+DISTINCTIONS
+XP
+ATTRIBUTES
+For best results, use pencil.
+NAME:
+HISTORY:
+DESCRIPTION:
+CHARACTER FILE
+Warrior
+Priest
+Scout
+Other
+Courage
+STRESS
+Grace
+STRESS
+Guile
+STRESS
+Reason
+STRESS
+Vigor
+STRESS
+Power 3
+Power 1
+Power 2
+ENDARCH DISTINCTION
+ROLE DISTINCTION
+Hinder: Gain a 
+ when you switch out this distinction’s ⑧ for a ④.
+FREEFORM DISTINCTION
+Hinder: Gain a 
+ when you switch out this distinction’s ⑧ for a ④.
+Hinder: Gain a 
+ when you switch out your endarch 
+distinction’s rating of ⑧ for a ④.
+Summon: Shut down this endarch distinction to summon your 
+Eidolon on your next turn.
+Highlight
+Highlight
+Highlight
+Highlight
+Highlight
+ENDARCH SFX
+SUMMONED EIDOLON
+BASE TRAIT
+HIGHLIGHT
+ATTRIBUTES
+POWERS
+SCALE
+or
+CHAPTER 2 PRIME CHARACTERS 47
+CHARACTER FILES
+A character file is the central record of essential game 
+details for your character. All players maintain their own 
+character file and the GM maintains (often abbreviated) 
+files for important GMCs. Character files serve double 
+duty. On the one hand, it’s where you account for all of the 
+die ratings, points, and important information about your 
+character. On the other hand, it’s kind of a wish list to the 
+GM. The choices players make when creating characters, 
+which ratings and dice they assign to their characters, 
+tell the GM what sort of character they want to play, and 
+in turn what sort of stories they’re hoping to be part of.
+A character file needs to include space for all of the infor­
+mation players need to record and maintain. There’s no 
+fixed character file for Cortex Prime because there’s no 
+fixed array of trait sets—every Cortex game is potentially 
+different in that way. Each of the settings in Prime Settings 
+includes a blank character file by way of example, and 
+every Cortex Prime setting published outside of this book 
+also includes a blank character file.
+PRIME SETS
+A prime set is one of at least two trait sets, in addition to 
+distinctions, that serve as the core of any Cortex Prime 
+character. There are no pre-defined prime sets, because 
+the trait sets you use in your game are up to you and the 
+decisions you make with your group. The examples in 
+this book use attributes and skills as prime sets, but you 
+might have attributes and roles, affiliations and values, 
+relationships and skills, and so forth.
+Prime sets provide the baseline dice for your dice pool on 
+any test or contest; they’re the dice you reach for when you 
+want to do something. Each trait in these sets should have 
+a die rating. If no die rating is noted, it typically defaults 
+to a ④.
+READYMADE PRIME SETS
+Here are some prime set choices based on popular genres 
+or tropes. Note that distinctions are always a prime set for 
+Cortex Prime games, even if they’re not fully loaded with 
+SFX or other features.
+EXPANDING PRIME SETS
+Prime sets can be expanded by adding SFX or trait state­
+ments to them. This is especially common with powers, 
+but it also makes attributes, roles, and relationships more 
+interesting. Do this if you want a specific prime set to 
+carry more story weight in the game through description 
+or deeper definition.
+Mary Rose decides that for her upcoming game 
+of super-science treasure hunters, she’ll use the 
+standard attribute triad of Physical, Mental,
+and Social. However, she’s asking her players
+to choose a statement for each of the three traits 
+that further clarifies what the die rating in each 
+attribute means. Physical ⑩ is one thing, but 
+Physical Raw, Unchecked Strength ⑩ is another.
+Keep in mind that if you add SFX or statements to a 
+prime set, you shouldn’t include them with more than 
+one other trait set in the game. For example, having your 
+relationships and values use trait statements is fine, but 
+don’t also include trait statements for powers and skills. 
+Similarly, if your powers and distinctions each have SFX, 
+your relationships and values shouldn’t. Two sets with 
+trait statements and two sets with SFX? Fine.
+GENRE
+DISTINCTIONS PLUS…
+Grim Fantasy
+Attributes + Skills
+Heist Action
+Attributes + Roles
+Paranormal Mystery
+Roles + Powers 
+Prime Time Drama
+Values + Relationships
+Romantic Fantasy
+Relationships + Skills
+Superheroes
+Affiliations + Powers
+
+
+=== PAGE 52 ===
+CHAPTER 2 PRIME CHARACTERS
+48
+AFFILIATIONS
+Affiliations reflect how well the PC performs in specific 
+contextual situations, like environments, societal struc­
+tures, or circumstances.
+WHEN TO USE AFFILIATIONS
+Affiliations are useful for games where teamwork or solo 
+activity is a key factor in how successful a PC’s tests or 
+contests are. They’re a good alternate for attributes if 
+you’re less concerned with a character’s internal capabil­
+ities and more interested in how they fit in with the world 
+around them. If your game is based on squad missions, 
+you might pair affiliations with roles. If you’re more inter­
+ested in comic book superheroes, pair affiliations with 
+power sets.
+An affiliation set for a mission-based or superhero-based 
+game looks like this:
+•	 Solo: The character’s ability to act when alone.
+•	 Buddy: The character’s ability to act when 
+partnered with another character.
+•	 Team: The character’s ability to act when part
+of a group of three or more characters.
+An affiliation set for a medieval setting based on 
+the three estates might look like this:
+•	 Clergy: The character’s ability to
+act in the context of religion and 
+religious institutions.
+•	 Nobility: The character’s ability to
+act in the presence of aristocracy
+and ruling powers.
+•	 Commons: The character’s ability to act 
+among peasants and the bourgeoisie.
+RATING AFFILIATIONS
+Because most affiliation sets only have three traits and 
+it’s assumed everyone is rated in each of them, the default 
+die rating is a ⑧. If one of them is a ⑩, another of them 
+has to be a ⑥.
+⑥: Disadvantaged. Your character tends to get
+in more trouble or functions at the lower end of
+their ability.
+⑧: Stable. Your character is comfortable in these 
+situations and performs neither at their best nor 
+their worst.
+⑩: Advantaged. Your character performs at their 
+best in these situations.
+
+
+=== PAGE 53 ===
+CHAPTER 2 PRIME CHARACTERS 49
+ATTRIBUTES
+Attributes represent raw ability, prowess, and effort.
+They rarely offer an insight into a character’s experience, 
+training, or external circumstances; they make 
+a good baseline for a prime set. If you’re not sure 
+where to start with prime sets in a Cortex Prime 
+game, start with attributes.
+WHEN TO USE ATTRIBUTES
+Any conceivable test or contest can fall into one of 
+three areas: Mental, Physical, and Social. You can 
+use these three as your attributes, or you can expand 
+beyond this and shape the tone and flavor of your 
+Cortex Prime game with a different list.
+A classic attribute set is as follows:
+•	 Agility: Speed, reaction time, and
+hand-eye coordination.
+•	 Alertness: Mental acuity, perception,
+and awareness of your surroundings.
+•	 Intelligence: Reason, logic, and ability
+to use what you’ve learned.
+•	 Strength: Physical power, muscle,
+and athleticism.
+•	 Vitality: Physical endurance, stamina, and 
+ability to survive in hostile surroundings.
+•	 Willpower: Mental resolve, concentration, 
+focus, and force of will.
+A swashbuckling attribute set might be:
+•	 Courage: Determination and steel
+in the face of danger.
+•	 Faith: Belief and conviction in
+higher powers or in others.
+•	 Guile: Capacity for wit, cunning,
+and subterfuge.
+•	 Reason: Raw logic, knowledge, and mental 
+comprehension.
+•	 Vigor: Physical fitness, strength, and endurance.
+RATING ATTRIBUTES
+Attributes usually have a rating from ⑥ to ⑩, although 
+there are exceptions. Everyone has a rating in each of 
+them, and they usually default to a ⑧. Higher rated attri­
+butes must be balanced out with lower rated ones.
+These ratings may scale differently depending on your 
+game, but in general they follow this basic scheme:
+④: Poor. Notably deficient in this area.
+⑥: Typical. An average degree of ability.
+⑧: Excellent. Above-average performance.
+⑩: Remarkable. Greatly above average.
+⑫: Incredible. Peak levels of ability.
+LISA HEIDHOFF
+
+
+=== PAGE 54 ===
+GIBY JOSEPH
+CHAPTER 2 PRIME CHARACTERS
+50
+DISTINCTIONS
+To inspire roleplaying, PCs have three distinctions that 
+paint a clearer picture of their background, personality, 
+and role in the story. Just by looking at your character’s 
+three distinctions you should have a clear impression of 
+who they are and how their past has shaped them.
+WHEN TO USE DISTINCTIONS
+For a given Cortex Prime game, distinctions might be 
+player-created (come up with three backgrounds, person­
+ality quirks, catch phrases, or job descriptions) or the GM 
+might prepare a big list of them to choose from.
+Distinctions are one of the main ways to earn ●
+Ⓟ. Every 
+Cortex Prime game should include distinctions as one 
+of the prime sets, which means your distinctions should 
+be varied and broad enough that one of them will apply 
+almost every time you put together a dice pool.
+Distinctions are frequently paired up with SFX—in fact, 
+all of them have the Hinder SFX: “Gain a ●
+Ⓟ when you 
+switch out this distinction’s ⑧ for a ④.” You can assign 
+more SFX to a distinction but leave them locked until 
+the player earns experience or growth (see “Growing 
+Characters” on page 82) or some other mechanic (see 
+“Rating Distinctions,” below).
+The most basic distinction looks something like this:
+The text in italics should be no more than one 
+or two sentences and give context for what this 
+distinction means or implies. The choice of when 
+to use a distinction is the player’s, but it must 
+make narrative sense to do so.
+RATING DISTINCTIONS
+Distinctions are always rated as ⑧ and as such 
+don’t necessarily need to have the die rating 
+included in text when referring to them. That 
+said, you might decide to apply a mod to this rule 
+and have distinctions rated from ④ to ⑫ like 
+other traits; if so, the average of the dice should 
+still be ⑧.
+While three distinctions is the default number for Cortex 
+Prime games, you’re under no obligation to limit your 
+characters to that many. Some Cortex Prime games allow 
+for the option of several distinctions, rated anywhere 
+from ④ to ⑫. In games like this, consider connecting 
+the unlocking of SFX to the die rating, rather than XP 
+spending: unlock one SFX at ④, another at ⑧, and the 
+last one at ⑫.
+HIGHLIGHTING OTHER TRAITS
+Distinctions can speed up character creation if they’re 
+pre-built to represent common character qualities, back­
+grounds, or vocations. Having the choice of distinction 
+also generate other traits on the character file is a great 
+option. With this mod, you can have each distinction 
+include two highlight traits, which are traits from a 
+specific trait set (like skills or powers) that the distinc­
+tion is most usefully linked to. If you use highlight traits, 
+choosing the distinction means those traits get stepped 
+up by one during character creation.
+Adam’s creating a Hero in Mary Rose’s treasure-
+hunting super-science game, which uses highlight 
+traits—skills, in this case. He chooses a distinction 
+called Soldier of Fortune, which has the highlight 
+skills of Shoot and Survive. This indicates that being 
+a soldier of fortune implies a tendency toward being 
+able to use firearms or bows, as well as live off the 
+land and track prey. When assigning dice to his skills, 
+Adam first steps up Shoot and Survive for free 
+before he applies any other steps.
+APOCALYPTIC CULT 
+SURVIVOR
+What you experienced in the cult 
+had a profound effect on your 
+life and what you do now,
+a decade later.
+	
+ɬ Hinder: Gain a ●
+Ⓟ when 
+you switch out this 
+distinction’s ⑧ for a ④.
+
+
+=== PAGE 55 ===
+VENUS BAMBISA
+POWERS
+A power is a special kind of trait that represents super­
+human ability or some extraordinary quality that most 
+normal humans or baseline characters don’t have. The 
+origin or source of powers varies from setting to setting—
+radiation, genetic mutation, sorcery, high-tech gadgets, 
+etc. Powers can also be used to represent gear or special 
+equipment, making it possible to mix heroes of varying 
+power origins together with the same system.
+WHEN TO USE POWERS
+Powers are central to superhero games but are also appro­
+priate for fantasy games or science fiction games with 
+aliens. They are incredibly flexible and—paired with SFX 
+and limits—they can represent almost any super-powered 
+character. On page 182 of Prime Lists there’s a big list of 
+powers that you can start with; renaming and tweaking 
+this list is one of the key parts of defining a game that uses 
+powers. For quick reference, here’s that power list without 
+the full description of what they do:
+•	 Attack: blasts, weapons
+•	 Durability: toughness, force fields
+•	 Elemental Control: air, earth, fire, gravity,
+ice, kinetic, light, weather, water, etc.
+•	 Intangibility: phasing through objects,
+going ethereal
+•	 Intelligence: inventiveness, knowledge,
+calculation speed
+•	 Invisibility: vs sight or vs other senses
+•	 Mimic: creating copies of other powers as assets
+•	 Movement: speed, flight, swing, swim, etc.
+•	 Psychic: mind control, telepathy, etc.
+•	 Reflexes: reaction time, coordination
+•	 Resistance: vs sonic, poison, psychic, fire, etc.
+•	 Senses: vision, hearing, touch, weird senses
+•	 Shapeshift: changing shape, copying
+other’s appearance
+•	 Size-Changing: grow, shrink
+•	 Sorcery: creating magical assets
+•	 Stamina: endurance, staying power
+•	 Strength: might and heavy lifting
+•	 Stretch: elongated limbs
+•	 Teleport: gateways, wormholes,
+shadow-steps, etc.
+•	 Transmutation: changing
+one thing into another
+
+
+=== PAGE 56 ===
+CHAPTER 2 PRIME CHARACTERS
+52
+RATING POWERS
+Powers are rated on a short scale from minor to godlike. If 
+all of the super-strong heroes in your comic book universe 
+tend to have Superhuman Strength ⑩ or Godlike Strength 
+⑫, you won’t see any fine-grained differences in their 
+ratings. That’s intentional! Power ratings are rungs of 
+broad ability and scope, as well as significance. The fine 
+grains are seen in choice of SFX and in all of the other 
+traits the superhero possesses, from their distinctions to 
+their skills, relationships, or values.
+A power has a die rating range between ⑥ and ⑫; the 
+rating usually defines how far-reaching, extensive, or 
+significant the power is. If you don’t have a power, you 
+don’t have a default die rating in it.
+⑥: Minor (or Influence). A power with this rating 
+allows the character to do something most people 
+can’t do, but it doesn’t have much effect on ordinary 
+tests and contests nor is it likely to be a character’s 
+signature power. Powers that permit levitation, 
+additional senses, or low-level enhancements are 
+often rated ⑥.
+⑧: Enhanced (or Control). A power with this 
+rating represents a level of performance beyond 
+ordinary human beings, and one that the character 
+likely uses most of the time. Flight at subsonic 
+speeds, strength or stamina at the absolute peak of 
+human capability, control over an element or energy 
+type in a local area, or attacks that are the equivalent 
+of automatic weapons are rated ⑧.
+⑩: Superhuman (or Mastery). A power with this 
+rating is rare and reflects someone with extensive 
+training or use in their power, an individual who 
+stands out among others with this power, or 
+performance at a truly superhuman level.
+⑫: Godlike (or Supremacy). Very few have a 
+power at this rating, as it represents a level of control 
+beyond superhuman or at the very peak of potential 
+with a specific ability. It’s reserved for truly godlike 
+characters and aliens, or superhuman individuals 
+whose signature power puts them among the top tier 
+of those who have it.
+Powers simply do what they say they do and can be used 
+as benchmarks for performance on an automatic success 
+(the GM can simply say that, because you have a power 
+at ⑧ or ⑩, you can just do that thing if the outcome isn’t 
+really in question). Powers aren’t usually a prime set; 
+instead they’re added to a dice pool when their use can 
+be justified as key to the test or contest’s success or failure.
+POWER SETS
+A power set is a mod that adds thematic strength to a 
+collection of power traits. Power sets usually come with 
+a limit that governs them, one or more helpful SFX, and a 
+single origin or source that explains why your character 
+has these powers. A power set might be something like 
+Russian Science Experiment or Alpha Centauri Heritage 
+or Dwarfish Traits. Each power set counts as a trait set 
+of its own.
+Using power sets helps in a number of ways: It allows you 
+to pre-build standardized “power sources” for your super­
+hero characters, ready for players to choose at character 
+creation. It links powers thematically with a limit that can 
+provide ●
+Ⓟ or other benefits. And it makes it possible to 
+group SFX together in flavorful ways that accentuate the 
+powers you’re using, rather than seeming disconnected.
+A power set must have at least one SFX, which helps flavor 
+the use of the powers. SFX are usually a way to double 
+specific power dice, step up dice, or roll an additional 
+⑥ when using the power trait. Power set SFX are always 
+linked to the power set’s theme. In some cases, using a 
+specific power trait in a specific way is sufficient activa­
+tion for the SFX (such as, “step up Superhuman Strength ⑩ 
+when you are submerged in water”) while others require 
+●
+Ⓟ spends.
+A power set must have at least one limit, specifying what 
+happens to the power set under certain conditions. Limits 
+always exist in the form of a ●
+Ⓟ gain in return for shutting 
+down the power set or, in some cases, specific power traits 
+included with the power set. A shut down power set no 
+longer works and its power traits can’t be included in dice 
+pools until a specific recovery condition is met.
+The intent behind limits is that players have the freedom 
+to choose when and where their powers stop working, 
+act uncontrollably, or trigger negative effects. It’s up to 
+you to decide if the GM has the power to actually trigger 
+limits, too—if that’s the case, the GM should always ask 
+the player if they want to activate the limit on their own in 
+order to get the benefit of activating it on their own terms.
+There’s no set number of powers in a power set (though 
+it’s usually at least two) and no cap on the die ratings of 
+the power traits (though most don’t have more than one 
+trait at ⑩ or ⑫). Individual power traits within a power 
+set might be stepped up as a result of growth, or entire 
+power sets might be acquired or swapped out during play, 
+depending on the game.
+Characters may have more than one power set. Each of 
+them counts as a different trait set; if you have two power 
+sets, you may include one power from each of the sets in 
+your dice pool at no cost.
+
+
+=== PAGE 57 ===
+JULIA METZGER
+53
+CHAPTER 2 PRIME CHARACTERS
+
+
+=== PAGE 58 ===
+VANESSA MORALES
+CHAPTER 2 PRIME CHARACTERS
+54
+ABILITIES
+Some games use a mod of power sets called abilities. An 
+ability is a rated trait, something that may be included 
+in a dice pool, that also has a number of SFX attached 
+to it. It works a lot like a power with its own SFX, rather 
+than a group of powers with linked SFX. In games that 
+use abilities, the intention is to simplify a power set while 
+keeping it separate from distinctions—as abilities don’t 
+automatically come with the “Gain a ●
+Ⓟ when you switch 
+out this distinction’s ⑧ for a ④” Hinder SFX—and to 
+make super powers or alien qualities a more dramatic, 
+narrative-shaping element rather than a simple dice pool 
+builder. Almost all ability SFX expand what ●
+Ⓟ can do in 
+the game. There is a list of abilities and SFX in Prime Lists 
+starting on page 194.
+When creating a character with an ability, choose one of 
+the SFX listed underneath the ability for free. Unlock the 
+other SFX just as you’d unlock SFX on distinctions.
+Abilities often include effect tags and descriptor tags. The 
+ability’s effect tag suggests ways that you might roll the 
+ability in a test or contest. There are six effect tags:
+Attack effects are pretty cut and dry. Dice from
+this effect hurt people; you use them in rolls to
+give others stress.
+Sensory effects allow the character to better
+perceive and understand their surroundings; you
+roll them in perception-based tests and contests.
+Movement effects help characters get from place 
+to place in unusual ways, so roll the dice in tests or 
+contests that depend on speed or travel.
+Control effects allow characters to manipulate 
+aspects of their surroundings. Use the ability die to 
+influence the outcome of a test or contest by altering 
+the environment.
+Defense effects protect the character from some 
+type of harm. Roll the die when it would help you 
+against attacks or rolls to inflict stress.
+Enhancement effects let the character change, shift, 
+boost, or alter their body or talents in some amazing 
+way. Roll this ability when your enhancements give you 
+an advantage.
+An ability’s descriptor tag establishes the details of how 
+and why an ability works or specifies something about 
+how the ability contributes to the story. They may end 
+up being used in place of the ability’s generic name in a 
+character file.
+Adam and Tina each create wizards that have Blast 
+as an ability; but while Adam’s Hero wizard has Blast 
+with descriptor tag Lightning Bolt, Tina’s Sage wizard 
+has Blast with descriptor tag Flame Strike. Both 
+abilities cause some serious hurt, of course, but 
+someone susceptible to electricity would be much 
+more affected by Adam’s Lightning Bolt than Tina’s 
+Flame Strike. On the other hand, someone that
+might be easily dehydrated or burned would hurt 
+more from Tina’s Flame Strike due to the
+heat-based descriptor. 
+An example ability might be something like this:
+Super Strength ⑩
+You have amazing strength beyond the abilities of most mortals 
+and can accomplish great feats of raw power and muscle.
+Effect: Enhancement
+•	 Spend a ●
+Ⓟ to perform a fantastic feat of strength.
+•	 Spend a ●
+Ⓟ to throw or knock another character 
+out of a scene.
+•	 Spend a ●
+Ⓟ to pound on the ground, creating a 
+shockwave sweep effect, knocking everyone in the 
+scene off their feet.
+•	 Spend a ●
+Ⓟ to break through a wall—even a brick 
+or stone wall—to grab a target or object on the 
+other side.
+•	 Spend a ●
+Ⓟ to wield a
+large inanimate object, like
+an automobile, as a weapon
+(and as a ⑧ asset.)
+
+
+=== PAGE 59 ===
+J YANG
+CHAPTER 2 PRIME CHARACTERS 55
+RELATIONSHIPS
+Relationships are traits that represent the intensity 
+and importance of a character’s connection to another 
+character or group of characters. This connection may 
+be positive or negative in nature, so long as it motivates 
+and empowers the character who has it. PCs start with 
+relationships with other PCs and some GMCs but can add 
+more during play. This makes relationships flexible and 
+not as limited as some other trait sets.
+WHEN TO USE RELATIONSHIPS
+A relationship contributes its die rating to a dice pool when 
+the test or contest involves the character the relationship 
+is linked to, or when that character has influence over or 
+inspires the PC. This makes them great to use in Cortex 
+Prime games that center around emotional drama, large 
+ensemble casts of characters, the dynamics of a prime 
+time drama, or interconnected groups. Use relationships 
+if the connections between characters are as significant 
+to the outcome of a story as any other character trait.
+RATING RELATIONSHIPS
+A relationship’s die rating indicates the intensity of the 
+character’s feelings or attachment to the subject of the 
+relationship. A high die rating doesn’t mean you neces­
+sarily like the subject more than a low one; in fact, your 
+⑩ relationship might be a really intense hatred, or a 
+particularly strong jealousy.
+④: I don’t feel anything for this person.
+⑥: This person matters, but so do a lot of people.
+⑧: I’m invested in this person.
+⑩: This person matters more than most.
+⑫: There’s nobody who matters more than they do.
+Relationships between PCs are assigned during char­
+acter creation. If characters are created using a simple 
+trait assignment process (such as picking distinctions, 
+assigning dice to attributes and skills, etc.), then one 
+relationship is assigned a ⑩, another a ⑧ and the rest 
+⑥. Characters created using another system such as 
+pathways begin as a ⑥ until stepped up as a result of 
+pathways choices.
+During play, ⑥ relationships can be created using a ●
+Ⓟ, 
+much like a temporary asset. The relationship lasts for 
+the duration of the session; when experience or growth is 
+resolved, it can either be dropped or made permanent. If 
+made permanent, the relationship remains as a ⑥ until 
+stepped up in later sessions.
+If a PC has no relationship to a character for any given test 
+or contest, they can either create one with a ●
+Ⓟ or assume 
+a ④ relationship default, just like any skill.
+REPUTATIONS
+A reputation is a relationship trait mod that may be used 
+alongside relationships or in place of them. Reputations 
+work like relationships do, except they represent a char­
+acter’s standing with a group, organization, company, 
+or culture. PCs might start with a cap on their reputa­
+tion die ratings because of inexperience or lack of fame 
+or popularity, and steadily increase their reputations as 
+play continues.
+Reputations change as often as relationships do. They can 
+also be affected by the actions of the character during play, 
+especially when paired with trait statements (see page 65 
+for more on trait statements). A player might challenge 
+their reputation statement to get a short-term benefit, only 
+to see their standing drop in the long term. Increasing 
+reputation might be a good use of milestone-based XP, 
+as players take concrete actions in support of a group or 
+organization in order to raise their status.
+
+
+=== PAGE 60 ===
+CHAPTER 2 PRIME CHARACTERS
+56
+RESOURCES
+There are four types of resource: extras, locations, orga­
+nizations, and props. Resources are usually represented 
+by two or more dice of the same size, which may be used 
+to aid a test or contest where that resource is helpful or 
+significant. Players choose how many resource dice to 
+roll—after they’re rolled, those dice are considered spent 
+and can be recovered later during downtime. Thus, if a 
+character has ⑥⑥⑥ in a resource and uses ⑥⑥ to aid 
+in a test, those two dice are spent, and one remains.
+WHEN TO USE RESOURCES
+Include resources when you want an asset that is exhaust­
+ible and renewable. You might use all four kinds of 
+resource or just one or two types.
+•	 Extra: An extra is a type of GMC, but when it’s 
+attached to a PC it represents a contact or ally
+the player may draw on for help.
+•	 Location: A location is a place in the game
+setting that may be used to set scenes or
+provide valuable resources.
+•	 Organization (or org): An organization is a 
+group of people who function under a specific 
+ideology, structure, or goal. An org resource may 
+open channels that the PC doesn’t have alone.
+•	 Prop: A prop is a tool, object, or item that helps a 
+PC broaden the scope of what they can achieve in 
+specific situations.
+A resource die is committed before the test or contest 
+dice pool is rolled but rolled separately. If more than 
+one resource die is spent to aid a test or contest, only 
+the highest rolling die is applied. This result is added to
+the total. 
+Resources are recovered at the beginning of every session, 
+or during any period of downtime (such as a week of 
+relaxation). You might also decide that resources can be 
+refreshed by spending ●
+Ⓟ on a one for one basis (one ●
+Ⓟ 
+for one resource die recovered).
+RATING RESOURCES
+Every resource has a name, a die rating (nearly always 
+in multiples of ⑥, but sometimes larger dice), and 
+(optionally) a tag or label to indicate what kind of field or 
+quality that resource belongs to, such as Politics, Crime, 
+Academics, or Military. If you use tags, each listed resource 
+should have two of them, and they should inform you of 
+the kind of test or contest that the resource might apply 
+to. A GM can invoke GMC resources by spending ●
+Ⓟ to 
+add to an opposition dice pool total.
+Adam’s playing his Hero in a TRACE 2.0 game 
+run by Mary Rose. His Hero has an org resource 
+called Cortez City Police Department, with the 
+tags Investigation and Law. When Adam’s Hero is 
+investigating a criminal case or researching a legal 
+matter, he could roll one or more resource dice 
+from this org alongside his dice pool for the test or 
+contest. On the other hand, if he’s trying to break 
+into a bank and there are cops out looking for the 
+Hero, Mary Rose might spend a ●
+Ⓟ to activate a 
+police chief GMC’s Cortez City Police Department 
+resource for the opposition’s dice pool total.
+RESOURCES VS SIGNATURE ASSETS
+VS HERO DICE
+A resource is similar in many ways to a signature asset in 
+that it’s a trait that represents an external person, object, 
+place, or thing that contributes to a character’s dice pool 
+total in a test or contest. It’s also similar to a hero die in 
+that it’s rolled separately and added to the total.
+Resource dice are more helpful than signature assets 
+because they always increase the potential total in a 
+test or contest, but the downside is that they’re spent, 
+whereas a signature asset can be used as many times as 
+is justifiable.
+Resource dice are more helpful than hero dice because 
+they don’t require ●
+Ⓟ to activate them, but the downside 
+is that they can only be used in specific circumstances, 
+represented by the resource’s tag. Hero dice can be used 
+on any test or contest, regardless of the nature of that test 
+or contest.
+
+
+=== PAGE 61 ===
+JOEL DUQUE
+SKILLS
+Skills represent natural talent, training, or experience. 
+If you can describe it as a verb, it’s a good candidate for 
+a skill. The default skill list for Cortex Prime consists
+of verbs.
+WHEN TO USE SKILLS
+Because it’s so easy to describe characters in roleplay­
+ing games by what they can do and how they’re trained, 
+skills are a natural trait set to include in a Cortex Prime 
+game. If you aren’t using skills, you’re probably either 
+focused more on dramatic flavor or you’ve got a similar 
+kind of trait such as roles or specialties, which work a lot 
+like skills.
+Although you can and should create a skill list for your 
+game based on the genre and sorts of activities you expect 
+to be common in the game’s world, the default list is 
+provided as a baseline.
+Note how they’re all framed as verbs, to make it easier to 
+imagine when you’d use them.
+•	 Craft: Crafting things, includes building, 
+assembling, or creating stuff.
+•	 Drive: Land and surface vehicles, including
+cars, boats, and trucks.
+•	 Fight: All kinds of close combat, including 
+weapons or fists.
+•	 Fix: Repairing things.
+•	 Fly: Piloting air vehicles or spacecraft.
+•	 Focus: Concentrating on something, to study
+or steel your will or whatever.
+•	 Influence: Making others do, think, act, or feel 
+the way you want them to.
+•	 Know: General knowledge and recall. Use 
+specialties to cover specific areas: Business, 
+Navigation, Religion, Animals, Fine Arts, etc.
+Know always includes a free specialty of the 
+player’s choice.
+•	 Labor: Carrying out tasks of manual labor, lifting, 
+pushing, digging, pulling, hauling.
+•	 Move: Running, jumping, climbing trees.
+•	 Notice: Spotting, sensing, or hearing things.
+•	 Operate: Using things like computers, gadgets, 
+and devices.
+•	 Perform: Acting, putting on a show.
+•	 Shoot: Guns, big rocket launchers, things that 
+you point and shoot.
+•	 Sneak: Sneaking around. Sneakily.
+•	 Survive: Surviving in the outdoors or wherever.
+•	 Throw: Throwing things.
+•	 Treat: Taking care of people. Heal, treatment of 
+injury, but also counseling.
+•	 Trick: Deceiving or conning somebody,
+sleight of hand, using spin.
+
+
+=== PAGE 62 ===
+CHAPTER 2 PRIME CHARACTERS
+58
+RATING SKILLS
+Every PC has at least a ④ in each skill, which represents 
+being untrained. Proficiency and expertise are repre­
+sented by ratings between ⑥ and ⑫. Most characters 
+start with 12 points (roughly equal to 2/3 the number of 
+skills in the skill list) to put into skills’ die ratings, with 
+one point stepping up a die by one step; some or all of 
+these points may be predetermined by character creation 
+options such as archetypes or pathways.
+④: Untrained. You have no idea what you’re doing, 
+and you’re likely to create trouble when you try it,
+but who knows.
+⑥: Competent. Sufficient training to get by.
+You’re comfortable doing this.
+⑧: Expert. Able to do this for a living.
+This is second nature to you.
+⑩: Master. One of the best in the field.
+Likely known to others who possess the skill.
+⑫: Grandmaster. One of the best in the
+world. Known even to those outside the field.
+ROLES
+Roles are skill-like trait mods that replace skills in some 
+expressions of Cortex Prime. A role acts like a skill group 
+or skill set, rather than a specific skill, and reflects a PC’s 
+experience, training, or proficiency in a broad thematic 
+area. Games that use roles should have no fewer than 
+three and no more than six roles.
+Roles are rated from ④ to ⑫, like other traits. Each PC 
+usually has at least one ⑩, one ⑧, and one ④, with the 
+rest at ⑥.
+•	 Three roles: ⑩, ⑧, and ④.
+•	 Four roles: ⑩, ⑧, ⑥, and ④.
+•	 Five roles: ⑩, ⑧, ⑥, ⑥, and ④.
+•	 Six roles: ⑩, ⑧, ⑥, ⑥, ⑥, and ④.
+A set of roles for a tactical action game might be:
+•	 Commander: Making strategic decisions; inspiring 
+the troops; talking with authority.
+•	 Engineer: Repairing and maintaining equipment; 
+jury-rigging gear; understanding science.
+•	 Medic: Applying first aid and medical treatment to 
+others; recognizing and diagnosing disease; using 
+medical equipment.
+•	 Sniper: Using ranged weapons; patiently waiting
+in a hidden location; being familiar with terrain.
+•	 Soldier: Close-combat fighting; use of military 
+weapons; making use of formation and defenses.
+A set of roles for a fantasy action game might be:
+•	 Warrior: Use of all weapons, armor, and combat 
+training; small unit tactics; maintaining gear.
+•	 Priest: Use of healing spells; channeling divine 
+energy; knowledge of religion.
+•	 Wizard: Use of elemental spells; using arcane 
+items; knowledge of magic and occult.
+•	 Rogue: Use of thief tools; sneaking, spying, and 
+scouting; opening barriers; knowledge of crime.
+•	 Bard: Use of social skills; performance-based 
+magic; knowledge of culture and legends.
+Roles are a good choice for a Cortex Prime game that 
+requires specialization without removing the ability to 
+use certain skills. This includes action-heavy or team-
+oriented games of all genres. When using roles, specialties 
+allow for narrow focus in a role’s area of proficiency.
+For a variation on roles, check out training packages in 
+Hammerheads on page 152.
+H. WON
+
+
+=== PAGE 63 ===
+CHAPTER 2 PRIME CHARACTERS 59
+THE SKILL PYRAMID
+One way to ensure that players aren’t quickly maxing out 
+their skills or other traits is to require them to adhere to 
+a skill pyramid. Using this mod, if you want a ⑩ rating 
+in a skill, you need at least two ⑧ rated skills and three 
+⑥ rated skills. If you want a ⑫, you need at least two 
+at ⑩, three at ⑧, and four at ⑥. In order to maintain 
+the skill pyramid, it may be necessary to step up a ④ 
+skill before subsequently stepping up other, larger dice 
+until the pyramid is restored. As skills have a baseline 
+of ④, there’s no required number of ④ rated skills in
+the pyramid.
+MULTI-LEVEL SPECIALTIES
+With this mod, specialties start at ⑥ but can be increased 
+to multiple dice or larger dice either during character 
+creation or through experience. They’re usually grouped 
+as follows:
+Trained: ⑥
+Expert: ⑧ or ⑥⑥
+Master: ⑩ or ⑧ ⑧ or ⑥⑥⑥
+Grandmaster: ⑫ or ⑩ ⑩
+or ⑧ ⑧ ⑧ or ⑥⑥⑥⑥
+NO SKILLS, JUST SPECIALTIES
+A Cortex Prime game that doesn’t use skills as a trait set 
+may choose to use specialties as a trait on their own. With 
+this mod, specialties are rated from ⑧ to ⑫ rather than 
+set at ⑥. Unlike skills, there’s no default specialty level for 
+all characters—if you don’t have a specialty, it’s assumed 
+the kinds of activity included in the specialty aren’t rele­
+vant or significant to your character.
+Without a Pickpocket specialty, Tina’s Sage can still 
+clandestinely pilfer a key; she just doesn't gain an 
+additional die for doing so beyond what she might 
+have from other traits.
+Without skills, it’s useful to create a master list of special­
+ties to choose from so that the thematic aspects of the 
+setting are maintained. For example, listing Computers, 
+Spacecraft, and Laser Weapons tells players that those 
+things are a part of the setting.
+SKILL AND SPECIALTY SPLIT
+With this mod, characters have general skills at a rating 
+of ④ (Untrained) or ⑥ (Competent), but to have higher 
+ratings they must specialize. Ratings of ⑧ (Expert),
+⑩ (Master), and ⑫ (Grandmaster) are only available for 
+specialties of that skill, and a character may have multiple 
+specialties at different die ratings.
+Mary Rose is running a game where the general skill 
+of Drive only goes as high as ⑥ and requires her 
+players to focus to a specialty such as Motorcycles
+to have a ⑧ or higher. Adam’s Hero might end up 
+with Drive ⑥ (Speed Boat ⑧, Motorcycles ⑩, 
+Drift Cars ⑩).
+Using this mod, you don’t add both the skill and the 
+specialty to the dice pool. Your character’s specialty 
+replaces the skill die rating, which you continue to use for 
+all tests and contests where your specialties don’t apply.
+This mod emulates the way skills work in Classic Cortex 
+games and is a good option if you want to encourage many 
+high-rated but narrow skills.
+Top rating only obtainable once 
+skills below line are achieved.
+Skills reach this quantity and
+at these die ratings in order
+to move a second level skill to
+the top rating.
+If this mod is used with highlight traits associated with 
+distinctions, or any other bonus skill steps, players must 
+“fill in” the pyramid with skills to account for any imbal­
+ances once the bonus steps from the highlight skills
+are resolved.
+SPECIALTIES
+A specialty is a narrow area of concentration or focus 
+within a skill. Using this mod, specialties confer a bonus 
+⑥ to any test or contest that falls into that narrow area 
+and involves the skill they’re attached to. There’s no 
+fixed list of specialties, which may include things like: 
+Grappling, Seduction, Rifles, Pickpocket.
+If you’re using specialties without using skills, specialties 
+replace skills but can’t be used by default. They start out 
+at a ⑥ and can increase to as much as ⑫, but if you don’t 
+have a specialty you don’t have a rating in it. See No Skills, 
+Just Specialties for more information.
+SPECIALTY: GUNS
+Skill
+Subject
+Bonus ⑥?
+Shoot 
+PC shoots a hunting rifle
+YES
+Shoot 
+PC shoots a bow & arrow
+NO
+Fix 
+PC fixes a cannon
+YES
+Fix 
+PC fixes a generator
+NO
+Know 
+PC tries to infer the
+caliber of a bullet
+YES
+Know 
+PC wants to figure out
+the artist of a painting
+NO
+
+
+=== PAGE 64 ===
+CHAPTER 2 PRIME CHARACTERS
+60
+VALUES
+Values represent how much specific things matter to the 
+PCs and, in turn, how much they influence the outcome 
+of tests and contests. They can embody such things as 
+societal mores, cultural principles, or elements of a code 
+of honor or behavior. As with relationships, a high rating 
+in a value doesn’t mean your character likes or stands out 
+as a paragon of that value, but rather that they are more 
+invested and concerned about that value than if they had 
+it at a lower die rating. A ⑩ in Truth could still mean the 
+character is a liar, but the concept of truth and falsehood 
+is one of the things that drives them the most to succeed.
+WHEN TO USE VALUES
+Values are useful in games where differences in physical 
+or mental attributes matter less to a character than what 
+they’re motivated by and what they believe. Prime time 
+drama, YA stories, political drama, and other personal­
+ity-driven and emotion-driven genres are all excellent 
+candidates for the values trait set.
+A dramatic set of values for a game about superheroes and 
+their friends might be:
+•	 Duty: Motivated by what one feels
+they must do for others.
+•	 Glory: Motivated by praise, acclaim,
+and renown.
+•	 Justice: Motivated by adherence to
+the law and what’s right.
+•	 Love: Motivated by affection and
+compassion for others.
+•	 Power: Motivated by control, wealth,
+and influence.
+•	 Truth: Motivated by facts, fidelity,
+and rejection of deceit.
+A dramatic set of values for a game about dark supernat­
+ural romance might be:
+•	 Envy: Driven by coveting the status, traits,
+or possessions of others.
+•	 Gluttony: Driven by appetite, excess,
+and consumption.
+•	 Greed: Driven by avarice and a desire to possess 
+more than what one has.
+•	 Lust: Driven by sexual or carnal desire.
+•	 Pride: Driven by hubris and placing one’s own 
+needs and successes before others.
+•	 Sloth: Driven by apathy and laziness.
+•	 Wrath: Driven by anger and vengeance.
+RATING VALUES
+Five to seven values is usually enough. Values have the 
+same range of dice as attributes: usually one at ⑩, one 
+or two at ⑧, one at ④, and the rest at ⑥. When a value 
+changes—either stepping up or stepping down by a die 
+size—one other value must change at the same time in 
+the opposite direction. Thus, the total number of die steps 
+in the dice assigned to values in any given Cortex Prime 
+game should always stay the same. Values can never be 
+lower than ④ or higher than ⑫.
+Tina’s playing her Sage in one of Mary Rose’s high 
+society drama games, where the values are the 
+seven deadly sins. During play, Tina steps up her 
+Gluttony ⑧ to ⑩ to show that her Sage has taken 
+a turn toward the intemperate. Because she stepped 
+one value up, she has to step another one down, so 
+she steps down her Wrath ⑥ to ④. No time to 
+worry about being angry, she thinks.
+The die rating of a value measures how much the value 
+matters to the character, as follows:
+④: “I’m really not into this.”
+⑥: “Sure, this matters. But so do a lot of things.”
+⑧: “This is definitely on my radar.”
+⑩: “I’m all over this thing.”
+⑫: “This is my heart and soul.”
+LENKA ŠIMEČKOVÁ
+
+
+=== PAGE 65 ===
+SFX AND OTHER TRICKS
+SFX is short for “special effect.” It’s usually some kind of 
+benefit or bonus that only occurs under certain condi­
+tions. In Cortex Prime, SFX are used as a way to introduce 
+exception-based rules for trait sets that possess them. 
+They’re a way to break the rules of the game, modify the 
+outcome of tests and contests, and add more texture to 
+the story.
+All distinctions get the “Gain a ●
+Ⓟ when you switch out 
+this distinction’s ⑧ for a ④” Hinder SFX for free, and 
+other trait sets may have one or more SFX to give context 
+to the traits in the set.
+WHEN TO USE SFX
+SFX are especially useful when you want to add depth and 
+variety to trait sets or assets. In general, you should decide 
+which trait set in your game features SFX, and use that 
+trait set as the key area of differences between otherwise 
+similar characters. In games with power sets or 
+pre-set distinctions, SFX provide ways to 
+further define and shape what those traits 
+actually represent.
+Mary Rose is planning a heroic fantasy game using 
+power sets. Two different power sets with the same 
+powers, such as Superhuman Strength ⑩ and 
+Superhuman Durability ⑩, might be distinguished 
+from one another with names like Ogre Blood and 
+Forged of Living Iron, but mechanically-speaking 
+they’re identical. Using SFX to give Ogre Blood 
+something like “Spend a ●
+Ⓟ to double an Ogre 
+Blood die when engaged in battle with fey” and 
+Forged of Living Iron something like “Earn a ●
+Ⓟ 
+and create a Sinking ⑧ complication when you 
+enter any large body of water or liquid” lets Mary 
+Rose sharpen these two power sets not just in the 
+narrative, but in the game as well.
+COUPLE OF KOOKS
+
+
+=== PAGE 66 ===
+CHAPTER 2 PRIME CHARACTERS
+62
+CREATING SFX
+One way to look at SFX is as a combination of a cost and 
+a benefit. The standard SFX for all distinctions has the 
+cost of “use the distinction as a ④” with the benefit of 
+“earn a ●
+Ⓟ.”
+Here’s a list of sample costs to choose from:
+•	 Spend a ●
+Ⓟ (very common)
+•	 Step down a beneficial die
+(usually an attribute, skill, or asset)
+•	 Step up a non-beneficial die
+(usually a complication)
+•	 Choose to do or introduce something
+risky/ill-advised/complicated
+(“When you walk right into a volatile
+situation and start causing trouble…”)
+•	 Create a ⑧ complication
+•	 Shut down a trait set
+(the trait set can’t be used until restored)
+Here are some useful benefits:
+•	 Earn a ●
+Ⓟ
+•	 Add a ⑥ to the dice pool
+•	 Step up a beneficial die (usually a
+specialty or asset, like “step up Pistols”)
+•	 Double a beneficial die (usually a
+specialty or asset, like “double Pistols”)
+•	 Step down a non-beneficial die
+(usually a complication)
+•	 Introduce a non-mechanical story detail 
+(“Hey, I think I know that guy’s brother...”)
+•	 Rename a complication
+(“I’m not Sickened, I’m Angry”)
+•	 Reroll a single die
+•	 Create a ⑧ asset for the rest of the scene
+Some SFX may switch out the cost for a different sort of 
+triggering condition. This can include rolling a heroic 
+success, or some roleplaying-based triggering effect.
+Mary Rose introduces some SFX in her
+TRACE 2.0 police procedural game. One lets a
+player double their character’s Move skill die
+when they’re in water. Another lets them introduce 
+an Obscure Legal Case ⑧ asset in any scene in 
+which they’re alone with a law enforcement officer.
+SFX often combine both a cost and a triggering condi­
+tion, especially if the benefit is broader or more potent 
+than usual. In some cases, an SFX may include a narrative 
+condition that explains when and how it’s used to give 
+context to the SFX.
+Tina’s Sage in a fantasy game has an SFX that lets
+her spend a ●
+Ⓟ to bank two hero dice of a given 
+value instead of one, so long as she is engaged in 
+battle with her hated foes—goblins. A powerful 
+feature (doubling a hero die) has a triggering 
+condition (fighting goblins) and a cost (spending
+the ●
+Ⓟ). It might be too narrow for some groups, 
+but for the setting Tina’s playing in (an epic war 
+against goblins) it could be a powerful advantage.
+STEPPING UP, STEPPING DOWN, 
+REROLLING, AND DOUBLING
+SFX use these dice tricks a lot, so here’s a summary of 
+what these actually mean.
+•	 Stepping up means increasing the size of a die by 
+one step, i.e. a ⑥ to a ⑧, or a ⑩ to a ⑫.
+•	 Stepping down means decreasing the size of a 
+die by one step, i.e. a ⑧ to a ⑥, or a ⑫ to a ⑩.
+•	 Rerolling means rolling a die or dice again, 
+ignoring the previous result and using the
+new result.
+•	 Doubling a die means adding another die of
+the same size to the dice pool before the dice
+are rolled.
+Aside from rerolling, most SFX tricks affect the unrolled 
+dice in the pool, although SFX that call for stepping up or 
+stepping down an effect die obviously take place after an 
+effect die is chosen.
+
+
+=== PAGE 67 ===
+CHAPTER 2 PRIME CHARACTERS 63
+LIMITS
+A limit is an SFX mod that introduces vulnerabilities that 
+provide ●
+Ⓟ. A hero is nothing without his flaws and weak­
+nesses; most superheroes have an Achilles’ heel, even if 
+it’s just that their powers wear them out!
+Most limits use the shutdown cost with the earn a ●
+Ⓟ 
+benefit. With a shutdown cost, there’s always a specific 
+situation in which the character can restore the shutdown 
+trait, even if it’s just “restore the trait at the beginning of 
+the next scene” or something along those lines.
+The GM can also activate limits in some circumstances 
+by spending a ●
+Ⓟ (or doom pool die, if that mod is used). 
+If the GM chooses to do this, they should first offer the 
+player the option to activate it themselves, in order to gain 
+the ●
+Ⓟ benefit. If the player decides not to, the option then 
+goes to the GM, and the ●
+Ⓟ the GM spends goes to the pile, 
+not to the player.
+Good SFX make it unambiguous when an effect takes 
+place, usually after a specific trigger and before the total 
+is declared or effect dice are put into play.
+THE LOGIC OF SFX
+Because SFX are used to break the rules or provide addi­
+tional ways to earn and spend ●
+Ⓟ, create assets, or alter 
+die rolls, they’re a mechanical way to represent special 
+abilities, tricks, or maneuvers your character has knowl­
+edge of. SFX are best when they allow you to differentiate 
+your character from other characters with otherwise 
+similar traits, and to flesh out trait sets that form the core 
+of a character.
+When you use SFX with distinctions, they let you further 
+define what a character with that distinction can do 
+beyond just getting the ⑧ in a dice pool. When you use 
+them with power sets or skills, they allow you to attach 
+fun and interesting tricks to those traits without having to 
+create narrow or specific traits. And they provide an ideal 
+means of tracking character growth, especially when 
+they’re used in pre-built character archetypes; distinc­
+tions can come with three or more SFX that the player 
+can unlock over time and experience.
+SIX STANDARD SFX
+SFX are the fiddliest part of Cortex Prime and take some 
+effort to get right for some players and GMs, so it might 
+help to look at the examples of Power SFX in the Prime 
+Lists chapter (page 191). In a pinch, however, use one of 
+the following SFX that game designer Leonard Balsera 
+uses when creating new distinctions.
+The Exchange: Step up or double one useful die for the
+scene but step down one other die in exchange until you
+do a recovery action.
+The Price: Step up or double one useful die for the scene
+or take a ⑧ asset for the scene (choose one benefit here,
+not both), but also take a ⑧ complication.
+The Swap: Spend a ●
+Ⓟ to use a different die than would 
+normally be appropriate for a given action, based on
+your distinction.
+The Edit: Spend a ●
+Ⓟ to declare a beneficial thing to be true 
+in the fiction, based on your distinction.
+The Folly: Earn a ●
+Ⓟ when you choose to do something 
+detrimental related to the distinction.
+The Shutdown: Earn a ●
+Ⓟ when you declare that, due to 
+appropriate circumstances based on your distinction,
+you have lost access to one or more of your attributes/skills/
+roles/etc. for the scene and cannot use it for any actions.
+ZOE BADINI
+
+
+=== PAGE 68 ===
+CHAPTER 2 PRIME CHARACTERS
+64
+SIGNATURE ASSETS
+Some characters have iconic weapons, gear, or pet robots 
+that contribute to their dice pools in tests and contests. 
+These are signature assets that the character doesn’t have 
+to create during play as they “belong” to the character and 
+act much like any other trait.
+Signature assets work like regular temporary assets—they 
+give players an extra die to include in their dice pools 
+when they’re able to justify their use. Unlike skills or attri­
+butes, they’re about things a PC has or people they know, 
+not about qualities innate to them. Not every PC has a 
+signature asset, but they’re a great way to further reveal 
+a PC’s personality as a means of representing heirlooms 
+or unique weapons or special relationships.
+Signature assets begin with a ⑥ die rating but can be 
+stepped up during play. They aren’t tied to a distinction, 
+attribute, or skill, but may complement any one of those 
+traits. Some examples of signature assets include:
+•	 Organizational Ties: San Narciso County 
+Sheriff's Department, Dio Sanchez Gang,
+CTRL-ALT-DEL Hacker Collective,
+Aurora Hunting Club, Free State Bikers
+•	 Vehicles: My Favorite Bike, M1 Abrams Tank, 
+Trans-Dimensional Scooter, Souped-Up
+Station Wagon
+•	 Weapons: Magnum Research Desert Eagle, My 
+Grandmother's Sword, Trusty Pew Pew Laser 
+Blaster, Louisville Slugger, A Knife (!!!)
+•	 Gear: All-Season Thermal Jacket, Talon TSA-
+Ready Multitool, Handheld Tablet, Bundle of 
+Baling Wire
+Signature assets can be left as they are—simply a die 
+rating on a character file—or the player can unlock an 
+SFX for the asset much like the SFX on distinctions or 
+power sets. There’s no default SFX for a signature asset, 
+and no two signature assets are the same, so typically 
+there needs to be a conversation with the GM about 
+appropriate options before one can be added. Typical SFX 
+for signature assets allow the player to spend a ●
+Ⓟ to step 
+up a skill when the signature asset is used with the skill, 
+especially when the signature asset is itself a tool of some 
+kind. A good rule of thumb is to attach a single SFX to a 
+signature asset; if you feel like adding more, there should 
+be a limit of three.
+Signature assets can be temporarily knocked out, elim­
+inated, rendered unusable, or damaged during play by 
+actions taken by the group or a GMC; but as they’re a 
+featured element of the PC’s file, the player can recover 
+
+
+=== PAGE 69 ===
+CHAPTER 2 PRIME CHARACTERS 65
+the signature asset between sessions or by spending a ●
+Ⓟ 
+at the beginning of the next scene (with some narrative 
+justification for getting it back/fixed).
+Signature assets cannot be shared between PCs; if 
+someone “borrows” a signature asset from a charac­
+ter (picking up the other character’s heirloom sword or 
+driving their custom sports car), the borrower must spend 
+a ●
+Ⓟ to create an asset as normal to get any benefit from 
+the asset borrowed, and the asset is rated at ⑥ like any 
+other plot point created asset.
+TRAIT STATEMENTS
+A statement is a sentence or phrase that clarifies or refines 
+the trait that it’s attached to. One or more trait sets may 
+be assigned trait statements. They’re especially useful 
+when assigned to values, relationships, or attributes. 
+They signify which trait sets you want at the center of your 
+game’s dramatic tension.
+A statement might be something like I’m not afraid of 
+danger or Everyone deserves respect (for values), He’s my 
+brother from another mother or Why doesn’t she under­
+stand me? (for relationships), and Tough as nails or Genius 
+runs in the family (for attributes).
+CHALLENGING STATEMENTS
+Trait statements are narratively similar to distinctions, 
+but a statement is a truth about your character that you 
+may challenge and then grow from. When you challenge 
+a trait with a statement attached to it, you act contrary 
+to the statement and your trait die is tripled for that roll.
+Once a trait statement is challenged, the trait it’s attached 
+to steps down by one. At the end of the session or when­
+ever character growth is resolved, that statement must 
+either be rewritten to reflect a new belief or truth and the 
+die returns to its original rating, or the statement remains 
+the same and the die remains stepped down. If the die 
+rating is stepped down, it’s likely that another trait must 
+be stepped up to balance it out, especially if the trait set 
+has a fixed number of assigned steps.
+When she does something for someone else at the 
+cost of her own safety, Tina’s Sage challenges the 
+statement Nobody matters but me! to her Social ⑧ 
+attribute. Tina triples her Sage’s Social to ⑧ ⑧ ⑧ 
+for the roll, which steps it down to ⑥ for the rest 
+of the session. At session’s end, Tina has to decide 
+whether to restore her Social ⑥ up to ⑧, in which 
+case she needs to rewrite her statement; or to keep 
+Social at ⑥ with the statement as it is and step her 
+Physical or Mental up by one.
+KEKAI KOTAKI
+
+
+=== PAGE 70 ===
+CHAPTER 2 PRIME CHARACTERS
+66
+STATEMENTS AS
+DISTINCTION ALTERNATES
+As a mod, you could have a Cortex Prime game where trait 
+statements replace distinctions entirely. It’s important 
+that there still be at least three prime sets so that dice 
+pools remain centered around a set of three dice; ensure 
+there’s another prime set or sufficient other ways to add 
+dice (such as through talents or specialties) so that it 
+remains consistent.
+TALENTS
+A talent is a special trait that doesn’t have a die rating and 
+consists of some descriptive or narrative text with an SFX, 
+separate from a distinction. Talents are often associated 
+with another trait group, such as skills or the roles mod. 
+They can also be grouped together based on things such 
+as professions, cultures, past experiences, membership 
+in a group, faction, or organization, or just thrown into a 
+single generic list. In each case, making it easy and quick 
+to skim the lists of talents and identify which ones might 
+be appropriate during character creation is a good idea.
+Talents are helpful in a game where characters from 
+similar origins need to be distinct from one another, or 
+where the other traits are less numerous or are broad in 
+scope. Because talents don’t have a die rating, they’re 
+frequently used to boost or accent another trait or series 
+of traits that do have die ratings. A talent like Elite Sniper 
+might step up both a Shoot skill and a Notice skill under 
+specific circumstances.
+Most characters in games using talents start with two and 
+can add more as part of character growth or advancement.
+The following is the standard format for talents.
+TALENT NAME
+Descriptive text (optional)
+Activation: (cost or triggering event)
+Effect: (benefit)
+Here are three sample talents to show off the breadth of 
+options available.
+UNRELENTING FORCE
+When you steel yourself for trouble, you are a force
+of nature.
+Activation: The GM gets a heroic success for a GMC 
+your PC is engaged in a contest with.
+Effect: You ignore the GM’s heroic success if the roll 
+beats yours by 5-9, such as the GMC’s effect die being 
+stepped up, or being taken out automatically. A roll of 10 
+or higher is a normal heroic success.
+YOUR SHOELACE IS UNTIED
+Your deceptive wit and fast-talk helps you pull the wool over 
+your opponent’s eyes.
+Activation: You’re engaging in a contest with a major 
+GMC or another PC, such as a fight or a battle of wits. 
+You spend a ●
+Ⓟ.
+Effect: For each die the GM keeps in the total after the 
+first—including those they keep as a result of spending 
+●
+Ⓟ—you get a ⑧ asset. You can use this asset in your 
+next roll for this contest. The GM may choose not to 
+keep a second die when determining their total.
+EXAMPLE 1
+EXAMPLE 2 
+EXAMPLE 3 
+HOPELESS ROMANTIC
+Everywhere you go, you run into old flames and people 
+you’ve romanced before. This can be helpful, but it can also 
+be hurtful.
+Activation: Introduce or identify a past fling, no more 
+than one per scene.
+Effect: You get a ⑧ asset linked to that character, but 
+the GM gets a ⑧ complication to use on you or one of 
+your allies.
+GRACE P. FONG
+
+
+=== PAGE 71 ===
+CHAPTER 2 PRIME CHARACTERS 67
+CREATING 
+CHARACTERS
+To create a player character for the Cortex Prime RPG, 
+players have three options:
+•	 Use an archetype to quickly
+create an original character.
+•	 Build a PC from scratch using
+the rules provided.
+•	 Use pathways to collaborate on
+settings and characters with your group.
+You might also introduce some sort of hybrid of the 
+three options—have every player pick two back­
+grounds (archetypes of a sort), apply the dice and 
+traits from those, then “level up” each character 
+through a short three-step pathways process to 
+generate some backstory, then add a handful of steps 
+(the scratch-built method). It’s up to you.
+Plan to devote most, if not all, of the first game session 
+to creating characters and, in some cases, the setting 
+the characters exist in. If you’re using pathways, that’s 
+a big chunk of the process.
+FORMING CONNECTIONS
+Even if the game you’re creating focuses mostly on action 
+adventure, connections between the PCs and the world 
+you’ve created are crucial.
+CONNECTING CHARACTERS TOGETHER
+When deciding your method of creating characters, 
+remember how important it is for the PCs to share some 
+sort of bond, relationship, or background. A Cortex Prime 
+game that starts out in the first session with four to six 
+completely random characters who happen to be in the 
+same place at the same time does stretch credibility. But 
+even in that case, there’s no reason you can’t ask each 
+player what their PC thinks of the other PCs, based on 
+their snap first impression.
+Connecting the PCs might only be flavor, but it’s import­
+ant. Even if the PCs are supposed to be rivals or enemies, 
+they share something that motivates them to get in each 
+other’s business. When in doubt, make them all part of 
+the same organization, family, or local culture at a specific 
+starting event. That often provides players with plenty of 
+ideas to link these different backstories together before 
+play starts.
+CONNECTING CHARACTERS
+TO THE SETTING
+Once you’ve established that the characters share some­
+thing in common with other characters, even if it’s not 
+the same backstory for all of them, you can move on to 
+the next most important part: the setting.
+Characters live in and inhabit their worlds. They belong 
+in them and they’ve usually grown up in them, so it’s a 
+fair guess to say that each PC has a connection to the
+setting’s GMCs, locations, and timeline. You can achieve 
+this through the character creation process with discus­
+sion around the table, or more formally through a 
+pathways method. Cortex Prime games are much stronger 
+when players have input into not only their characters, 
+but the setting’s specifics as well. If you’re the player who 
+named the local bar the Skunk Pangolin, then every time 
+the bar is introduced into a session as a location for a 
+scene, you feel a sense of ownership.
+CREATING THE ENGINEER
+We use Amanda’s Engineer, one of Cortex Prime’s iconic 
+characters, in our examples for creating characters. Follow 
+along in the examples to see how Amanda uses the different 
+methods to produce the same character file. The character 
+file for the Engineer appears on page 81.
+VIKO MENEZES
+
+
+=== PAGE 72 ===
+CHAPTER 2 PRIME CHARACTERS
+68
+Can’t Stay Long, Too Much To Do ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this 
+distinction’s ⑧ for a ④.
+	
+ɪ Full Speed Ahead: Spend a ●
+Ⓟ to reroll your
+dice when time is of the essence.
+	
+ɬ High Demand: Gain a ●
+Ⓟ when you leave an 
+important scene to help someone rather than
+help the people you’re with.
+Highlight skills: Drive, Move
+ARCHETYPES
+An archetype is a partially created character you can use 
+to generate your own character quickly. Archetypes have 
+background information and suggestions for how to play 
+the character, as well as three pre-assigned distinctions, 
+pre-assigned attributes or other traits, and a choice of 
+two signature assets. Each distinction has the base ④/⑧ 
+Hinder SFX already unlocked, and more SFX that may be 
+unlocked initially or later in play. The distinctions also list 
+highlight skills that are appropriate to that distinction 
+and, by implication, that archetype.
+HIGHLIGHT SKILLS
+If your Cortex Prime game doesn’t use skills, your arche­
+types will look a bit different. You might highlight another 
+trait, such as roles, or use other methods to step up traits. 
+Each distinction in an archetype lists two highlight skills 
+that are appropriate for that distinction. If you’re making 
+distinctions from scratch, these skills should be chosen 
+by the player. If the distinctions are pre-built by the GM 
+or included in a specific Spotlight or world setting, they 
+should already have their highlight skills provided.
+Highlight skills start out at ⑥ rather than ④. If a high­
+light skill appears on two distinctions, it starts out as ⑧; 
+if it’s on all three distinctions, it starts out as ⑩.
+To build a character using an archetype, players:
+Select one of the archetypes provided.
+Choose two distinction SFX to unlock from
+the three distinctions provided.
+Select one of the two listed signature assets
+for each character.
+The archetype uses the skill list common to all characters 
+in the game and may include bonus specialties.
+EXAMPLE ARCHETYPE: THE ENGINEER
+Amanda’s Engineer character is an archetype all by 
+herself, so here’s how this might look if she were repre­
+sented in a Cortex Prime game that uses attributes, skills, 
+distinctions, and signature assets.
+Distinctions: (unlock two more SFX)
+The World Is My Workshop ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this 
+distinction’s ⑧ for a ④.
+	
+ɬ Kitbash: Spend a ●
+Ⓟ to gain a ⑧ asset for the rest 
+of the scene.
+	
+ɪ Out of Stock: Gain a ●
+Ⓟ when you declare that you 
+don’t have the tools you need to make a repair or 
+build something that others are asking you to repair 
+or build.
+Highlight skills: Fix, Operate
+1
+2
+3
+Boundless Curiosity ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this 
+distinction’s ⑧ for a ④.
+	
+ɪ Intriguing: Spend a ●
+Ⓟ to step up or double
+your Mental die when you’re making inquiries
+or investigating something new.
+	
+ɪ Killed the Cat: Gain a ●
+Ⓟ when you poke your
+nose into something secret and are discovered.
+Highlight skills: Know, Notice
+DISTINCTION 1
+DISTINCTION 2
+DISTINCTION 3
+Note: Cortex Prime games with trait mods may use 
+slightly different archetypes.
+Any skill listed as a highlight skill on the archetype’s 
+distinctions starts as a ⑥, not a ④. Once these are 
+adjusted, each player has nine additional points to spend 
+on stepping up skills. Each point may be spent to step a 
+skill die up one step; the GM may set a cap on starting skill 
+dice (⑩ is common). In addition to stepping up skills, 
+players can assign three specialties to a skill rated ⑥ or 
+higher, as well as an additional specialty if Know is rated 
+at least ⑥.
+Physical
+Mental
+Social
+THE ENGINEER
+Ever since you were young,
+you knew your path was
+creative. You build, you repair, 
+you invent, you innovate.
+It’s what gives purpose and 
+meaning to your life.
+YANGTIAN LI
+
+
+=== PAGE 73 ===
+Skills: Step up each highlight skill listed in your distinc­
+tions. Then distribute nine more points to the remaining 
+skill list. Maximum skill die rating is ⑩. Add the follow­
+ing Know specialties: Mechanical Engineering ⑥, 
+Electrical Engineering ⑥. Add the following Fix specialty: 
+Mechanical ⑥. Choose an additional Know specialty if 
+the skill is rated at ⑥ or higher.
+Signature Assets: Choose either Engineer’s Goggles ⑧ 
+or Crew of Builders ⑧.
+•	 SELECT DISTINCTIONS
+•	 Select the SFX Kitbash from
+The World is My Workshop.
+•	 Select the SFX High Demand from
+Can’t Stay Long, Too Much To Do.
+•	 ADD SPECIALTIES TO YOUR SKILLS
+•	 Add the specialties Mechanical Engineering ⑥ 
+and Electrical Engineering ⑥ to your
+Know ⑧ skill (you can use a bonus ⑥ if 
+you use Know on anything that requires 
+mechanical or electrical engineering 
+know-how).
+•	 Add the specialty Mechanical ⑥ to the skill
+Fix ⑧ (you can use a bonus ⑥ if you use
+Fix on anything mechanical).
+•	 Choose additional specialty Physics ⑥ for 
+your Know ⑧ skill.
+•	 SELECT SIGNATURE ASSET
+•	 Choose signature asset,
+Engineer’s Goggles ⑧.
+THE ENGINEER
+Ever since you were young, you knew 
+your path was creative. You build, you 
+repair, you invent, you innovate.
+It’s what gives purpose and meaning
+to your life.
+1
+2
+3
+YOUR SKILLS AT A GLANCE
+Craft ⑧
+Drive ⑥
+Fight ④
+Fix ⑧
+(Mechanical ⑥)
+Fly ④
+Focus ⑥
+Influence ④
+Know ⑧
+(Electrical Engineering ⑥, 
+Mechanical Engineering ⑥, 
+Physics ⑥)
+Labor ④
+Move ⑥
+Notice ⑥
+Operate ⑧
+Perform ④
+Shoot ⑥
+Sneak ⑥
+Survive ⑥
+Throw ④
+Treat ④
+Trick ④
+SKILL
+HIGHLIGHT?
+POINTS
+FINAL RATING
+Craft
+---
+b b
+Drive
+YES
+---
+Fight
+---
+---
+Fix
+YES
+b
+Fly
+---
+---
+Focus
+---
+b
+Influence
+---
+---
+Know
+YES
+---
+Labor
+---
+---
+Move
+YES
+b
+Notice
+YES
+---
+Operate
+YES
+b
+Perform
+---
+---
+Shoot
+---
+b
+Sneak
+---
+b
+Survive
+---
+b
+Throw
+---
+---
+Treat
+---
+---
+Trick
+---
+---
+
+
+=== PAGE 74 ===
+CHAPTER 2 PRIME CHARACTERS
+70
+SCRATCH-BUILT
+Some players prefer to build their own characters rather 
+than play an archetype. To scratch-build characters, 
+players should do the following.
+STAGE 1: ADJUST ATTRIBUTES
+All characters start with a ⑧ in each attribute: Mental, 
+Physical, and Social. You may step down an attribute 
+(from ⑧ to ⑥) to step up a different attribute from ⑧ to 
+⑩. No starting characters have an attribute lower than a 
+⑥ or higher than a ⑩ at character creation.
+STAGE 2: CHOOSE DISTINCTIONS
+Choose three distinctions to add to your character file, 
+noting the highlight skills associated with each distinc­
+tion. Distinctions can represent roles, relationships, 
+quirks, personality types, character histories, or any 
+other descriptor that helps to flesh out who the PC is in 
+the game.
+STAGE 3: CHOOSE DISTINCTION SFX
+Once you’ve selected distinctions, select your distinction 
+SFX. The first three SFX are preselected for players—
+they’re all Hinder: Gain a ●
+Ⓟ when you switch out this 
+distinction’s ⑧ for a ④. Players should choose two addi­
+tional SFX. If players design custom distinctions, the 
+GM may need to develop new SFX or use SFX from other 
+distinctions for the custom distinction. When in doubt, 
+pick two of the six standard SFX (page 63).
+STAGE 4: STEP UP SKILLS
+As with the archetypes, custom characters are given 
+nine skill points to step up skills. Before spending those, 
+however, step up your skill dice with highlight skills 
+listed in your distinctions. If a skill is listed more than 
+once across your distinctions, you should step it up one 
+for each time it appears (up to a ⑩ skill). Once you’ve 
+stepped up those highlight skills, step up skills using skill 
+points. Each point steps a skill up by one step.
+STAGE 5: CHOOSE SPECIALTIES
+AND SIGNATURE ASSETS
+Players have five points to assign to specialties and
+signature assets at character creation. Each point may 
+be used to:
+•	 Add a specialty to a skill rated at a ⑥ or higher.
+•	 Create a signature asset at a ⑥.
+•	 Step up a ⑥ signature asset to a ⑧.
+With your five points you might:
+•	 Assign 5 specialties and create no signature assets.
+•	 Assign 4 specialties and create one
+⑥ signature asset.
+•	 Assign 3 specialties and create one
+⑧ signature asset.
+•	 Assign 2 specialties and create three
+⑥ signature assets.
+•	 Assign 1 specialty and create one
+⑧ and two ⑥ signature assets.
+STAGE 6: BIOGRAPHICAL INFORMATION
+Last, but certainly not least, add a few details:
+Your Name: Pick a favorite name or use an
+online name generator.
+Background: Where were you born? Where did
+you grow up? What is your family like?
+What you look like: Got a telltale birthmark? 
+Blonde hair? Tall and stout? Short and thin?
+To further flesh out your character background, look at 
+the distinctions you’ve chosen and think about:
+Where you’ve been the last few years.
+Where you’re going in the near future.
+What you’re doing to keep your head above water.
+How you feel about the politics of the world.
+EXAMPLE SCRATCH-BUILT CHARACTER: 
+THE ENGINEER
+Here’s how Amanda puts together her iconic Engineer 
+character using the scratch-built method.
+Stage One: Amanda assigns a ⑧ to all three attributes. 
+She briefly considers stepping up Mental to ⑩ and step­
+ping down Social to ⑥, but she’s not really interested in 
+the awkward yet brilliant stereotype of an engineer. Her 
+character will be well-rounded.
+Stage Two: Amanda then chooses three distinctions
+(The World Is My Workshop ⑧, Boundless Curiosity ⑧, 
+and Can’t Stay Long, Too Much To Do ⑧) and she notes 
+that the highlight skills listed with these are Drive, Fix, 
+Know, Move, Notice, and Operate.
+OPTIONS
+Physical
+Mental
+Social
+Base
+Example 1
+Example 2
+Note: If you’re not using attributes and skills, keep 
+reading to see how various character mods affect 
+this checklist.
+
+
+=== PAGE 75 ===
+Stage Three: Amanda unlocks two SFX out of the remaining 
+six options after all three Hinder SFX are unlocked for free. 
+She decides on Kitbash (from The World is My Workshop) 
+and High Demand (from Can’t Stay Long, Too Much
+To Do).
+Stage Four: First Amanda steps up her highlight skills one 
+step from the base of ④, which gives her Drive ⑥, Fix ⑥, 
+Know ⑥, Move ⑥, Notice ⑥, and Operate ⑥. She’s got 9 
+skill steps left to assign to skills. She decides to step up Fix, 
+Know, and Operate by one more step each, which costs her 
+3 steps. Then she puts Craft up to ⑧, which costs another 
+2. With the remaining 4 steps she sets Focus, Shoot, Sneak, 
+and Survive to ⑥.
+Stage Five: The Engineer has a Know skill of at least ⑥ 
+so she gets a free ⑥ specialty. She adds Physics ⑥. She’s 
+got five points to assign between additional specialties 
+and signature assets. She gives the Engineer a pair of 
+Engineer’s Goggles ⑧, which costs her 2 points (1 for 
+the ⑥ rating, and 1 to step it up from ⑥ to ⑧). Then 
+she uses the remaining points to add a Fix specialty 
+of Mechanical ⑥, and two more Know specialties of 
+Electrical Engineering ⑥ and Mechanical Engineering ⑥.
+Stage Six: Here’s the story Amanda assigns to this charac­
+ter, with more details probably to come later as she starts 
+playing: She’s been everywhere, she’s fixed everything, but 
+she still has so much more she wants to do. The Engineer 
+retains her wide-eyed wonder at the universe even as she 
+draws on her experiences to keep her grounded.
+CHARACTER BUILDING 
+WITH OTHER TRAITS
+Many Cortex Prime worlds use variations on the base­
+line traits, and building characters differs slightly when 
+powers and power sets are added to the game, or attributes 
+are replaced by affiliations. In each case, the number of 
+options within each trait set is a good indicator of which 
+dice to assign and whether there’s a default rating. What 
+follows are guidelines for implementing trait mods into 
+character building.
+AFFILIATIONS
+Start out with a ⑧ in all three, with (if there are more than 
+three) a ⑥ for any additional affiliation.
+ATTRIBUTES
+The baseline is three at ⑧. If you have a longer list, each 
+additional attribute beyond the first three starts out at ⑥.
+VIKO MENEZES
+
+
+=== PAGE 76 ===
+CHAPTER 2 PRIME CHARACTERS
+72
+RESOURCES
+If you’re not using a relationship map like pathways to 
+establish shared resources in your game, you can still 
+implement resources by allowing them to be purchased 
+in a scratch-built character. Resources cost one specialty 
+or signature asset point in stage 5. This gives you a ⑥⑥ 
+resource with two tags. Spending additional points can 
+either give you another resource, step up a resource’s dice 
+by one step (⑥⑥ to ⑧ ⑧) or increase the number of dice 
+(⑥⑥ to ⑥⑥⑥).
+Resources of greater than ⑧ ⑧ or ⑥⑥⑥ are not recom­
+mended. It’s better to add more resources to a character 
+than invest more than 2 points in a single resource.
+ROLES
+Characters using roles instead of skills ignore stage 4 and 
+assign the following based on how many roles are used 
+in the game:
+•	 Three roles: ⑩, ⑧, and ④.
+•	 Four roles: ⑩, ⑧, ⑥, and ④.
+•	 Five roles: ⑩, ⑧, ⑥, ⑥, and ④.
+•	 Six roles: ⑩, ⑧, ⑥, ⑥, ⑥, and ④.
+SKILL AND SPECIALTY SPLIT
+Using this mod, assign points as noted in stage 4 to 
+skills, but no skill may be advanced above ⑥ except as a
+specialty. Points later assigned in stage 5 may also be used 
+to step up those specialties but may not be used to step 
+a ④ skill up to a ⑥ skill. Therefore, the 9 points from 
+stage 4 and any bonus steps from highlight skills from 
+distinctions are the only way to raise a skill from ④ to ⑥.
+TALENTS
+Choose talents from a list provided by the GM or the 
+world, or create them from scratch using the SFX rules, 
+during stage 3. Players usually start with 2 talents, linked 
+thematically to either the highest rated role or skill, or 
+some other important trait.
+TRAIT STATEMENTS
+If using trait statements, write these during the last stage 
+once you have a good grasp of the other PCs and the 
+overall direction of your character.
+VALUES
+When using values, dice are assigned to them during 
+stage 1. Assign ⑧ for the first three, and ⑥ for the rest, 
+with the option to step values up by stepping others down. 
+Usually this looks like one at ⑩, one at ④, two at ⑧, and 
+the rest at ⑥.
+MULTI-LEVEL SPECIALTIES
+With this mod, in stage 5 you can step up specialties from 
+⑥ instead of adding additional ⑥ specialties. Starting 
+characters rarely start out with ⑫ specialties.
+POWERS
+If your game uses powers and power sets, assigning 
+powers to characters depends in large part on the scope 
+of super-powered characters in the world the game is 
+set in. If superhuman characters are common, in stage 
+3 every character gets two power sets, each with two SFX 
+and one limit. If they’re rare, drop this to one power set, 
+or offer the choice of a power set or 5 additional points in 
+skills, talents, etc. A player might choose to drop a power 
+set entirely in order to add an SFX to another and increase 
+their starting number of powers by one.
+The number of actual powers within those power sets also 
+varies based on the game. A good rule of thumb is that 
+each character should start with a number of ⑧ powers 
+equal to the number of power sets plus one. Stepping up 
+powers uses the same points used for specialties in stage 
+5, and powers may be stepped down to step others up. No 
+power should start above ⑩ unless the game features 
+godlike heroes. No power may be stepped down below 
+⑥; if it is, the power trait goes away.
+More SFX may be added in the same way that distinction 
+SFX are added or switched out. If using powers, the game 
+shouldn’t use SFX with distinctions at all to avoid clutter­
+ing up the character file and making it too busy.
+Tweak all of these guidelines as needed.
+RELATIONSHIPS
+When assigning relationships, most PCs should have a 
+relationship with each other PC at ⑥ for free. Step these 
+up using the points in stage 5 that otherwise are used to 
+step up signature assets or add specialties. Alternately, 
+set one relationship at ⑩, one at ⑧, and the rest at ⑥. 
+Assign a relationship to any GMCs the players might want 
+to have a relationship with to start the game.
+REPUTATIONS
+See relationships, above. It’s often a good idea to cap the 
+die ratings of reputations during character creation to 
+something that matches the level of notoriety or fame you 
+expect the PCs to start with.
+Mary Rose decides to set the cap for reputations in 
+her game to ⑧, giving her players a reputation at
+⑧, two at ⑥, and all others at ④. During play,
+any of her players might step up their reputations
+to ⑩ or even ⑫.
+
+
+=== PAGE 77 ===
+CHAPTER 2 PRIME CHARACTERS 73
+PATHWAYS
+Pathways is an interactive and collaborative setting and 
+character creation process. It creates a kind of map that 
+shows the connections between characters, places, 
+events, and objects and helps provide the basis of a Cortex 
+Prime series. It’s best to set aside an entire session for it, 
+and it’s intended for use in a long-term series. Pathways 
+is excellent for creating the setting within which the 
+players create their characters using either of the two
+previous methods.
+Each stage in the pathways process can be used to assign 
+some of the points or steps that create a character beyond 
+their starting values. If you know you need to assign a total 
+of 9 points to skills, and you’re using 9 stages, have each 
+player assign one point to a skill each stage. Use major 
+stages to decide things like distinctions; use meta stages 
+to pick abilities or power sets. On every stage, including 
+a standard stage, choose to step up skills and attributes, 
+add specialties, and so forth. The default pathways table 
+has guidelines for choosing traits. 
+GETTING STARTED
+Pathways requires the group to have some idea what the 
+game will be about, and each player should have at least a 
+basic character concept. A shared understanding of what 
+you want the game to be is important to ensure that the 
+elements the players pick work with the intended setting 
+and tone. In creating the pathways map, players have a 
+lot of freedom to create or introduce characters, organi­
+zations, and situations, so it’s important to be on the same 
+page about what’s suitable for the game.
+If you meet in person you’ll need a large piece of paper 
+(or some other surface you can write on), and if you meet 
+online you’ll need a shared drawing tool.
+PLAYER CHARACTERS (RECTANGLES)
+First draw a rectangle for each player, and draw lines 
+between each of the rectangles. This is the foundation of 
+your pathways map.
+ROUND ROBIN SETTING CREATION
+The idea is simple: go around the table taking turns adding 
+ideas to the game’s setting and adding traits to your char­
+acter until you have the “play area” of your campaign and 
+a set of characters connected to it. If the group finds any 
+created element problematic, you can ask the person who 
+suggested it to change it or come up with something else.
+MAPPING TIPS
+The story map you create in pathways can very quickly 
+get complicated and confusing. Here are a couple of tips:
+If you have a small number of player characters, placing 
+the rectangles representing them towards the outside of 
+the map can make things a little easier.
+If need be, you can put “warp zones” on the map. Put an 
+A in a circle in two places to indicate a jump, and then 
+move on to B and so on as needed.
+ENGINEER
+SAGE
+HERO
+Map in Progress
+A
+A
+B
+B
+ELEMENTS
+The pathways map consists of several different kinds of 
+elements. These can be relationships, characters, assets, 
+situations, etc. By themselves, elements don’t concern 
+characters’ actual abilities, though they can imply a whole 
+lot, and in story terms can help reinforce a character’s 
+traits. Some archetypes imply a school that might serve as 
+a location or a mentor who can be a secondary character; 
+membership in an elite organization helps show that the 
+character is in fact an elite.
+CONNECTIONS (LINES)
+Connections are the links between things, and thus 
+they’re represented by lines between different elements. 
+Each connection should end up with a description written 
+along the length of the line. These descriptions don’t need 
+to be detailed, but they do need to explain what joins the 
+two elements together. A connection might imply the 
+existence of a relationship trait, if your game uses those.
+Examples: Business rivalry, has a crush on, uses for 
+transportation, has terrible nightmares about
+ENGINEER
+HERO
+GREW UP TOGETHER
+COMMON GOALS
+
+
+=== PAGE 78 ===
+CHAPTER 2 PRIME CHARACTERS
+74
+SECONDARY CHARACTERS (CIRCLES)
+Secondary characters are the people and other actors that 
+take part in the story. These will become important GMCs 
+and can range from valued friends to desperate enemies.
+Examples: Classmate, Colleague, Lover, Parent, 
+Sibling, Teammate
+Extras are minor characters that make themselves useful 
+to a character in some way. Unlike secondary charac­
+ters, relationships with extras are pragmatic. They can 
+be contacts that provide information or services, or just 
+flunkies at a character’s beck and call. Extras can include 
+a group of people, such as a squad of soldiers, who mostly 
+act as one character in the story.
+Examples: Alchemist, Doctor, Gadget Guy, Scholar, 
+Scientist, Security Team, Servant, Soldiers
+Organizations are established groups of various kinds. 
+Depending on the scope of your campaign, this could 
+range anywhere from a powerful government to a school 
+club. Think about how your character relates to a given 
+organization.
+Examples: Army, Corporation, Government Agency, 
+Religion, Research Facility, Secret Society,
+Thieves Guild
+A prop is an object of major importance to the story. It’s 
+most likely a MacGuffin in the classic sense—a thing that 
+the characters desire enough that it helps drive conflicts. 
+Props are usually, but not always, signature assets.
+A prop element doesn’t necessarily mean a character gets 
+to possess some particularly powerful thing. A sword that 
+people would fight wars over might not have the slightest 
+hint of magic if it’s got the right history behind it.
+Examples: Autographed Baseball, Crown Jewels, 
+Legendary Sword, Magical Key, Special Formula, 
+Suitcase Everyone Wants, Vial of the Z Virus,
+Vitally Important Data Crystal
+Locations are places of significance to the characters.
+A location can be a place they specifically own or control, 
+or just a place that’s somehow significant to their affairs.
+A team’s secret base, the bar a character owns, and a pizza 
+place where they hang out can all be locations.
+Examples: Bar, Bowling Alley, Café, Mansion, 
+Military Base, Newspaper Office, Restaurant,
+School, Store
+SITUATIONS (TRIANGLES)
+A situation is an event or potential event that’s import­
+ant to the character(s) in some way, whether it’s a past 
+event that shapes them, something currently ongoing, 
+or a possible future problem.
+Examples: Occupation, Pending Invasion, Pogrom, 
+Power Manifestation, Questionable Experiments
+RESOURCE (DIAMONDS)
+A resource is something in the world connected to the 
+character. Resources connected to your character aren’t 
+necessarily ones they can use—resources cover plenty of 
+things that could be adversarial to or simply desirable to 
+a character—so make it clear in the connection how the 
+resource relates to your character. There are four differ­
+ent kinds of resource: extras, organizations, props, and 
+locations. They can be used purely as setting creation 
+tools or may be represented as traits on a player’s char­
+acter file (see “Resources” on page 56).
+TESSA
+CYRIL
+YOLANDA
+MOTHER
+EX-GIRLFRIEND
+APPRENTICE
+ENGINEER
+NEW
+STEAM
+AGE
+CIVIL 
+UNREST
+BORN AND 
+LIVING DURING 
+THIS TIME
+BREAKS OUT 
+WHILE A 
+YOUNG ADULT
+ENGINEER
+HMS
+ASTONISH
+WORKERS’
+UNION
+ENGINEER’S
+GOGGLES
+STEAM 
+CITY
+ENGINEER
+FIRST GREAT 
+INVENTION
+HELPS HER 
+WORK
+WHERE SHE 
+STILL LIVES
+SHARES WITH 
+THE HERO AND 
+THE SAGE
+MANY SAW 
+HER GROW UP
+BASE OF 
+OPERATIONS
+BORN AND 
+RAISED
+FAMILY ARE 
+MEMBERS
+
+
+=== PAGE 79 ===
+CHAPTER 2 PRIME CHARACTERS 75
+STAGES
+During pathways, players go through a series of stages 
+that represent different periods in the characters’ lives. 
+Different characters’ stages don’t necessarily correlate in 
+time, so a 200-year-old elf and a 2-week-old robot could 
+still go through the same number of stages if it comes to 
+that. Instead, the stages represent more the thrust of their 
+formative experiences and connections. On the other 
+hand, if your game is based around several pivotal events, 
+you could deliberately make each stage correspond to a 
+particular time period.
+The number of stages the group goes through determines 
+the complexity of the resulting pathways map and how 
+long it takes to create. Five stages make for a good average. 
+The pathways table in this section has a suggested default 
+pattern of stages, but of course you can customize it to 
+your tastes. We get into the types of stages in a moment, 
+but the first and last stages should be major stages.
+Your map should already have rectangles for all the PCs, 
+with their names inside them, and lines connecting each 
+PC to all the others.
+USING THE PATHWAYS TABLE
+On our default pathways table, each stage has five choices. 
+Beginning with Origin and going all the way down to
+Life-Changing Event, your choice for the next stage must 
+be directly below the choice you made in the current 
+stage, or the choice to the left or right of that one. So, from 
+the Gifted Origin (stage 1), you could pick Average, Geek, 
+or Outsider for your Youth (stage 2).
+TAKING TURNS
+It isn’t absolutely necessary to have the players take turns 
+adding elements to the map, but it does makes things less 
+confusing. For each element allowed in a stage (major 
+and meta stages have two each), go around the table once 
+letting each player add their element.
+TYPES OF STAGES
+There are three types of stages—standard, major, and 
+meta—that work a little differently in terms of what kinds 
+of elements players get to add.
+VIKO MENEZES
+
+
+=== PAGE 80 ===
+CHAPTER 2 PRIME CHARACTERS
+76
+STANDARD STAGE
+During a standard stage, each player gets to connect their 
+character to an element. You can draw a connection from 
+your character to an existing element, or you can add a 
+new character, resource, or situation to the map and draw 
+a connection from it to your character.
+The following stages count as standard: Youth, Road,
+Priority, Motivation.
+Use a standard stage to gain a resource, signature asset, 
+skill, or specialty based on the element you’ve just 
+connected. You can add a new one at ⑥ or step up an 
+existing one by one step.
+MAJOR STAGE
+A major stage represents a major turning point in the 
+characters’ lives. During a major stage each player adds 
+two new elements instead of one, drawing connections to 
+them, but otherwise it works like standard stage. Roughly 
+one out of every 3 stages should be a major stage.
+The following are major stages: Origin, Life-Changing 
+Event, Identity.
+Use a major stage to gain a resource, signature asset, skill, 
+or specialty just as with a standard stage, but also define 
+and add a distinction.
+META STAGE
+In a meta stage, the players also get to play with other 
+aspects of the pathways map. In addition to adding one 
+new element like in a standard stage, each player gets to 
+do one of the following things:
+•	 Draw a connection between any two non-PC 
+elements and define a relationship between them.
+•	 Destroy a connection between their PC and 
+a given element and add a new element and 
+connection. This implies that something happened 
+to sever one connection and foster another.
+•	 Introduce an element for another PC. The other 
+player defines the nature of their characters’ 
+connection with that element however.
+One out of every 4 or 5 stages should be a meta stage.
+The following are meta stages: Focus, Modus Operandi.
+Use a meta stage to gain a resource, signature asset, skill, 
+or specialty as well as a new distinction, just as with a 
+major stage. Also add a power set or ability if you’re using 
+those traits. If you add a power set, you can now add 
+powers on future standard or major stages.
+STAGE
+TYPE
+TITLE
+A
+B
+C
+D
+E
+1
+Major
+Origin
+Rich
+Ordinary
+Gifted
+Strange
+Alien
+2
+Standard
+Youth
+Jock
+Average
+Geek
+Outsider
+Paragon
+3
+Meta
+Focus
+Money
+Life
+Status
+Technology
+Paranormal
+4
+Standard
+Road
+Risky
+Straight
+& Narrow
+Lofty
+Underground
+Ethical
+5
+Major
+Life-Changing
+Event
+Advancement
+Tragedy
+Manifestation
+First Contact
+Destiny
+6
+Standard
+Priority
+Friends & Family
+Work
+Moving Forward
+Looking Back
+Performance
+7
+Meta
+Modus 
+Operandi
+Loyalty
+Shady Business
+Against the Grain
+Outside Normal
+Channels
+Special Gifts
+8
+Standard
+Motivation
+Others
+Self
+The Cause
+The Job
+The World
+9
+Major
+Identity
+The Sidekick
+The Foil
+The Rebel
+The Specialist
+The Hero
+ENGINEER’S
+GOGGLES
+ENGINEER
+GAIN
+SIGNATURE ASSET
+HMS
+ASTONISH
+ENGINEER
+UNLOCK DISTINCTION
+The World is my Workshop
+ENGINEER
+UNLOCK SPECIALTY
+Physics ADDED TO Fix
+CIVIL 
+UNREST
+ENGINEER
+UNLOCK DISTINCTION
+Boundless Curiosity
+YOLANDA
+
+
+=== PAGE 81 ===
+CHAPTER 2 PRIME CHARACTERS 77
+DEFAULT PATHWAYS TABLE
+The default table has nine pre-built stages that form a 
+narrative background. Start with the first five stages, then 
+decide if you want to progress to the remaining four for 
+a more experienced group. Here are brief descriptions of 
+the stages to inspire your own pathways tables.
+•	 Origin: Where did you come from? Was your 
+family rich, or ordinary? Was your family blessed 
+with gifts, or just strange? Were you an alien 
+(another planet, another country)?
+•	 Youth: What sort of childhood did you have? 
+Were you a jock, a geek, or just average? Were 
+you an outsider among your peers, or a paragon 
+in your community?
+•	 Focus: What sort of goals and values were 
+instilled in you as you grew up? Was it money, a 
+good life, or elevated status? Was it a dedication 
+to technology or involvement in the paranormal?
+•	 Road: What path did you walk as you emerged 
+from your youth? Was it risky, or on the straight 
+and narrow? Did you tread a lofty road above 
+others, or stay underground and out of sight? Was 
+it a road governed by ethics or a code of honor?
+•	 Life-Changing Event: Something changed your 
+life forever. Was it the thrill of advancement, the 
+sting of tragedy, or the manifestation of a hidden 
+power? Did you contact something beyond your 
+ken, or come face to face with your destiny?
+•	 Priority: What goals do you set above all others? 
+Friends and family or hard work? Moving forward 
+in your life, looking back at your achievements, or 
+concentrating on your own performance?
+•	 Modus Operandi: How do you achieve your 
+goals? Do you stay loyal, engage in shady business, 
+or go against the grain? Do you rely on outside 
+channels, or your own special gifts?
+•	 Motivation: What keeps you going? Is it other 
+people, yourself, or a cause that’s bigger than 
+you? Is it your job, whatever that is, or the world 
+around you?
+•	 Identity: Where do you see yourself in the 
+unfolding drama of your life? Are you the sidekick, 
+or the foil to others? Are you the rebel of the 
+group, the specialist who does one thing really 
+well, or are you the hero of the piece?
+DOES THE GM GET A TURN?
+Chances are the map is more than sufficiently large and 
+convoluted at the end of pathways with just the players 
+adding to it, but if as the GM you want to have some 
+creative input into the whole thing, you can fill in your 
+ideas on each stage as per a player, adding new elements 
+that relate to the PCs and GMCs.
+As the GM you don’t have your own character, so you can 
+add elements connected to whatever you like.
+USING THE FINISHED MAP
+The pathways map will provide you with plenty of ideas, 
+but it still takes a little thought to fully flesh out the story.
+TRIANGULAR RELATIONSHIPS
+One key thing to look for on the pathways map is places 
+where multiple characters have conflicting connec­
+tions with a given element. The classic love triangle is an 
+obvious example, but anything where connections are at 
+odds is a potential place to make things more interesting.
+WEDGES
+The GM, whose job is to drive the conflicts in the game, 
+can look at the pathways map and look for places to drive 
+wedges, to threaten and mess with existing relationships. 
+If there’s a triangular connection, look for something to 
+exacerbate it. Even if a connection is non-triangular, you 
+can find interesting ways to mess it up.
+IMPLIED ELEMENTS
+The pathways map covers most of the major elements 
+that go into the game, but it can’t be truly comprehensive. 
+An organization has leaders and members, characters 
+have other characters around them, locations have any 
+number of people associated with them, and so on. While 
+the map is a very useful tool, it shouldn’t limit what you 
+bring into the game.
+LATE ADDITIONS
+The simplest way for a player with a new character to be 
+introduced to the game is to just run through the same 
+stages as for the original PCs. That gives them plenty of 
+opportunities to give their character connections to exist­
+ing elements, as well as to add some new ones.
+It’s up to you whether you want the new PC to start off 
+with connections to all the other PCs. Sometimes this 
+makes perfect sense, and other times it’s tricky to pull 
+off, so you may want to have a new character start without 
+connections to other PCs until the player draws them in 
+(though in that case you may want to give them a couple 
+extra element choices).
+ENGINEER
+SAGE
+HERO
+HATES THEIR GUTS
+THINKS SHE IS CREEPY
+TOO INTENSE
+TOO STUBBORN
+NEEDS TO 
+LIGHTEN UP
+SCATTER-BRAINED
+
+
+=== PAGE 82 ===
+CHAPTER 2 PRIME CHARACTERS
+78
+EXAMPLE PATHWAYS CHARACTER:
+THE ENGINEER
+Amanda and her friends are creating a collaborative 
+steampunk setting with Mary Rose as the GM, and they’ve 
+decided to use pathways to do it. They’re using the first 
+five stages of the default table to draw the pathways map. 
+Mary Rose has compressed all the character creation 
+steps into those five stages, so she lets the players know 
+what traits they’ll be choosing at each stage. 
+•	 Origin (Major): All players choose their first 
+distinction, step up the highlight skills plus two 
+additional skill steps anywhere they like, and
+add a specialty or a signature asset. All three 
+attributes start at ⑥.
+•	 Youth (Standard): All players get two skill steps 
+and a specialty or signature asset and may step 
+one attribute up by one.
+•	 Focus (Meta): All players choose their second 
+distinction, step up the highlight skills plus two 
+additional skill steps anywhere they like, and add a 
+specialty or signature asset. One SFX is unlocked.
+•	 Road (Standard): All players get two more skill 
+steps and a specialty or signature asset and may 
+step up an attribute by one.
+•	 Life-Changing Event (Major): All players choose 
+their third distinction, step up the highlight skills 
+plus one additional skill by one, add a specialty or 
+signature asset, and unlock a second SFX. They 
+get their third and final attribute step.
+Let’s see what Amanda chooses as everyone around the 
+table takes their turns. Amanda’s Engineer, Adam’s Hero, 
+and Tina’s Sage are all rectangles on the map, with lines 
+linking them together.
+First Stage: Origin is a major stage and it represents 
+the genesis of Amanda’s Engineer. She gets to add two 
+elements to the map and connect to them with lines, so 
+she adds a triangle for the situation New Steam Age, a 
+circle for Yolanda, her mother, and draws lines to both 
+of them from her rectangle. Her pick for origin is Gifted: 
+Amanda says her Engineer was born with a wrench in 
+one hand and eyes wide to the world of science around 
+her. The distinction she chooses is Boundless Curiosity, 
+which steps up Know and Notice to ⑥. She steps up Know 
+again to ⑧, and Craft up to ⑥. Know comes with a free 
+specialty at ⑥, so she adds Physics, and uses her specialty 
+or signature asset step to add Electrical Engineering ⑥. 
+All of her Engineer’s attributes are set to a starting ⑥.
+Second Stage: Youth is a standard stage. Here Amanda 
+adds a location to her pathways map, Steam City, and 
+connects it to her character rectangle. Amanda looks 
+at the pathways chart and sees that her choices for her 
+Engineer are Average, Geek, and Outsider. While Geek 
+seems the most obvious, Amanda wants to have a more 
+well-rounded character, so she chooses Outsider. Born 
+with obvious talents, her Engineer’s youth in Steam City 
+was sheltered because of her non-technologically inclined 
+family. She mostly stayed out of other people’s way while 
+pursuing her gifts. She gets two skill steps, and puts them 
+into Focus and Sneak, raising them to ⑥. She also adds 
+Mechanical Engineering ⑥ as a specialty for Know and 
+steps up her Physical attribute to ⑧.
+STAGE 1
+Physical
+Mental
+Social
+THE ENGINEER
+Born to Yolanda during the New 
+Steam Age, her natural sense of 
+curiosity and giftedness made 
+her seek to understand the 
+world around her.
++Boundless Curiosity
+Know ④ steps up to ⑥ (unlocks a free specialty) 
+Notice ④ steps up to ⑥
++2 ADDITIONAL SKILL STEPS
+Know ⑥ steps up to ⑧, Craft ④ steps up to ⑥
++1 SPECIALTY OR SIGNATURE ASSET
+Physics ⑥ added to Know ⑧ (free from distinction)
+Electrical Engineering ⑥ added to Know ⑧
+STAGE 2
++2 ADDITIONAL SKILL STEPS
+Focus ④ steps up to ⑥, Sneak ④ steps up to ⑥
++1 SPECIALTY OR SIGNATURE ASSET
+Mechanical Engineering ⑥ added to Know ⑧
++1 TO AN ATTRIBUTE
+Physical ⑥ stepped up to ⑧
+Physical
+Mental
+Social
+THE ENGINEER
+Raised in a family that didn’t 
+understand her interests 
+and talents, the Engineer felt 
+isolated and longed to be part 
+of the innovation of Steam City.
+YOLANDA
+NEW
+STEAM
+AGE
+ENGINEER
+ENGINEER
+STEAM 
+CITY
+HERO
+
+
+=== PAGE 83 ===
+CHAPTER 2 PRIME CHARACTERS 79
+Third Stage: Focus is a meta stage and where Amanda’s 
+Engineer begins to come into her own as a mechani­
+cal prodigy. She adds a prop, her Engineer’s Goggles, 
+to her pathways map, connected with a line; she also 
+connects her character rectangle to a situation triangle 
+Adam created earlier, Civil Unrest. Her focus is clearly 
+Technology, and Amanda adds The World is My Workshop 
+distinction together with the two highlighted skills, Fix 
+and Operate, each of which step up to ⑥. She adds the 
+Engineer’s Goggles as a signature asset at ⑥, and can step 
+up two more skills, choosing to step up Fix and Operate 
+again to ⑧. At this stage she can unlock her first SFX, 
+and goes for Kitbash (under The World is My Workshop).
+Fourth Stage: Road is a standard stage and Amanda 
+draws a connection to an element Tina had added to 
+the pathways map earlier, the airship HMS Astonish; 
+it’s another location (albeit one that travels around the 
+globe). Her road is Underground, meaning the shadowy 
+or secret lifestyle outside of the mainstream of Steam City: 
+The Engineer travels with the Sage and the Hero in their 
+airship, righting wrongs caused by the Clockwork Empire. 
+She spends her two skill steps on Craft and Survive, adds 
+Mechanical as a specialty to Fix, and steps up her Mental 
+attribute by one to ⑧.
+Fifth Stage: Life-Changing Event is a major stage. 
+Amanda picks First Contact—an encounter with the 
+mysterious Luminescent Beings cements her future as 
+the world’s premier Engineer. She draws them on the 
+pathways map, connected to her with a line; she’s real­
+ized that the world is more than she imagined, with other 
+worlds and other intelligent forms of life. She picks her 
+final distinction, Can’t Stay Long, Too Much To Do, and 
+unlocks the High Demand SFX. The distinction gives her 
+steps in Drive and Move, both now ⑥. One more skill step 
+goes to Shoot, making it a ⑥. Her final attribute step 
+raises her Social to ⑧ like the other two. With the last 
+signature asset or specialty step, she steps up Engineer's 
+Goggles to ⑧, and the Engineer is complete except for 
+the finishing touches.
+STAGE 4
++2 ADDITIONAL SKILL STEPS
+Craft ⑥ steps up to ⑧, Survive ④ steps up to ⑥
++1 SPECIALTY OR SIGNATURE ASSET
+Mechanical ⑥ added to Fix ⑧
++1 TO AN ATTRIBUTE
+Mental ⑥ stepped up to ⑧
+Physical
+Mental
+Social
+THE ENGINEER
+Operating just under the
+radar of society, she travels 
+around the world with her 
+companions to fight against
+the Clockwork Empire.
+ENGINEER
+ENGINEER’S
+GOGGLES
+CIVIL 
+UNREST
+Physical
+Mental
+Social
+THE ENGINEER
+Her first invention of her 
+distinctive goggles marks a 
+breakthrough in what will be an 
+incredible journey of discovery 
+and invention.
+STAGE 3
++The World is My Workshop
+Fix ④ steps up to ⑥, Operate ④ steps up to ⑥
++2 ADDITIONAL SKILL STEPS
+Fix ⑥ steps up to ⑧, Operate ⑥ steps up to ⑧
++1 SPECIALTY OR SIGNATURE ASSET
+Engineer’s Goggles ⑥ added as a signature asset
++1 UNLOCKED SFX
+Kitbash unlocked under The World is My Workshop
+HMS
+ASTONISH
+STEAM 
+CITY
+ENGINEER
+SAGE
+HERO
+ENGINEER
+LUMINESCENT
+BEINGS
+STAGE 5
++Can’t Stay Long, Too Much To Do
+Drive ④ steps up to ⑥, Move ④ steps up to ⑥
++1 ADDITIONAL SKILL STEP
+Shoot ④ steps up to ⑥
++1 SPECIALTY, SIGNATURE ASSET
+Engineer’s Goggles ⑥ stepped up to ⑧
++1 UNLOCKED SFX
+High Demand unlocked under Can’t Stay Long, Too 
+Much to Do
+Physical
+Mental
+Social
+THE ENGINEER
+A pivotal point in her journey 
+is her encounter with the 
+mysterious Luminescent 
+Beings, who prove that the 
+world is bigger than it seems.
+
+
+=== PAGE 84 ===
+CHAPTER 2 PRIME CHARACTERS
+80
+COMPLETED EXAMPLE
+PATHWAYS MAP
+LUMINESCENT
+BEINGS
+YOLANDA
+NEW
+STEAM
+AGE
+ENGINEER’S
+GOGGLES
+RECTANGLE:
+Player Character
+TRIANGLE:
+Situation
+RED LINE: Engineer’s Connection
+GREEN LINE: Other PC’s Connection
+DASHED LINE: Other PC’s Connections 
+and Resources (not filled out for the 
+purpose of this example map).
+CIRCLE:
+Secondary Character
+DIAMOND:
+Resource
+
+
+=== PAGE 85 ===
+CHAPTER 2 PRIME CHARACTERS
+81
+SIGNATURE ASSETS
+Engineer’s Goggles ⑧
+THE ENGINEER
+She’s been everywhere, she’s fixed everything, but she still has so 
+much more she wants to do. The Engineer retains her wide-eyed 
+wonder at the universe even as she draws on her experiences to 
+keep her grounded.
+The World Is My Workshop ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this 
+distinction’s ⑧ for a ④.
+	
+ɬ Kitbash: Spend a ●
+Ⓟ to gain a ⑧ asset
+for the rest of the scene.
+Boundless Curiosity ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this 
+distinction’s ⑧ for a ④.
+Can’t Stay Long, Too Much To Do ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this 
+distinction’s ⑧ for a ④.
+	
+ɬ High Demand: Gain a ●
+Ⓟ when you leave an 
+important scene to help someone rather than
+help the people you’re with.
+DISTINCTIONS
+Mental
+Social
+Physical
+ATTRIBUTES
+SKILLS
+Fight
+Fly
+Perform
+Labor
+Throw
+Treat
+Trick
+Influence
+Drive
+Focus
+Shoot
+Sneak
+Survive
+Move
+Notice
+Craft
+Fix
+Mechanical ⑥
+Know
+Electrical Engineering ⑥
+Mechanical Engineering ⑥
+Physics ⑥
+Operate
+YANGTIAN LI
+
+
+=== PAGE 86 ===
+CHAPTER 2 PRIME CHARACTERS
+82
+GROWING 
+CHARACTERS
+While PCs start out as competent, experienced profes­
+sionals, they change and grow during play, with each job 
+they take giving them more to grow on. The more adven­
+tures the group undertakes, the more benefits they can 
+enjoy and the richer their backstory becomes.
+All of these methods of growing characters are mods. You 
+can play many games of Cortex Prime without growth of 
+any sort outside of the kind that happens in the story or 
+fiction. Many Cortex Prime characters are just fine as they 
+are for several sessions, and if you’re doing a one-shot or 
+limited session story, you won’t worry much about growth 
+either. However, many players love to change things about 
+their characters, so you should—as a group—decide how 
+you want growth to work in your Cortex Prime game.
+SESSION RECORDS
+With this mod, at the end of each session, the players 
+make a note of the session’s name on their character file. 
+This is the PC’s personal session record, and over time 
+it provides an account of the group’s accomplishments 
+and checkered past.
+CALLBACKS
+Each player may use their own session record to make 
+callbacks, references to events from other sessions that 
+may be useful towards the current storyline. To make a 
+callback, have your PC make an in-character reference to 
+a session in their session record while performing a task. 
+While the name of the session might be referenced explic­
+itly, it’s more evocative to say something like “This is just 
+like that time in Montana….” When you use a callback, 
+you may gain a benefit immediately for anything that a 
+●
+Ⓟ could be used for—activating an SFX, keeping an extra 
+die result in your total, or creating an asset to reflect your 
+PC’s previous experiences with the task.
+You can only make a callback to a specific session once 
+per session. A checkbox next to each session is useful for 
+this purpose. Erase the checked boxes when a new session 
+begins and add the last session’s name to the record.
+TRAINING UP
+By spending sessions from your record, you can make 
+permanent improvements to your PC. A spent session 
+remains on the record but can no longer be used for call­
+backs or to train a second time.
+•	 Turn an asset from a session into a signature 
+asset (or relationship): 1 session
+•	 Switch out a distinction (or trait statement) 
+for a new one: 1 session
+•	 Step up a signature asset (or relationship):
+2 sessions
+•	 Add a new specialty: 2 sessions
+•	 Unlock a new SFX: 2 sessions
+•	 Step up a skill (or resource, role, value,
+or power): 3 sessions
+•	 Step up one attribute (or affiliation)
+and step down another: 4 sessions
+Training can happen anytime during downtime between 
+sessions. Maximum die ratings of ⑫ apply in all cases to 
+skills, attributes, and assets. If you switch out a distinc­
+tion, your new distinction has as many SFX unlocked as 
+the original, although they may be entirely different SFX.
+
+
+=== PAGE 87 ===
+GROWTH
+The best dramatic heroes grow with the story and are 
+changed by the challenges they face. Indeed, to some, 
+that’s the very definition of a hero—or, at the very least, 
+a protagonist. Even antagonists, if they’re interesting, 
+change over the arc of their story.
+With this mod, PCs gain new traits and advance current 
+traits through a mechanism called the growth pool, 
+which is a pool of dice you build up over the course of 
+the game. This method uses the Trait Statements mod 
+(page 65) extensively but can be adapted in other ways 
+depending on your game.
+You can get dice for the growth pool in two ways:
+•	 Challenging a trait statement.
+•	 Successfully recovering stress or complications 
+with someone else’s help.
+You can then use that growth pool to add new traits 
+or improve existing ones at the end of the session, in a 
+special kind of scene called a tag scene.
+TAG SCENES
+At the end of every session you have the opportunity to 
+do a special kind of scene called a tag scene, where you 
+can try to improve your character’s traits.
+Tag scenes shouldn’t be very long—just enough narra­
+tion for everyone to get an idea of how you want your PC 
+to change. After that, you get to do two things: rewrite 
+statements and step up traits.
+See Prime Scenes for more information on types of scenes, 
+including tag scenes.
+REWRITING STATEMENTS
+For every trait statement you’ve challenged in the session, 
+you get to make a choice: did your PC change perspec­
+tives? If so, you can rewrite your statement to reflect your 
+new belief about the trait and put it back to its original die 
+rating. Jason would never let me down ⑧ might become 
+Jason isn’t the friend I thought he was ⑧ or Jason will 
+answer to me ⑧.
+If your PC didn’t change perspectives, you can keep the 
+statement the same, but the trait it’s attached to must stay 
+at the reduced die rating. For values or other traits that 
+share a fixed number of steps, pick another value or values 
+to increase by that same amount, so your total number of 
+die steps remains the same. So, if you stepped down Love 
+from ⑩ to ⑥ (two steps) during a session and decide to 
+stay there, you’d pick one value to step up by two, or two 
+values to step up by one.
+For relationships or other traits that aren’t governed by a 
+fixed number of steps, if you stay at the lowered die rating, 
+add another die to your growth pool equal to the new die 
+rating. So, if you stepped down Jason from ⑧ to ④, you’d 
+add a ④ to growth in addition to the ⑧ you added when 
+you originally challenged it.
+STEPPING UP TRAITS
+You may select one trait to step up or pick a new one to 
+add. New traits begin at ④. You can’t step a trait up higher 
+than ⑫.
+To raise the trait, you must succeed at a test. You roll your 
+growth pool plus the highest stress or complication you 
+had during the session, even if it was recovered. The GM 
+sets the difficulty at one die equal to the trait level you 
+want to step up to and a second die based on what kind 
+of trait it is:
+•	 Attribute or Affiliation ⑫
+•	 Distinction, Role, or Power ⑩
+•	 Skill, SFX, or Value ⑧
+•	 Relationship, Resource,
+or Signature Asset ⑥
+Unlike other tests, you can’t use ●
+Ⓟ to affect the outcome 
+of this one. Ignore all hitches. If you win, you get to step 
+up your trait or add a new one and the dice in the growth 
+pool are used up. If you lose or tie, you can do it anyway, 
+but you have to step something else down to compensate; 
+the dice in the growth pool stick around for next session.
+JANNA SOPHIA
+
+
+=== PAGE 88 ===
+CHAPTER 2 PRIME CHARACTERS
+84
+MILESTONES
+Milestones are an alternate way to track progress and 
+earn experience points (XP) that players then use to 
+unlock character upgrades, as well as story unlockables 
+and other narrative benefits. With this mod, players hit 
+milestones through the choices they make for their char­
+acters in play.
+Characters have two milestones. Often, one is shared by 
+the entire group, while the other is chosen personally. The 
+personal milestone might be built into your archetype, 
+suggested with a distinction, or be developed for your 
+specific character. 
+Milestones contain three different levels:
+•	 A 1 XP level that can be hit as many times as
+it applies (or once per test or contest).
+•	 A 3 XP level that can only be hit once per scene.
+•	 A 10 XP level that can only be hit once per 
+session. If it’s a shared milestone among the party, 
+once this milestone is hit, it’s unusable until the 
+next session. If it’s a personal milestone, it closes 
+that milestone completely, and the player should 
+choose a new one at the end of the session.
+Milestones are usually hit by the players’ tests or contests, 
+with the GM verifying if there’s any question whether one 
+has been hit or not.
+The following is an example of a group milestone for a 
+game based heavily on classic heroic fantasy:
+HEROIC ADVENTURERS MILESTONE
+You’re out there for the thrills and the fame, but mostly for 
+the thrills. If there are monsters to vanquish and people in 
+need of adventurers, your troupe is there! 
+•	 1 XP when your party defeats an adversary.
+•	 3 XP when you emerge successfully from
+a battle or conflict.
+•	 10 XP when you complete or abandon
+a major quest.
+However, if you’re running a game where fighting is 
+downplayed, you might change the focus of the milestone 
+to match your game’s theme. Here’s an example:
+DUNGEON DELVER MILESTONE
+You heed the call of all the riches found in lost ruins, forgot­
+ten tombs, and strange abandoned temples. Finding the 
+dungeon is half the fun; clearing it is where it’s at!
+•	 1 XP when you find new treasure.
+•	 3 XP when you explore a new area.
+•	 10 XP when you finish exploring a complete 
+dungeon or abandon a dungeon because it’s
+too dangerous.
+NOÉ LEYVA
+
+
+=== PAGE 89 ===
+CHAPTER 2 PRIME CHARACTERS 85
+SESSION MILESTONES
+GMs can offer milestones at the start of a session or reveal 
+them after major turning points in the session’s ongoing 
+narrative. Session milestones tie the PCs directly into 
+the story, giving them personal motivations (and XP!)
+for becoming involved. 
+As you have two milestones, you can replace your current 
+personal milestone with the session milestone, or if the 
+GM allows, replace the group milestone until the session 
+milestone is completed. 
+An example session milestone might be:
+RESCUE THE PRINCE OF FLOWERS
+My son the prince has been abducted by the Bandit Queen! 
+I won’t stand for this affront to our family! Save him before 
+it’s too late.
+•	 1 XP when you ask somebody you just met
+about the Prince of Flowers.
+•	 3 XP when you get a clue towards the
+Prince’s location.
+•	 10 XP when you rescue the Prince or decide
+to leave him with the Bandit Queen.
+UNLOCKABLES
+XP may be spent between scenes to increase a PC’s traits 
+or unlock other benefits. You may spend as much XP as 
+you’ve earned to unlock multiple upgrades at once. 
+The GM may create unlockables that provide greater 
+access to story elements such as important GMCs, previ­
+ously unavailable locations, or property. Sometimes an 
+unlockable represents a one-shot benefit that’s significant 
+enough to warrant earning XP towards it; other times it 
+becomes a permanent option in your repertoire.
+Tailor the following menu of options to the specific traits 
+and mods you’re using for your game. This list can also 
+be customized and adapted for games that eschew mile­
+stones but feature the GM handing out XP directly each 
+session for such things as entertaining roleplaying or 
+achieving story goals.
+•	 Train a new specialty at Expert ⑧.
+•	 Unlock an SFX.
+•	 Add a ⑥ signature asset.
+•	 Upgrade an existing trait from ⑥ to ⑧.
+•	 Upgrade an existing Expert ⑧ specialty
+to Master ⑩.
+•	 Add a ⑩ signature asset.
+•	 Upgrade an existing trait from ⑩ to ⑫.
+CAROL AZEVEDO
+5 XP:
+15 XP:
+20 XP:
+10 XP:
+•	 Add a ⑧ signature asset.
+•	 Add a new locked SFX to a distinction
+or signature asset.
+•	 Upgrade an existing trait from ⑧ to ⑩.
+•	 Upgrade an existing Master ⑩ specialty
+to Grandmaster ⑫.
+•	 Add a ⑫ signature asset.
+
+
+=== PAGE 90 ===
+KEVIN HONG

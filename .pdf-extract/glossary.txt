@@ -1,0 +1,960 @@
+
+=== PAGE 232 ===
+228 GLOSSARY & INDEX
+Ability 54, 194
+A trait used to describe narrative-focused 
+superpowers, usually with SFX.
+Detailed list 195-212
+as gear 213
+List 237
+Action 24, 98
+A mod that replaces tests and contests for 
+dealing with more traditional turn-taking 
+resolution. Actions are rolled first and then 
+opposed by a reaction from the target or a 
+difficulty set by the GM.
+Action Order 24, 98
+in Eidolon Alpha 133
+in Hammerheads 161
+Locations in 116
+Advancement
+Improving your character between or 
+sometimes during a session.
+See Player Character, Growing
+Affiliation 48, 71
+A trait that represents a character’s ability to 
+succeed in a variety of social environments.
+Example 165, 168-171
+Archetype 68-69, 131	
+
+A tool for creating characters, usually with pre-
+determined traits and a thematic background.
+Endarch 135-140
+Example 68-69, 168-171
+Area Attack/Effect 191	
+An SFX or quality that allows characters to 
+affect multiple targets with a single roll.
+Asset 9, 34-35
+Helpful trait that you may include in your
+dice pool when appropriate.
+as clues 35
+Creating 28, 32
+Sharing 29
+Signature 56, 64-65, 104-107, 216-217, 218
+Stepping up 37
+Attribute 49, 70, 71
+A trait set of basic areas of innate ability,
+such as Mental, Physical, and Social.
+A
+Example in play 104-107, 133
+Vehicles 218
+Baker, D. Vincent 120
+Balsera, Leonard 63, 104-107
+Banks, Cam 26, 91-92, 94-96, 110, 116
+Beat 88
+The subjective unit of time it takes for a 
+character to carry out a single test and alter
+or affect the progress of the story.
+Timed Test 101-103
+Beat the Difficulty 18
+Getting a total that’s higher than the difficulty 
+set by the opposition’s dice roll.
+Benefit 62
+The part of an SFX that gives you
+something beneficial.
+Boss 118
+A single GMC that acts like a mob, with multiple 
+dice forming a boss trait that must be eliminated 
+in order to take them out.
+Example Boss 118
+Botch 17, 19, 28
+A critical failure. All your dice come up hitches, 
+so your total is zero. The GM can introduce a 
+free ⑥ complication and step it up as many 
+times as you have hitches past the first.
+No ●
+Ⓟ for you.
+Callback 82, 96, 135, 145, 156
+Referencing a previous session in which you did 
+something similar to something that’s happening 
+in this session; you get a bonus roughly equal to 
+a single ●
+Ⓟ.
+Challenge 65
+A mod where players may challenge their PC’s 
+traits to get 3x the die rating, at the cost of 
+stepping down the trait die.
+and character growth 82
+Reputation 55
+Character File 47, 111
+The player record sheet that holds all of your 
+game stats and information.
+Blank printable 244-247
+Example 81, 104, 149, 162-163, 179
+Complication 8, 28
+Unhelpful trait that your opposition gets to roll 
+B
+C
+GLOSSARY
+& INDEX
+
+
+=== PAGE 233 ===
+229
+GLOSSARY & INDEX
+in their dice pool to make your own actions that 
+much more difficult.
+Creating 34, 36-37
+Crisis pool and 159
+Example in play 105-107, 133, 152
+Instead of being taken out 29, 37
+Recovery from 37-38
+Stepped down to ④ 38
+Stepped up beyond ⑫ 22, 37
+Stepping down 37
+Stepping up 37
+Complication Mods
+Life Points 43
+Pushing Stress 40
+Shaken and Stricken 42, 133, 152
+Stress 39, 152, 167
+Trauma 41
+Conflict Mods
+Action Order 98
+Advantage of Scale 99
+Dramatic Order 98
+Multi-level Scale 100
+Taking Initiative 99
+Connections 67
+in pathways 73
+Consent in Play
+Mind control and possession 186
+Contest 19, 133
+A series of dice rolls between opponents, each 
+trying to beat the previous roll until one side 
+chooses not to roll and gives in, or fails to beat 
+the previous roll and takes a complication or is 
+taken out.
+Example Throwdown 105-107
+More than two characters 23
+Contest Mods
+Action-based resolution 24
+Add All the Dice 25
+No Effect Dice 25
+Reroll for Effect 25
+Cortex (older versions) 4, 6, 12, 25, 27, 43, 
+59, 99, 129-130, 165
+Previous Cortex games are compatible with 
+Cortex Prime, depending on which trait sets and 
+mods you use.
+Cost 62	
+The activating part of an SFX, to counterbalance 
+the benefit.
+Crisis Pool 33	 
+A pool of dice similar to a doom pool only 
+smaller, more focused, and able to be targeted 
+by characters.
+in Hammerheads 152, 158-159
+Crowbar
+That matters 35
+Dice 16-17
+Polyhedral randomizers.
+Botch 17, 28
+Difficulty 18
+Doubling 62
+Effect 20, 159
+Hitch 17, 20, 28, 36-37
+Key to examples 17
+Opportunity 17, 20, 28, 36-37
+Ratings 16
+Rerolling 62
+Result 16, 29
+Rolling 17
+Scale 99
+Steps 16
+Symbol reference chart 6
+Total 16, 17, 18
+Types of dice 11 
+Dice Pool 17
+All of the dice you get to roll when you make a 
+test or engage in a contest.
+Crisis 33, 152, 158-159
+Doom 17, 32-33
+Example in play 104-107
+Growth 83, 167, 172
+Opposition 17, 18, 19
+Resource 155
+Vehicle 217
+Difficulty
+The measure of how hard it is to succeed at a 
+test or contest.
+Crisis pool 33, 158
+Dice 18, 133
+Doom pool 32-33
+Growth pool 83, 172
+Recovery 37-38, 40, 41
+Static 25
+Timed test 101
+Difficulty Dice 18
+A pair of dice that represents how hard your 
+test is going to be.
+D
+
+
+=== PAGE 234 ===
+230 GLOSSARY & INDEX
+Disaster 157-159
+Terrible things that happen; the antagonists in 
+Hammerheads are usually disasters.
+Distinction 50
+A trait that represents a character’s background, 
+personality, and role in the game and 
+differentiates them from other PCs and GMCs.
+in archetypes 68, 168-171
+in character creation 70, 76, 133, 152
+Examples 68, 104, 118, 119, 136-140, 153, 168-171
+Scene 116
+and SFX 61
+Universal trait set 26, 47
+Vehicle 218
+Distinction Mods
+Highlighting Other Traits 50
+Rating Distinctions 50
+Statements as Distinction Alternates 66
+Doom Pool 17, 32-33
+A mod that introduces a pool of dice that 
+replace GM plot points and difficulty dice.
+Dramatic Order 98
+The order in which PCs act during a dramatic 
+scene using contests.
+Dramatic Situations 112
+Drawback 17
+The part of an SFX that costs you something.
+pushing stress 40
+vehicle distinctions 216
+Dream, It Was All A 123
+Effect Die 20, 159
+A die chosen from the roll that wasn’t used for 
+the total, which then gets used for things like 
+creating assets or complications. Usually the 
+largest size die remaining.
+Example in play 105-107
+and SFX 21, 194
+Versus opposition effect dice 21
+Eidolon Alpha 132-149, 226
+Extra 74, 116, 173
+A GMC defined with a single trait. Not usually 
+named as an individual.
+See also Resources
+Faction 116
+A group of characters who follow the same 
+ideology, goal, or purpose, even if they don’t 
+always work together. Works like a mob, but 
+with a scale die.
+Example Faction/Org 116
+Game Moderator (GM) 10
+The person who facilitates the game, presents 
+the session, and plays the parts of every other 
+person and thing in the game.
+Action order 98
+Antagonists 112-113, 121, 141, 148
+Choosing prime sets 46-47
+Ending scenes 92-93
+Framing scenes 90-92, 122
+and pathways 77
+E
+F
+G
+GRACE P. FONG
+
+
+=== PAGE 235 ===
+231
+GLOSSARY & INDEX
+Plot points 27, 63 
+Preparing a session 110-113
+Responsibilities 10, 121
+Rotating 111, 123
+Running a session 120-123
+You’re not prepared 122
+Gang Up 100
+Having more than one character provide 
+assistance on a test or contest.
+Gear 51, 64, 193, 213
+Stuff you have that lets you do things. Not 
+always represented by traits.
+as abilities 213
+as powers 51, 193
+as signature assets 64
+Gear Mods
+Ablative Armor 213
+Weapon Ranges 213
+Genre 126-131
+A style or category of setting that can be 
+loosely defined by various literary or cinematic 
+conventions, such as science fiction, fantasy,
+or horror.
+Apology 126
+Examples 128-130, 133, 151, 165
+Types of conflicts 97
+Give In 19, 28
+When called to make a roll, usually in a contest, 
+you instead choose not to roll and accept the 
+consequences on your own terms.
+Example in play 104-107
+GMC 114-119
+Game moderator characters, including major, 
+minor, and extra GMCs.
+Boss 118
+Extras 116
+Faction 119
+Ganging up 100, 116
+Locations 174, 175-178
+Major 114
+Minor 115
+Organization 119
+Vices 173-174
+Group 5, 10
+All of the characters that the players at the table 
+are playing; the GM and players as a group.
+Comfort at the Table 73, 186
+Example 12, 26
+One-shots with 110
+and vehicles 216-217
+Growing Characters Mods
+Growth 83
+Milestones 84-85, 214-215
+Session Records 82
+Growth 83
+An advancement mod that lets players advance 
+their characters as a result of challenging their 
+trait statements and recovering from stress.
+EXAMPLE GMCS
+Bosses, Factions/Orgs, Mobs
+Antagonist PAC (Faction/Org) 119
+Glove-Wielding Space Titan (Boss) 118
+Goblin Repair Team (Mob) 117
+Hit Squad (Mob) 117
+Order of Shog-Thema (Faction/Org) 119
+Pitchfork-Wielding Villagers (Mob) 117
+Queen of the Elves (Boss) 118
+South Street Jackdaws (Faction/Org) 119
+Titano-Gigantosaur (Boss) 118
+Eidolon Alpha
+Hydra Cultist (minor) 146
+Hydra Poisoner Endarch (major) 146
+Leviathan Cultist (minor) 147
+Leviathan Storm-Prince (major) 147
+Manticore Cultist (minor) 147
+Manticore Mercenary Endarch (major) 147
+Phoenix Cult Leader (major) 147
+Phoenix Cultist (minor) 147
+Siren Cultist (minor) 146
+Siren Pirate-Queen (major) 146
+Summoned Minotaur Eidolon 142
+TRACE 2.0
+Amontillado (location) 175
+Carlos Emerson (minor) 173
+Cortez Civic Center (location) 176
+Donita Exardopolous (major) 173
+El Rio Dorado (location) 176
+Norton Estates (location) 177
+Ridgetop (location) 177
+San Narciso Marina (location) 177
+
+
+=== PAGE 236 ===
+232 GLOSSARY & INDEX
+Hammerheads 150-163, 225-226
+Hero Dice 30-31
+Dice you earn from heroic successes that you 
+can use on future rolls.
+Compared to resource dice 56
+Static difficulty 25
+Heroic Success 20
+A total that’s 5 or more points higher than the 
+difficulty set by the opposing roll.
+Example in play 104-107
+Ganging up 100
+Hero dice and 30-31
+No Effect Dice mod 25
+Timed Test 101-103
+Unrelenting Force talent 66
+Highlight Trait 50
+Traits, such as skills, that a distinction or 
+archetype steps up for free.
+Archetype 68
+in Eidolon Alpha 136-140
+Pathways 78
+Scratch-Built 70
+Skill pyramid 59
+Hitch 17
+A die that came up as 1 in your roll for a test or 
+contest. The GM may give a player a ●
+Ⓟ to turn 
+a hitch into a complication. Additional hitches in 
+the same roll step up the complication.
+Archetype 68
+in Eidolon Alpha 136-140
+Pathways 78
+Scratch-Built 70
+Skill pyramid 59
+Initiative 99
+A mod for determining the order in which 
+characters act based on dice rolls.
+See also Action Order and Dramatic Order
+Interfere 23, 98
+An interfering character spends a ●
+Ⓟ to enter a 
+contest that’s already underway, hoping to beat 
+both of them.
+Life Points 43
+A mod that provides a score of points that 
+are either reduced by damage or serve as a 
+threshold of cumulative damage.
+H
+I
+L
+Limit 63
+A type of SFX that allows players to shut down
+a power set.
+Ability 194
+Gear 213
+Power 52, 193
+Location 56
+Where a scene takes place, may have traits that 
+can be used by characters in the scene.
+A location can be a resource on a character file.
+in Eidolon Alpha 146-147
+as GMCs 116
+in reveals 113
+in scenes 90-91, 94-95
+in pathways 74
+in TRACE 2.0 174-178
+Major GMC 114
+A GMC that has game stats roughly equivalent 
+to a PC and always has a name and some 
+significant role in the story.
+Bosses as 118
+Example 146-147, 173
+Vices 173
+Meta-reality 27
+You are in this right now.
+Milestone 84-85, 95
+A list of goals that earn a player character XP 
+during a session; XP is used to unlock new traits 
+or upgrade old ones.
+Example 84-85, 214-215
+Minor GMC 115
+A GMC with just a handful of game stats. May or 
+may not have a name. Somewhat less important 
+or significant than a major GMC, but certainly 
+more than an extra.
+Example 146-147, 173
+Mob 100, 117
+A group of extras that acts as a single minor 
+character. They have a mob trait rated with 
+multiple dice. Mobs can be weakened in
+strength until eliminated.
+Area attack 191
+Mod 13
+A Cortex Prime rules module that can change 
+the expressions of other rules. You choose 
+which mods to include to give your game the 
+feel and tone you want.
+M
+
+
+=== PAGE 237 ===
+233
+GLOSSARY & INDEX
+Mod Categories
+Asset and Complication Mods 39-43
+Conflict Mods 98-100
+Distinction Mods 50, 66
+Doom Pool 32-33
+Gear Mods 213
+Growing Characters Mods 82-85
+Hero Dice 30-31
+Plot Point Mods 29
+Power Mods 52, 54
+Relationship Mods 55
+SFX Mods 63
+Skill Mods 58-59, 152
+Test and Contest Mods 24-25
+One-shot 110-111
+A single session story, often with pre-made 
+player characters, good for trying out ideas.
+Oops 123
+Opportunity 37
+A GM hitch. When the GM rolls a 1 on the dice it 
+gives the players an opportunity to spend a ●
+Ⓟ 
+to step down a complication or step up an asset. 
+More opportunities mean more steps.
+See Hitch
+Org 119
+Short for organization. A group of characters 
+who all work together to do something, even if 
+they don’t all believe the same thing. Works like 
+a mob, but with a scale die.
+Outcome 19
+What happens after the dice are rolled and all 
+game effects are decided, shaping the direction 
+the story takes.
+Pathways 73-80, 110, 131
+A collaborative method of character creation 
+that also builds a setting and a relationship map.
+Default table 76-77
+Example 78-80
+Player
+One of the people playing the game, specifically 
+the people who are not the game moderator.
+Plot points 28-29
+Responsibilities 10, 13 
+O
+P
+Player Character (PC) 10
+A character played by a player, one of the stars 
+of the show.
+Aiding other PCs 100, 103, 161
+Character file 46-47
+Creating 67-80, 145, 156, 168
+Growing 82-85, 95, 96, 135, 145, 156, 194
+Plot Point (●
+Ⓟ) 8, 27
+A resource earned by getting invested in the 
+game and taking risks, and spent to alter the 
+outcome of tests and contests, or to do other 
+cool things.
+Bank 27
+Earning 28
+Example in play 105-107
+Pile 27, 36
+Spending 28-29
+Tokens 11
+Plot Point Mods
+No Bank 29
+Starting Plot Points 29
+Poker Chips 11, 27, 102
+Polti, Georges 112
+EXAMPLE PLAYER CHARACTERS
+Ashford, Mariella (Backer) 220
+Avenging Spirit (Backer) 221
+Belmarius (Backer) 222
+Chantee, Admiral (Backer) 223
+Crowe, Dr. Jeremiah (Backer) 224
+Dante (Eidolon Alpha) 149
+DeFalt, Jane (Example) 7
+Doherty, Eugene (Backer) 225
+Elix (Backer) 226
+Endarchs (Eidolon Alpha) 136-140
+Engineer (Example) 81
+Jubatus II, Count (Throwdown) 104
+Midnight-Blue (Backer) 227
+Ran, Uhtred (Hammerheads)163
+Sorx, Morza (Throwdown) 104
+Street, Ren (TRACE 2.0) 179
+TRACE Archetypes (TRACE 2.0) 168-171
+
+
+=== PAGE 238 ===
+234 GLOSSARY & INDEX
+Robot
+Zzt! zzt! Ro-bot! Ro-bot!
+Giant 127, 128
+Killer 24
+Mech 100, 127
+Pet 64
+Replacements 130
+Spider 37
+Systems 191
+Two-week-old 75
+Roby, Josh 104-107
+Role 58
+A type of trait that serves as a thematic bundle 
+of related skills and training.
+in character creation 72
+Examples 143-145, 166, 168-171
+Roll and Keep 8, 17
+Scale Die 99
+A die added to the dice pool of one side of a 
+conflict if it has a significant size advantage over 
+the other side.
+in Eidolon Alpha 142, 148
+Factions/Orgs 119
+Multi-level 100
+Scene 88
+A unit of time that basically covers a series
+of connected tests and beats in a story.
+Usually in one location, and usually with one
+set of characters.
+Action 89, 94
+Bridge 89, 95, 121, 122
+Distinctions 116
+Ending 92-93
+Exploration 89, 95
+Flashback 89, 96, 122
+Framing 90-92, 105
+High stakes 21, 22
+Opening 89, 94, 121, 174
+Tag 83, 89, 96, 122
+Types 89
+Scratch-built Character 70-72
+Example 70-71
+Vehicle 218
+S
+Power 51-52
+A trait that represents superhuman abilities
+or qualities.
+in character creation 72, 76
+Example 133, 136-140
+Limit 193
+List 182-190
+SFX list 191-192
+Power Mods
+Abilities 54
+Power Sets 52, 72
+Power Set 52
+A group of power traits collected together 
+under a thematic name and linked to a set of 
+SFX and limits.
+in character creation 72, 76
+Example 182
+with SFX 61
+Prime Set 26, 47
+A trait set that’s an essential source of dice
+for dice pools in tests and contests.
+Prompts, Not Plots! 112
+Reaction 24, 98
+In a contest, the dice roll made by an opponent 
+to beat the acting character’s roll. If using the 
+Action Order mod, a reaction serves the
+same purpose.
+Relationship 55
+A trait that represents close connections to 
+other characters.
+Example 153
+Relationship Mods
+Reputations 55, 72
+Resource 56
+A trait that represents contacts, locations, or 
+other external sources of aid.
+in character creation 72, 74
+Example 167-171
+Pool 154
+Reveal 113, 121
+A plot element prepared in advance of
+a game session.
+Result 16-17
+The number that comes up on any given die 
+after it’s been rolled.
+R
+
+
+=== PAGE 239 ===
+Signature Asset 64-65
+Asset that belongs to the PC and represents 
+important things or connections that may 
+sometimes help the PC out.
+in character creation 70
+Example in play 104-107
+Compared to resource dice 56
+Vehicles 216-217
+Situation 110, 112
+A central hook or story idea for a session.
+The “what” of “What is this session about?”
+Dramatic, list 112
+Eidolon Alpha 146-147
+Examples 7, 102-103, 104-107, 146-148, 174 
+and genre 127
+Introducing 121
+Jane DeFalt 7
+Sage’s timed test 102-103
+Throwdown 104-107
+Session 109
+All the gameplay that takes place in one sitting 
+around the table or online, roughly equivalent to 
+an episode from a TV series in story length.
+Centered 5
+Parts of 16
+Preparing for 110-113
+Running a 120-122
+Variations on 123
+Session Record 82
+All of the sessions a PC has played through prior 
+to the one they’re in, useful for callbacks.
+Setting 12, 25
+The shared game world in which scenes and 
+sessions take place.
+Connecting PCs to 67, 127
+Creating through pathways 70-74
+Genre 126-131
+Setting the Difficulty 18
+Generating a total that indicates how
+difficult it is for the other side to succeed.
+SFX 61-63
+A special effect that allows a player to
+influence the story in some way.
+and abilities 54, 194
+in character creation 70, 72
+in Eidolon Alpha 133
+Examples 68, 104-107, 136-140, 153,
+191-192, 195-212, 213
+and powers 191
+and signature assets 64
+SFX Mods
+Limits 63
+Shaken and Stricken 42
+A mod that applies stress directly to traits
+such as attributes or skills. Once one trait
+has more stress than its die rating, the 
+character is shaken. When this happens
+to two, the character is stricken.
+Example 133, 152
+Shut Down
+The act of making a trait inactive or
+unavailable until it is later restored.
+Power limits 193
+Power set 52
+SFX 62-63
+ORIANA MENENDEZ
+
+
+=== PAGE 240 ===
+236 GLOSSARY & INDEX
+Skill 57-59
+A trait that represents training, expertise,
+and talent.
+Character creation 68-69
+Default list 57
+Example in play 104-107
+Pyramid 59
+Training Packages 152
+Skill Mods
+Multi-level Specialties 59, 72
+No Skills, Just Specialties 59
+Roles 58, 72
+Skill Pyramid 59
+Skill and Specialty Split 59, 72
+Specialties 59
+Training Packages 152
+Specialty 59
+A trait that represents a narrow area of focus.
+Character creation 68-69, 70, 72
+Example in play 104-107
+Spend
+Using a point or die or other tracked currency 
+from a pool to do something.
+Hero dice 25, 30
+Plot points 28-29
+Sessions 82
+Statement
+A mod that connects contextual statements
+to traits.
+See Trait Statement
+Step Down 9, 16, 62
+Replacing a die with the next lowest die type,
+i.e., a ⑥ becomes a ④.
+Below ④ 38
+Traits 83
+Step Up 9, 16, 62
+Replacing a die with the next highest die type, 
+i.e., a ⑥ becomes a ⑧.
+Beyond ⑫ 21, 22, 37
+in character creation 68-69, 70-72
+Traits 83
+Stress 39-40, 152, 167
+A type of complication that represents
+harm and hinders action.
+Recovery 167
+Stunt 34
+An asset created by an SFX or another
+rule, starting at ⑧.
+Tag
+A keyword or descriptor used to guide when
+a resource or ability might be used.
+Descriptor (abilities) 54
+Effect (abilities) 54
+Resource 56
+Taken Out 19, 21, 22
+When you fail to beat your opponent in a 
+contest and lose, suffering the consequences 
+on your opponent’s terms. Also applies to 
+characters who fail a test in a high-stakes
+scene or who have a complication or stress
+die stepped up beyond ⑫.
+Avoiding 28-29, 37, 106-107, 217
+Recovery 22
+Talent 66, 72
+SFX set apart as specific character elements 
+without die ratings.
+Example 166-167
+Test 18, 133
+A use of the dice to determine the outcome of 
+an objective or goal, needs to beat the difficulty 
+set by the GM.
+Timed 101-103
+Test Mods
+Action-based Resolution 24
+Add All the Dice 25
+No Effect Dice 25
+Reroll for Effect 25
+Static Difficulty 25
+Total 16-17
+The number you get when you add at least two 
+of your dice together after rolling your dice 
+pool. Usually, your two highest rolling dice 
+results added together.
+TRACE 2.0 164-179, 227
+Train
+Choo choo! It goes on rails.
+Bullet 185
+Chicago to Minneapolis 88
+Road movie 128
+Runaway 33, 157, 158-159
+Western 128
+Train Up 82
+Improving your traits with practice and effort.
+in Eidolon Alpha 145
+in Hammerheads 156
+in TRACE 2.0 172
+T
+
+
+=== PAGE 241 ===
+237
+GLOSSARY & INDEX
+LIST OF ABILITIES
+Absorption 195
+Adaptation 195
+Animal Control 195
+Animal Mimicry 195
+Astral Projection 196
+Blast 196
+Body Transformation 196
+Chi Mastery 196
+Claws 197
+Combustion 197
+Comprehension 197
+Cryokinesis 197
+Density Control 198
+Dream Manipulation 198
+Duplication 198
+Earth Control 198
+Electrokinesis 199
+Energy Aura 199
+Flight 199
+Force Constructs 199
+Force Field 201
+Gravity Control 201
+Healing 201
+Hydrokinesis 201
+Illusions 202
+Insect Control 202
+Invisibility 202
+Invulnerability 202
+Light Control 203
+Luck 203
+Magnetism 203
+Metahuman Sense 203
+Mind Control 204
+Paralysis 204
+Plant Control 204
+Possession 205
+Power Leech 205
+Precognition 206
+Pyrokinesis 206
+Regeneration 206
+Shadow Control 206
+Shadow Walk 207
+Shapeshifting 207
+Size Alteration 207
+Sonic Blast 207
+Stretching 208
+Summoning 208 
+Super-Senses 208
+Super-Speed 209
+Super-Strength 209
+Swimming 210
+Technopathy 210
+Telekinesis 210
+Telepathy 210
+Teleportation 211
+Time Control 211
+Time Travel 211
+Transmute 211
+Tunneling 212
+Wall Walking 212
+Wind Control 212
+Gear
+Cloaking Device 213
+EMP Blaster 213
+Personal Gravity 
+Generator 213
+Powersuit 213
+Tricked-Out
+Compound Bow 213
+Trait 8, 26, 46-66
+Game stats rated by dice of various sizes,
+usually included in a dice pool and belonging
+to a trait set.
+Abilities 54
+Affiliations 48, 168-171
+Attributes 49, 133, 152
+Boss 118
+Choosing 129-131
+Distinctions 26, 47, 50, 61, 133, 153
+Mob 117, 119
+Powers 51-52, 133, 182-190
+Relationships 55, 152
+Reputations 55
+Resources 56, 72, 74, 167
+Roles 58, 72, 133, 165, 168-171
+SFX 54, 61-63, 133, 153, 191-192
+Signature assets 64-65
+Talents 66, 72, 166-171
+Temporary 26
+Trait statements 47, 65-66, 83, 96
+Values 60
+Vehicle 154-155, 216
+Trait Set 26
+A category of traits grouped together.
+Trait Statement 47, 65-66
+A mod that connects contextual statements
+to traits.
+Trauma 41
+Long-term stress that is harder to recover from, 
+gained when a character is stressed out.
+See also Stress
+Unlockable 85
+An advancement benefit unlocked by spending 
+XP, such as improved traits or in-game story 
+benefits like access to important locations.
+Value 60
+A trait that represents deeply held beliefs
+or attitudes.
+in character creation 72
+Trait statements and 65, 82
+Vehicles
+Things that you drive, fly, pilot, ride, or 
+otherwise get around in, represented in
+game terms.
+Building 218
+Dice pool 217
+Hammerhead 154-155, 160, 162
+Tests 217
+Traits 216, 218
+Training up 217
+XP
+Points earned during play using
+the milestone advancement mod.
+See Player Character, Growing
+U
+V
+X
+EXAMPLE VEHICLES
+Black Shanty (Backer) 223
+Hammerhead One (Hammerheads) 162
+High-Tech Street Bike 216
+Star-Frigate 217

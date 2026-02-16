@@ -1,0 +1,521 @@
+
+=== PAGE 10 ===
+INTRO TO CORTEX PRIME
+6
+If you’ve come from other roleplaying games, even if you’ve 
+played previous Cortex-based games, it might seem daunt­
+ing to jump straight into a modular, customizable rules-set 
+like this one. This primer serves as a bare bones look at 
+Cortex Prime before plunging into the rest of the rulebook.
+READ THIS FIRST:
+THE CORTEX PRIMER
+THE CORE OF CORTEX
+Here is the core of Cortex, stripped down to the basics: 
+Everyone writes down their character’s name
+and one central thing they’re good at doing.
+This is their trait (“Seasoned Journalist”).
+Each player makes decisions for
+their character (“What would Jane do?”).
+If a player wants their character to do something 
+that the character’s trait would help them do, they 
+roll ⑥⑥⑥ (“My experience as a journalist will 
+help me gather information on this subject”).
+If their trait doesn’t have anything to do with
+the thing they want to do, they roll ⑥⑥
+(“My experience as a journalist will not help
+me win this fistfight”).
+Every character starts with one plot point 
+(represented by this symbol: ●
+Ⓟ).
+Here’s a super basic Cortex Prime character:
+When you want to do something and there’s something 
+that might get in your way (such as the environment, 
+another character, or time), you make a test. Someone 
+else picks up dice to establish the difficulty number you 
+must beat to succeed.
+•	 For easy opposition, roll ⑥.
+•	 For challenging opposition, it’s ⑥⑥.
+•	 For hard opposition, it’s ⑥⑥⑥
+or more.
+Then you either roll the default ⑥⑥ or roll ⑥⑥⑥ if your 
+trait is applicable. 
+If you roll 1 on a die, that die is called a hitch and doesn’t 
+count. When you roll a hitch the GM can give you a ●
+Ⓟ. 
+You can spend a ●
+Ⓟ later to add a ⑥ to your roll if you can 
+describe something cool that helps you out.
+Total up your dice, excluding any hitches. If you had more 
+than two dice, only add the best two dice together. Your 
+opposition does the same.
+•	 If you beat your opposition’s total,
+you succeed!
+•	 If you get equal to or less, you fail.
+Talk about what happened instead.
+1
+2
+3
+4
+5
+In this handbook, dice are represented by the symbols below, 
+using solid shapes for dice type and numbers outlined by their 
+respective dice shapes for example rolls.
+JANE DeFALT
+BASE TRAIT:
+Seasoned Journalist
+DICE SYMBOL REFERENCE CHART
+TYPE
+SYMBOL
+SAMPLE RESULTS
+d4
+d6
+d8
+d10
+d12
+
+
+=== PAGE 11 ===
+INTRO TO CORTEX PRIME
+7
+Jane, working undercover to investigate 
+possible corruption, must sneak into the 
+corporate lab to get some files.
+The GM decides this task should be hard 
+to pull off and rolls ⑥⑥⑥.
+2
+2
+Jane’s player reasons that she has plenty 
+of experience with all-nighters from 
+journalism school.
+The trait, Seasoned Journalist, is 
+applicable to this contest so the GM 
+allows them to roll ⑥⑥⑥.
+Jane’s player chooses the two highest 
+results for a total of 9, which beats 
+the GM!
+Jane’s total of 5 doesn’t beat the GM, 
+but she picks up a ●
+Ⓟ for rolling a 
+one (a hitch).
+Jane’s player chooses the two highest 
+results for a total of 11, which beats 
+the GM!
+THREE EXAMPLE SITUATIONS
+Jane needs to get a big pitch done by 
+tomorrow morning.
+The game moderator (GM) decides 
+staying up late should be an easy 
+task, so they roll ⑥.
+Jane needs to talk to a source inside a 
+members-only biker bar.
+The GM decides that it should be more 
+challenging to get past the bouncer 
+and rolls ⑥⑥.
+Jane manages to stay up all night to 
+finish her pitch. Next morning, she 
+walks into her boss’s office and slams 
+it down on the desk.
+Jane’s player tries to convince the GM 
+that her journalistic background 
+would make her a smooth talker.
+The GM disagrees that her trait would 
+apply here so they restrict the player 
+to rolling only ⑥⑥.
+The bouncer shoves Jane into the 
+mud. The source comes out and 
+hands her his card. She’ll get her info 
+later—but will she hit her deadline?
+Jane’s player points out that her 
+informant provided the lab schedule, 
+so she uses Seasoned Journalist 
+and a ●
+Ⓟ for good measure.
+The GM agrees to that and lets the 
+player roll ⑥⑥⑥⑥.
+Jane discovers some damning 
+evidence and sneaks out with the 
+incriminating paperwork before 
+anyone notices she’s not at her desk.
+THE DEADLINE
+THE INFORMANT
+THE SCOOP
+1
+1
+1
+2
+3
+3
+3
+GM’s Roll
+Player’s Roll
+GM’s Roll
+Player’s Roll
+GM’s Roll
+Player’s Roll
+GM’s Roll
+Player’s Roll
+JEREMY NGUYEN
+GM’s Roll
+Player’s Roll
+GM’s Roll
+Player’s Roll
+
+
+=== PAGE 12 ===
+INTRO TO CORTEX PRIME
+8
+GOT IT.
+WHAT ELSE?
+Cortex Prime provides mechanical support for the various 
+genre styles that you may want to emulate, or for the way 
+you want to play. From drama-heavy games with lots of 
+character interaction to action-heavy games with perilous 
+challenges and exciting opposition, Cortex Prime can be 
+modified, assembled, and run in hundreds of ways.
+There’s a common language shared by each Cortex Prime 
+game, and it’s this language that makes the system so 
+readily customizable. Let’s go into a little more detail 
+about what that design language looks like.
+TRAITS
+Every Cortex Prime game—even our stripped-down basic 
+rules-lite version—incorporates traits. A trait, when you 
+get right down to it, is a descriptive label with a die rating 
+attached. Nearly everything on your character file is a 
+trait. For the most part, the rating is a die type (④ through 
+⑫) but it could be a multiple of dice (like ⑧⑧) or two 
+die types together (like ④ + ⑫). Cortex Prime traits are 
+almost universally this: Trait Name <dice icon>.
+A game typically breaks traits down into sets, such as 
+attributes, roles, values, and so on. If you’re building your 
+own Cortex Prime game, you pick trait sets that most suit 
+your setting or world. Maybe you want to use affiliations 
+and not attributes, or relationships and not skills. Maybe 
+everyone has super powers or maybe only aliens do. Sets 
+are like buckets the various traits are dropped into, divid­
+ing a character file into areas that are easily defined and 
+assigned when making new characters.
+Trait sets are also the individual components of a dice 
+pool. Most of the time when a player rolls to determine 
+an outcome, they grab a die from each of the appropri­
+ate sets on their character file. The act of choosing a die 
+from a set helps pull you back into the story and give some 
+narrative structure to what may otherwise seem like just 
+an elaborate dice game.
+PLOT POINTS
+Cortex Prime games run on a narrative currency called 
+plot points (●
+Ⓟ) that influence the plot. They’re the fuel 
+for the system’s engine. The cycle of earning, spending, 
+and then earning more plot points is something that you 
+must maintain when deciding what mods to use.
+So long as there are various ways to earn ●
+Ⓟ, spend ●
+Ⓟ, 
+and explain what it means to do this within the context 
+of the story, you’re set.
+If you rely too heavily on ●
+Ⓟ being generated by utterly 
+random occurrences (such as rolling hitches), players may 
+feel that their character’s progress is arbitrary and out of 
+their control. Always include some way the player can 
+make a risky or challenging choice and gain ●
+Ⓟ in the 
+process. Don’t leave this to the GM to manage—it should 
+be in the hands of the players.
+ROLL AND KEEP
+In Cortex Prime, you may roll a lot of dice, but you don’t 
+add them all together. By default, players keep two dice 
+to add together for their total.
+The statistical qualities of rolling a bunch of dice of 
+varying sizes is a little beyond this primer, but if you’re 
+worried about the odds, take some comfort in the fact that 
+it operates on a curve. It seems obvious when choosing 
+dice that a ⑫ is better than a ④, that five dice should logi­
+cally result in a better average total than two (especially 
+if you keep the two highest rolling dice in any given roll).
+
+
+=== PAGE 13 ===
+But there’s a lot of variation there. The more dice you roll 
+and the bigger they are, the better chance you have of 
+getting a higher total. There’s an element of risk, however, 
+because the more dice you roll, the better chance of 
+rolling hitches.
+STEPPING UP AND 
+STEPPING DOWN
+Cortex Prime games feature a lot of “dice tricks.” One 
+of the most common methods of altering the outcome 
+is by changing the type of die being rolled. Things like 
+distinctions, SFX, and talents often allow you to step up 
+a die (changing it from a die of one size to one of a larger 
+size) or step down a die (the reverse). We do this in lieu of 
+flat modifiers, to preserve the swingy nature of the dice 
+pool, and to give you the feeling of improving your odds 
+without actually breaking the balancing nature of the roll-
+and-keep method.
+ASSETS AND 
+COMPLICATIONS
+Another central part of Cortex Prime is the use of assets 
+and complications. This includes such things as stress 
+or resources or stunts—basically, temporary traits that 
+either help you out or make life more difficult for you.
+An asset is a trait you create during play that instantly 
+labels a part of the fiction as significant. Sure, there are 
+guns everywhere in an action movie setting, but when it’s 
+a Gun ⑧ people take notice. Whether you create them by 
+spending ●
+Ⓟ or as a result of a die roll, an asset allows you 
+to improve your chance at influencing the story by adding 
+more dice in a flavorful and thematic way.
+By contrast, complications are traits that make things 
+harder for you. As Cortex Prime is almost always a game 
+of opposed dice rolls, increasing the risk of something 
+makes the opposition better by increasing their dice 
+pool. Complications (or stress, or whatever they end up 
+being called in your game) are bonus dice included in 
+your opposition’s dice pool when your negative circum­
+stances would hinder you.
+A healthy game of Cortex Prime often ends up with the 
+playing area or character files or chat windows covered 
+in sticky notes or index cards, each labeled with some 
+asset or complication or equivalent. They come and go, 
+they change hands, they get bigger or reduced in size, 
+and they’re a sign that the story is evolving and changing, 
+directly affected by the players and their choices.
+WHAT’S NEXT?
+This is just the beginning of a book packed with ideas,
+suggestions, variables, and mods that you can use to 
+create the game you want. With a shared design language 
+and a shared goal of emulating genre, the rules and mods 
+in this book are primed and ready to inspire, motivate, 
+save time, and above all allow you and your players to 
+express yourselves.
+Go forth, mess around, and see what else 
+you can strip away before you build it right 
+back up again!
+THOMAS SCHOLES
+
+
+=== PAGE 14 ===
+INTRO TO CORTEX PRIME
+10
+To play Cortex Prime, you’ll need a few other people, 
+someone to manage the rules and prep the session, some 
+dice, and a handful of other supplies. Most of all, you need 
+this Game Handbook and a few hours to play the game.
+PLAYERS
+Cortex Prime works best with two to six players, each 
+creating and playing their own player character or PC. 
+The PCs together make up the group. Each PC gets their 
+own character file for players to record important game 
+statistics and details.
+PLAYERS ARE RESPONSIBLE FOR:
+•	 Deciding what their PCs do.
+•	 Confronting any problems that the GM
+throws in front of them.
+•	 Pointing their PCs in directions that make
+for good stories.
+•	 Supporting other PCs and giving them a
+shot at what they’re good at.
+•	 Deciding how their PCs change and grow
+over time.
+•	 In general, telling the story of their PCs.
+WHAT YOU 
+NEED TO PLAY
+GAME MODERATOR
+One person at the table doesn’t take a PC, instead playing 
+the role of the game moderator (GM). The GM manages 
+the session and presents exciting scenes, locations, and 
+game moderator characters (or GMCs). Often, but not 
+always, the GM is the person who bought the game and 
+has read the book a few times.
+THE GM IS RESPONSIBLE FOR:
+•	 Preparing and presenting the session to
+the players.
+•	 Deciding how the GMCs react to the
+group’s actions.
+•	 Asking leading questions of the players to
+lead them into further adventure.
+•	 Revealing the important details of the
+setting to the players.
+•	 Facilitating the game rules at the table and 
+maintaining the pace of the session.
+•	 In general, bringing the world to life
+around the other players.
+ANNA “SARIANNE”
+NEUMANNOVÁ
+
+
+=== PAGE 15 ===
+INTRO TO CORTEX PRIME
+11
+GAME DICE
+Cortex Prime uses game dice of various sizes. You can 
+pick them up from hobby stores or online. Dice often 
+come in sets but can also be purchased individually. For 
+each session, you need a bunch of four-sided, six-sided, 
+eight-sided, ten-sided, and twelve-sided dice. You won’t 
+need the twenty-sided die, or dice marked with special 
+symbols, or those with percentage numbers. You will, 
+however, need a fair amount of dice. We recommend a 
+communal pool of dice for the table, with at least three 
+or four of each type. The more dice you have the better.
+If you’re playing online, you might have dice simulators 
+for making virtual dice rolls. Make sure everyone playing 
+approves of the method you use, and that everyone can 
+see the results of each die in your die rolls.
+A WAY TO KEEP TRACK
+There’s a good reason tabletop RPGs are often called 
+pen-and-paper RPGs. Every player as well as the GM 
+should at least have access to scratch paper and writing 
+implements. A whiteboard or dry-erase gaming mat large 
+enough to draw maps and other diagrams on is helpful.
+Cortex Prime is also purpose-built to be played online or 
+with our digital tools. Whether your group uses tablets or 
+laptops to keep track of character files and notes around 
+the table, or your “table” is entirely virtual and you’re 
+gathered together online, you can eschew the traditional 
+pen and paper for a digital solution.
+Visit www.cortexRPG.com to learn more. 
+PLOT POINT TOKENS
+You need a set of about a dozen or so game tokens to repre­
+sent plot points. These can be poker chips, coins, glass 
+beads, or plastic counters. Put a pile of them in the middle 
+of the table where the GM and players can reach them.
+When using our digital tools to play Cortex Prime, keeping 
+track of plot points can be handled virtually.
+TETRAHEDRON
+Four equilateral triangles with three 
+numbers on each face. Indicated by 
+whatever number is on top or bottom.
+HEXAHEDRON
+Six square faces,
+most common type 
+of dice used.
+OCTAHEDRON
+Eight equilateral 
+triangles (made up 
+of two pyramids).
+PENTAGONAL
+TRAPEZOHEDRON
+Ten congruent kites,
+zero represents 10.
+DODECAHEDRON
+Twelve pentagonal 
+faces connected to 
+each other.
+0
+12
+GLASS BEADS
+DIGITAL
+COINS
+CANDY
+POKER CHIPS
+PLASTIC
+
+
+=== PAGE 16 ===
+SETTING
+Every Cortex Prime game needs a setting, although in 
+some cases the setting is created by the players and GM 
+during the first session. Even if collaborative setting 
+creation is your goal, you should have an idea of what 
+kind of game you want to play, and what sort of world, 
+background, and shared space your group expects to 
+create characters and stories inside.
+Pre-made Spotlight settings are included in this book, as 
+well as in other Cortex Prime supplements and products. 
+These settings vary in genre, tone, and detail. You can 
+expect pre-made settings to specify what mods and traits 
+are expected, what major conflicts, themes, and ideas are 
+present in the world, as well as who the characters are, 
+broadly speaking.
+Note: This Handbook has three Spotlight settings:
+Eidolon Alpha (page 132), Hammerheads (page 150),
+and TRACE 2.0 (page 164).
+Cortex Prime is built on previously published Cortex 
+games based on popular media properties such as comic 
+books and television shows, and each of those games 
+has its own setting. You can treat those older games 
+as pre-made settings or use them to inspire your own. 
+You can also use a setting you and your group already 
+know and enjoy, either from another roleplaying game 
+or from media properties that don’t have their own
+RPG adaptations.
+H. WON
+OUR EXAMPLE CORTEX GROUP
+Throughout this book we include examples of play, and those 
+examples feature the same players, GM, and characters for 
+consistency. They are:
+•	 Mary Rose: Game Moderator
+•	 Amanda: The Engineer
+•	 Adam: The Hero
+•	 Tina: The Sage
+If you look closely, you’ll see the Engineer, the Hero, the Sage, 
+and several other archetypal characters in the artwork gracing 
+these pages. Like Cortex Prime itself, they may vary widely in 
+representation but they share common traits. See if you can 
+spot them!
+
+
+=== PAGE 17 ===
+INTRO TO CORTEX PRIME
+13
+HOW TO
+USE THIS BOOK
+The Cortex Prime Game Handbook is divided into 
+seven chapters, each covering an important part 
+of the game:
+Prime Intro: You’re reading this chapter already.
+Prime Core: The basic rules of any Cortex Prime 
+game and how they work, including dice, traits,
+and plot points.
+Prime Characters: Defining, describing,
+and creating characters for Cortex Prime.
+Prime Scenes: Framing, moderating,
+and resolving scenes.
+Prime Sessions: How to plan for and manage
+Cortex Prime sessions, including GM advice.
+Prime Settings: How to build and use your
+own settings. Features three Spotlight settings
+for use as-is or as inspiration.
+Prime Lists: An appendix of lists, followed by
+a glossary and index.
+If you skipped “Read This First: A Cortex Primer” earlier 
+in this chapter, start there. If you’ll be the game moder­
+ator, you should read through the entire book at least 
+once, and pay special attention to the Prime Core, Prime 
+Characters, Prime Scenes, and Prime Sessions chapters as 
+they contain the bulk of the game’s rules. Read the Prime 
+Settings section for ideas on what sort of world you and 
+your players want to set your game in. Use the Prime Lists 
+chapter for reference as needed.
+Players should eventually be familiar with Prime Core 
+and Prime Characters, but as the GM it’s one of your 
+responsibilities to introduce the rules and concepts to 
+the players. There isn’t anything in this book that’s espe­
+cially secret or that needs to be hidden from the players, 
+unless you plan to use one of the Spotlight settings 
+for your game—in that case you may want to encour­
+age the players to let you brief them on those, to avoid
+spoiling secrets.
+USING MODS
+This book includes a lot of mods that expand the basic 
+rules, as explained in other chapters such as Prime 
+Characters and Prime Sessions. Due to the modular 
+approach of Cortex Prime, everything about this game 
+can be hacked, drifted, modified, and changed as you 
+see fit. Where possible, the book tells you what to expect 
+when you use specific mods, and in some cases, what 
+happens when you use two or more mods together, so 
+you can assemble the right version of Cortex Prime for 
+your game table.
+Mods are called out using this symbol ȯ. You might see 
+this symbol a lot. Where there’s a stated rule or game 
+mechanic and there’s no mod symbol next to it, assume 
+that you’re reading a Prime Core rule.
+KEVIN HONG
+
+
+=== PAGE 18 ===
+NOÉ LEYVA

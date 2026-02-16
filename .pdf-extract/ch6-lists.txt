@@ -1,0 +1,4106 @@
+
+=== PAGE 185 ===
+181
+CHAPTER 6 PRIME LISTS
+CHAPTER BREAKDOWN
+Here’s what you can find in this chapter of miscellanea. Much 
+of it is aimed squarely at fantasy or superhero settings, but 
+any of it can serve as inspiration for Cortex Prime games 
+using supernatural, science fiction, or surreal genre elements.
+The Power List: A list of power traits, SFX, and limits for use
+in superhero and supernatural settings.
+The Ability List: A list of abilities, suitable for use in more 
+narrative-heavy settings with superpowers or supernatural traits.
+Fantasy Milestones: A list of milestones for use in traditional 
+fantasy and other fantastical settings.
+The Motor Pool: Rules for creating vehicles in Cortex Prime.
+Characters from the Cortex Multiverse: A collection of 
+sample characters created by backers you can use as written or
+as inspiration for creating your own characters.
+Prime Lists is a chapter full of lists. There are lists of examples of SFX, powers, abilities, 
+and milestones. It also includes supplemental mods on vehicles, expanding how these 
+work in the game beyond signature assets or traits on a character file. There's an 
+eclectic collection of pre-built characters you can use as inspiration for your own 
+game and characters. 
+PRIME
+LISTS
+CHAPTER 6
+
+
+=== PAGE 186 ===
+182 CHAPTER 6 PRIME LISTS
+THE POWER LIST
+This section goes into greater detail about the individual 
+power traits listed in Prime Characters on page 51, as well 
+as power-based SFX and limits. Powers can be used as 
+part of power sets or incorporated into other aspects of 
+the rules (such as distinctions or talents) or re-skinned 
+to serve as the building blocks of spells for heroic fantasy 
+or the abilities of monsters and supernatural creatures.
+A power set generally looks something like this:
+STRANGE VISITOR
+FROM ANOTHER DIMENSION
+ATTACK POWERS (BLASTS, WEAPONS)
+Whether it’s an energy blast or razor-sharp claws, any 
+power that represents an attack fits in this category. Use 
+these guidelines for rating attack powers in a power set:
+At ⑥, the power is roughly equivalent to small arms 
+fire or dangerous close combat weapons.
+At ⑧, the power is capable of greater injury or harm, 
+roughly equivalent to automatic rifles or grenades.
+At ⑩, the power is equivalent to heavy explosives or 
+lightning bolts.
+At ⑫, the power is truly devastating, even if the area 
+of effect isn’t widespread.
+An attack power’s name gives you more suggestions about 
+when it works. Often, the attack uses a specific type of 
+energy, such as fire, electricity, cold, or radiation. This may 
+affect how you describe the effects of stress caused by the 
+attack and by other powers or SFX that provide resistance 
+to those types. A generic Energy Blast is usually explo­
+sive plasma or cosmic energy with few side effects, unlike 
+Flame Blasts or Lightning Bolts that might set things on 
+fire, or Cold Blasts that freeze. Psychic Blasts can target 
+heavily armored foes but they’re useless against oppo­
+nents without minds.
+Some attacks may be used at range, while others are only 
+effective in close quarters. Whether this is an advantage 
+or a drawback varies on the situation. It’s easier to target 
+a flying target with a Force Blast than with Elbow Spikes, 
+but in a confined space the Force Blast poses problems 
+the Elbow Spikes do not.
+VENUS BAMBISA
+Enhanced Speed ⑧
+Enhanced Stamina ⑧
+Heat Vision ⑧
+Superhuman Durability ⑩
+Superhuman Strength ⑩
+Supersonic Flight ⑩
+	
+ɬ SFX: Bulletproof: Spend a ●
+Ⓟ to ignore physical stress
+or complications for a test or contest unless caused
+by magic.
+	
+ɬ SFX: Mightiest Mortal: Use two or more Strange Visitor 
+from Another Dimension powers in a single dice pool and 
+step each power down by one for each additional power 
+beyond the first.
+	
+ɬ Limit: Tellurite Allergy: When exposed to tellurite mineral 
+or anything powered by tellurite energy, shut down a 
+Strange Visitor from Another Dimension power and gain 
+a complication of the same size to gain a ●
+Ⓟ. Once out of 
+range of the tellurite, eliminate the complication to recover 
+the power.
+POWER DESCRIPTIONS
+In the following descriptions, we assume you're using 
+stress as well as complications. If you’re not, all instances 
+of stress can be replaced with complications without 
+much effort. Other mods can be integrated by following 
+the general guidelines for those mods.
+Some powers start at ⑧, rather than ⑥. These include 
+Durability, Intelligence, Reflexes, Stamina, and Strength. 
+There’s no reason you can’t include a ⑥ die rating level 
+for them, but we assume that any of these enhancement 
+powers truly kick in at ⑧, with ⑥ being “human level.”
+As always, you can change the names or customize the 
+specific version of these powers as needed. “Attack” or 
+“movement” are general categories rather than actual 
+powers, for example.
+
+
+=== PAGE 187 ===
+183
+CHAPTER 6 PRIME LISTS
+DURABILITY
+Whatever the reason, the character is more resistant to 
+injury and harmful effects than the average human.
+Enhanced Durability ⑧ represents toughened skin 
+and muscle, as well as the ability to withstand most 
+minor blunt trauma or pain and low-level extremes of 
+heat or cold.
+Superhuman Durability ⑩ is bulletproof skin and 
+resistance to extreme temperatures or hazards.
+Godlike Durability ⑫ indicates invulnerability
+to almost all conventional forms of injury and 
+harmful effects.
+Durability is also used in power sets that represent force 
+fields or hardened objects. Use common sense and the 
+descriptions in the power set as your guide for when you 
+can factor in Durability. A character that can project 
+a force field may not be able to apply that Durability 
+against light-based attacks, while a character whose 
+Durability represents steel-hard skin can’t apply it against
+psychic blasts.
+Durability usually, but not always, comes with an assumed 
+level of life support or protection from the environment. 
+This might indicate that the character can shrug off 
+certain environmental conditions such as heat or cold. 
+Whether this life support is continuous or only when the 
+character is using the power may depend on SFX or how 
+the Durability is described.
+Energy powers are typically resisted by Durability. Some 
+SFX protect against other, more specific types of harm—
+such as disease or toxins—over and above any protection 
+Durability might give. For example, a power set that 
+includes Durability might have the Immune SFX against 
+poison. For protection against magic or psychic powers, 
+use Mystic Resistance or Psychic Resistance.
+ELEMENTAL CONTROL POWERS 
+(INCLUDING INFLUENCE, MASTERY,
+AND SUPREMACY)
+The ability to control the elements is a common power trait 
+for superheroes. How “elements” is defined can vary from 
+character to character. They aren’t necessarily elements 
+in the periodic table sense, or the classical elements of 
+air, fire, earth, and water—in many cases they’re more 
+properly categorized as energy types or compounds.
+For the purposes of the game, the material, energy, or 
+substance being controlled is called an element. Each 
+elemental control power trait must be specified, i.e., Fire, 
+Light, Magnetic.
+Elemental Influence ⑥ gives minor or basic 
+control: extinguishing the candles in a room; cooling 
+the air in a room; shorting out household appliances.
+Elemental Control ⑧ gives significant local 
+control: extinguishing a burning room; snap-freezing 
+the air in a room; shorting out the electrical system 
+of a building.
+Elemental Mastery ⑩ provides citywide control: 
+extinguishing a burning skyscraper; freezing over a 
+city street; bringing down a city’s power grid.
+Elemental Supremacy ⑫ provides regional 
+control: extinguishing a forest fire; freezing over 
+Lake Michigan; rerouting the national power grid.
+Elemental control powers offer many opportunities for 
+stunts; when tied together with SFX, they may be applied 
+in dozens of ways. The basic rule of thumb is that the 
+larger the die rating, the greater the scope of the power’s 
+control effect. Elemental Influence ⑥ usually only extends
+to one or two types of effect, while Elemental Supremacy ⑫ 
+indicates the unsurpassed ability to manipulate the 
+controlled element.
+ELEMENTS TO CONTROL
+Here’s a list of the common elements in comic book universes.
+Air: Moving air masses around, increasing or decreasing air pressure, 
+creating whirlwinds
+Cosmic: Channeling and redirecting the quantum power of the universe, 
+altering or destroying the bonds between energy and matter, and 
+connecting with the cosmos
+Earth: Moving soil, dirt, and rock; shaping it or altering its consistency
+Electric: Strengthening, weakening, redirecting, and otherwise altering 
+the properties of electrical current
+Fire/Heat: Rapidly increasing the thermal properties of the environment, 
+shaping existing flame, combusting materials
+Gravity: Intensifying or diminishing the hold the Earth’s gravitational 
+field has on objects, shifting centers of gravity
+Ice/Cold: Rapidly decreasing the thermal properties of the environment, 
+producing ice, freezing things
+Kinetic/Telekinetic: Intensifying or diminishing the stored kinetic 
+potential of objects, moving things around, holding them in place
+Light: Intensifying or diminishing the ambient light in the environment, 
+creating bright flashes, forming holograms
+Magnetic: Strengthening, weakening, redirecting, or otherwise 
+manipulating magnetic fields, affecting ferrous metals
+Negative: Summoning and manipulating negatively charged energy
+or darkness
+Sonic: Intensifying or diminishing the ambient sound in the environment, 
+altering sound waves, mimicking noises
+Weather: Anticipating, directing, and manipulating local and regional 
+weather patterns to create meteorological effects from rain and snow 
+to wind and drought
+Water: Moving aqueous masses around, increasing or decreasing water 
+volume and pressure, dehydrating a living target
+
+
+=== PAGE 188 ===
+184 CHAPTER 6 PRIME LISTS
+Note that Mind Control and other psychic powers aren’t 
+considered elemental control powers. The same is true 
+for Sorcery, which is its own power trait type. Psychics or 
+sorcerers often possess some of these elemental powers, 
+of course; Kinetic/Telekinetic Control, Fire Control, and 
+Weather Control are frequently psychic in nature.
+Some elemental control powers overlap; you can create 
+frosty conditions using both Ice Control and Weather 
+Control, though the former has more accuracy and depth 
+than the latter. Magnetic Supremacy could alter electri­
+cal currents and other types of energy, though this is 
+likely better represented by a stunt than SFX. This sort 
+of overlap is more likely at the Mastery and Supremacy 
+levels; Influence and Control rarely allow the character to 
+step outside the standard boundaries of those elements.
+To properly represent the kinds of abilities associated with 
+characters with elemental control, these power sets also 
+include powers like Energy Blast, Flight, or Senses, and 
+SFX like Area Attack, Energy Absorption, and Multipower.
+INTANGIBILITY
+The character is able to become less solid, either through 
+reduced molecular density, shifting phase, or becoming 
+fluid. The primary effect of this power trait is that passing 
+through obstacles becomes much easier, and physical 
+objects pass through the body.
+Intangibility ⑥ lets you mildly disperse your 
+molecules, reducing the impact of some physical 
+attacks and allowing you to slowly move through 
+highly porous or permeable obstacles such as
+chicken wire fences or barred gates.
+Intangibility ⑧ represents substantial fluidity or 
+dispersal, giving you the power to seep through tiny 
+holes in obstacles and reduce the impact of most 
+physical attacks.
+Intangibility ⑩ makes you ghostlike or out of 
+phase, letting you walk through almost any physical 
+obstacle other than super-high-density substances, 
+and making very little noise. Physical attacks rarely 
+affect you.
+Intangibility ⑫ makes you completely out of
+phase with reality, including even energy waveforms. 
+You’re essentially not even there.
+Intangibility is frequently associated with power sets that 
+describe transforming into liquids or, at low ratings, the 
+ability to deform or compress your body. A close cousin to 
+Stretch, it’s often included in the same power sets. If the 
+power set represents molecular or dimensional phasing, 
+powers like Flight or Airwalk are common.
+SFX in power sets with Intangibility include being able to 
+disrupt people or things by phasing or passing through 
+them and sharing your Intangibility with others.
+INTELLIGENCE
+The character has enhanced reasoning, mathematical, or 
+analytical faculties linked to intelligence. Many people 
+are smart, but this superpower puts you above the rest. 
+It’s almost always used to create assets or apply complica­
+tions, and to enhance the use of several specialties.
+Enhanced Intelligence ⑧ means you’re able to 
+handle complex mental problems easily, including 
+calculation, recall, and applied knowledge.
+Super Intelligence ⑩ means you’re a living 
+computer, with a mind that processes information 
+and sensory input with dazzling speed, running 
+numerous simultaneous rational operations,
+and able to recall vast amounts of information
+and data when needed.
+Godlike Intelligence ⑫ places you beyond 
+terrestrial computers, forming connections in 
+your mind between apparently unrelated facts, 
+solving impossibly difficult puzzles or mathematical 
+problems, and possessing nigh-instant access
+to countless storehouses of knowledge that
+you’ve collected.
+Intelligence pairs well with Senses, as well as other powers 
+such as Reflexes or psychic powers. It acts as a sort of 
+generic “smartest guy in the room” power that substi­
+tutes in for specialist knowledge from skills or specialties 
+but doesn’t entirely replace them: even having Godlike 
+Intelligence doesn’t mean you can’t also benefit from 
+having a high rating in the Know skill.
+INVISIBILITY
+The character can hide in plain sight, whether through the 
+bending of light waves, high-tech chameleon technology, 
+or shifting out of phase with this dimension.
+Invisibility ⑥ blurs or obscures your visual image; 
+it’s often limited to obscuring your image in mirrors 
+or electronic surveillance, or in situations where 
+vision is already impaired, such as at night. It may also 
+be a psychic field that makes others pay less attention 
+to you, even though you’re still visible.
+At Invisibility ⑧, you’re concealed to a greater 
+degree, such as with chameleon-like blending, ghost-
+like transparency, or psychic misdirection. While 
+still visible to others if they focus, you’ve got the 
+equivalent of a stealth field.
+
+
+=== PAGE 189 ===
+185
+CHAPTER 6 PRIME LISTS
+Invisibility ⑩ renders you completely invisible 
+to standard visual means. You can move around 
+without being noticed, and you don’t leave a shadow 
+or other sign of being there. Certain spectrums of 
+visual detection may spot you, such as infrared or 
+dimensional locators.
+At Invisibility ⑫, you are impossible to detect 
+with any visual-based sense. You never show up 
+on any device, and likely don’t even give off energy 
+signatures of any kind.
+Depending on how this is defined within a power set, 
+Invisibility may be psychic or physics based. If it’s psychic, 
+that affects how others might detect the character. If 
+it’s physics, sometimes all you need to do is to turn up 
+the sound detection to realize an invisible character is 
+nearby. This power trait when combined with others like 
+Intangibility or Flight can essentially make the character 
+a phantom or apparition.
+MIMIC
+This power isn’t changing shape into other forms or to 
+look like other people—that’s Shapeshift. Mimic is copying 
+or even stealing powers from others. It may also be used to 
+represent a character who has no fixed powers but instead 
+spontaneously creates them as the need arises.
+To manifest a power, the character must create an asset 
+with a test or contest using this power’s die. Sometimes, 
+the character must physically touch or cause stress to the 
+target; in other cases, the character can just develop a 
+power. The description and SFX usually define how this 
+works. The asset created serves as the power trait in the 
+short term.
+Mimic’s die rating directly corresponds to the character’s 
+ability to effectively copy or mimic another power. The 
+scope and extent of the copied power is limited by Mimic’s 
+die rating. If you want to copy or steal Flight as a power 
+and only have Mimic ⑧, you won’t be capable of super­
+sonic speed. You might create a ⑫ asset to represent 
+Flight and roll that die into any tests or contests, but the 
+actual speed won’t be the equivalent of space flight.
+Heroes with Mimic usually have a number of SFX and 
+limits that refine the power. Including other powers in 
+the power set, such as Shapeshift, allows the character to 
+also copy others’ appearance and form.
+MOVEMENT POWERS (SPEED/FLIGHT/
+SWING/AIRWALK/BURROW/LEAP/SWIM)
+Movement powers confer the ability to move at greater 
+than human speed. Speed is ground or surface travel, 
+while Flight is air or space travel. The actual speed each 
+die rating represents differs between Speed and Flight.
+At Speed ⑥, you can run as fast as the world’s 
+fastest humans; Flight ⑥ is the speed of a hawk
+or news chopper.
+At Enhanced Speed ⑧, you can run at the speed of 
+a horse; with Subsonic Flight ⑧, you can fly as fast 
+as a missile or passenger airliner.
+At Superhuman Speed ⑩, you’re faster than a bullet 
+train; with Supersonic Flight ⑩, you can fly as fast 
+as a jet fighter.
+At Godlike Speed ⑫, you can travel around the 
+world in moments; Space Flight ⑫ permits swift 
+interplanetary travel.
+Other movement powers appear in power sets, too. Swing, 
+Airwalk, Burrow, Swim and so forth are all movement 
+powers. They generally operate at the same speed as 
+the Speed power trait, but how and when they might be 
+used differs. Swing lets some characters swing through 
+city streets above the traffic, giving them access to 
+areas others don’t have. Burrow is something subterra­
+nean creatures can do that surface-dwellers can’t. Leap 
+describes traveling large distances with mighty bounds 
+or spring-like steps. Swim is being able to move through 
+water as fast as—or faster than—an Olympic medalist.
+Teleport gets its own entry since it represents crossing 
+distances without movement at all.
+Movement powers are often included in power sets with 
+Reflexes or Stamina, but not always. Similarly, Strength 
+and Leap are often found in the same power set. They’re 
+usually used to guide how quickly and in what ways 
+someone can get to places. Stunts created with movement 
+powers factor in the velocity and speed of the power more 
+than, say, the reaction time or endurance of the character. 
+Movement powers that explicitly allow travel in specific 
+environments are assumed to include the ability to 
+survive in those environments at or beyond the ⑧ level. 
+So, Enhanced Swim ⑧ affords the ability to breathe under­
+water or an air supply, while Subsonic Flight ⑧ means 
+you don’t suffer the negative effects of high velocity. If 
+you have Space Flight ⑫, you’re not worried about the 
+vacuum of space.
+PSYCHIC POWERS
+(MIND CONTROL/TELEPATHY/
+ANIMAL CONTROL/PLANT CONTROL)
+Psychic powers affect or influence other minds, although 
+most people don’t include plants as minds. The two most 
+
+
+=== PAGE 190 ===
+186 CHAPTER 6 PRIME LISTS
+common are Mind Control and Telepathy. Psychic powers 
+are used to create complications on their targets. If the 
+complication is stepped up beyond ⑫ and the target is 
+stressed out, your effect is total. Until then, the target 
+gets a chance to resist it or fight it off, with the complica­
+tion making things tough for them. To cause mental or 
+emotional stress, use Psychic Blast instead.
+Mind Control relies on planting suggestions, influencing 
+perceptions, and altering behavior—it’s getting people to 
+do what you want, especially when they wouldn’t other­
+wise. A complication you create with Mind Control (such 
+as Fight your Friends! Or Let Us In!) hampers your target 
+if they resist or try to oppose what you want them to do. If 
+they go along with it, the complication doesn’t pose any 
+problem for them.
+At ⑥, you can push the target to do something
+they were inclined to do already, such as buy 
+something they like or make advances on someone 
+they’re attracted to. You can also intensify their 
+senses to a degree—making the room seem colder,
+a smell seems stronger, or other mild effects.
+At ⑧, you can override the target’s impulse control, 
+remove inhibitions, or provoke irrational behavior. 
+You can make them see, smell, or hear things
+that aren’t there for short periods, enough to 
+distract them. 
+At ⑩, you can take over the target’s motor 
+control and movements, create vivid and believable 
+hallucinations that last for hours, or cause them to 
+go against their core beliefs for a short time.
+At ⑫, you can completely possess the target, create 
+entire fictional universes within their mind, and 
+permanently alter their beliefs or perceptions.
+Telepathy is communicating with other minds, although 
+it also allows reading surface or deeper thoughts, antic­
+ipating actions, and sharing or altering memories. A 
+complication you create with Telepathy might hamper 
+your target if they’re trying to block you out, screen their 
+thoughts, or remember something you’ve made them 
+forget. Much of the time you won’t need to roll this power, 
+especially if it’s used on willing targets. If the target isn’t 
+willing, you need to take out your target (step it up beyond 
+a ⑫ die rating) with the complication before you can pull 
+out the information you want.
+At ⑥, you can maintain a link with another mind with 
+some effort, using the link to talk or share thoughts.
+At ⑧, you can read surface thoughts, discern 
+emotions, and share one or two senses (like sight 
+and hearing), as well as link a half-dozen minds 
+together for the purposes of communication.
+At ⑩, you can probe minds for memories, thoughts, 
+and instincts, create persistent mental links among 
+large groups of people across great distances, and 
+even block or influence a specific target’s memories.
+At ⑫, you can remain in constant communication 
+with vast numbers of people, skim the surface 
+thoughts of everyone on the planet, and implant 
+entirely new life histories within specific minds.
+Animal Control is used to make animals do what you 
+want, though how this happens can vary. Plant Control 
+is the same, only with vegetable matter. These powers, 
+while psychic in nature, are really a kind of elemental 
+control (page 183), with the die rating representing the 
+scope and power of the control. At ⑥, your influence 
+and ability to connect with animals or plants is limited 
+to nudges or suggestions; at ⑫, you have supremacy over 
+all animal or plant life, and you may even be connected 
+directly to the living web of life on the planet.
+REFLEXES
+The character has a greater response time, physical agility, 
+and aim than an average human.
+Enhanced Reflexes ⑧ represents two to three 
+times the normal human response time and
+hand-eye coordination.
+Superhuman Reflexes ⑩ indicates as much as ten 
+times the response time and coordination of
+an ordinary human.
+Godlike Reflexes ⑫ confers the ability to react as 
+if the world around you had slowed to a crawl; you 
+have lightning-fast hand-eye coordination.
+MIND CONTROL, POSSESSION, AND CONSENT
+Many groups aren’t comfortable with characters having the ability 
+to control other characters with their mind or with mystic spells or 
+possession, and that’s something that should be determined before 
+you progress with your games. Possession and mind control remove 
+agency from players, and in some cases that’s perfectly fine when 
+there’s a high degree of player trust, but in other cases (especially 
+in games with new players or strangers at a convention) it’s a no-no.
+Just don’t.
+It’s important that consent form a part of your group’s conversation 
+about social standards at the table, as important if not moreso than 
+“don’t look at your phone while it’s somebody else’s turn” or “don’t 
+show up late without letting us all know.”
+For more information on consent in your game and safety tools to make 
+your games better, visit sites like goldenlassogames.com/tools for 
+helpful links and advice.
+
+
+=== PAGE 191 ===
+187
+CHAPTER 6 PRIME LISTS
+Many characters with a Reflexes power also have move­
+ment powers, although they aren’t synonymous. It’s more 
+common to have both when the Reflexes power trait is 
+rated at Superhuman or Godlike.
+RESISTANCE
+The character is resistant to types of harm or attack that 
+most people have no defense against. It might be some­
+thing intrinsic or provided by equipment or gear. The 
+most common types are Mystic Resistance and Psychic 
+Resistance. Other resistances are frequently provided by 
+Durability or show up as SFX for a power set (such as being 
+immune to toxins or disease).
+A Resistance ⑥ is slight, but still more than any 
+normal person would have.
+A Resistance ⑧ is enhanced, enough to turn aside 
+most standard attacks of this type.
+A Resistance ⑩ is superhuman, giving substantial 
+defense against most attacks of this type.
+A Resistance ⑫ is godlike, representing nigh-
+invulnerability to attacks of this type.
+These power traits are similar to Durability in that they 
+provide resistance or protection from harmful or damag­
+ing attacks. SFX may also provide protection against 
+specific types of attack, on top of whatever protection is 
+given by a Resistance or Durability. Most characters with 
+mystic or psychic powers also possess a Resistance of that 
+type in their power set.
+SENSES
+The character’s senses are more acute, keen, or developed 
+than a normal human.
+Enhanced Senses ⑧ represent extraordinary levels 
+of awareness, closer to those of predatory animals.
+Superhuman Senses ⑩ reach beyond nature, 
+offering incredible levels of awareness.
+Godlike Senses ⑫ touch upon cosmic threads of 
+information and perception.
+It’s more or less assumed that most people have Senses at 
+the ⑥ level and included in other core attributes or skills. 
+Senses at a ⑥ rating are usually additional senses that 
+might be brought in, like Cybernetic Sense or Mystic Sense, 
+mostly to give you other ways to pick up on information.
+Extraordinary senses, such as a sonar sense or sixth sense, 
+are often represented by SFX that build on the characters’ 
+Senses power traits to let them reroll dice in their pool. An 
+android’s Cybernetic Senses on the other hand might let 
+you include computer network access in a dice pool where 
+non-synthetic people don’t have access.
+These power traits don’t specify which senses are height­
+ened. In the game, this is left up to individual character 
+description. For the most part, characters with a Senses 
+power enjoy heightened awareness across the spectrum, 
+at least in terms of acquiring information from their 
+immediate environment.
+Senses often goes hand-in-hand with Intelligence in 
+power sets, with Intelligence focusing on what the char­
+acter is able to do with the sensory input rather than the 
+ability to detect it.
+SHAPESHIFT
+The ability to alter how you look or to take on the form of 
+something else is a great stealth power. It can also repre­
+sent the use of magic to disguise one’s appearance, like a 
+faerie, or the power to transform into non-human shapes, 
+like certain lycanthropes or mecha characters.
+At ⑥, you can make minor changes to your facial 
+features or aspects of your appearance, but not 
+enough to closely mimic anyone in particular.
+At ⑧, you can take on the external form of someone 
+else, fooling most onlookers and passing as the 
+person you’re imitating. You may also be able to
+take on the external form of an animal or other
+living creature.
+At ⑩, you may fully shift into another living physical 
+form or shape, even down to the cellular level, fooling 
+scientific instruments, extraordinary senses, and so 
+on. Non-living shapes still register as organic.
+At ⑫, you may shapeshift into anything—living and 
+non-living forms—fooling even cosmic senses. For all 
+intents and purposes, you become that other thing.
+Shapeshift can be used to acquire things that a char­
+acter doesn’t normally have access to, such as claws or 
+wings. These can be represented by assets that last for the 
+remainder of the scene, which might be extended with ●
+Ⓟ. 
+If the character regularly creates wings or claws, they’re 
+probably represented by other power traits in the power 
+set. A character who shapeshifts wings all the time prob­
+ably has Flight as a power trait to avoid having to create 
+them as a stunt or asset. A character might also have the 
+Mimic power, giving them the ability to copy other powers, 
+instead of or together with Shapeshift.
+Shapeshift is frequently in a power set with Stretch, with 
+size-changing powers like Grow or Shrink, and with 
+physical enhancement powers like Durability, Stamina, 
+or Strength.
+
+
+=== PAGE 192 ===
+188 CHAPTER 6 PRIME LISTS
+If a character only ever shapeshifts into one form, they 
+probably don’t have this power. Instead, their power set 
+would include powers that describe their other form (such 
+as Durability or Reflexes), and a limit that shuts down 
+these powers when they’re not in the alternate form.
+SIZE-CHANGING POWERS
+(GROW, SHRINK)
+With these powers, the character can grow or shrink.
+At ⑥, you can bulk up considerably (Grow) or 
+compress your mass tightly (Shrink). This doesn’t 
+change your overall height or weight so much as it 
+represents being able to snap out of or slip from 
+restraints, fit into cramped spaces, or look
+somewhat more menacing.
+With Grow ⑧, you can grow to at least fifteen feet, 
+more than doubling in size. With Shrink ⑧, you can 
+reduce your size to that of a doll or small animal.
+With Grow ⑩, you can grow to the size of a 
+building, upwards of a hundred feet. With
+Shrink ⑩, you can become insect sized.
+With Grow ⑫, you can become truly massive, 
+perhaps without limit, almost a geographic
+formation of your own. With Shrink ⑫, you
+can become microscopic, reducing your size
+to the sub-molecular level.
+Use size-changing powers when you think that being 
+really big or really small could be helpful in a dice pool 
+or let you change the situation in a scene. They’re almost 
+always included in a power set with other power traits—
+Grow with Strength, Durability, or Stamina; Shrink 
+with Reflexes, Flight, or Senses. You cannot use both 
+size-changing powers at the same time—it makes no 
+sense to roll both Grow and Shrink. Power sets with these 
+powers have a limit that shuts down associated power 
+traits along with Grow or Shrink. In other words, if you 
+have Superhuman Strength and Superhuman Durability 
+while you’re a giant, shutting down Grow shuts those 
+down also.
+Is it easier for opponents to hit you when you’re fifty feet 
+tall? Are you less of a target when you’re the size of an ant? 
+Ensure that a limit in your power set handles the former 
+(Huge: Earn a ●
+Ⓟ when your Grow becomes a complica­
+tion for you) and use your die in a contest to handle the 
+latter (that Shrink ⑩ sure helps avoid danger!).
+SORCERY
+The character has the ability to alter or change magical 
+fields or to channel power from other dimensions to
+affect change in this one.
+At Novice ⑥, you can achieve the equivalent of 
+parlor tricks, prestidigitation, and conjuring without 
+needing stage magic equipment. Nothing more than 
+pulling out long scarves, lighting a candle with a snap 
+of the fingers, or concealing doves in a cage.
+At Adept ⑧, you have genuine powers of 
+summoning and controlling mystic forces—
+usually to create constructs and illusions,
+commune with other dimensions, and invoke
+changes in the laws of physics.
+At Master ⑩, you have great mystical powers, 
+channeling power into longer lasting constructs or 
+objects, bending the laws of physics, and dispelling 
+the magical works of others.
+At Supreme ⑫, you can draw on world-shattering 
+mystic power to affect far-reaching changes, bring 
+things to and from other dimensions, and empower 
+mystical objects or creatures of frightening strength.
+Sorcery may seem overwhelming or too powerful, but 
+it’s really just another form of elemental control. The 
+descriptive nature of Sorcery makes for flashy effects 
+and interesting stunts, assets, and complications, but 
+the power itself shouldn’t be more potent than others. 
+It’s included in power sets with power traits that 
+represent specific magical effects, from Mystic Blast 
+and Flight to Strength and Teleport. Sorcery can’t
+usually inflict stress on its own, but it can create assets 
+and complications.
+Note that an Enchant or Know (Occult) skill allows for 
+other avenues into occult lore, including rituals, items of 
+power, and knowledge. Heroes with Sorcery usually have 
+a skill or specialty like this.
+STAMINA
+The character has increased endurance and staying 
+power, as well as recuperative ability and resistance to 
+fatigue or toxins. 
+Enhanced Stamina ⑧ indicates faster than normal 
+healing and recovery, resistance to minor diseases, 
+and the ability to perform at maximum effort for an 
+hour or more.
+Superhuman Stamina ⑩ allows for rapid recovery 
+from injury, resistance to most terrestrial diseases or 
+
+
+=== PAGE 193 ===
+toxins, and the ability to operate at maximum effort 
+for several hours.
+Godlike Stamina ⑫ indicates extremely rapid 
+recovery from even near-fatal wounds or trauma, 
+resistance to even extraterrestrial diseases, and 
+almost limitless ability to operate at maximum effort.
+Stamina is most used for recovery, but it can also be used 
+against attacks that target a character’s endurance or 
+staying power, or try to induce paralysis, sleep, or fatigue. 
+If a character is holding their breath or some other more 
+active effort, you might use Stamina in the dice pool.
+Stamina extends the character’s lifespan, too, if that ever 
+comes into question, though it won’t necessarily prevent 
+aging so much as keep the effects of aging from slowing 
+the character down. Heroes with a Stamina power are 
+more resistant to chemical substances like drugs, alcohol, 
+and caffeine and can’t get drunk or high.
+STRENGTH
+The character has strength and muscular power beyond 
+that of a normal human.
+Enhanced Strength ⑧ allows you to flip cars, break 
+through solid barriers, and bend ordinary iron bars.
+Superhuman Strength ⑩ allows you to lift and 
+throw vehicles, smash through stone and metal,
+and tear apart most barriers.
+Godlike Strength ⑫ confers the power to hurl 
+objects into orbit, push over tall buildings, and 
+demolish most structures.
+This very common superpower represents everything 
+from mutant-enhanced musculature to high-tech 
+powered armor. As with many power traits, it’s often 
+assumed to just work if there’s nothing challenging the 
+character, or if using Strength is part of the goal of a test 
+(like ripping a telephone pole out of the ground to smash 
+a tank).
+It’s usually, though not always, included in a power set 
+with Durability, often at a different die rating. It may also 
+be used with Leap, representing the use of Strength to 
+leap great distances.
+If the Strength is only in one limb or otherwise limited 
+to specific conditions, this is just part of the power set’s 
+definition. There’s usually no reason to worry about your 
+character only having Superhuman Strength ⑩ in their 
+cybernetic right arm unless the situation specifically talks 
+about needing strength in the legs or the left arm.
+FIONA
+HSIEH
+
+
+=== PAGE 194 ===
+190 CHAPTER 6 PRIME LISTS
+Depending on the nature of the power (sorcery, technol­
+ogy, alien, etc.) the way the teleportation works can vary 
+greatly. If the teleportation is through portals or worm­
+holes, this might affect the SFX used in the power set.
+Some characters may use this power to grab people and 
+teleport them, either bringing them along as a passenger 
+or making portals to send them away. This is represented 
+best with SFX or by using the power with a stunt as part 
+of an attack.
+At the ⑩ and ⑫ rating, you can choose to have the power 
+only allow travel to other dimensions or other worlds; 
+travel between locations on Earth in such instances 
+would be a stunt.
+TRANSMUTATION
+The character has the power to transmute one substance 
+to another. Mystics call it alchemy, while to scientists it's 
+known as matter alteration; the specific details may vary.
+At ⑥, you can affect the integrity or cohesion of 
+a target, causing it to soften or harden, perhaps 
+degrade or take on other qualities, but not actually 
+change into another substance.
+At ⑧, you can alter the properties of the target to 
+make it solid, liquid, or gas, or change it from one 
+kind of solid, liquid, or gas to another within the same 
+category, i.e., inorganic or organic.
+At ⑩, you can operate on the chemical or elemental 
+level and can change one substance, living or 
+nonliving, into another. Stone can be made flesh, 
+water can be transmuted into oil, and so on.
+At ⑫, you can change any object into another, 
+regardless of its original substance, shape, or
+other qualities.
+Transmutation is very powerful and, as such, typically 
+doesn’t confer long-lasting effects. Most Transmutation 
+tests or contests create assets or complications that repre­
+sent the change in quality. The power can be used to inflict 
+stress—such as a disintegrator ray—but unless the target 
+is stressed out, the effect isn’t complete or permanent. The 
+die rating of the power also typically informs how well it 
+can alter a target that has Durability or Resistance.
+Transmutation is often found in power sets with elemental 
+control, Shapeshift, Stretch, or an attack power. A char­
+acter’s ability to transmute or change themselves into 
+different forms of matter is best represented by Shapeshift 
+or powers like Durability or Strength, with the actual 
+elemental change being descriptive.
+STRETCH
+The character can elongate or increase the length of their 
+limbs or other body parts, often to great distances. This 
+could be through prosthetic devices like tentacles, or it 
+might be a metamorphic ability like having a rubbery or 
+elastic body.
+At ⑥, you can reach across a normal room or access 
+high places. It’s the equivalent of having double the 
+usual reach with arms or legs.
+At ⑧, you can reach across a street, up the side of a 
+building, or down an elevator shaft.
+At ⑩, you can stretch to considerable distances, 
+several city blocks away. You can clear buildings, 
+rivers, or ravines with your elongated legs and arms.
+At ⑫, you can reach ridiculous distances, perhaps 
+without limit—across lakes, oceans, and even into 
+orbit—although the further you stretch the less 
+you’re able to make use of your limbs.
+Stretch can be used like a movement power (long legs 
+make travel easier), a defensive power (an elastic body 
+can mitigate a bunch of damage), or an offensive power (a 
+punch hurled across a street can hurt). While the way the 
+power set is defined should inform how it’s used, Stretch 
+is primarily a means of extending reach and access. 
+Stretch is often coupled with powers like Durability, 
+Intangibility (at low ratings), Grow, Strength, Reflexes, 
+Shapeshift, and Elemental Control.
+A power set with Stretch includes SFX like Area Attack, 
+Grapple, and Versatility.
+TELEPORT
+The character may travel instantaneously from one point 
+to another. Usually, no actual distance is traveled; the 
+character just vanishes from one place and appears in 
+another. The power rating defines teleport distance.
+At ⑥, you can blink in and out of place in a single 
+location, crossing a room or a gap between buildings, 
+effectively eliminating the need to walk. Line of sight 
+is usually required.
+At ⑧, you can teleport across several miles, such 
+as from place to place in a metropolitan area or, by 
+taking multiple jumps, from one city to another.
+At ⑩, you can travel around the world in single or 
+multiple jumps, and perhaps as far as the moon.
+At ⑫, you can travel across vast distances, even to 
+other planets or galaxies.
+
+
+=== PAGE 195 ===
+191
+CHAPTER 6 PRIME LISTS
+POWER SFX
+Here’s a list of thematically appropriate SFX to use with 
+power sets or to adapt for distinctions. It’s a good idea to 
+rename SFX for flavor; rather than Absorption you might 
+have Reflective Constructs or Energy Channel.
+These SFX use some mods described in other chapters, 
+such as stress (page 39). You can switch out any mention 
+of “stress” with “complication” or whichever variation of 
+damage-tracking your Cortex Prime game uses.
+ABSORPTION
+If you succeed in a <type of attack> contest, instead of 
+inflicting stress or a complication, convert your opponent’s 
+effect die into a stunt asset for yourself or step up a power 
+by one for your next roll. Spend a 
+ to create this stunt 
+asset if your opponent succeeds.
+Usually included in a power set with some kind of Energy 
+Control, Energy Blast, Strength, or Reflexes linked to the 
+type of attack described in the SFX. This is an example 
+of something that could be represented with a power 
+trait but works best as SFX, e.g., Energy Absorption or
+Kinetic Absorption.
+AFFLICT
+Add a ⑥ and step up your effect die by one when inflicting 
+<type> complication on a target.
+Usually appears in power sets that represent gear, grap­
+pling, entangling, etc. The type of complication is usually 
+connected to the power set.
+AREA ATTACK
+Spend a 
+ to add a ⑥ and keep an additional effect die for 
+each additional target past the first. 
+Frequently included in power sets with Strength, Blast, 
+or Control power traits.
+Useful against mobs (similar opponents grouped together 
+as a single threat). Rolling hitches when using Area 
+Attack generally causes collateral damage, represented 
+by complications.
+AREA ATTACKS AND AREA EFFECTS 
+Many attacks allow for a special kind of SFX called an area effect or 
+area attack. At the cost of a 
+, the benefit allows the character to 
+add an additional  to the dice pool for each additional target. After 
+the roll, when determining effect dice (stress, complications, etc.) an 
+additional die may be chosen for every additional  that was added. 
+Area effects are resisted individually by all targets, who roll to set or 
+raise the difficulty against the attacking character’s single total. This 
+SFX is especially useful against mobs (see page 117).
+Adam’s superpowered agent in Mary Rose’s superspy game 
+has an area effect SFX attached to his Quantum Belt power 
+set. Adam’s defined this as an explosive effect that uses the 
+Quantum Blast 
+ power trait. In a contest with a Mob of 
+Enemy Agents   , Adam can add up to   to his dice 
+pool—one for each of the extra dice in the mob past the 
+first—and keep three effect dice if he succeeds. The mob 
+gets a single opposition dice pool to try to beat it.
+If Adam was confronting three separate GMCs, Adam adds 
+  to his dice pool and each of the GMCs gets their own 
+opposition dice pool to avoid being affected by the SFX. 
+Adam assigns each of his three effect dice to a different 
+GMC. It’s possible to lose against one GMC and succeed 
+against the other two, in which case only the effect dice 
+assigned to the losing GMCs are applied.
+CONFRONTING THE MOB
+Adam spends a ●
+Ⓟ to use his area effect Quantum Blast ⑧
+against Mob of Enemy Agents ⑥⑥⑥.
+CHARACTER
+DICE POOL EFFECT
+Adam’s Agent
+add  
+Mob of Enemy Agents    
+only get a single pool
+If Adam wins, he can apply up to three effect dice to the mob.
+CONFRONTING THREE SEPARATE GMCS
+Adam spends a ●
+Ⓟ to use his area effect Quantum Blast ⑧
+against three GMCs, rated ⑧, ⑧, and ⑥.
+CHARACTER
+DICE POOL EFFECT
+Adam’s Agent
+add  
+GMC 1 ⑧, GMC 2 ⑧, GMC 3 
+each GMC rolls their own 
+opposition pool
+Adam sets aside up to three effect dice. For each contest
+he wins, he applies one of those effect dice.
+BOOST
+Shut down your highest rated <power set> power to step up 
+another <power set> power by one. Activate an opportunity 
+to restore the power.
+Great for power sets that represent powered armor, cyber­
+netics, or robotic systems.
+BURST
+Step up or double a power die against a single target. 
+Remove the highest rolling die from your pool and add 3 
+dice together for your total.
+Usually appears in power sets that represent some kind 
+of gear. Represents a concentrated effort, such as autofire 
+or rapid attacks.
+Burst represents a wide spread of attack such as covering 
+fire or the attack ricocheting from one or more surfaces 
+and thus around corners, obstacles, and so on.
+
+
+=== PAGE 196 ===
+192 CHAPTER 6 PRIME LISTS
+CONSTRUCTS
+Add a ⑥ and step up your effect die by one when using 
+<power set> to create assets.
+Usually included in power sets that represent summoning 
+control over elements like earth or fire, etc. A variation is 
+Grapple, which creates complications.
+DANGEROUS
+Add a ⑥ to your dice pool for an attack and step down the 
+highest die in pool by one. Step up the effect die by one.
+Included in power sets when representing some danger­
+ous use of the character’s abilities, like claws or fangs.
+FOCUS
+If a pool includes a <power set> power, you may replace two 
+dice of equal size with one die one step larger.
+Great for heroes who have a lot of skills or whose power 
+sets represent skill, training, or conditioning.
+HEALING
+Add <power> to your dice pool when helping others recover 
+complications. Spend a 
+ to recover your own or another’s 
+<complication type> by one.
+This might represent psychic healing, empathetic healing, 
+chi healing, or spiritual aura.
+IMMUNITY
+Spend a 
+ to ignore complications from <specific
+attack type>.
+Attack types include poisons, disease, psychic attack, 
+magical attack, electricity, radiation, and so forth.
+INVULNERABLE
+Spend a 
+ to ignore <type of complication> for a test or 
+contest unless caused by <specific attack type>.
+Similar to Immunity but restricted to a specific type of 
+complication with an exception for a specific attack type. 
+For example, Poisoned (except alcohol), Paralyzed (except 
+magical paralysis).
+MULTIPOWER
+Use two or more <power set> powers in a single dice pool 
+and step each power down by one for each additional power 
+beyond the first.
+Usually appears in power sets with several power traits 
+and when the character has no other power sets. Only 
+step down the power dice, not all the dice in the dice pool.
+SECOND CHANCE
+Spend a 
+ to reroll when using any <power set> power.
+Good for power sets that represent luck or fortitude.
+SECOND WIND
+Before you put together a dice pool including a <power set> 
+power, you may give the GM a complication attached to 
+you to re-assign as a complication at any time. Step up the 
+<power set> power by one for this roll.
+Almost always appears in a power set with the Stamina 
+power trait. Variations might work with emotional or 
+mental stress and be tied to a different power trait.
+Tina’s Sage has the Second Wind SFX in Mary 
+Rose’s superspy game. Her Sage has acquired 
+Exhausted ⑧. When she confronts the villain
+of the session, she gives the Exhausted ⑧ 
+complication to Mary Rose and steps up the
+power die she’s using in her dice pool against the 
+villain. Mary Rose can re-assign the ⑧ complication 
+as she likes once the contest is done, including
+giving it to another player!
+UNLEASHED
+Step up or double any <power set> power for one roll.
+If the roll fails, you gain a complication equal in size to
+your power die.
+Pairs well with power traits that are at the ⑧ or ⑩ rating. 
+Represents a hero or villain who maintains strict control 
+over his own powers and sometimes cuts loose.
+VERSATILE
+Split power trait die into two dice, stepped down by one; or 
+three dice, stepped down by two.
+Usually appears in power sets with power traits rated ⑩ 
+or ⑫ and when the character has no other power sets. 
+Splitting a ⑩ in this way gives you ⑧ ⑧ or ⑥⑥⑥. 
+Splitting a ⑫ gives you ⑩ ⑩ or ⑧ ⑧ ⑧.
+Dice that result from Versatile are each considered power 
+trait dice for the purposes of other SFX that step up or step 
+down the power.
+
+
+=== PAGE 197 ===
+POWER LIMITS
+The primary purpose of limits in power sets is to repre­
+sent vulnerabilities that let players acquire plot points in 
+keeping with their character’s specific powers. A hero is 
+nothing without their flaws and weaknesses, and most 
+superheroes have an Achilles’ heel, even if it’s just that 
+their powers wear them out!
+Players aren’t the only people at the table who can activate 
+a limit. The GM may also spend ●
+Ⓟ to activate them in 
+some circumstances. This doesn’t earn the player a ●
+Ⓟ, so 
+the option to activate a limit is always given to the player 
+first. If the player decides not to, the option then goes to 
+the GM, so it’s almost always beneficial to the player to 
+take them up on it.
+Each limit includes a description of how to restore a power 
+that’s shut down by a limit.
+CONSCIOUS ACTIVATION
+If taken out, asleep, or unconscious, shut down <power set>. 
+Restore <power set> when you awake.
+This limit is common when the character’s powers stop 
+working if the hero is unconscious, incoherent, or other­
+wise taken out. It usually only applies to a specific type 
+of stress, such as physical or emotional.
+EXHAUSTED
+Shut down any <power set specific> power to gain a 
+. 
+Activate an opportunity to restore the power.
+This limit is straightforward. The character gets tired, 
+and one of his powers stops working. Note that it isn’t the 
+whole power set but only specific power traits.
+GEAR
+Shut down <power set> and gain a 
+. Test to restore.
+This limit represents a piece of equipment or another 
+powered item that, if lost or stolen or knocked away, shuts 
+down the character’s use of it. The power is restored by 
+making a test to get the gear back, reset it, fix it, or other­
+wise recover it. The GM sets the test’s difficulty based on 
+the likelihood of getting it back.
+GROWING DREAD
+Both 1 and 2 on your dice count as hitches when using a 
+<power set> power.
+This is a good limit for mystical or very powerful heroes 
+who make situations worse when they use their powers 
+to their fullest extent. If the power set represents a pact 
+with a demon, a dangerous power source, or something 
+along those lines, this limit makes it clear that using those 
+powers comes at a greater cost.
+MUTUALLY EXCLUSIVE
+Shut down <power set A> to activate <power set B>.
+Shut down <power set B> to restore <power set A>.
+Use this limit when your use of one set of powers depends 
+on another set of powers being inactive.
+UNCONTROLLABLE
+Change any <power set> power into a complication and gain 
+a 
+. Activate an opportunity or remove the complication to 
+restore the power.
+This limit represents powers that aren’t necessarily 
+dangerous, but they’re unreliable or prone to causing 
+immediate problems. When a power is turned into a 
+complication through a limit like this, it can be targeted 
+and recovered like any other complication. Eliminating 
+the complication restores the power.
+BURAK KIRK
+
+
+=== PAGE 198 ===
+194 CHAPTER 6 PRIME LISTS
+All abilities in this chapter use this format:
+ABILITY NAME
+A short description and a suggestion of when to include 
+the ability’s die in your dice pool.
+Effect: All abilities fit into one of the six effect categories: 
+Attack, Sensory, Movement, Control, Defense,
+and Enhancement.
+Descriptors: Ultimately, the players create the descriptors, 
+but we provide some examples.
+Limits: Again, these are just examples, and which limits apply 
+depends on the circumstances and the descriptors. Feel free 
+to create your own limits. Ability limits are almost always
+“Earn a ●
+Ⓟ when this ability is shut down.”
+SFX: Players may choose from the list or create their own.
+THE ABILITY LIST
+It's true that this list overlaps a good bit with the Power 
+List (page 182), but the Ability List has a more cinematic, 
+prime time drama approach to superpowers and SFX. 
+It’s not a good idea to mix the two; if you have superhe­
+roes or aliens or fantasy monsters in your Cortex Prime 
+game, they should all use powers, or all use abilities. See 
+“Abilities” on page 66 for more details about this trait.
+Depending on your method of creating characters, not all 
+SFX attached to abilities come unlocked when the char­
+acter is created. Usually each ability comes with one free 
+SFX, and the rest can be unlocked later when you step 
+up the die rating of your ability—one SFX at ⑧ and one 
+SFX at ⑫. During growth, you can choose to add a new 
+descriptor, and thus a new way to use your ability, rather 
+than stepping up your ability’s die rating.
+VANESSA MORALES
+SFX THAT STEP DOWN EFFECT DICE
+Many SFX in this section represent armor, damage reduction, or 
+invulnerability to other abilities by stepping down an effect die, incoming 
+stress, or complication. When you use the SFX, compare your effect die 
+to the ability die being used against you.
+•	 If your effect die is the same size or smaller than the ability die, 
+step your opponent’s effect die down by one.
+•	 If your effect die is a larger size than the ability die, ignore your 
+opponent’s effect die completely.
+EFFECT SYMBOLS
+ATTACK
+SENSORY
+MOVEMENT
+CONTROL
+DEFENSE ENHANCEMENT
+
+
+=== PAGE 199 ===
+195
+CHAPTER 6 PRIME LISTS
+ABSORPTION
+You can absorb a single kind of energy, whether 
+directed at you or at characters in the same scene as you. 
+Sometimes this energy can be stored and released later; 
+sometimes it can be used to power your body to perform 
+great feats. Include the ability in your dice pool when you 
+absorb, release, or use energy.
+Descriptors: Electricity, Heat, Radiation
+Limits: Broken Concentration, Cold, Grounding
+SFX: 
+•	 Spend a ●
+Ⓟ to absorb energy to step down
+your opponent’s energy-based effect die
+against you or another character.
+•	 Spend a ●
+Ⓟ to absorb the energy out of an
+attack on you or another character to create
+an asset of the same die rating.
+•	 Spend a ●
+Ⓟ to use absorbed energy to
+perform feats of super-strength.
+•	 Spend a ●
+Ⓟ to release the energy you’ve
+absorbed to power technology.
+•	 Spend a ●
+Ⓟ to release absorbed energy behind 
+you, propelling you forward at great speed.
+ADAPTATION
+Your body is able to survive in, and may actually 
+prefer, an environment that’s normally hostile or hazard­
+ous to others. This can be as simple as thick, hairy skin 
+to resist the effects of extreme cold temperatures, or as 
+complicated as gills to allow you to breathe underwater. 
+Some people with this ability can change their physiology 
+to adapt to different environments, though it’s not usually 
+an instantaneous process. Include the ability in your dice 
+pool when you are fighting to overcome the elements or 
+when your adaptation gives you an advantage.
+Descriptors: Amphibious, Heat Shield, Modification
+Limits: Dehydration, Cold, Heat, Vacuum
+SFX: 
+•	 Spend a ●
+Ⓟ to adapt your physiology to
+new conditions.
+•	 Spend a ●
+Ⓟ to extend your adaptation to
+other characters as long as you touch them.
+•	 Spend a ●
+Ⓟ to blend in to your
+chosen environment.
+•	 Spend a ●
+Ⓟ to reveal additional details
+of your chosen environment.
+•	 Spend a ●
+Ⓟ to find useful resources
+in your chosen environment.
+ANIMAL CONTROL
+You have some form of psychic link with a single 
+species or type of animal. Sometimes this means being 
+able to communicate with that type of animal or being 
+“one of the pack.” You might form a close enough bond 
+that one of these creatures is a constant companion, 
+possibly bonded so strongly that you and the animal 
+share each other’s pain and see through each other’s eyes. 
+Include the ability die when you deal with your chosen 
+animal or when one of your animal friends helps you.
+Descriptors: Wolf, Cat, Fish
+Limits: Eye Contact, Pain Transference, Psychic Feedback
+SFX: 
+•	 Spend a ●
+Ⓟ to see through an animal’s eyes
+in another scene.
+•	 Spend a ●
+Ⓟ to see an animal’s recent memories.
+•	 Spend a ●
+Ⓟ to summon an animal that you
+can control.
+•	 Spend a ●
+Ⓟ to take on features of your
+chosen animal.
+•	 Spend a ●
+Ⓟ to take an animal out of the scene.
+ANIMAL MIMICRY
+Perhaps you have an unusual tie to the natural 
+world, or your genetic structure slips back and forth on 
+the evolutionary ladder. You can call upon the gifts and 
+abilities of animals, gaining the speed of an antelope, the 
+fantastic sense of smell of a bloodhound, or the jumping 
+ability of a kangaroo. Include this ability’s die when you 
+use the gifts of the natural world.
+Descriptors: Primal Power, Genetics, Tribal Traditions
+Limits: Concentration, Natural Enemies, Fire
+SFX: 
+•	 Spend a ●
+Ⓟ to mimic the natural abilities
+of an animal.
+•	 Spend a ●
+Ⓟ to combine the natural abilities
+of two animals to use in conjunction.
+•	 Spend a ●
+Ⓟ to grow claws to step up your
+effect die on any physical attack.
+•	 Spend a ●
+Ⓟ to grow a thick hide to step down 
+your opponent’s effect die from incoming attacks.
+•	 Spend a ●
+Ⓟ to retire in feline seclusion and 
+recover your own stress or complications.
+
+
+=== PAGE 200 ===
+196 CHAPTER 6 PRIME LISTS
+ASTRAL PROJECTION
+You can leave your physical body behind and 
+travel as a psychic entity or ghost. While in this form, your 
+body is usually unconscious and defenseless, but your 
+astral form is nearly invisible to normal detection and 
+can walk through solid objects as if they weren’t there. 
+Include the ability die when you invisibly eavesdrop, or 
+in any contest with other astrally projected characters.
+Descriptors: Psychic, Magic, Spirit 
+Limits: Psychic Feedback, EMP, Tethered to Body
+SFX: 
+•	 Spend a ●
+Ⓟ to take another character
+with you.
+•	 Spend a ●
+Ⓟ to disrupt electronics while
+astrally projected.
+•	 Spend a ●
+Ⓟ to astrally project one body
+part to see or touch the astral world.
+•	 Spend a ●
+Ⓟ to project “deeper” into
+otherworldly spirit realms.
+•	 Spend a ●
+Ⓟ to take along the astral form of
+a material object.
+BLAST
+Whether it’s primal forces like water, lava, and 
+fire or energy sources such as light, heat, or electricity, the 
+Blast ability covers a wide spectrum. When weaponized, 
+these can be quite scary. This ability must be acquired 
+multiple times if you want to project more than one kind 
+of energy or element and should be renamed to suit, 
+i.e., Radium Blast or Heat Blast. Include the ability die 
+when you’re using your Blast to threaten, scare, or injure
+an opponent.
+Descriptors: Super-Breath, Fire, Water, Lava, Heat Ray, 
+Electricity Blast, Shadow, Light
+Limits: Heat, Ice, Rubber, Lead Shielding, Cold, Vacuum
+SFX: 
+•	 Spend a ●
+Ⓟ to create an area effect.
+•	 Spend a ●
+Ⓟ to destroy an inanimate object as 
+big as a car. Spend 2 ●
+Ⓟ for an object as big as 
+a house. Spend 3 ●
+Ⓟ for an object as big as a 
+skyscraper or a river.
+•	 Spend a ●
+Ⓟ to make geysers of your element 
+shoot up from the ground beneath your foes.
+•	 Spend a ●
+Ⓟ to encase a person or an object in 
+ice for a scene with Ice Blast or Super-Breath 
+Blast. Breaking free requires a test with your 
+effect die added to the opponent’s difficulty
+as a complication.
+BODY TRANSFORMATION
+You can change the molecular makeup of your 
+body to change into another element. In most cases, you 
+can only turn into one type of form, but there are rare 
+individuals that can take on multiple forms. When in 
+other forms, you take on the aspects of that form: metal­
+lic forms are subject to magnetism, fiery forms can be 
+doused with water, and gaseous forms are dispersed 
+by high winds. Include the ability die when you use the 
+aspects of your form to your advantage.
+Descriptors: Steel Skin, Liquid Body, Gaseous Body
+Limits: Corrosion, Heat, Wind
+SFX: 
+•	 Spend a ●
+Ⓟ to turn to a gaseous or liquid form 
+and escape through a crack.
+•	 Spend a ●
+Ⓟ to become a rock-hard statue for a 
+scene, ignoring physical stress or complications.
+•	 Spend a ●
+Ⓟ to turn another character into
+your chosen element.
+•	 Spend a ●
+Ⓟ to turn yourself into living fire, adding 
+the effect die to future hand-to-hand attacks.
+•	 Spend a ●
+Ⓟ to hide in a large amount of your 
+chosen element.
+CHI MASTERY
+Through training and mastery, you’ve taught 
+your body to respond to your conscious control. You can 
+manipulate your own metabolic rate, sense other char­
+acters and animals around you, and direct your life force 
+into your every movement. Include this ability die when 
+your body and your expert control of it come into play—
+when you fight, run, or leap, and when you perceive the 
+life force of others.
+Descriptors: Discipline
+Limits: Dark Chi, Sorcery, Distraction
+SFX: 
+•	 Spend a ●
+Ⓟ to channel your chi into a powerful 
+blow, stepping up your effect die for this attack.
+•	 Spend a ●
+Ⓟ to recover your own stress or 
+complications from injury or exhaustion.
+•	 Spend a ●
+Ⓟ to sense an incoming attack,
+avoiding surprise.
+•	 Spend a ●
+Ⓟ to act in the darkness as if you
+could see.
+•	 Spend a ●
+Ⓟ to step up or double a martial arts
+or combat-based trait die for a test or contest.
+
+
+=== PAGE 201 ===
+197
+CHAPTER 6 PRIME LISTS
+CLAWS
+With long claws, nails, or knives you slash and 
+hack at your foes. It causes as much fear as it does blood 
+and gore. You can include the ability die in your pool 
+when trying to cause fear or bodily harm, as well as for 
+other uses of your claws, such as climbing or wedging 
+open blast doors.
+Descriptors: Metal Nails, Energy Claws, Natural Talons 
+Limits: Electricity, Magnetism, Terrifying
+SFX: 
+•	 Spend a ●
+Ⓟ to step up your effect die when 
+inflicting stress or complications with your claws.
+•	 Spend a ●
+Ⓟ to rip apart solid, inert obstacles.
+•	 Spend a ●
+Ⓟ to stop your fall by using your
+claws as pitons.
+•	 Spend a ●
+Ⓟ to regrow your claws if they are 
+damaged or broken.
+•	 Spend a ●
+Ⓟ to cling to a surface with your
+claws despite adverse conditions.
+COMBUSTION
+You create explosive charges that can detonate 
+and cause damage commensurate to the size of the bomb. 
+The larger the bomb, the bigger the blast. Given enough 
+time and energy, you could blow up a building or possibly 
+much, much more. Include the ability die when you use 
+your bombs to destroy, threaten, or distract.
+Descriptors: Explosion, Heat, Psychic
+Limits: Time, Water, Vacuum
+SFX: 
+•	 Spend a ●
+Ⓟ to cause an explosive effect that 
+inflicts stress or complications.
+•	 Spend a ●
+Ⓟ to reveal that you left a bomb in
+a location you were in earlier in the episode.
+•	 Spend a ●
+Ⓟ to draw everyone’s attention to
+an explosion so you can escape a scene.
+•	 Spend a ●
+Ⓟ to create shaped charges that can 
+take down obstacles without damaging the 
+surrounding structure.
+•	 Spend a ●
+Ⓟ to create a time bomb set to go
+off after a certain amount of time has passed.
+COMPREHENSION
+You’re a savant, able to understand unusual 
+languages and decipher impenetrable codes. Even if 
+you’ve never seen or heard the language before in your 
+life, or the ciphers are alien or otherwise impossible to 
+understand, you have a handle on it. If it’s encoded in 
+symbols, you can puzzle it out. Include the ability die 
+when reading or deciphering strange languages or codes, 
+or when using what you’ve learned.
+Descriptors: Psychic, Networking, Intuition
+Limits: Auditory, Visual, Time
+SFX: 
+•	 Spend a ●
+Ⓟ to instantly understand a spoken 
+language you’ve never heard before.
+•	 Spend a ●
+Ⓟ to figure out alien technology well 
+enough to use it…once.
+•	 Spend a ●
+Ⓟ to deduce the language or code’s 
+origin in general terms.
+•	 Spend a ●
+Ⓟ to write or speak in response to
+what you’ve deciphered.
+•	 Spend a ●
+Ⓟ to read binary code to reconstitute 
+data files or understand a program’s function.
+CRYOKINESIS
+You control cold, ice, and all things related. You 
+can draw moisture from the air to create structures of 
+ice, or mess with the temperature of a room. Include the 
+ability die when you drop the temperature, ice things 
+over, or manipulate chunks of ice.
+Descriptors: Ice, Cold, Frost
+Limits: Heat, Sunlight, Passion
+SFX: 
+•	 Spend a ●
+Ⓟ to entomb another character in
+ice, in a form of suspended animation.
+•	 Spend a ●
+Ⓟ to create walls of ice to block
+a path or pursuer.
+•	 Spend a ●
+Ⓟ to jam mechanical devices with
+frost and ice.
+•	 Spend a ●
+Ⓟ to “skate” across ice.
+•	 Spend a ●
+Ⓟ to freeze a large mass of liquid
+or even gas into a solid state.
+
+
+=== PAGE 202 ===
+198 CHAPTER 6 PRIME LISTS
+DENSITY CONTROL
+You can change the space between molecules in 
+your body. In effect, you can walk through walls, become 
+hard as stone, or both. Include the ability die whenever 
+your altered density benefits you.
+Descriptors: Phasing, Hardening, Intangibility
+Limits: Electricity, Water, Wind
+SFX: 
+•	 Spend a ●
+Ⓟ to walk through a wall.
+•	 Spend a ●
+Ⓟ to become hard as stone and step 
+down your opponent’s effect die when they’re 
+trying to harm you.
+•	 Spend a ●
+Ⓟ to reach into another character’s 
+body—as an attack or as medical attention.
+•	 Spend a ●
+Ⓟ to decrease your density.
+•	 Spend a ●
+Ⓟ to make your fists super-dense and 
+step up your effect die when smashing somebody.
+DREAM MANIPULATION
+Entering people’s dreams is a tricky thing. You 
+get to know parts of them they keep hidden. For you, it’s 
+an art. You must see the sleeper to enter their dreams. 
+Once inside, you aren’t subject to the rules of the dream. 
+You can control elements within the dream and leave 
+when you choose to do so. Include the ability die when­
+ever you’re within a dream, whether you are mining for 
+information, inflicting harm through nightmares, or 
+soothing the subject’s fears.
+Descriptors: Psychic, Magic, Memory
+Limits: Psychic Feedback, Strong Emotion, Dreams About You
+SFX: 
+•	 Spend a ●
+Ⓟ to bring other characters into
+a dreamscape with you.
+•	 Spend a ●
+Ⓟ to create an item, location,
+or event within a dream.
+•	 Spend a ●
+Ⓟ to force a dream to recall a
+memory of the dreamer.
+•	 Spend a ●
+Ⓟ to make the dreamer sleepwalk.
+•	 Spend a ●
+Ⓟ to enter the dreams of a
+comatose dreamer.
+DUPLICATION
+There are more than one of you. Perhaps there 
+are an infinite number of you; perhaps you can make 
+more yous when you wish. By default, only one of you has 
+your abilities. Each of your duplicates has its own stress 
+or complication tracks. Include the ability die when you 
+gang up on another character, work “together” with your­
+self, or when being in two or more places benefits you.
+Descriptors: Holographic Copy, Clones, Magic
+Limits: Psychic Feedback, Pain Transference, Split Attention
+SFX: 
+•	 Spend a ●
+Ⓟ to create a duplicate with one of your 
+abilities, stepped down by one. Spend additional 
+●
+Ⓟ to give your duplicate additional abilities.
+•	 Spend a ●
+Ⓟ to stash a duplicate in a
+convenient place you’ve been in before.
+•	 Spend a ●
+Ⓟ to merge two duplicates
+together, sharing memories.
+•	 Spend a ●
+Ⓟ to “share” stress or complications 
+across duplicates, stepping down the die rating
+by one for each shared dupe.
+EARTH CONTROL
+You can control the very ground beneath your 
+feet, bending it to your will. Include the ability die when 
+you create earthquakes, volcanic vents, or other tectonic 
+disturbances, or when you mold stone or sand to trap your 
+foes or shield your friends. 
+Descriptors: Seismic Manipulation, Lava Control,
+Glass Manipulation
+Limits: Must be Grounded, Cold, Water
+SFX: 
+•	 Spend a ●
+Ⓟ to encase another character
+in stone.
+•	 Spend a ●
+Ⓟ to create a sweeping effect of
+quakes that inflict stress or complications.
+•	 Spend a ●
+Ⓟ to raise a barrier of stone before
+you, stepping down your opponent’s effect die.
+•	 Spend a ●
+Ⓟ to seal a corridor with a wall
+of stone.
+•	 Spend a ●
+Ⓟ to make the earth swallow up a 
+vehicle, a building, or a whole town.
+EFFECT SYMBOLS
+ATTACK
+SENSORY
+MOVEMENT
+CONTROL
+DEFENSE ENHANCEMENT
+
+
+=== PAGE 203 ===
+199
+CHAPTER 6 PRIME LISTS
+ELECTROKINESIS
+Electricity, whether man-made or naturally 
+occurring, is your plaything. You might create the elec­
+tricity yourself or need to have an external source, but 
+the end result is the same. Include the ability die when 
+you create a spark of electricity, override some electrical 
+device, or disperse the power in an electrical cable.
+Descriptors: Electricity, Lightning, Magic
+Limits: Grounding, Rubber, Conductive Materials
+SFX: 
+•	 Spend a ●
+Ⓟ to create a powerful storm.
+•	 Spend a ●
+Ⓟ to channel lightning to a point
+on the ground.
+•	 Spend a ●
+Ⓟ to charge your body or conductive 
+material with electricity to be released later.
+•	 Spend a ●
+Ⓟ to activate electronic devices
+using your electrical abilities.
+•	 Spend a ●
+Ⓟ to create an electromagnetic pulse
+to disable all electronic devices within a scene.
+ENERGY AURA
+A swirl of flame, a looming patina of decay, or a 
+shining halo—whatever form it takes, you’re surrounded 
+by an aura of energy. It protects you and repels your oppo­
+nents through force or violence or perhaps sheer nausea. 
+Include this ability die when your aura protects you or 
+when you extend it out into the world around you.
+Descriptors: Fire, Radiation, Holy Light
+Limits: Water, Corruption, Concentration
+SFX: 
+•	 Spend a ●
+Ⓟ to use your aura to envelop another 
+PC or GMC who’s in the same scene as you.
+•	 Spend a ●
+Ⓟ to step down an opponent’s effect
+die from an incoming physical or energy attack.
+•	 Spend a ●
+Ⓟ to cause feedback and interference 
+with electronics in your presence.
+•	 Spend a ●
+Ⓟ to set flammable objects on fire.
+•	 Spend a ●
+Ⓟ to step up your own effect die
+when making a close-combat attack.
+FLIGHT
+You can defy the pull of gravity and soar through 
+the skies, no need for an aircraft. You may use wings, gusts 
+of wind, or anti-gravity, or just have the superpower to 
+defy humanity’s evolutionary misfortune of being a land-
+bound mammal. Roll this ability’s die when performing 
+evasive maneuvers in mid-flight, chasing down another 
+flying opponent, or getting a bird’s eye view of a situation.
+Descriptors: Wings, Gliding, Levitation
+Limits: Short Distances, Sonic Boom, Wind
+SFX: 
+•	 Spend a ●
+Ⓟ to carry something large or
+ungainly along with you.
+•	 Spend a ●
+Ⓟ to support a falling object such
+as a floundering aircraft.
+•	 Spend a ●
+Ⓟ to dive bomb an enemy and
+step up your effect die for this attack.
+•	 Spend a ●
+Ⓟ to change direction quickly to fly 
+around an obstacle; you may use this obstacle
+as a ⑧ stunt or asset.
+•	 Spend a ●
+Ⓟ to join a scene you aren’t part of, 
+even if you can’t get there by ground.
+FORCE CONSTRUCTS
+You have the ability to create objects out of sheer 
+energy. Whether you build towers to the sky, wrap chains 
+around your enemies, or create a parachute when you fall 
+out of an airplane, your constructs last just long enough 
+to be of use and then disappear into nothing. Include 
+this ability die when using your force constructs as tools, 
+obstacles, or any other clever thing you think up. 
+Descriptors: Hypertech, Magic, Psychic
+Limits: Specific Substance, Concentration, Line of Sight
+SFX: 
+•	 Spend a ●
+Ⓟ to create a wall of force that prevents 
+another character from escaping a scene.
+•	 Spend a ●
+Ⓟ to create a net of force that catches
+a large, falling object.
+•	 Spend a ●
+Ⓟ to dispel a force construct made
+by another character.
+•	 Spend a ●
+Ⓟ to create a force construct inside
+a machine that causes it to malfunction.
+•	 Spend a ●
+Ⓟ to create a path through the air
+that you can run along.
+
+
+=== PAGE 204 ===
+200 CHAPTER 6 PRIME LISTS
+NOÉ LEYVA
+
+
+=== PAGE 205 ===
+201
+CHAPTER 6 PRIME LISTS
+FORCE FIELD
+You can create a barrier made of energy or force. 
+It might be a visible energy field or an invisible bubble. It 
+can protect you and your friends, or trap your foes while 
+you determine their fate. Roll the ability die when you use 
+your force field to help you in conflicts or emergencies.
+Descriptors: Energy Shield, Telekinetic Field, Electric Shield
+Limits: Psychic Feedback, Mental, Concentration
+SFX: 
+•	 Spend a ●
+Ⓟ to step down stress or complications 
+imposed on all characters within the force field.
+•	 Spend a ●
+Ⓟ to entrap another character in a
+force field.
+•	 Spend a ●
+Ⓟ to fly short distances within a
+force bubble.
+•	 Spend a ●
+Ⓟ to slip from the grasp of an
+adversary by sliding out of your force field.
+•	 Spend a ●
+Ⓟ to keep all forms of gas in or out 
+of the force field; this can provide a bubble of 
+breathable air in an airless environment or
+keep harmful gases in or out.
+GRAVITY CONTROL
+You can manipulate the pull of Earth’s gravity on 
+yourself or another person or object. Increasing the pull 
+of gravity can make the subject so heavy it can’t move; 
+decreasing the pull of gravity can make the subject light 
+enough to fly. Include this ability die when manipulating 
+weight could affect the outcome.
+Descriptors: Gravity, Magic, Centrifugal Force
+Limits: Concentration, Density, Magnetism
+SFX: 
+•	 Spend a ●
+Ⓟ to hold another character or
+object in place with powerful gravity.
+•	 Spend a ●
+Ⓟ to fly short distances or hover
+in place.
+•	 Spend a ●
+Ⓟ to toss another character out
+of a scene.
+•	 Spend a ●
+Ⓟ to make a character or object
+so light that it can float in the breeze.
+•	 Spend a ●
+Ⓟ to increase the gravity in a scene;
+you may use the crushing gravity as a ⑧ stunt
+for the remainder of the scene.
+HEALING
+You can heal physical or mental trauma inflicted 
+on others, sometimes with just a touch. Curing wounds—
+stress or complications, depending on your mods—might 
+end with you getting the stress in place of the injured 
+character. Roll this ability’s die in any situation that calls 
+upon your restorative talents.
+Descriptors: Physical Healing, Mental Healing, Repair
+Limits: Emotional Trigger, Damage Transfer, Touch
+SFX: 
+•	 Spend a ●
+Ⓟ to recover another character’s
+stress or complications that relate to being 
+anxious or angry.
+•	 Spend a ●
+Ⓟ to recover another character’s
+stress or complications relating to being
+afraid or shocked.
+•	 Spend a ●
+Ⓟ to stave off a disease or similar 
+affliction for a short period of time.
+•	 Spend a ●
+Ⓟ to identify any poison or toxin
+in your subject’s body.
+•	 Spend a ●
+Ⓟ to remove another character’s 
+physical stress or complication and add it
+to yourself.
+HYDROKINESIS
+You have complete control over water, ice, and 
+steam, allowing you to move water as if with telekinesis 
+and to create structures like walls or orbs of water. Roll 
+this ability’s die in tests or contests involving water or 
+aqueous liquids.
+Descriptors: Water, Ice, Steam
+Limits: Cold, Heat, Sand
+SFX: 
+•	 Spend a ●
+Ⓟ to create a small storm or thick fog 
+within a scene; you may use this as a ⑧ stunt.
+•	 Spend a ●
+Ⓟ to create bubbles of air to allow 
+others to survive underwater.
+•	 Spend a ●
+Ⓟ to create huge tidal waves.
+•	 Spend a ●
+Ⓟ to turn any large body of water,
+such as a lake, into steam or ice or vice-versa.
+•	 Spend a ●
+Ⓟ to create a wall of water that moves 
+to act as a shield for you or an ally, and step down 
+the effect die of the appropriate opponent. 
+
+
+=== PAGE 206 ===
+202 CHAPTER 6 PRIME LISTS
+ILLUSIONS
+You can create images that others can see and 
+hear, and which seem very real. Roll this ability’s die when 
+you’re trying to pull the wool over somebody’s eyes, trick 
+them with some sleight of hand, or create misdirection.
+Descriptors: Mental, Magic, Visual
+Limits: Psychic Feedback, Concentration, One Target 
+SFX: 
+•	 Spend a ●
+Ⓟ to create illusions so real that
+another character thinks they can be seen,
+heard, smelled, and even touched.
+•	 Spend a ●
+Ⓟ to create illusions that appear
+for all characters in a scene.
+•	 Spend a ●
+Ⓟ to create an illusion of a scene, 
+changing the surroundings.
+•	 Spend a ●
+Ⓟ to create an illusion pleasing
+enough to step down the effect die of any 
+incoming fear or sadness-based attack.
+•	 Spend a ●
+Ⓟ to create an illusion scary
+enough to step up the effect die of any fear
+or terror attack.
+INSECT CONTROL
+You can communicate with and control insects, 
+usually of a single type. In some circumstances, you might 
+be seen as a hive or a queen by the insects; in others it’s 
+simply a form of mind control. Regardless, the connection 
+can have side effects such as transference of pain as well 
+as seeing through the eyes of the insects, which could get 
+quite confusing. Include your ability’s die when the situa­
+tion involves insects or could be improved by controlling 
+insects in the area.
+Descriptors: Bees, Locusts, Ants
+Limits: Pain Transference, Psychic Feedback, Bug Spray
+SFX: 
+•	 Spend a ●
+Ⓟ to see through the eyes of an
+insect in another scene.
+•	 Spend a ●
+Ⓟ to swarm insects on another 
+character for a scene. Any other character
+can use the swarm as a ⑧ stunt.
+•	 Spend a ●
+Ⓟ to take on aspects of the insects
+that you control.
+•	 Spend a ●
+Ⓟ to call insects of the type you
+control to come to you.
+•	 Spend a ●
+Ⓟ to direct insects to infest large 
+electronic or mechanical devices in the scene
+to disrupt them and render them inoperable.
+INVISIBILITY
+You can disappear from view at will. This might 
+be a result of a mass telepathy convincing others you’re 
+not there, you might simply turn transparent, or you might 
+refract light around you, so others see what’s behind you 
+instead of you. If vanishing from sight would help you in 
+a test or contest, include the ability’s die.
+Descriptors: Perception, Blending, Magical
+Limits: Mental, Scent, Audible
+SFX: 
+•	 Spend a ●
+Ⓟ to disappear, escaping from
+the scene.
+•	 Spend a ●
+Ⓟ to hide for an entire scene to
+listen in without being noticed.
+•	 Spend a ●
+Ⓟ to shadow someone for a whole
+day without them noticing you at all.
+•	 Spend a ●
+Ⓟ to see other invisible people
+or objects.
+•	 Spend a ●
+Ⓟ to turn another person or
+object invisible for a scene.
+INVULNERABILITY
+You are able to avoid pain and trauma. This might 
+be because you’re simply tough and hardened, or your 
+body might be rubbery or liquid and thus impossible to 
+hurt. Include this ability whenever you’re engaged in a 
+struggle to resist or oppose physical attacks, showing off 
+your impenetrable skin, or ignoring hostile conditions to 
+achieve some goal.
+Descriptors: Mental, Physical, Magic
+Limits: Energy, Electricity, Magic
+SFX: 
+•	 Spend a ●
+Ⓟ to step down an opponent’s
+effect die.
+•	 Spend a ●
+Ⓟ to recover your stress or 
+complications relating to injury or exhaustion.
+•	 Spend a ●
+Ⓟ to ignore the effects of exposure to 
+extreme temperatures such as arctic cold
+or volcanic cores.
+•	 Spend a ●
+Ⓟ to ignore hunger or exhaustion
+due to lack of sleep.
+•	 Spend a ●
+Ⓟ to ignore the need to breathe in
+an airless environment such as underwater. 
+EFFECT SYMBOLS
+ATTACK
+SENSORY
+MOVEMENT
+CONTROL
+DEFENSE ENHANCEMENT
+
+
+=== PAGE 207 ===
+203
+CHAPTER 6 PRIME LISTS
+LIGHT CONTROL
+You can control light, using it to blind or daze 
+or light up a dark room without a flashlight. Include this 
+ability’s die when making attacks with light, revealing 
+things with light, or making the ambient light improve the 
+way you look to others, or when you’re trying to perform 
+well in an overly bright or dark environment.
+Descriptors: Light, Laser, Flash
+Limits: Shadow, Diffusion, Mirror
+SFX: 
+•	 Spend a ●
+Ⓟ to create a dazzling blast,
+temporarily blinding everyone in a scene.
+•	 Spend a ●
+Ⓟ to create a dizzying light show, 
+hypnotizing anyone that can see the lights.
+•	 Spend a ●
+Ⓟ to use a focused light beam to
+burn through an inanimate object or burn a 
+message onto a surface.
+•	 Spend a ●
+Ⓟ to shine brightly into the ultraviolet 
+spectrum, imitating sunlight.
+•	 Spend a ●
+Ⓟ to create holographic shapes from 
+light that can remain for an entire scene.
+LUCK
+Things have a tendency to go your way, whether 
+this is a conscious decision or not. There are people 
+with the opposite ability to cause bad luck to happen to 
+other people. They are not fun to be around. Include this 
+ability die in any roll that hinges almost entirely on luck 
+or chance, rather than skill or effort.
+Descriptors: Luck, Jinx, Magic
+Limits: Mental, Emotional Trigger, Magic
+SFX: 
+•	 Spend a ●
+Ⓟ to reroll a die in a test or contest
+that includes a hitch (you can reroll the hitch).
+•	 Spend a ●
+Ⓟ to force your opponent to reroll
+the highest die in a test or contest.
+•	 Spend a ●
+Ⓟ to allow another PC or major
+GMC to reroll a die in a test or contest that 
+includes a hitch (they can’t reroll the hitch).
+•	 Spend a ●
+Ⓟ to chance upon a clue when you 
+aren’t looking for it.
+•	 Spend a ●
+Ⓟ to step down an effect die that
+would obviously cause you harm.
+MAGNETISM
+You can affect not only the massive magnetic 
+powers of the planet, but the minuscule magnetic prop­
+erties in every piece of metal, allowing you to create walls 
+of metal to defend yourself or perhaps even slow the blood 
+in a human body due to the iron content. Roll this abili­
+ty’s die when a situation’s outcome might be affected by 
+magnetic forces.
+Descriptors: Magnetism
+Limits: Electricity, Plastics, Concentration
+SFX:
+•	 Spend a ●
+Ⓟ to wrap metal around a
+character, trapping them.
+•	 Spend a ●
+Ⓟ to wipe computer data storage
+and memory banks.
+•	 Spend a ●
+Ⓟ to scramble electronic devices
+for the remainder of the scene.
+•	 Spend a ●
+Ⓟ to manipulate the iron in the
+blood of another person to stun them or
+cause stress or complications. 
+•	 Spend a ●
+Ⓟ to move big metallic objects around 
+as defined by the scope of your die rating:
+④: office chair	
+⑩: truck
+⑥: refrigerator	
+⑫: jumbo jet
+⑧: small car
+METAHUMAN SENSE
+You can identify those with power like your 
+own. That information may come to you through a sixth 
+sense or be a variation of your other senses like sight or 
+smell. By default, you detect metahumans like yourself: if 
+you’re meteor-infected, you can only detect other meteor-
+infected metahumans. Include this ability die when you 
+find other metahumans or when you use that information 
+to your benefit.
+Descriptors: Perception, Insight, Experience
+Limits: Line of Sight, Lead, Time/Focus
+SFX: 
+•	 Spend a ●
+Ⓟ to get a vague sense of a metahuman’s 
+abilities—usually their descriptors or limits.
+•	 Spend a ●
+Ⓟ to identify power sources beyond 
+your own.
+•	 Spend a ●
+Ⓟ to identify a target’s limit.
+•	 Spend a ●
+Ⓟ to identify any existing assets, 
+complications, or stunts the abilities are
+linked to.
+•	 Spend a ●
+Ⓟ to “tag” a metahuman so that
+you can track their location for a day.
+
+
+=== PAGE 208 ===
+204 CHAPTER 6 PRIME LISTS
+MIND CONTROL
+You can control or influence other people’s minds 
+without them realizing, although it’s hard to make them 
+go against their deepest beliefs. You might use psychic 
+influence, or pheromones, or subsonic vibrations. Include 
+the ability die when trying to coerce, seduce, influence, or 
+mislead someone. Mind control works best when you’re 
+in the same scene; its effects may be overcome in later 
+scenes by a test, especially when your influence conflicts 
+with the subject’s true convictions.
+Descriptors: Mental, Magic, Pheromones, Tech Implant
+Limits: Psychic Feedback, Eye Contact, Auditory
+SFX: 
+•	 Spend a ●
+Ⓟ to insert a post-hypnotic suggestion 
+in your target to be acted upon later.
+•	 Spend a ●
+Ⓟ to erase a memory, such as a
+secret identity.
+•	 Spend a ●
+Ⓟ to insert false memories into a target.
+•	 Spend a ●
+Ⓟ to make a target into your stalwart 
+defender without having to maintain control
+over every action.
+•	 Spend a ●
+Ⓟ to make a target oppose his
+friends without having to maintain control
+over every action.
+PARALYSIS
+You can lock someone in place, incapable of 
+moving or doing anything physical. This could be due to 
+some sort of ray or beam, perhaps some kind of mental 
+control, or a poison that causes paralysis on contact.
+Roll this ability’s die when immobilizing someone—
+whether to terrorize them or escape from them—would 
+be to your advantage.
+Descriptors: Mental, Poison, Stun
+Limits: Psychic Feedback, Touch, Duration
+SFX: 
+•	 Spend a ●
+Ⓟ to make another character
+unable to move, speak, or act.
+•	 Spend a ●
+Ⓟ to release a paralyzing agent that 
+slows everyone in a scene except you. You may 
+use this as a ⑧ stunt.
+•	 Spend a ●
+Ⓟ to stun a target from a distance
+so that they can no longer run away.
+•	 Spend a ●
+Ⓟ to make a target fall asleep.
+•	 Spend a ●
+Ⓟ to step up your effect die when 
+causing fear, anger, or injury-based stress
+or complications. 
+PLANT CONTROL
+You can command plant life to grow or wither at 
+will, to wind around your enemies, and to communicate 
+with you as if it were another person. Roll this ability’s die 
+when the plant life around you could help you achieve 
+your goals.
+Descriptors: Tree, Spore, Fungus
+Limits: Pain Transference, Psychic Feedback, Cold
+SFX: 
+•	 Spend a ●
+Ⓟ to make vines burst from below, 
+binding a character to the ground. Anyone but
+the target may use the vines as a ⑧ stunt for
+the rest of the scene.
+•	 Spend a ●
+Ⓟ to send messages through plant
+life in scenes you’re not in.
+•	 Spend a ●
+Ⓟ to grow a large plant pod to
+escape a scene through the ground.
+•	 Spend a ●
+Ⓟ to ask plant life in the scene for 
+residual memories.
+•	 Spend a ●
+Ⓟ to cause plants in a scene with
+you to secrete toxins. You may use the toxins
+as a ⑧ stunt.
+POISON
+Your touch or scent can destroy the inner work­
+ings of the human body. This may involve breathing in 
+your released vapors, venomous injection, or a simple 
+kiss. Include this ability’s die when trying to overcome 
+someone with your toxic or chemical talents.
+Descriptors: Gaseous, Kiss, Injection
+Limits: Touch, Wind, Water
+SFX: 
+•	 Spend a ●
+Ⓟ to make your poisonous gas
+affect everyone in a scene as an area effect.
+•	 Spend a ●
+Ⓟ to infect a target with a poison
+that activates one or more scenes later.
+•	 Spend a ●
+Ⓟ to conceal the toxin from normal 
+medical science.
+•	 Spend a ●
+Ⓟ to recover yourself or somebody in 
+the same scene from any stress caused by a toxin.
+•	 Spend a ●
+Ⓟ to step up your effect die when
+you’re trying to cause harm with your poison.
+Note: Please read the note on Mind Control, 
+Possession, and Consent on page 186.
+
+
+=== PAGE 209 ===
+205
+CHAPTER 6 PRIME LISTS
+POSSESSION
+You can inhabit another’s body for a short 
+time. Often the victims of this kind of control have no 
+memory of the event. Include this ability’s die when 
+you’re possessing someone and want to hide your 
+possession, convince people your host is still in charge, 
+or engage in psychic warfare with the mind of the host.
+Possession includes a few special rules. When you possess 
+someone, you use your own mental traits, but you may 
+use your host’s physical traits where appropriate. If you 
+attempt a test or contest while in your host’s body in which 
+their highest mental trait die rating is higher than your 
+own, they may attempt to shake your control by spending 
+a ●
+Ⓟ and interfering with their own roll. If they roll higher 
+than you, the possession is ended. Possession for more 
+than a single contest or test requires a contest 
+against the target in addition to the ●
+Ⓟ spent; 
+if you succeed, you step in and act while the PC 
+or GMC takes a back seat.
+Descriptors: Mental, Magic, Spirit
+Limits: Psychic Feedback, Duration, Concentration
+SFX: 
+•	 Spend a ●
+Ⓟ to seize control of a minor GMC
+in the same scene as you for the rest of this 
+episode, or until they break free of your control.
+•	 Spend a ●
+Ⓟ to control all minor GMCs in a scene. 
+Rather than inhabiting everyone’s body, you 
+are merely in the back of their minds, making 
+suggestions that everyone seems to agree are 
+good ideas. The effects only last for this scene. 
+•	 Spend a ●
+Ⓟ to use someone else’s SFX for
+the rest of the scene.
+•	 Spend a ●
+Ⓟ to take control of a PC or GMC in 
+another scene for a single contest or test. 
+•	 Spend a ●
+Ⓟ to take control of a PC or GMC
+for the remainder of the scene or until they
+break free. This also requires a contest
+against the target.
+POWER LEECH
+You’re the bane of the powered community, 
+existing to either imitate other abilities or temporarily 
+take them away. You roll this ability’s die when facing 
+down someone else with abilities or when trying to 
+control stolen abilities. To actually take abilities away, 
+you must use SFX.
+Descriptors: Alien Mineral, Power, Magic
+Limits: Uncontrollable, Touch, Concentration
+SFX: 
+•	 Spend a ●
+Ⓟ to gain an ability of another PC
+or GMC in the same scene. The die rating
+of the stolen ability is the lower of your
+Power Leech die rating and the stolen ability’s 
+original die rating.
+•	 Spend a ●
+Ⓟ to shut down an ability of another
+PC or GMC in the same scene. Your die rating 
+must be equal to or greater than their ability’s
+die rating.
+•	 Spend a ●
+Ⓟ to use an SFX from gear in the
+same scene.
+•	 Spend a ●
+Ⓟ and step this ability down by one
+to step down all abilities other than your own
+in the same scene as you by one.
+•	 Spend a ●
+Ⓟ to step up another ability of yours
+by stepping down an opponent’s ability.
+Note: Please read the note on Mind Control, 
+Possession, and Consent on page 186.
+COUPLE OF KOOKS
+
+
+=== PAGE 210 ===
+206 CHAPTER 6 PRIME LISTS
+PRECOGNITION
+You see things before they happen. Sometimes 
+only seconds before; sometimes far, far ahead. This power 
+doesn’t mean you can automatically understand the 
+context of what you’re seeing; it simply means that you 
+see something that’s coming. Roll this ability’s die when 
+trying to solve a problem, understand information, or get 
+insight into something using your precognitive ability.
+Descriptors: Mental, Magic, Touch
+Limits: Traumatic Flashes, Psychic Feedback, Uncontrollable
+SFX: 
+•	 Spend a ●
+Ⓟ to sense an opponent’s next
+move in a fight. Remove the highest rolling
+die from their next roll.
+•	 Spend a ●
+Ⓟ to learn about an object or
+person’s future just by touching them.
+•	 Spend a ●
+Ⓟ to act on your precognitive abilities; 
+reroll your entire pool, minus any hitches.
+•	 Spend a ●
+Ⓟ to have gained a precognitive clue 
+that leads you to a scene you aren’t part of.
+•	 Spend a ●
+Ⓟ to have left a clue or message in a 
+scene you aren’t part of but have visited before.
+PYROKINESIS
+Your control over fire and heat lets you manipu­
+late temperature as well as flame. You might create your 
+own flame or require something else to make the flame for 
+you, but the end result is the same. Add this ability’s die 
+when handling fire, impressing others with your grilling 
+techniques, or sensing heat sources in your area.
+Descriptors: Fire, Heat, Temperature 
+Limits: Water, Cold, Vacuum
+SFX: 
+•	 Spend a ●
+Ⓟ to melt an inanimate object with a 
+scope defined by your die rating:
+REGENERATION
+You are able to heal physical or mental stress and 
+trauma you’ve been subjected to. Include your ability die 
+when your regenerative ability would let you successfully 
+struggle through painful or harmful situations.
+Descriptors: Physical, Mental, Magical
+Limits: Emotional Block, Elemental Trigger, Vampirism
+SFX: 
+•	 Spend a ●
+Ⓟ to recover stress or complications 
+caused by injury or fatigue.
+•	 Spend a ●
+Ⓟ to recover stress or complications 
+caused by fear or anxiety.
+•	 Spend a ●
+Ⓟ to grow back a severed limb or
+other body part.
+•	 Spend a ●
+Ⓟ to cure yourself from any ailment
+or disease.
+•	 Spend a ●
+Ⓟ to return from the dead. You must 
+step this ability down a step as a consequence.
+SHADOW CONTROL
+A creature of shadow, you can create shadows 
+where there are none and cause existing shadows to 
+do your bidding. Include this ability die when shifting 
+shadows around, drawing them closer, or dispersing them 
+would help you achieve your goals.
+Descriptors: Shadow, Magic, Darkness
+Limits: Light, Fire, UV Light (including Sunlight)
+SFX: 
+•	 Spend a ●
+Ⓟ to turn someone else into
+a shadow.
+•	 Spend a ●
+Ⓟ to restrain another character
+with their own shadow.
+•	 Spend a ●
+Ⓟ to attack someone with their
+own shadow.
+•	 Spend a ●
+Ⓟ to envelop an entire scene in 
+darkness, snuffing out all light.
+•	 Spend a ●
+Ⓟ to temporarily blind everyone
+in a scene by covering their eyes in their
+own shadows.
+EFFECT SYMBOLS
+ATTACK
+SENSORY
+MOVEMENT
+CONTROL
+DEFENSE ENHANCEMENT
+④: ice cubes	
+⑩: steel bars
+⑥: frozen pond 	 ⑫: vault door
+⑧: gold brick
+•	 Spend a ●
+Ⓟ to create a ring of fire, trapping 
+another character.
+•	 Spend a ●
+Ⓟ to absorb existing fire and heat 
+into your own body.
+•	 Spend a ●
+Ⓟ to surround yourself with flames
+and step up your effect die when making
+a burn attack.
+•	 Spend a ●
+Ⓟ to create a wall of flame to step
+down a damage-causing effect die from
+physical attacks.
+
+
+=== PAGE 211 ===
+207
+CHAPTER 6 PRIME LISTS
+SHADOW WALK
+You can dive into shadows or move as a shadow 
+to get from place to place. Include this ability in any test 
+or contest where your unique talent at moving in and 
+through local shadows would be an advantage.
+Descriptors: Shadow, Magic, Darkness
+Limits: Light, Fire, UV Light (including Sunlight)
+SFX: 
+•	 Spend a ●
+Ⓟ to slip into holes and cracks too
+small for pursuers to follow.
+•	 Spend a ●
+Ⓟ to jump into one shadow and out
+of another.
+•	 Spend a ●
+Ⓟ to spread a shadow across a scene
+to jump in one end and out the other.
+•	 Spend a ●
+Ⓟ to jump into another person’s
+shadow and jump out of the same person’s 
+shadow at a later point in time.
+•	 Spend a ●
+Ⓟ to jump into a shadow on a flat 
+surface like a wall and out on the other side
+of the surface as if the shadow was a doorway
+or portal.
+SHAPESHIFTING
+You can alter your appearance or shape to imitate 
+other people, creatures, or inanimate objects. Include this 
+ability’s die when you’re trying to pass off your assumed 
+shape or appearance as your own, engaged in a fight 
+where changing shape might help you out, or retaining 
+your shape while fatigued or hurt. If you’ve been taken 
+out, you might return to your native form unless you 
+spend a ●
+Ⓟ to keep it stable.
+Descriptors: Imitation, Animal, Object 
+Limits: Concentration, Scent, X-Rays
+SFX: 
+•	 Spend a ●
+Ⓟ to change shape into an object
+the same size as yourself.
+•	 Spend a ●
+Ⓟ to imitate another character
+down to fingerprints and retinal patterns.
+•	 Spend a ●
+Ⓟ to grow in size to two or three
+times your normal height.
+•	 Spend a ●
+Ⓟ to shrink to miniscule size.
+•	 Spend a ●
+Ⓟ to change into an animal that
+would be indistinguishable from the real
+thing at a genetic level.
+SIZE ALTERATION
+Six feet tall? A demure five four, perhaps? How 
+about twenty feet toes to nose or a mere six inches? You 
+can drastically grow and shrink your body size. Contrast 
+this with Shapeshifting, which is about fooling other char­
+acters: nobody will be fooled by a twenty-foot-tall you. 
+Include this ability die when your shifting size plays to 
+your advantage—towering over others, shrinking down 
+to slip through small crevices, or simply parlaying your 
+size advantage.
+Descriptors: Strange Biology, Physics, Wishes
+Limits: Insecurity, Concentration, Air
+SFX: 
+•	 Spend a ●
+Ⓟ to grow toward terrifying 
+proportions, stepping up your effect die
+when trying to intimidate or exert force
+on something.
+•	 Spend a ●
+Ⓟ to be so tiny you’re not detected.
+•	 Spend a ●
+Ⓟ to grow so big you destroy the 
+building you’re in.
+•	 Spend a ●
+Ⓟ to shrink and escape any bonds
+that are constraining you.
+•	 Spend a ●
+Ⓟ to grow into the way of an attack 
+against another character, interfering with
+a contest.
+SONIC BLAST
+You can let loose a cacophony of noise that could 
+take out a city block. Include this ability die when you’re 
+using your sonic attack to harm someone, freak them out, 
+or break a lot of glass.
+Descriptors: Sonic Scream, Music, High Frequency
+Limits: Silence, Requires Vocals, White Noise
+SFX: 
+•	 Spend a ●
+Ⓟ to affect everyone in a scene who 
+can hear you. Treat this as an area effect test, one 
+that all affected characters in the scene must test 
+against to avoid taking stress or complications 
+related to hearing injury or vibration damage.
+•	 Spend a ●
+Ⓟ to emit a low frequency scream and 
+cause a localized earthquake.
+•	 Spend a ●
+Ⓟ to emit a high frequency scream that 
+scrambles electronics in a scene and calls to all 
+nearby canines.
+•	 Spend a ●
+Ⓟ to emit a scream of the exact 
+frequency required to shatter a specific glass 
+object in the same scene as you.
+•	 Spend a ●
+Ⓟ to emit a scream of such force that it 
+deteriorates concrete and other materials back to 
+its rocky and sandy origins.
+
+
+=== PAGE 212 ===
+208 CHAPTER 6 PRIME LISTS
+STRETCHING
+You can bend and twist into nearly any shape, 
+becoming both like liquid and stretching far beyond 
+human reach. Include this ability’s die when your elastic 
+or rubbery nature would help you get a positive outcome.
+Descriptors: Plastic, Rubber, Putty
+Limits: Electricity, Cold, Heat
+SFX: 
+•	 Spend a ●
+Ⓟ to force yourself through narrow 
+spaces including pipes and cracks.
+•	 Spend a ●
+Ⓟ to stretch long distances to reach 
+great heights.
+•	 Spend a ●
+Ⓟ to stretch in all directions like a
+net in order to catch a falling object or person.
+•	 Spend a ●
+Ⓟ to change your appearance in
+minor ways to hide your identity.
+•	 Spend a ●
+Ⓟ to step down your opponent’s
+effect die from physical attacks against you.
+SUMMONING
+Whether they come from the luminiferous ether, 
+another plane of existence, or are conjured up from your 
+own imagination, you can summon forth all manner of 
+creatures. They assist you, defend you, fight for you, and 
+perform tasks for you. Include this ability when your
+creatures assist or defend you or when you use their 
+powers as your own. 
+Descriptors: Magic
+Limits: Magic
+SFX: 
+•	 Spend a ●
+Ⓟ to summon a creature, which
+serves as a ⑧ ⑧ extra. This creature
+disappears once it reaches zero dice.
+•	 Spend a ●
+Ⓟ to boost a summoned extra’s
+die rating.
+•	 Spend a ●
+Ⓟ to grant a summoned creature
+an ability appropriate to its nature.
+•	 Spend a ●
+Ⓟ to banish a creature summoned
+by you or another summoner.
+SUPER-SENSES
+Your senses are broader and keener than any 
+mortal’s should be. You may have superhuman versions 
+of your five senses, or senses outside of the human spec­
+trum. Start with one Super-Sense descriptor at ④ and add 
+a new one every time you step the rating up or add a new 
+SFX—yes, adding descriptors to Super-Senses is easier 
+than most abilities. Include this ability’s die when using 
+your super-senses to help you stay alert, aware, or aid you 
+in perceiving things in your immediate environment.
+Descriptors: Super-Hearing, Telescopic Sight, X-Ray Vision, 
+Infrared Vision, Radar
+Limits: Lead, Overload, Interference, Magic
+SFX: 
+•	 Spend a ●
+Ⓟ to see through objects.
+•	 Spend a ●
+Ⓟ to hear or see into a nearby scene 
+you’re not in.
+•	 Spend a ●
+Ⓟ to get the scent of any person or 
+object and track the scent to its source.
+•	 Spend a ●
+Ⓟ to see microscopic details beyond 
+what’s possible with an electron microscope.
+•	 Spend a ●
+Ⓟ to see in all directions at once.
+•	 Spend a ●
+Ⓟ to hear signals along the radio band 
+or see beyond the electromagnetic spectrum.
+
+
+=== PAGE 213 ===
+209
+CHAPTER 6 PRIME LISTS
+SUPER-SPEED
+You can move so fast you’re rarely seen as more 
+than a colored blur. Include this ability die whenever 
+your ability to move quickly might directly help you 
+out, whether it’s to get something done faster or to cover 
+more distance. When dealing with someone else with 
+Super-Speed, you can spend a ●
+Ⓟ to keep pace with them 
+or counter their Super-Speed effects; this turns it into
+a contest.
+Descriptors: Quickness, Kinetic, Hypersonic
+Limits: Unstoppable, Sonic Boom, Out of Touch
+SFX: 
+•	 Spend a ●
+Ⓟ to join a scene or switch to a new 
+scene regardless of distance.
+•	 Spend a ●
+Ⓟ to run so fast you run up a
+vertical surface.
+•	 Spend a ●
+Ⓟ to perform multiple activities in the 
+time it takes others to perform a single activity.
+•	 Spend a ●
+Ⓟ to run fast enough to cross water
+as if it were solid ground.
+•	 Spend a ●
+Ⓟ to zip around an obstacle during a 
+chase; you may use this obstacle as a ⑧ stunt 
+against your pursuer.
+SUPER-STRENGTH
+You’re capable of staggering feats of superhu­
+man strength, even if you don’t look all that muscular. 
+Include this ability die when your amazing strength 
+would directly help you succeed. When facing another 
+character with Super-Strength, you may spend a ●
+Ⓟ to 
+counter an SFX they use against you; this makes it into 
+a contest.
+Descriptors: Muscles, Tactile Telekinesis, Size
+Limits: Uncontrollable, Anger Trigger, Needs Focus
+SFX: 
+•	 Spend a ●
+Ⓟ to perform a fantastic feat
+of strength.
+•	 Spend a ●
+Ⓟ to throw or knock another
+character out of a scene.
+•	 Spend a ●
+Ⓟ to pound on the ground, creating
+a shockwave that knocks over everyone in
+the scene.
+•	 Spend a ●
+Ⓟ to break through a wall—even a
+brick or stone wall—to grab a target or object
+on the other side.
+•	 Spend a ●
+Ⓟ to wield a large inanimate object, like 
+an automobile, as a weapon (and as a ⑧ stunt).
+TEN TEN STUDIOS
+
+
+=== PAGE 214 ===
+210 CHAPTER 6 PRIME LISTS
+SWIMMING
+You can move through the water at great speeds, 
+more like a dolphin or shark than a human. Usually this 
+ability includes an adaptation for surviving underwater, 
+making it possible for you to sustain those speeds deep 
+underwater without coming up for air. If you don’t want 
+this to come with underwater breathing, add that as a 
+limit. Add this ability’s die into any roll that involves 
+aquatic activity or movement.
+Descriptors: Swimming, Water, Fins
+Limits: Dehydration, Ice, Earth, Not Amphibious
+SFX: 
+•	 Spend a ●
+Ⓟ to move through water at high 
+speeds—join another scene regardless of
+distance if it’s accessible by water.
+•	 Spend a ●
+Ⓟ to escape a scene by jumping
+into a nearby body of water and disappearing
+into the depths.
+•	 Spend a ●
+Ⓟ to leap from the water onto a
+nearby shore, boat, or low flying aircraft to 
+surprise your foes.
+•	 Spend a ●
+Ⓟ to resist the pressure of very deep 
+water without a pressure suit or submarine.
+•	 Spend a ●
+Ⓟ to step down any incoming stress
+or complications while you’re in the water by 
+dodging around your opponent.
+TECHNOPATHY
+You can control technology remotely with your 
+mind, accessing even unfriendly devices as if they were 
+your home computer. Include this ability die when you 
+interact with computers and technology.
+Descriptors: Mechanical, Mental, Computer, Electronic
+Limits: Electricity, Psychic Feedback, Magnetism
+SFX: 
+•	 Spend a ●
+Ⓟ to break through a computer
+system’s firewall.
+•	 Spend a ●
+Ⓟ to control any electronic device 
+n the same scene as you; you may use this
+device as a ⑧ stunt for the rest of the scene.
+•	 Spend a ●
+Ⓟ to turn on and control vehicles
+as if you’re physically driving them.
+•	 Spend a ●
+Ⓟ to see through the “eyes” of 
+electronic devices in scenes other than
+your own.
+•	 Spend a ●
+Ⓟ to override security codes on
+door panels or electronic vaults.
+TELEKINESIS
+You can levitate and move people, objects, even 
+yourself with your mind. Telekinetics can usually main­
+tain flight and create shields to stave off physical trauma. 
+With this ability you may be able to create telekinetic bolts 
+to damage an enemy or throw another person aside like 
+a rag doll. Include this ability die whenever you’re using 
+your mind to help you manipulate something.
+Descriptors: Mental, Magic, Spirit
+Limits: Psychic Feedback, Concentration, Emotion Trigger
+SFX: 
+•	 Spend a ●
+Ⓟ to knock a character out of a scene.
+•	 Spend a ●
+Ⓟ to create a telekinetic shield
+to step down the effect die of an incoming
+physical attack.
+•	 Spend a ●
+Ⓟ to push, pull, or lift something
+really heavy.
+•	 Spend a ●
+Ⓟ to fly or levitate a short distance. 
+Spend another ●
+Ⓟ if you want to carry others
+with you.
+•	 Spend a ●
+Ⓟ to shoot bolts of telekinetic force.
+TELEPATHY
+You can access the mind of others, conveying 
+messages or reading thoughts and memories. Include 
+this ability die when you’re using telepathy to help you 
+communicate with others, get a read on somebody, or 
+sense the presence of stray thoughts in a room.
+Descriptors: Mental, Magic, Spirit
+Limits: Psychic Feedback, Concentration, Eye-contact
+SFX: 
+•	 Spend a ●
+Ⓟ to read another character’s
+surface thoughts.
+•	 Spend a ●
+Ⓟ to send messages psychically to
+a character in a different scene.
+•	 Spend a ●
+Ⓟ to create a mental shield to block 
+other mental powers from invading your mind.
+•	 Spend a ●
+Ⓟ to sense the location and well-being 
+of any one person that you’ve met before.
+•	 Spend a ●
+Ⓟ to attack another person with a 
+mental blast.
+EFFECT SYMBOLS
+ATTACK
+SENSORY
+MOVEMENT
+CONTROL
+DEFENSE ENHANCEMENT
+
+
+=== PAGE 215 ===
+211
+CHAPTER 6 PRIME LISTS
+TELEPORTATION
+You can move from one place to another without 
+moving at all. You might open a large portal like a doorway 
+from one place to another place miles away, or you might 
+just blink out of existence and re-appear someplace else. 
+Some dissolve into glowing light, then reform with a 
+similar light show somewhere far away. You can roll this 
+ability’s die into tests and contests where teleporting and 
+jaunting around might directly affect the outcome.
+Descriptors: Portal, Magic, Mental
+Limits: Concentration, Slow, Mental
+SFX: 
+•	 Spend a ●
+Ⓟ to join a scene or switch to a new 
+scene regardless of distance.
+•	 Spend a ●
+Ⓟ to quickly teleport away to escape 
+from a scene.
+•	 Spend a ●
+Ⓟ to take another character with you.
+•	 Spend a ●
+Ⓟ to create a small portal capable of 
+teleporting objects.
+•	 Spend a ●
+Ⓟ to create a portal that alters your 
+falling trajectory, landing safely or off to the side.
+TIME CONTROL
+You can manipulate the flow of time around you, 
+slowing or speeding it up to suit your needs. It’s said that 
+some with this ability can use it to reverse time in short 
+bursts, but that might only be a rumor. Roll this ability’s 
+die if tweaking the flow of time would directly influence 
+a test or contest’s result.
+Descriptors: Time, Age, Magic
+Limits: Time, Concentration, Psychic Feedback
+SFX: 
+•	 Spend a ●
+Ⓟ to stop time for up to ten
+subjective minutes.
+•	 Spend a ●
+Ⓟ to slow time around you, allowing
+you to switch to a new scene instantly.
+•	 Spend a ●
+Ⓟ to stop time for five subjective 
+minutes but bring another person with you.
+•	 Spend a ●
+Ⓟ to reverse time for a few seconds
+to change one error, allowing you to reroll
+your last dice roll—however, you must keep
+the second roll.
+•	 Spend a ●
+Ⓟ to slow time so you can perform 
+multiple activities in the time it takes others to 
+perform one; treat this as an area effect, with 
+a maximum number of added ⑥ equal to the 
+number of steps above ④ in this ability to
+create assets, complications, or stress.
+TIME TRAVEL
+Yesterday, today, tomorrow—these are all open to 
+you as destinations. You can travel through time. Whether 
+you disappear now and appear then or hit some sort of 
+cosmic rewind or fast forward button, the result is the 
+same. When you travel through time, you remain in the 
+same place relative to the Earth; if you travel from 2020 
+Quebec to 1400, you’ll meet some Algonquins. Include 
+this ability when you seek information or resources in 
+another time or when you slip back or forward for tacti­
+cal advantage. Careful, though—this ability is prone to 
+causing serious amounts of continuity trouble.
+Descriptors: Psychic, Hypertech, Unmoored in Time
+Limits: Grandfather Paradox, Observer Effect, Lead
+SFX:
+•	 Spend a ●
+Ⓟ to find a cache of necessary items
+you left for yourself.
+•	 Spend a ●
+Ⓟ to receive a message from your 
+possible-future self (accuracy not guaranteed).
+•	 Spend a ●
+Ⓟ to escape a scene you’re in.
+•	 Spend a ●
+Ⓟ to travel in space as well as time.
+•	 Spend a ●
+Ⓟ to take another character with
+you to another time.
+TRANSMUTE
+You can create stuff out of thin air and other 
+things by reconfiguring the basic attributes of matter. At 
+the smallest level, you can change an object’s atomic or 
+molecular structure; you can also change its overall shape 
+or structure. You can’t change an object’s mass, only shift 
+it around; nor can you change the amount of energy the 
+object stores as heat or chemical energy. Include this 
+ability when you turn air into useful tools, convert the 
+ground under an opponent into a slippery morass, or bend 
+your surroundings to assist in a chase.
+Descriptors: Magic, Super Science, Divinity
+Limits: Distraction, an “Unworkable” Substance, Scarcity
+SFX: 
+•	 Spend a ●
+Ⓟ to create exactly the tool you need as 
+a ⑧ stunt or asset.
+•	 Spend a ●
+Ⓟ to create a hole or doorway in a wall 
+or other obstruction.
+•	 Spend a ●
+Ⓟ to sense if an object has been 
+transmuted.
+•	 Spend a ●
+Ⓟ to change an object’s mass.
+•	 Spend a ●
+Ⓟ to create a bomb, the explosion of 
+which counts as an area effect attack.
+
+
+=== PAGE 216 ===
+TUNNELING
+You can dig deep under the ground as fast as 
+a person can walk, allowing you to tunnel to and from 
+your destinations. You probably don’t need to worry about 
+tight or confined spaces, and you might have some wicked 
+claws. Include this ability die when moving through dirt, 
+spraying up loose earth, or slashing away at stone or
+an opponent.
+Descriptors: Stone, Earth, Dirt
+Limits: Misdirection, Water, Earthquake
+SFX:
+•	 Spend a ●
+Ⓟ to make tunnels that last for
+the rest of the session as ⑧ stunts.
+•	 Spend a ●
+Ⓟ to escape a scene by digging an 
+escape tunnel.
+•	 Spend a ●
+Ⓟ to find a weak point in any floor
+by digging beneath it; this becomes a ⑧ stunt 
+you can use for the rest of the scene.
+•	 Spend a ●
+Ⓟ to make tunnels collapse behind
+you so that you can’t be followed.
+•	 Spend a ●
+Ⓟ to use your claws to step up
+your effect die when damaging something.
+WALL WALKING
+You can move up and down walls and across ceil­
+ings as easily as walking across your living room floor. 
+You can even stick to a ceiling and stay there where no 
+one can see you. It’s not like anyone looks up anyway. If 
+you’re making use of your clingy condition in combat or 
+hiding up in the rafters, roll the ability’s die to help.
+Descriptors: Magnetic, Sticky, Spines
+Limits: Slow, Slick Surfaces, Water
+SFX:
+•	 Spend a ●
+Ⓟ to hide on a ceiling, making it easy for 
+you to jump down into the middle of those below.
+•	 Spend a ●
+Ⓟ to escape a scene by a convenient 
+window or similar exit to an outside wall.
+•	 Spend a ●
+Ⓟ to take another person with you
+as you walk on the wall or ceiling.
+•	 Spend a ●
+Ⓟ to jump from wall to wall, keeping 
+your grip as if on a flat surface. 
+•	 Spend a ●
+Ⓟ to step down incoming stress or 
+complications when something you’re clinging
+to collapses or falls.
+WIND CONTROL
+You have the power to control the movement of 
+air, whirling it around or redirecting powerful winds. 
+Include this ability die to use whirlwinds and gusts of 
+air to tilt a test or contest in your favor.
+Descriptors: Wind, Air, Storm
+Limits: Grounded, Dirt, Vacuum
+SFX:
+•	 Spend a ●
+Ⓟ to fly a short distance.
+•	 Spend a ●
+Ⓟ to create a localized tornado.
+•	 Spend a ●
+Ⓟ to create a powerful wind that 
+delivers stress or complications.
+•	 Spend a ●
+Ⓟ to lift another person or inanimate 
+object off the ground and into the air.
+•	 Spend a ●
+Ⓟ to hold a target, object, even a 
+moving car in place with powerful gusts of wind.
+BETHANY BERG
+
+
+=== PAGE 217 ===
+213
+CHAPTER 6 PRIME LISTS
+ABILITIES AS GEAR 
+From jetpacks to suits of armor to freeze rays, any ability 
+in the game can be replicated with a device. These nifty 
+gadgets work like abilities, except they all share the 
+same limit—gear can be lost, broken, or stolen. This limit 
+deprives you of your gear and, without it, you don’t have 
+the ability at all (no die or SFX). And in the wrong hands, 
+your own ability could potentially be used against you.
+Gear is frequently custom-created for your character and 
+doesn’t need to map exactly to any single ability. Borrow 
+SFX from abilities that match your gear’s effect; weapons, 
+such as a Tricked-Out Compound Bow, fall under the attack 
+effect, while a Jetpack is a movement effect.
+To design your own gear, you need an effect, a descrip­
+tor, and SFX. You may add more SFX through growth or 
+advancement, which might represent sending the gear to 
+the lab or tinkering with it. Instead of stepping up your 
+die rating, you can add a new descriptor to a piece of gear, 
+making it multi-purpose. For example, instead of using 
+growth to step up your Human Turret gear ⑧ (Attack 
+descriptor) to ⑩, you could add the Defense descriptor 
+to it, expanding the kinds of dice pools you could roll it in.
+CLOAKING DEVICE
+When it's tapped, this small electronic pendant 
+briefly emits a low hum and a soft green light. Then 
+it refracts light around the wearer so that they seem 
+invisible. 
+Descriptor: Perception
+Limit: Gear
+SFX: Spend a ●
+Ⓟ to disappear and escape from a scene.
+EMP BLASTER
+This modified taser can shoot an EMP pulse in an 
+aimed direction, allowing it to specifically disable single 
+electronic devices rather than everything around it.
+Descriptor: Electromagnetism
+Limit: Gear
+SFX: Spend a ●
+Ⓟ to disable any electronic device,
+including gear.
+PERSONAL GRAVITY GENERATOR
+This device lets the wearer create gravity fields 
+of low and high gravity, affecting the wearer and others.
+Descriptor: Gravity
+Limit: Gear
+SFX: Spend a ●
+Ⓟ to hold a nearby character in place with a 
+powerful gravity field.
+POWERSUIT
+This powered suit of metal armor protects the 
+wearer from most forms of attack. Additional SFX and 
+descriptors can make it a walking arsenal as well.
+Descriptor: Iron
+Limit: Gear
+SFX: Spend a ●
+Ⓟ to step down your opponent’s effect die 
+when they’re trying to harm you.
+TRICKED-OUT COMPOUND BOW
+This compound bow has been modified with 
+the most advanced upgrades in bow-making technology 
+available. Most of its SFX are attributed to hi-tech arrows.
+Descriptor: Graphite Bow
+Limit: Gear
+SFX:
+•	 Spend a ●
+Ⓟ to use an electrically charged arrow 
+that releases its charge on impact.
+•	 Spend a ●
+Ⓟ to use an EMP arrow to disable all 
+electronic devices within a scene.
+•	 Spend a ●
+Ⓟ to use a grappling arrow to entangle a 
+target and keep it from getting away.
+•	 Spend a ●
+Ⓟ to use a tranquilizer arrow to step up 
+any sleep-inducing stress or complication.
+MODS FOR ARMOR AND WEAPONS
+Many players enjoy creating specialty weapons or armor in games where 
+their non-powered characters deal with supernatural or superpowered 
+threats. Gear represents that technology in a single trait, and these mods 
+add more detail to gear. They add some complexity to the rules, so only 
+use them if weapons and armor are a Big Deal in your game.
+Ablative Armor: Abilities that represent armor or protection may 
+prevent damage at the cost of being stepped down afterward. Compare 
+your armor ability die rating to the attacker’s ability die (or, if no ability is 
+used, the attacker’s skill or attack trait). If your ability die is greater than 
+their die rating, their effect die is ignored and you take no effect from 
+the attack. If your ability die is equal to or less than their ability die, their 
+effect die is stepped down by one.
+ARMOR
+ATTACKER
+IF ATTACKER SUCCEEDS
+Breastplate ⑧
+Iron Spear ⑥
+Breastplate ⑧ 
+stepped down to ⑥, 
+effect die ignored.
+Breastplate ⑧
+Iron Spear ⑧ 
+and up
+Breastplate ⑧ 
+stepped down to ⑥, 
+effect die stepped
+down by one.
+Weapon Ranges: To represent the effect of various distances on 
+ranged weapons, determine if attacking the target with your chosen 
+weapon would be within its standard range, if it’d be a stretch, or 
+if it’d be almost impossible. Assign a difficulty die to the opposition 
+dice pool of 
+ if it’s a stretch and a 
+ if it’s almost impossible. You can 
+come up with individual range bands for various weapons if you like, 
+but something simple like this works for most games.
+
+
+=== PAGE 218 ===
+214 CHAPTER 6 PRIME LISTS
+FANTASY 
+MILESTONES
+Here’s a variety of milestone examples from a 
+heroic fantasy genre that you can adapt to any 
+other genre. Most are universally applicable if 
+you change the descriptive text a bit, and the 
+XP rewards can be inspiration for creating your 
+own milestone goals in other settings.
+ACCURSED
+The infernal forces of the multiverse have picked you to 
+play some role in their unfathomable plans. Others call 
+you unlucky, but you recognize a growing blackness in 
+your heart… 
+•	 1 XP when your attack demonstrates the sinister 
+nature of your abilities.
+•	 3 XP when you add at least a ⑧ to the doom 
+pool, either from rolling two or more hitches on 
+a single roll or by using an SFX that adds to the 
+doom pool.
+•	 10 XP when you are finally claimed by a villainous 
+power for dark deeds, or you strike a major blow 
+against a villainous power by using their own dark 
+powers against them.
+ASCETIC
+How can one attain focus if they remain as the magpie, 
+always seeking what shines instead of what matters? 
+•	 1 XP when you abstain from a worldly pleasure.
+•	 3 XP when you participate in an indulgence that 
+leads to trouble.
+•	 10 XP when you found an institution devoted to 
+abstaining from worldly pleasures or abandon the 
+path of the ascetic to live it up in one long party.
+BLESSED
+You were born under a divine star and followed a god’s 
+calling. You spread the Word as you see fit so that you can 
+spread your god’s blessings.
+•	 1 XP when you perform a religious rite.
+•	 3 XP when you inflict stress upon a blasphemer.
+•	 10 XP when you complete a grand work in your 
+god’s name(s) or become a martyr for your
+god’s cause.
+COMFORTABLE IN THE SHADOWS
+Don’t look at me, I’m not important or interesting. I just 
+want to stay alive and help from a safe distance. 
+•	 1 XP when you hide or otherwise choose to stay 
+out of the spotlight.
+•	 3 XP when you leave the shadows to accomplish 
+something important.
+•	 10 XP when you step into the spotlight in front of 
+a large group to accomplish something important 
+or decide to fade away forever.
+HAUGHTY NOBLE
+You were born into aristocracy. You are well aware of your 
+station in life and take pains to remind others of theirs. 
+•	 1 XP when you say something dismissive about 
+the lower class. 
+•	 3 XP when you try to buy your way out of a 
+problem or situation.
+•	 10 XP when you surrender your noble station for 
+adventure or give up for a life of nobility.
+HOMEBODY
+They say you can never go home. But if I can’t go back, I 
+can bring home with me.
+•	 1 XP when you remark to another character that 
+something reminds you of home.
+•	 3 XP when you do something adventurous that 
+you could never do at home.
+•	 10 XP when you retire home and write about your 
+adventures, or you embrace the adventurous life 
+and admit you can never go home.
+NATALIA BACETTI
+
+
+=== PAGE 219 ===
+HONORABLE WARRIOR
+I live by my reputation and the honor that burdens my
+existence. Stand fast, foe! We shall let fate and our martial 
+skills determine your destiny!
+•	 1 XP when you state that a decision brings
+honor or dishonor.
+•	 3 XP when you put yourself in a position to 
+take stress because the alternative would be 
+dishonorable.
+•	 10 XP when you perform an inexcusable act of 
+dishonor in the course of the greater good or 
+sacrifice yourself to maintain your honor.
+LEADER
+Adventurers are a chaotic, undisciplined bunch. You lead 
+by example, trying to get your teammates back alive to 
+enjoy the sweet taste of success. 
+•	 1 XP when you give an order to a member
+of your group.
+•	 3 XP when a member of your group uses an
+asset you created for them.
+•	 10 XP when you are recognized for your 
+achievements in a great adventure, or you
+are deposed as leader in a mutiny.
+MYSTERIOUS SAGE
+Apocryphal, people say your wisdom is.
+•	 1 XP when you make a cryptic observation.
+•	 3 XP when you encounter something that you 
+can’t explain.
+•	 10 XP when you are exposed as not that wise, or 
+when someone in your group is the Chosen One 
+the prophecy spoke of!
+NATURE’S GUARDIAN
+I have been granted so many boons by our mother Earth.
+I merely seek to honor her through my respect and devotion.
+•	 1 XP when you eschew something artificial for a 
+tool from nature.
+•	 3 XP when you create an asset for someone else.
+•	 10 XP when you lay down your life to protect the 
+sanctity of nature, or if you allow nature to be 
+harmed in a major way to complete an adventure.
+PLANAR TRAVELER
+Open your eyes to the realities outside your limited senses. 
+There are other realities one must always consider. 
+•	 1 XP when you follow a custom that’s unfamiliar 
+to your companions.
+•	 3 XP when you tune out of the material world in a 
+way that endangers your companions.
+•	 10 XP when you become bound to the material 
+world, so you can never travel the planes again, or 
+depart the material world for a new one.
+TREASURE HUNTER
+It’s not about amassing riches; it’s about acquiring and 
+disposing of it in the most thrilling and entertaining 
+manner possible. You consulted maps, scoured rumors, 
+raided ruins, and killed monsters and it’s not even noon yet.
+•	 1 XP when you acquire or spend money.
+•	 3 XP when you search for treasure during a battle.
+•	 10 XP when you find the big score, or when you 
+spend all of your money in an act of altruism.
+RAFAEL SARMENTO
+
+
+=== PAGE 220 ===
+216 CHAPTER 6 PRIME LISTS
+THE
+MOTOR POOL
+In some settings, such as Hammerheads on page 150, 
+vehicles like spaceships, sailing ships, or RVs need more 
+of a mechanical role than signature assets provide. If 
+they’re as important to the story as the characters are, 
+then they deserve more attention. To make vehicles come 
+to life, each group of players maintains a vehicle file, a 
+bit like a character file, that contains attributes, distinc­
+tions, and signature assets. Players can use their vehicle 
+to accomplish goals such as chasing down criminals or 
+staging attacks on enemy installations.
+VEHICLE TRAITS
+In addition to the traits of the vehicle’s pilot, engineer, 
+and other PCs, the vehicle itself possesses several traits 
+that can be added to rolls made when PCs make tests or 
+contests. These traits sometimes replace (attributes) and 
+sometimes complement or supplement (distinctions and 
+signature assets) existing PC traits.
+VEHICLE ATTRIBUTES
+Primarily, vehicle attributes replace team attributes when 
+a PC is assembling a dice pool that involves the vehicle. 
+There are as many as four different attributes:
+•	 Engines measures the agility and speed of your 
+vehicle, including how well it handles and the kind 
+of problems the engine might have. The higher 
+the Engines die rating, the faster and more agile 
+it is. A lower Engines die rating might indicate the 
+vehicle is awkward to maneuver or just plain slow.
+•	 Frame is the structure that contains the interior 
+of the vehicle and keeps everything together.
+A higher Frame means that your vehicle is strong 
+and secure, while a weaker Frame might indicate 
+perpetual problems with the exterior.
+•	 Systems helps the vehicle operate, including 
+life support, communications, internet access, 
+computers, and navigation. The higher the 
+Systems die rating, the more technically 
+sophisticated the vehicle is. A lower Systems
+die rating indicates a no-frills vehicle, or one
+with a lot of hotwired parts.
+•	 Crew represents the skill of the crew of a GMC-
+operated vehicle. A higher Crew die rating 
+indicates trained professionals, while a lower 
+rated Crew is either unskilled or flying with a 
+skeleton team. (PC-operated vehicles don’t
+have a Crew score.)
+VEHICLE DISTINCTIONS
+Vehicles have vehicle distinctions with SFX like basic 
+character distinctions. Vehicle distinctions may be added 
+to a roll when a character is using the vehicle to accom­
+plish a task. A player may add both a vehicle distinction 
+and a personal distinction to a single roll.
+Vehicle distinctions come in three types, and each vehicle 
+has one distinction from each category:
+•	 Model determines the vehicle’s starting attributes 
+and indicates the vehicle’s base type.
+•	 History reveals how old or new the vehicle is.
+It can also indicate the vehicle’s current use.
+•	 Customization reveals how the vehicle has
+been modified, remodeled, or upgraded since
+its initial build. 
+Each vehicle distinction comes with a Hinder: Gain a ●
+Ⓟ 
+when you switch out this distinction’s ⑧ for a ④ SFX, but 
+other SFX are also unlockable. Like personal distinction 
+SFX, vehicle distinction SFX are constructed by selecting 
+appropriate benefits (“reroll a die, step down a complica­
+tion, earn a ●
+Ⓟ”) and drawbacks (“spend a ●
+Ⓟ, step up a 
+complication, choose to do something risky”).
+VEHICLE SIGNATURE ASSETS
+Like individual PCs, vehicles have signature assets that 
+can be added to a dice pool. These assets represent modi­
+fications or resources that are available on the vehicle, 
+ranging from a Sophisticated GPS to Lethal Machine Guns. 
+Typically, vehicle signature assets have a rating of ⑧.
+F88 Blue Racer ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+Fresh Off the Custom Rack ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+Upgraded Handling ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+HIGH-TECH
+STREET BIKE
+This is a sweet road-worthy 
+motorcycle that has all the 
+newest tech for elite riders.
+Engines
+Frame
+Systems
+SIGNATURE ASSETS
+Racing Wheels 
+Protective Shield 
+
+
+=== PAGE 221 ===
+217
+CHAPTER 6 PRIME LISTS
+H. WON
+ALEX JAY BRADY
+TRAINING UP VEHICLE RESOURCES
+Players can spend a session to train up vehicle resources 
+instead of improving their own character files. As with 
+an individual PC, vehicles can swap distinctions, add or 
+step up signature assets, and unlock new SFX. PCs can 
+also pool session expenditures to purchase improvements 
+to the vehicle. It’s impossible for a vehicle to swap out its
+model distinction.
+USING VEHICLES
+PCs make tests or engage in contests using the vehicle’s 
+traits any time the vehicle’s Engines, Frame, or Systems 
+matter more than the individual PC’s attributes.
+BUILDING DICE POOLS
+Vehicle dice pools are assembled by pairing an attri­
+bute with a skill—or an equivalent pair of traits (such as 
+an affiliation, role, or specialty). One of the PC’s prime 
+traits is paired with the appropriate vehicle trait, result­
+ing in rolls that combines the vehicle’s features with the
+PC’s skills. 
+THE SCALE OF SUCCESS OR FAILURE
+It’s important to remember that success or failure in 
+vehicle tests typically affect the whole group. If a failed 
+roll leads to the complication Failing Coolant System, the 
+results of that complication affect everyone on board the 
+vehicle. Be careful not to lay on the costs of failure too 
+quickly, as a single bad roll could potentially knock out 
+the whole group in one hit.
+ASSETS AND COMPLICATIONS
+Players can purchase assets and acquire complications 
+that affect their vehicle just as they can for individ­
+ual characters. Any asset purchased by a player for the 
+vehicle starts at a ⑥ and lasts for a scene, and any hitches 
+rolled on a vehicle test can be activated by the GM to 
+add complications to the vehicle. If the result of a test or 
+contest would take out a vehicle, any PC may spend a ●
+Ⓟ 
+to take a complication equal to the highest rolling die in 
+the opposing pool to keep the vehicle in the fight.
+Quantum-Class Space Frigate ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+Veteran of the Last War ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+Planetary Defense Systems ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+STAR FRIGATE
+A proven vessel in the Galactic 
+Federation’s stellar navy, 
+ideal for protecting planetary 
+installations from orbit.
+Engines
+Frame
+Systems
+Crew
+SIGNATURE ASSETS
+Turbolasers 
+Defense Shield 
+Long-Range Scanners 
+
+
+=== PAGE 222 ===
+BUILDING YOUR VEHICLE
+Creating vehicles is a fairly simple process similar to 
+the scratch-built character creation method in Prime 
+Characters (page 44). To construct a new vehicle, players 
+should follow these steps:
+STEP 1: PICK A MODEL
+Players start vehicle construction by selecting the model 
+distinction, such as F92 Stealth Fighter, Autogyro Class 
+X, or Resolute-Class Frigate. In addition to adding the 
+first distinction, assign a ⑧ to each of the three attributes 
+of Engines, Frame, and Systems. Step up one attribute by 
+up to two steps, but step down another attribute or both 
+additional attributes by the same total number. So, you 
+might have ⑫, ⑧, and ④; ⑫, ⑥, and ⑥; or ⑩, ⑧, and 
+⑥. You can also choose to keep all three at ⑧.
+STEP 2: CHOOSE 2 MORE DISTINCTIONS
+In addition to the model distinction, players should choose 
+two more distinctions for the vehicle. One represents 
+the vehicle’s history, and another its customization. For 
+example, you might take Years in the Service and Custom 
+Interior; Only One Previous Owner and Overhead Gun 
+Rack; or Made the Omega Run and Smuggler Refit.
+SABINA LEWIS
+STEP 3: CHOOSE DISTINCTION SFX
+Each distinction gets the Hinder: Gain a ●
+Ⓟ when you 
+switch out this distinction’s ⑧ for a ④ SFX for free. 
+Players should choose two additional SFX to unlock (if 
+you have prepared distinctions in advance for your group) 
+or come up with two additional SFX to attach to one or 
+two of your distinctions.
+STEP 4: CHOOSE SIGNATURE ASSETS
+Each vehicle gets two ⑧ signature assets. Players should 
+select two that represent special features you’d like on 
+the vehicle (such as Gravity Grapplers), something the 
+vehicle gives access to that other vehicle owners might not 
+have (such as Intergalactic Trade License), or minor GMC 
+or crew that come with the vehicle (such as Pit Crew). If 
+vehicles are a central part of your game, consider prepar­
+ing a list of signature assets for players to choose from or 
+unlock later in the game during advancement.
+STEP 5: NAME YOUR VEHICLE
+Finally, the players should name the vehicle and discuss 
+some biographical information, such as:
+•	 Who owns the vehicle? How did they procure it?
+•	 How do you keep the vehicle up? What sort of 
+jobs do you usually take?
+•	 What improvements have been made to the 
+vehicle? What’s always broken and can’t be fixed?
+OPTIONS
+Engines
+Frame
+Systems
+Base
+Example 1
+Example 2
+
+
+=== PAGE 223 ===
+219
+CHAPTER 6 PRIME LISTS
+As part of the Cortex Prime Kickstarter, several backers 
+pledged for the opportunity to have Cortex characters of 
+their own creation included in this Game Handbook. Herein 
+are eight such characters, built from combinations of traits 
+and SFX found throughout this book. You can use them as 
+the seed of an all-new Cortex setting, or try your hand at 
+adapting them to your own ongoing game.
+CHARACTERS FROM
+THE CORTEX MULTIVERSE
+ARTUR TREFFNER
+
+
+=== PAGE 224 ===
+220 CHAPTER 6 PRIME LISTS
+MARIELLA ASHFORD
+The formidable young matriarch of a family in a sweeping courtly 
+drama set in a grim fantasy world much like England’s Wars of 
+the Roses. Her son Bowen was fated to be stillborn until Mariella 
+made a deal with a shadowy power so that he might live. Now, the 
+child has mystical powers all of his own, powers that Mariella can 
+occasionally call upon.
+LORD ASHFORD (YOUNGER BROTHER) ⑧
+Aidan needs me, even if he doesn’t realize it.
+TIERNAN (YOUNGER HALF BROTHER) ⑧
+Tiernan knows the deep mysteries of the world.
+TORI (LADY’S MAID/BODYGUARD) ⑥
+Tori is my secret weapon.
+ELLORY (HUSBAND) ⑥
+Ellory is everything I need in a spouse.
+RELATIONSHIPS
+Lady of the House ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+I Would Do Anything for my Children ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Mother’s Love: Spend a ●
+Ⓟ to use Mental to defend 
+against a Physical threat to you or your children.
+Words Can Kill Surely as Blades ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Paper Bullets of the Brain: Spend a ●
+Ⓟ to create a ⑧ 
+asset representing a secret or rumor you know would 
+affect a person in the scene with you.
+DISTINCTIONS
+Physical
+Social
+Mental
+Created by Amanda Valentine
+VALUES
+Duty
+Integrity
+Loyalty
+Power
+Vengeance
+RESOURCES
+•	 Chamber of Physick (Lore, Medicine) ⑥⑥
+•	 Lord’s Small Council (Political, Military) ⑥⑥⑥
+•	 Ashford Castle (Political, Safety) ⑥⑥
+•	 Mystic Baby (Scary, Magic) ⑥⑥⑥⑥
+
+
+=== PAGE 225 ===
+221
+CHAPTER 6 PRIME LISTS
+CAROL AZEVEDO
+AVENGING SPIRIT
+The Avenging Spirit is a mysterious supernatural figure, ideal for 
+a noir setting set in the 1920s or 1930s that focuses less on action 
+and more on intense dramatic moments.
+LINDA TRUMAN (EX-WIFE) ⑧
+ROGER ASHBURY (FORMER BOSS) ⑧
+NICOLAI KOSTEVSKY (CRIME KINGPIN) ⑧
+KELLY HWANG (SCHOOL TEACHER) ⑥
+MOSTHENES (ELDER GHOST) ⑥
+EVERYONE ELSE ④
+RELATIONSHIPS
+Spirit of Trauma ⑧
+A victim of a horrific crime, the spirit is now trapped 
+between the land of the living and the afterlife.
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Being of the Fade: Spend a ●
+Ⓟ to ignore physical objects 
+like walls, furniture, and other inorganic obstacles for 
+the rest of the scene.
+	
+ɬ Wrathful Glare: Spend a ●
+Ⓟ to double your Wrath when 
+turning your anger against a mortal.
+Curious About the Material World ⑧
+Possessed of insatiable curiosity about the mortal realms, 
+the spirit has learned to focus on the details rather than see 
+the forest for the trees.
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Inquisitive: Spend a ●
+Ⓟ to reroll when you are 
+investigating clues or secrets in a scene.
+Uncertain Future ⑧
+With no clear path to the afterlife, the spirit must make 
+choices that resolve their fate.
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ The Endless Guilt: Earn a ●
+Ⓟ and step down a 
+complication when you give in on a contest because you 
+don’t feel worthy.
+DISTINCTIONS
+Created by R Holds
+VALUES
+Envy
+Gluttony
+Greed
+Lust
+Pride
+Wrath
+Sloth
+
+
+=== PAGE 226 ===
+222 CHAPTER 6 PRIME LISTS
+BELMARIUS
+Divided We Stand ⑧
+A shame my bifurcation spell faltered, scattering pale shards 
+of my former self throughout the realms. Or did I choose 
+this life of 100 selves at once? Sometimes I forget…
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ The Other Me: Gain a ●
+Ⓟ when you drop everything to 
+interact with another self that just showed up in person 
+or in your head.
+	
+ɬ Life Once Lived: Add a ⑥ and step down your role die 
+when you reveal a moment from your previous life. Then 
+step up your effect die.
+Abdicated Archmage ⑧
+To become an Archmage of the Circle required magical 
+skill and power the likes of which the gods themselves take 
+heed of. And avarice to match. Renouncing my blood oath 
+prompted none of my adversaries within the Circle to do 
+the same. Quite the opposite I suspect.
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Entropic Master: Spend a ●
+Ⓟ to reroll your dice when 
+you trust in luck and charge into a risky situation without 
+hesitation or preparation.
+	
+ɬ Circle Interference: Gain a ●
+Ⓟ when agents of the Circle 
+appear or otherwise interfere with something very 
+important to you.
+Freedom! ⑧
+I will break the chains the Circle binds their people with one 
+by one, then pull their towers down around their ears to 
+wake them from their torpor.
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Liberator: Spend a ●
+Ⓟ to create a ⑧ asset for the rest 
+of the scene when someone you have liberated decides 
+to pay you back.
+	
+ɬ They Know Me: Gain a ●
+Ⓟ and create a ⑧ complication 
+because you must interact with bandits or authorities 
+who might recognize you.
+DISTINCTIONS
+SIGNATURE ASSET
+Dodecahedron 
+: A portable pocket dimension within
+which is enough living space to comfortably fit 6 people.
+Belmarius is a former Archmage of the Circle in a sword and 
+sorcery setting whose pursuit of powerful magicks split him into 
+countless versions of himself. He now travels the world, freeing 
+those in chains while encountering his duplicates in all of their 
+myriad lives.
+POWER SETS
+THE CIRCLE UNLEASHED
+EMISSARY OF ENTROPHY
+	
+ɬ SFX: Scion of Chaos: Spend a ●
+Ⓟ to reroll when using
+a The Circle Unleashed power.
+	
+ɬ SFX: Unleashed: Step up or double any The Circle 
+Unleashed power for one roll. If the roll fails, gain a 
+complication equal in size to your power die.
+	
+ɬ Limit: Uncontrollable: Change any The Circle Unleashed 
+power into a complication and gain a ●
+Ⓟ. Activate an 
+opportunity or recover the complication to restore
+the power.
+	
+ɬ Limit: Mutually Exclusive: Shut down The Circle 
+Unleashed to activate Emissary of Entropy. Shut down 
+Emissary of Entropy to restore The Circle Unleashed.
+Primal Chaos (Sorcery) ⑩
+Belmarius’s Bedevilman (Psychic Blasts) ⑧
+Growth ⑥
+Shapeshift ⑥
+Shrinking ⑥
+Created by Marcus Morrisey
+Physical
+Social
+Mental
+ROLES
+Engineer
+Rogue
+Wizard
+
+
+=== PAGE 227 ===
+223
+CHAPTER 6 PRIME LISTS
+ADMIRAL CHANTEE
+Pirates whisper to each other of a mysterious woman’s voice
+that precedes the disappearance of their compatriots without 
+a trace. She collects these stories like medals, and she gleefully 
+shares the emerging legend of the ship by signing to the
+deaf crew of The Black Shanty.
+Between the Devil
+and the Deep Blue Sea ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Light it on Fire, Lads: Spend a ●
+Ⓟ to add a ⑥ and 
+step up the effect die on any attack roll using a ship's 
+signature assets.
+Pipe Down! ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ War Drums: Spend a ●
+Ⓟ to step up or double your 
+Social die in any contest involving intimidation or 
+threats while at sea.
+Pirate Queen ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ And Up She Rises: If you would be taken out during a 
+scene while on a ship or at sea, spend a ●
+Ⓟ to enact a 
+daring escape or mysterious death. Spend a ●
+Ⓟ to join 
+any subsequent scene that you were not already in.
+DISTINCTIONS
+WATER SWORD DANCE ⑧
+	
+ɬ Spend a ●
+Ⓟ to step up or double your Physical 
+attribute die.
+	
+ɬ Spend a ●
+Ⓟ to reroll a dice pool that includes
+Water Sword Dance.
+SIREN’S SONG ⑩
+	
+ɬ Spend a ●
+Ⓟ to use this as an area effect.
+	
+ɬ Gain a ●
+Ⓟ when you attract the wrong sort of 
+attention from your song.
+CREW LOYALTY ⑩
+	
+ɬ Gain a ●
+Ⓟ when one of your crew defies your orders.
+	
+ɬ Gain a ●
+Ⓟ when you must rescue a crew member in 
+a crisis.
+ABILITIES
+Created by Tina Lam Collier
+SIGNATURE ASSETS
+Ancestral Split Drum 
+Tapping Boots 
+Physical
+Social
+Mental
+Shadow in the Fog ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this 
+distinction’s ⑧ for a ④.
+Deathly Quiet Rigging ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this 
+distinction’s ⑧ for a ④.
+Sign Language Communication ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this 
+distinction’s ⑧ for a ④.
+THE BLACK SHANTY
+This state-of-the-art brigantine 
+towers over most ships of its 
+class in the region—so they say.
+No one really knows, as it comes 
+suddenly out of nowhere to prey 
+upon its quarry, making not a 
+sound upon the waves.
+Engines
+Frame
+Crew
+SIGNATURE ASSETS
+Whistling Cannons 
+Whispering Sails 
+TITHI LUADTHONG
+CAROL AZEVEDO
+DISTINCTIONS
+
+
+=== PAGE 228 ===
+224 CHAPTER 6 PRIME LISTS
+DR. JEREMIAH CROWE
+Deathless Revenant ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Spend a ●
+Ⓟ to reroll your dice when you align with your 
+true nature as a deathless revenant.
+	
+ɬ Gain a ⑧ complication to step up a specialty when you 
+align with your true nature.
+Student of Medicine ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Spend a ●
+Ⓟ to step up an attribute when you connect to 
+your old life.
+	
+ɬ Gain a ⑧ complication to double your attribute die 
+when you connect to your old life.
+Swift Stroke Against Injustice ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Spend a ●
+Ⓟ to double your resource dice when you 
+embrace your obsession.
+	
+ɬ Gain a ⑧ complication to step up your resource dice 
+when you embrace your obsession.
+DISTINCTIONS
+A Civil War era physician, Dr. Crowe was murdered in cold blood 
+by a hateful mob while trying to protect another man. Brought 
+back to life by alchemy as an ageless crusader, he has since turned 
+his unique skills and abilities to thwart injustice and bring hope
+to a dark modern world. 
+Created by Jeremy Puckett
+Guile
+Grace
+Reason
+Vigor
+Courage
+RESOURCES
+•	 Secret Lab (Occult, Science) ⑥⑥⑥
+•	 Blue Mountain City Police Department
+(Legal, Tactics) ⑥⑥
+•	 University of Kentucky: College of Medicine
+(Medicine) ⑥⑥⑥
+SIGNATURE ASSETS
+Plague Mask 
+Cane Sword 
+SPECIALTIES
+Crime Master
+Combat Expert
+Medical Expert
+All Others
+Science Expert
+
+
+=== PAGE 229 ===
+225
+CHAPTER 6 PRIME LISTS
+EUGENE DOHERTY
+Eugene is a second-generation Irish-American investigator in a 
+1920’s Lovecraftian game. A former radical, he has turned toward 
+more peaceful forms of protest and confronts eldritch horrors 
+with the grit and determination of a seasoned WW1 veteran.
+Grizzled Dough Boy
+Who Has Seen Too Much ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+Father Murphy
+Guides and Protects Me ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+Green Revolutionary Anarchist ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+FEAR TO TREAD
+When you first enter an area hidden by darkness, you 
+may step up your Exhausted stress to step down your 
+Afraid or Anxious stress.
+AGAINST THE DARK
+When you’re pursuing a case linked to the Mythos, you 
+may add a ④ to any test or contest in order to step 
+up your effect die by one. If you roll a hitch on the test 
+or contest, the GM can step up your stress or create a 
+complication without giving you a ●
+Ⓟ.
+DISTINCTIONS
+TALENTS
+Created by Jonathan Oakes
+SIGNATURE ASSETS
+Colt 1911 Pistol 
+Bible 
+Physical
+Social
+Mental
+SKILLS
+Theology
+Repair
+Stealth
+Contacts
+Rapport
+Burglary
+Firearms
+Notice
+Cthulhu Myths
+CAROL AZEVEDO
+
+
+=== PAGE 230 ===
+226 CHAPTER 6 PRIME LISTS
+ELIX
+Elix is one of the few humans left scattered across the galaxy. 
+Growing up between worlds wasn’t easy and Elix is ready for Terra 
+2.0. Using ancient Terran magic with a space-age twist, they travel 
+with a team of interplanetary problem solvers to reunite humanity 
+and make the galaxy a better place to be.
+Intergalactic Connection
+and Communication ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ New Visions of Interaction: Spend a ●
+Ⓟ to reroll a dice 
+pool that includes Willpower.
+Old Magic in a New World⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Spell Twisting: Spend a ●
+Ⓟ to step up or double an 
+attribute when you include Sorcery in your dice pool.
+When Nowhere is Home,
+Everywhere is Home ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+	
+ɬ Centering: Spend a ●
+Ⓟ to ignore a complication for the 
+next test or contest.
+DISTINCTIONS
+POWER SET
+SIGNATURE ASSET
+Spell Tablet 
+Created by Mary Rose Valentine
+Intelligence
+Alertness
+Strength
+Vitality
+Willpower
+Agility
+ROLES
+Scholar
+Muscle
+Diplomat
+Mechanic
+Leader
+TERRAN MYSTICISM
+	
+ɬ SFX: Call of Old Earth: Add a ⑥ and step up your effect 
+die by one when using Transmutation to create assets.
+	
+ɬ SFX: Thread of Life: Add Sorcery to your dice 
+pool when helping others recover their stress or 
+complications. Spend a ●
+Ⓟ to recover your own or 
+another’s physical-based stress or complications.
+	
+ɬ Limit: The Old Power: When using a Terran Mysticism 
+power, both 1s and 2s count as hitches.
+Sorcery ⑧
+Transmutation ⑩
+
+
+=== PAGE 231 ===
+227
+CHAPTER 6 PRIME LISTS
+CAROL AZEVEDO
+MIDNIGHT-BLUE
+Paull Cross takes on the identity of Midnight-Blue when fighting crime 
+with the sacred powers entrusted to him by the Goddess Nyx.
+Love Gets You Killed ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+Investigator of the Unknown ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+Not a Morning Person ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s 
+⑧ for a ④.
+DISTINCTIONS
+POWER SETS
+MILESTONES
+FAVORED OF NYX
+POWER OF NIGHT
+	
+ɬ SFX: Midnight Whispers: On a failed reaction, spend
+a ●
+Ⓟ to add Teleport to your dice pool (or step up
+by one if already in the pool) and reroll all dice.
+	
+ɬ SFX: Midnight Revelation: Add ⑥ to your dice pool
+and step up the effect die by one when you use
+Mystic Vision or Shadow Influence to create an
+asset or complication.
+	
+ɬ SFX: Night Promises: Add ⑥ emotional stress to 
+include Flight, Invisibility, Intangibility, or Teleport 
+from the Power of Night power set in a dice pool. Step 
+down both power dice by one to include two.
+	
+ɬ Limit: Embrace the Night: Shut down Favored of Nyx to 
+activate the Power of Night power set. Shut down Power 
+of Night to restore Favored of Nyx.
+	
+ɬ SFX: Caress of Midnight: When in shadow, spend a
+●
+Ⓟ to use your Godlike Stamina to recover your 
+physical stress. Upon nightfall, step down physical 
+trauma by one.
+	
+ɬ Limit: Spend a ●
+Ⓟ or take ⑥ emotional stress at
+the beginning of each of your turns if Power of Night
+is active.
+Mystic Vision (Senses) ⑩
+Shadow Influence ⑧
+Superhuman Reflexes ⑧
+Cold Blast ⑩
+Flight ⑧
+Godlike Stamina ⑫
+Intangibility ⑩
+Invisibility ⑩
+Mystic Vision (Senses) ⑫
+Shadow Mastery ⑩
+Teleport ⑧
+THE SUPERNATURAL AND MYTHS ARE REAL?
+•	 1 XP when your attack demonstrates the 
+sinister nature of your abilities.
+•	 3 XP when you add at least a ⑧ to the 
+doom pool from rolling two or more hitches 
+on a single roll.
+•	 10 XP when you are finally claimed by a 
+villainous power for dark deeds, or you 
+strike a major blow against a villainous 
+power by using their own dark powers 
+against them.
+CALL OF THE NIGHT
+•	 1 XP when you take emotional stress to 
+draw on the powers of Nyx, primordial 
+goddess of the night.
+•	 3 XP when you use a power trait for a 
+reaction and your reaction is successful.
+•	 10 XP when you accept Nyx’s love and 
+merge with her, or when you spurn her love 
+and deny her full melding with your body 
+and mind.
+Created by Christopher P. Crossley
+Shadow
+Day
+Night
+SPECIALTIES
+Covert Master
+Cosmic Expert
+Crime Expert
+Mystic Expert
+Menace Expert

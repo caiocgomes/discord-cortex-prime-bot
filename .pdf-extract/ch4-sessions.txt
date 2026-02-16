@@ -1,0 +1,986 @@
+
+=== PAGE 113 ===
+109
+CHAPTER 4 PRIME SESSIONS
+CHAPTER BREAKDOWN
+Here’s what to expect from this chapter.
+Preparing a Session: The length of sessions, and
+how much prep you need to do for them.
+Game Moderator Characters: How to build a GMC
+and an overview of the various types of GMCs.
+Running a Session: Managing all of the elements
+of a session, from setup to GMCs to the climax.
+Session Tricks: Options for making a session
+different from the ones before it.
+This chapter is intended mostly for the game moderator (GM). It covers preparing for, 
+running, and wrapping up a session of play, as well as putting together and using game 
+moderator characters (GMCs). Cortex Prime is all about the sessions you play at the 
+table, focusing on what most groups are able to deal with in real time—a gathering of 
+a GM and players. Whether you’re playing a one-shot or a whole series, this chapter 
+provides guidance to help you manage every session.
+PRIME
+SESSIONS
+CHAPTER 4
+
+
+=== PAGE 114 ===
+110 CHAPTER 4 PRIME SESSIONS
+PREPARING
+A SESSION
+Before you run your first session of a Cortex Prime game, 
+plan on a few hours of preparation. It’s a good idea to try 
+to familiarize yourself with the contents of Prime Core, 
+Prime Characters, and Prime Scenes. If you’re using a 
+pre-made setting or adapting one of your favorite TV 
+shows or movies to Cortex Prime, you might want to make 
+some notes about what sort of game you’re interested 
+in being the GM for. The players have a lot to say about 
+their own characters and what sort of setting they’d like 
+to explore, but it makes things a lot easier if you show up 
+with an idea about what you’re prepared to run for them.
+WHICH SETTING?
+Some GMs pick a setting they like, spend time writing up 
+detailed histories and backgrounds, create distinctions 
+and powers, and maybe some archetypes. Then they put 
+that in the hands of their players and use the first session 
+to make characters. This is a fairly traditional method that 
+works for a lot of groups.
+Other GMs don’t have a preference or only have a couple 
+of broad ideas about what they’d like to run, and they 
+use the first session as a collaborative process with the 
+players. They might suggest a steampunk setting or an 
+urban fantasy drama loosely inspired by a few movies 
+everyone’s seen, and then the details get fleshed out with 
+a pathways map in the character creation session.
+For more on settings, see the next chapter (helpfully 
+named Prime Settings). You can pick one of the three 
+settings included there or go with one of the more 
+broadly defined genres and see where that takes you. 
+More settings and worlds are available in other Cortex 
+Prime books.
+HOW LONG
+IS A SESSION?
+Sessions can be short or they can be long, and you could 
+play multiple “sessions” in a single day around breaks for 
+lunch or dinner. But generally, a session is about three to 
+four hours of play with a beginning and an end, allow­
+ing for bookkeeping, advancing a story along, and giving 
+everyone enough time in the spotlight.
+The central hook or story idea for any given session is 
+called the situation (page 112). This isn’t the same as the 
+plot, because roleplaying games aren’t pre-written stories, 
+but it’s the “what” when you look back at a session and 
+think, “What was that about?”
+SERIES
+Many groups plan to meet for several sessions, telling 
+part of the same ongoing story each time. I like to think 
+of sequential sessions as episodes in a television show or 
+issues of a comic book. You can consider a game that takes 
+place over several sessions as a series if you continue with 
+the TV or comic book metaphor—there’s a story arc, but 
+quite often you don’t know what the arc is until it’s been 
+played out, and the “season” is over.
+With a series, take a moment to recap the last session at 
+the beginning of the next one, like a “previously on…” 
+segment before the opening credits of a TV show. 
+ONE-SHOT SESSIONS
+A one-shot is an excellent way to test the waters of a new 
+setting or a genre that the group hasn’t played with for a 
+while (or ever) or introduce new players to Cortex Prime. 
+If not everyone in your regular group can show up to an 
+ongoing game, the other players might want to play a 
+one-shot rather than play without that character.
+
+
+=== PAGE 115 ===
+111
+CHAPTER 4 PRIME SESSIONS
+This is often a good way for the regular GM to step back 
+and play a character of their own while one of the other 
+players takes on the GM duties for the evening.
+With one-shots, starting in medias res—in the middle 
+of the action—is highly recommended as you have less 
+time to build up to the situation than you might with an 
+ongoing sequential game. You need to prep the session in 
+advance—write up some GMCs, maybe provide pre-made 
+characters, and think up a situation. As the GM, let every­
+one get acquainted with their characters, make quick 
+introductions, then jump straight into an action scene 
+with the story already underway.
+HOW MUCH PREP?
+For some GMs, getting ready for a session takes as long, 
+if not longer than, the session itself. For others, prepar­
+ing for a session is nothing more than scribbling down 
+some notes and reviewing the character files before the
+game starts.
+The degree to which you need to prepare for a Cortex 
+Prime game comes down to personal tastes and prefer­
+ences. Making up minor GMCs and difficulties off the cuff 
+is simple, but if you want a major GMC to show up in the 
+session with a full character file of their own, it pays to sit 
+down and figure out at least the key traits and description 
+in advance.
+Here are some useful guidelines for any Cortex Prime GM, 
+experienced or not.
+RUNNING OFF-THE-CUFF
+With a little bit of information and access to the players’ 
+character files, you may have enough to run the session 
+without a lot of detailed notes or background. Take a 
+look at the prime sets of each character. See where the 
+players have invested larger dice and more involved SFX 
+or descriptions. Each character file is a player’s wish list to 
+the GM, an invitation for challenge and a guide to the sort 
+of action and drama the player expects to see come up.
+•	 Do your players invest a lot into combat, military, 
+or conflict-creating traits? Make sure that there’s a 
+fight in the session, or at least something that lets 
+them pull out those big guns and SFX.
+•	 Are your players focusing a lot on social and 
+interactive traits, or those that depend on internal 
+feelings, goals, or values? Make sure those traits 
+have a role to play in the session by framing scenes 
+that directly call upon them.
+Knowing in advance what sorts of characters your players 
+have created gives you a head-start on improvising 
+scenes that make sense for those characters. Don’t saddle 
+your players with a session that has nothing to do with
+their characters.
+JULIA METZGER
+
+
+=== PAGE 116 ===
+112 CHAPTER 4 PRIME SESSIONS
+DEFINING SITUATIONS
+As the GM, you get to decide what the session’s situation 
+is, which is to say, what’s going on when the PCs enter the 
+story in the first couple of scenes and begin to interact 
+with the GMCs and their goals, as well as any locations 
+and resources. Figure out what the status quo is at the 
+beginning, and some circumstances that take place at 
+various times that you expect the players to react to. More 
+about these circumstances—or reveals—later.
+Back in the late 19th century, Georges Polti wrote about the 
+36 Dramatic Situations, and people who work with stories 
+continue to use this handy list or others like it. Here’s his 
+list to use as a baseline for your own session prep; you 
+can find expanded descriptions of these online. These 
+are prompts, not plots! Don’t try to write the whole story. 
+They’re just the set of circumstances the protagonists—
+in this case, the player characters—find themselves in. 
+Pick one or two of these, flesh them out a little (that’s in 
+the next section), then put them right in front of your 
+characters—the story soon writes itself with the players’ 
+reactions to them. Choose prompts, not plots!
+A session can have more than one situation. Sometimes 
+it’s fun to go with the A-Plot/B-Plot approach, where one 
+situation is the primary one that involves most of the PCs, 
+but there’s a second parallel situation that only involves 
+one or two of the PCs. On rare occasions, and with smaller 
+groups of players, you could have a situation defined for 
+each player character. That’s a lot of work, but it can be 
+rewarding to try once in a while. Just be aware that the 
+more situations you introduce, the more screen time 
+you’ll need to split up in your session’s actual play time.
+DEFINING CONFLICTS AND ANTAGONISTS
+The situations you choose should inspire the central 
+conflict of your session, motivate your PCs to respond, 
+and give you an idea as to what sort of GMCs to include. 
+In some cases, you don’t actually need any GMCs to act as 
+antagonists—if the players have conflicting goals of their 
+own, they can serve that role without any major “bad guy” 
+of your own creation. Looking at the list of 36 situations, 
+many of these kinds of conflict jump right out at you.
+36 DRAMATIC SITUATIONS
+Abduction
+Adultery
+All sacrificed for passion
+Ambition
+An enemy loved
+Conflict with a god
+Crime pursued by vengeance
+Crimes of love
+Daring enterprise
+Deliverance
+Disaster
+Discovery of the dishonor of a loved one
+Enmity of kin
+Erroneous judgment
+Falling prey to cruelty/misfortune
+Fatal imprudence
+Involuntary crimes of love
+Loss of loved ones
+Madness
+Mistaken jealousy
+Murderous adultery
+Necessity of sacrificing loved ones
+Obstacles to love
+Obtaining
+Pursuit
+Recovery of a lost one
+Remorse
+Revolt
+Rivalry of kin
+Rivalry of superior vs inferior
+Self-sacrifice for an ideal
+Self-sacrifice for kin
+Slaying of kin unrecognized
+Supplication
+The enigma
+Vengeance taken for kin upon kin 
+
+
+=== PAGE 117 ===
+Mary Rose considers the situation Discovery of 
+the Dishonor of a Loved One. In that situation 
+she’s got the Discoverer and the Loved One as the 
+two principal characters. The conflict is that the 
+Discoverer finds out that the Loved One either 
+did something wrong or has been accused of 
+wrongdoing. Is the Discoverer a PC, and the
+Loved One a GMC? Maybe. They could both be 
+GMCs, and the PCs blunder into this scenario.
+Or they could both be PCs, and this is a story about 
+what happens when one PC either finds out that 
+another PC did something terrible in a previous 
+session or hears nasty rumors spreading about 
+another PC. Mary Rose might leave some of this up 
+to discover in play, or she might make a decision now 
+and prepare a little more ahead of the session.
+Action-oriented games favor the use of GMCs as antag­
+onists, so the players feel as if their characters are the 
+heroes and the GM is playing the villains. That’s a classic 
+setup and works for most of the situations on the list. 
+However, you can also run the occasional dramatic 
+primetime TV sort of session, which inverts those tropes 
+and makes the PCs the “bad guys” perhaps as a result of 
+their past actions—or has the group of PCs turn on each 
+other, not necessarily violently or in bad faith but as a 
+result of competing goals.
+Don’t forget to look at the PCs’ character files for inspi­
+ration, too. Distinctions and trait statements are fuel for 
+great conflict that your players will want to engage with. 
+While you prep your session, take some notes on which 
+of those seem particularly fun to play with. If you’re using 
+a pathways map or some other collaborative setting 
+construct, those connections provide all the juice you 
+need to stir things up and present a situation that your 
+players can really engage with.
+DEFINING REVEALS
+A reveal is an event, a twist in the story, or a piece of
+information that prods the players to take additional 
+action or make a difficult choice. A reveal often looks like 
+a clue, which helps direct the players toward a new loca­
+tion or a confrontation with an antagonist. But a reveal 
+can also be a new GMC, a shift in a goal, or a surprise 
+encounter with something or someone that changes the 
+status quo and forces the players to look at their character 
+files and consider their options.
+With your situation in mind, you can prepare a list of 
+reveals for the session that, when they’re all presented 
+and dealt with, resolve the situation and bring an end to 
+the session. This could be a set of encounters, or a set of 
+clues, or a string of cool locations to have the PCs visit, 
+or some combination of these. A good rule of thumb is to 
+have at least one reveal per PC, even if they’re not specif­
+ically targeted toward that character, and one or more 
+reveals for each major GMC, antagonist, or location you 
+plan to include.
+Using the Discovery of the Dishonor of a Loved One 
+situation, Mary Rose establishes that the antagonist 
+is a relative of Tina’s Sage, a Loved One who’s done 
+something to dishonor the family. So, she needs 
+at least the reveal of the dishonorable thing, but 
+that’s not enough for a whole session (unless her 
+players are really good at just taking this kind of 
+thing and running with it). She adds in two more 
+reveals: a blackmail letter written by another GMC 
+who has learned of this insult to the Sage’s family, 
+and a forgotten basement chamber in the Sage’s 
+family home out in the country, wherein all manner 
+of secrets are buried (and which might lead to other 
+sessions later on).
+DOMINIQUE RAMSEY
+
+
+=== PAGE 118 ===
+114 CHAPTER 4 PRIME SESSIONS
+GAME
+MODERATOR
+CHARACTERS
+GMCs are the characters that the GM incorporates into 
+the session and gets to roleplay, for better or worse. Most 
+sessions have at least one major character, usually a bad 
+guy or villain, who deserves a full-fledged character file 
+like the PCs have. Sometimes, however, the villain just 
+needs a couple of traits because the true opposition for 
+the PCs is the villain’s lieutenant or majordomo. In that 
+case, they’re the ones whose files are more detailed.
+GMCs can reappear session after session, plaguing the 
+PCs at every turn. Even if you used the villain’s full stats 
+in a previous session, you’re under no obligation to re-use 
+the same stats in another session. GMCs don’t have to 
+follow the same rules as the players when it comes to 
+character files or even XP and growth (although it’s often 
+interesting if they do).
+We split GMCs into a few specific types, which we detail 
+after this section, but here’s a list for easy reference.
+•	 Major GMCs: Characters on par with the PCs, 
+with about as much detail and the same traits.
+•	 Minor GMCs: Characters with fewer traits and 
+less detail but still significant.
+•	 Location GMCs: Set pieces for scenes that may 
+have their own traits.
+•	 Extras: Unnamed background characters or 
+support characters with only one trait.
+•	 Mobs: Groups of extras that act together as a 
+single character.
+•	 Bosses: Individual characters that act like a group 
+of extras. 
+•	 Factions/Orgs: Much larger mobs that operate at 
+a higher scale than a standard mob.
+MAJOR GMCS
+A major GMC has the same traits as the PCs do. In a sense, 
+they’re a PC that the GM happens to make the decisions 
+for. Make sure that major GMCs have enough resources 
+on their files to stand up to the PCs. It’s important that 
+they always have at least two or three dice to roll to ensure 
+that they’re worthy antagonists.
+CREATING MAJOR GMCS
+Major GMC characters have three power levels in Cortex 
+Prime: light, medium, and heavy. Light characters should 
+be the majority, as the PCs should be able to maintain the 
+spotlight in most scenes. Medium characters are more 
+like the PCs themselves and should be used sparingly. 
+Heavy characters should be extremely rare, represent­
+ing unique threats and obstacles. To keep major GMCs 
+consistent from session to session, consider using the 
+following guidelines when creating them:
+Light: Prime set die ratings are on average a step behind 
+the PCs, so if the PCs have a ⑧ in their attributes, affili­
+ations, or values, the GMC has a ⑥. The GMC has fewer 
+total steps (or points) in traits like skills or signature 
+assets, usually by about half. 
+Medium: Prime set die ratings, skills, signature assets, 
+and other traits all function at the same average rating 
+and number of steps or points as the PCs. 
+Heavy: Prime set die ratings are on average the same as 
+the PCs, but at least one if not more of them is a step ahead 
+of the PCs. Add half again as many skills, signature asset 
+points, and other traits. 
+
+
+=== PAGE 119 ===
+115
+CHAPTER 4 PRIME SESSIONS
+MINOR GMCS
+A minor GMC isn’t a significant headliner in the session 
+but will nevertheless interact with the PCs in some 
+fashion. The powerful villain may be a minor GMC if your 
+players are mostly interacting with her lieutenants.
+CREATING MINOR GMCS
+Minor GMCs get at least three traits that can be anything—
+they don’t have to be attributes, skills, or distinctions. 
+They’re just dice with appropriate descriptive labels, like 
+Corrupt Lawman ⑧, Out of Shape ④, Big Shotgun ⑧.
+You can also start with a light major GMC and scale them 
+back a lot—give them the same prime sets as the PCs, but 
+not a lot else other than one or two key traits. The traits 
+should provide details about the GMC and some ideas of 
+which rolls use a higher level of skill, so don’t use a char­
+acter’s name as a trait (such as Sherlock Holmes ⑧). You 
+have a lot of flexibility with minor GMCs and it’s usually 
+quick to come up with them if needed.
+Minor GMCs always have a name, even if you come up 
+with it on the spur of the moment. This helps separate 
+them from the extras that populate the setting.
+LIE SETIAWAN
+
+
+=== PAGE 120 ===
+116 CHAPTER 4 PRIME SESSIONS
+LOCATIONS AS GMCS
+Locations can have traits like minor GMCs when they 
+might be used to oppose your PCs. These are like fixed 
+assets or complications that help the GM describe where 
+the action takes place. If a player can justify using a 
+location-based trait in their own dice pools, they can 
+do so. Locations may be listed on a character file, too: 
+see “Resources” on page 56. If you’re using a character 
+creation system like pathways (page 73) to create the 
+setting collaboratively, spend some time writing up the 
+locations on the pathways map and assign them traits if 
+you want them to feature strongly in sessions.
+CREATING SCENE DISTINCTIONS
+You can also give a location some personality by applying 
+scene distinctions. These work like distinctions on char­
+acters, complete with the Hinder SFX, but can be used by 
+any character in the scene.
+•	 Stockyard ⑧
+•	 Minefield ⑧
+•	 Panicked Crowd ⑧
+You can expand this by adding location-specific SFX to 
+a location’s scene distinctions, such as spending a ●
+Ⓟ to 
+create location-specific assets.
+PANICKED CROWD ⑧
+	
+ɬ Hide in the Chaos: Spend a ●
+Ⓟ to create a Hidden ⑧ asset 
+and turn Panicked Crowd ⑧ into Panicked Crowd ⑥⑥.
+Both GMCs and PCs might make use of scene distinction 
+SFX if they are made available.
+If you’re using an action order or similar turn-tracking 
+system to handle action scenes, a location that’s behav­
+ing like a GMC should have its own turn in the action 
+order, especially if it’s using its traits to make attacks on 
+the PCs. Otherwise, assign the location to a major GMC or 
+any character that’s in control of it, and have it help that 
+character instead of taking its own turn.
+EXTRAS
+Extras are unnamed characters with only one die rating. 
+Extras may be a part of a character file: see “Resources” 
+on page 56. Extras come into play as an additional die the 
+GM includes in an opposition dice pool for a test. They can 
+also gang up (page 100) with a minor or major GMC by 
+adding their die to a GMC’s dice pool in a contest.
+CREATING AN EXTRA
+Something as simple as Hired Assassin ⑩, Grizzled Fur 
+Trapper ⑧, or Cut-Rate Thief ⑥ works just fine. If you like, 
+add another trait during play as things progress; you can 
+upgrade any extra to a minor GMC this way. If the extra is 
+part of a character file, it might already have a die rating, 
+so you can use that in a pinch. Extras can be taken out by 
+complications or stress higher than their base trait die.
+While prepping your session’s situation and reveals, you 
+can jot down a list of fun extras to include. But I’ll tell you 
+a secret: I never prepare extras in advance. They’re so easy 
+to make, I toss them in whenever they’re needed.
+THOMAS SCHOLES
+
+
+=== PAGE 121 ===
+117
+CHAPTER 4 PRIME SESSIONS
+MOBS
+A mob is a group of extras that acts together like a minor 
+GMC. You can use them just like you’d use any single 
+GMC, but they represent a whole bunch of thugs, mooks, 
+pawns, or goons. You can also use this rule for swarms 
+of things. For a variation on this approach see the Crisis 
+Pools mod on page 33.
+CREATING A MOB
+Mobs have a single mob trait with multiple dice repre­
+senting the size of the mob. All of these trait dice are 
+included in the mob’s dice pool. A useful rule of thumb is: 
+The size of the dice depends on the relative skill or expe­
+rience of the mob’s members:
+EXAMPLE MOBS
+Here are three examples of mobs of varying 
+sizes and strengths.
+DICE QTY
+NUMBER OF INDIVIDUALS
+2
+a handful of people
+3
+a dozen
+4
+a roomful of people
+5
+a large crowd
+DICE SIZE
+SKILL LEVEL
+⑥
+rabble or thugs
+⑧
+trained guards or soldiers
+⑩
+elites and veterans
+ZOE BADINI
+JESSICA FONG
+ANTHONY
+“ROBOTPENCIL”
+JONES
+HIT SQUAD
+Highly trained cadre of 
+professional murderers.
+MOB TRAIT:
+Mob of Assassins
+⑧ Tactics
+⑧ Sabotage
+⑩ Hand-to-Hand
+⑩ Rifle
+⑥ Intimidation
+PITCHFORK-
+WIELDING VILLAGERS
+You stand between them and 
+grassroots justice against
+the monsters.
+MOB TRAIT:
+Mob of Villagers
+⑥ Pitchfork
+⑥ Angry
+GOBLIN REPAIR TEAM
+They’ve got pipes to fix and don’t 
+take kindly to interference.
+MOB TRAIT:
+Mob of Goblins
+⑧ Engineering
+⑧ Stabbing
+⑩ Flee
+⑥ Rowdy
+You can assign traits to a mob that all of the members 
+possess and include the traits in the mob’s dice pool when 
+appropriate. Mobs act as a single unit but can be reduced 
+in size and power by targeting their mob trait with attacks; 
+each time the attack would create or step up a complica­
+tion or stress that exceeds the mob trait die rating, one die 
+is knocked off (from ⑥⑥⑥⑥ to ⑥⑥⑥, for example) 
+and the complication is removed. This represents one 
+or more members of the mob being taken out. When all 
+of the mob trait’s dice are removed, the whole mob is
+taken out.
+ANNA “SARIANNE”
+NEUMANNOVÁ
+
+
+=== PAGE 122 ===
+118 CHAPTER 4 PRIME SESSIONS
+BOSSES
+A boss is like a mob, except it’s a single character. A boss 
+can represent a powerful opponent like a huge rampaging 
+monster, or it may be a foe who outclasses the PCs not 
+only in traits and skills, but in an abstract dramatic sense.
+CREATING A BOSS
+Bosses have a single boss trait that has multiple dice. They 
+can also have distinctions, SFX, or anything else you want 
+to add in. Bosses can replace major GMCs in your games 
+if you prefer not to do all the work of making opponents 
+who have the same game stats as your PCs.
+In either case, a boss can’t be completely taken out of any 
+scene until all of the boss trait’s dice are removed. If you’re 
+using major GMCs with boss traits, ignore the usual rules 
+for taking out characters and use this method instead.
+GLOVE-WIELDING
+SPACE TITAN
+He’s a tyrant from outer space
+who wants to end all life.
+Or most of it.
+BOSS TRAIT:
+Titan of Space
+⑩ Power Glove
+⑩ Invulnerability
+⑩ Cosmic Senses
+	
+ɬ Come at Me: When reacting to an attack from more than 
+one opponent, Glove-Wielding Space Titan adds a ⑥ to 
+his dice pool and keeps an additional effect die for every 
+opponent attacking him.
+	
+ɬ Snap: Spend a ●
+Ⓟ to double Power Glove and include an 
+extra die in Glove-Wielding Space Titan’s result, then shut 
+down Power Glove.
+QUEEN
+OF THE ELVES
+She’s got more fey magic in
+her little finger than…
+you know the rest.
+BOSS TRAIT:
+Elven Queen
+⑩ Fey Magic
+⑧ Elven Presence
+⑧ Politics
+⑧ Sword of the Sidhe
+	
+ɬ Glamour: When creating magical assets using Fey Magic, 
+the Queen of the Elves adds a ⑥ to her dice pool and steps 
+up her effect die by one. Her magical assets persist until 
+dispelled or targeted by silver, salt, or church music.
+	
+ɬ Air and Darkness: The Queen of the Elves may shut down 
+Fey Magic and step up Sword of the Sidhe to ⑫, changing 
+its name to Blade of the Unseelie. Spend a ●
+Ⓟ to restore 
+Fey Magic and Sword of the Sidhe.
+TITANO-
+GIGANTOSAUR
+Humans woke him from his 
+slumber under the sea and
+now he’s ready to smash
+their tiny cities.
+BOSS TRAIT:
+Giant Radioactive Dinosaur
+	
+ɬ Collateral Damage: Step down Stomp by one and keep up to 
+three additional effect dice. Additional effect dice may only 
+be used to create complications on the scene.
+	
+ɬ Truly Huge: When making attacks on buildings, vehicles, or 
+structures, Titano-Gigantoasaur includes an additional die 
+in his result and gains an Easy Target ⑥ complication.
+⑫ Atomic Breath
+⑫ Stomp
+⑩ Thick Hide
+⑧ Roar
+⑧ Swim
+ORIANA MENENDEZ
+VANESSA MORALES
+EXAMPLE BOSSES
+Here’s three boss-level opponents using
+a fairly basic trait set-up.
+ANTHONY
+“ROBOTPENCIL”
+JONES
+
+
+=== PAGE 123 ===
+119
+CHAPTER 4 PRIME SESSIONS
+FACTIONS AND ORGS
+Factions and orgs are like mobs, but they’re much larger 
+and operate at a scale above the player characters. They 
+can be a simple trait with multiple dice that also uses the 
+scale rules (page 100), such as keeping three dice instead 
+of two. Or they can be a more complicated character, 
+something like a cross between a location GMC and a 
+minor GMC with a scale die.
+A faction is a group of characters who follow the same 
+ideology, goal, or purpose, even if they don’t always work 
+together. An org is a group of characters who all work 
+together to do something, even if they don’t all believe 
+the same thing. So, they’re really just two names for a 
+large-scale group.
+CREATING A FACTION OR ORG
+Begin with an idea of what the role of the faction or org 
+is in the game. Make that one of their traits, such as 
+Dangerous Gang ⑧, or Political Action Committee ⑩. 
+Then multiply that die rating to create a mob trait. Add 
+other single-die traits to give some context and additional 
+dice to the faction or org’s pool (since they work on a scale 
+above the PCs). You can give the faction or org one or more 
+SFX and distinctions to introduce some tricks that seem 
+relevant to their overall purpose and scope.
+If the faction or org is connected to a PC (see “Resources,” 
+page 56) you might not need to do a full write-up, but if 
+you want them to have a role beyond just being something 
+to aid the PCs, writing them up is a good idea.
+ANTAGONIST PAC
+This is a political action
+committee dedicated to making 
+life as difficult as possible for 
+PCs involved in politics, law 
+enforcement, or activism.
+MOB TRAIT:
+Political Action Committee
+⑩ Economics
+⑧ Bureaucracy
+⑩ Wealth
+	
+ɬ Smear Campaign: Add a ⑥ and step up Antagonist PAC’s 
+effect die when targeting individuals in public life with 
+rumors, gossip, or lies.
+	
+ɬ Back Again: When Antagonist PAC is reduced to a single 
+Political Action Committee die, it’s taken out. Recover 
+all dice and return to activity in the next session when a PC 
+rolls a hitch.
+SCALE
+THE SOUTH
+STREET JACKDAWS
+This gang of miscreants and 
+brutes operates behind the 
+scenes to rough up the PC’s 
+informants, friends, and allies.
+MOB TRAIT:
+Dangerous Gang
+⑧ Violence
+⑩ Threats
+⑧ Crime
+	
+ɬ Send in the Boys: Choose up to 4 Dangerous Gang dice and 
+form a mob to attack the PCs directly. Dice that are taken 
+out from this mob reduce Dangerous Gang for this org 
+for the remainder of this session and recover for the next 
+session. Traits for this mob are stepped down by one from 
+the org’s traits (Violence ⑥, Threats ⑧, Crime ⑥) until 
+the next session.
+	
+ɬ Shakedown: When attacking another org, the South Street 
+Jackdaws add a ⑥ and step up their effect die by one. If 
+they fail their attack, their opponent may keep an additional 
+effect die.
+SCALE
+ORDER OF
+SHOG-THEMA
+This secretive cult worships
+a mysterious entity from
+beyond the stars.
+MOB TRAIT:
+Mystic Cult
+⑧ Ritual Magic
+⑧ Subterfuge
+⑩ Occult Library
+⑧ Kidnap
+	
+ɬ Infiltrate Org: Spend a ●
+Ⓟ and remove one Mystic Cult die 
+to create an Infiltrator ⑧ asset within an enemy org or 
+faction. The Order or any of its affiliate GMCs may use this 
+asset when acting against the infiltrated org or faction.
+If discovered, it becomes a Turncoat complication on
+the Order.
+	
+ɬ The Stars Are Right: When creating a Summoned Demon 
+asset, spend a ●
+Ⓟ and remove one Mystic Cult die to step 
+up Ritual Magic by one. Set aside any hitches as bonus 
+effect dice to use on additional Summoned Demon assets.
+SCALE
+COUPLE OF KOOKS
+GRACE P. FONG
+TAMMY & CHAD STREET
+EXAMPLE FACTIONS AND ORGS
+Here’s three examples of factions and orgs
+using simple traits.
+
+
+=== PAGE 124 ===
+Play opening scenes to introduce each PC,
+either alone or in groups.
+Introduce the situation and the first reveal.
+Use action and bridge scenes to introduce
+more reveals, following the PCs’ choices.
+Bring things to a climactic scene once all
+reveals are checked off.
+Play tag scenes to wrap things up and take
+care of growth, XP, or milestones.
+All of the types of scenes discussed here are explained 
+in greater detail in Prime Scenes, beginning on page 89.
+RUNNING A SESSION
+Now that you’ve got a situation or two, your conflicts and 
+reveals, and your GMCs, you’re ready to put it all together 
+and see what happens when the players get involved.
+D. Vincent Baker has an excellent turn of phrase: “Play to 
+find out what happens.” This is a good mantra for Cortex 
+Prime and reminds us that the game is collaborative and 
+full of discovery. But it’s also a game that relies on a shared 
+narrative sense based on movies, television, and other 
+media. So, we want to combine all of that into a loose 
+structure that looks like this:
+1
+2
+3
+4
+5
+HAO SHUANG
+
+
+=== PAGE 125 ===
+121
+CHAPTER 4 PRIME SESSIONS
+OPENING SCENES
+As the GM, you need to know where all of the PCs are 
+before you spring the first situation on them. Your opening 
+scenes serve two purposes. The first is to establish what’s 
+going on before the session starts, what each PC’s current 
+status is. Are they traveling? Are they with their friends in 
+a bar? Are they locked up in a jail, awaiting sentence? Are 
+they neck-deep in social obligations at court?
+The second purpose is to give you a chance to tease parts 
+of the situation before you actually bring it in. Drop a 
+couple of hints in each scene about what’s to come, such 
+as a storm on the horizon (literally or figuratively), or by 
+asking leading questions of the players, like “How well 
+did you pack for this trip?” or “Who did you leave behind 
+when you set out to the bar this evening?” or “Which of 
+the Queen’s handmaidens is missing from the gala?”
+INTRODUCING
+THE SITUATION
+Your first big action scene drops the PCs right into the 
+story to establish the situation, bringing at least some of 
+them together and letting them play off each other and off 
+any GMC you use here. Classic story structure confronts 
+the protagonists (the PCs) with something they can’t 
+resolve right away—a villain is too strong for them and 
+has them on the ropes before she takes off—or a mystery 
+they don’t have the answers to just yet. Some players really 
+don’t like to have their PCs made examples of right off 
+the bat, so a common technique is to foreshadow a later 
+conflict or telegraph the main antagonist’s goals through 
+smaller or less important characters. This implies that 
+there’s some greater force at work but doesn’t make the 
+PCs look like chumps.
+You want to drop the first reveal in this scene. This sets 
+up the format for the rest of the session, with each scene 
+framed and designed around a reveal for the PCs, one step 
+toward that climactic resolution of the situation. This first 
+reveal is often some kind of clue dropped by the villain, or 
+a supporting character giving some important news about 
+the conflict that’s to come. The reveal might be the scene 
+itself, as the status quo starts to change, and the PCs are 
+forced to confront that.
+BRIDGE SCENES
+After playing a few sessions, you’ll have a sense of when 
+the PCs need to take a break and regroup, recover, or 
+research. A good rule of thumb is to run a bridge scene 
+once every PC has been involved in an action scene of 
+some kind, either alone or in groups. Often a bridge scene 
+comes at a time that seems obvious—everyone’s taken 
+loads of complications or stress, information or resources 
+are sparse, and so on—but it’s a good idea to frame one 
+or more bridge scenes to connect one reveal to another 
+either across time or space (putting the PCs in downtime, 
+or in travel time).
+MODERATING
+GM CHARACTERS
+In each session it’s the GM’s responsibility to use GMCs to 
+demonstrate the situation, serve as antagonists, allies, or 
+obstacles, and to take part in one or more reveals. They’re 
+your characters, but they’re more pliable and transient 
+than the PCs. The key to successfully moderating GMCs 
+is to use them both as part of the setting and as a tool 
+to move the story along. Don’t get too attached to them, 
+but make sure they’re as appealing and notable as they 
+need to be.
+
+
+=== PAGE 126 ===
+When a GMC is present in the scene, introduce them as 
+part of your scene framing. Don’t forget to paint a picture 
+of them in your players’ minds with more senses than 
+just the visual. Looking over your GMC writeup (or your 
+hastily scribbled prep notes), find at least three things to 
+say about them, and make sure you say those things at 
+some point early in the scene.
+GMCs aren’t just for action scenes. Especially when you’re 
+using a GMC to push against the connections between 
+your PCs, or to remind the players about the themes and 
+goals of your setting, you should make use of your GMCs 
+in bridge scenes and flashbacks as well as in the standard 
+action scenes. 
+RUNNING THE CLIMAX
+Once everything seems to have come to a head, all reveals 
+are known and checked off your list, and you’ve got the 
+PCs all together working toward the same outcomes, 
+you’ve got a climactic scene to run. Here’s where the 
+villain’s plan is foiled for good (or until next time), the 
+disaster is thwarted, the challenge is overcome, and so on.
+Here’s the big, big, big secret with this part of the session: 
+you have not prepared for this part. Seriously. This isn’t 
+something you should have written notes on before the 
+session, because you never know where the players will 
+take your situation and your conflict and your reveals. 
+So, in some ways, it’s flying by the seat of your pants time.
+A good climax brings back all of the various decisions and 
+choices the players made during the session in one way 
+or another. This is where consequences of earlier actions 
+come to the fore. The players get to use some of the assets, 
+complications, and ●
+Ⓟ they’ve built up in past scenes. 
+And it resolves the situation for the PCs, even if it creates 
+another one for the next session, and even if the PCs didn’t 
+come out ahead.
+It’s tempting to wrap everything up here, in this last big 
+scene, but you’ve still got some tag scenes to go. Leave 
+some story threads to be picked up and woven into the 
+growth of the PCs during those scenes. You don’t need 
+to resolve the tangled weave of minor and major GMCs 
+in the climax, because some of them will get their just 
+deserts later. Recurring characters provide continuity, 
+after all! What’s important is that the players feel as if, 
+despite some loose ends, the status quo has changed.
+TAG SCENES
+Find a way to reflect the session’s overall themes and 
+motifs in tag scenes. As you go around the table and 
+frame scenes with questions and reflections about what 
+the PCs have done, you can also insert a bit of exposition 
+and update the players on what happened to GMCs or 
+other people who they perhaps lost sight of, or who didn’t 
+show up again in later scenes.
+Tag scenes are also about growth, marking XP, checking 
+off milestones, and so on. Make them poignant, 
+make them specific, and most of all 
+make them short.
+
+
+=== PAGE 127 ===
+123
+CHAPTER 4 PRIME SESSIONS
+SESSION TRICKS
+So, you’ve run a few sessions and have a handle on them. 
+What now? Here are a few suggestions for mixing it up
+a little.
+VERY SPECIAL EPISODES
+If your usual sessions are heavy on group-based conflict 
+against external antagonists (good guys vs bad guys, 
+for example) think about what those TV shows back in 
+the Eighties and Nineties did, and have a very special 
+episode that’s more introspective, more inward focused, 
+and highlighting some cause, relationship problem, or 
+complex issue.
+In these sessions, there might not be a classic antagonist. 
+Instead, some external yet deeply personal thing gets in 
+the way of the PCs’ existing relationships. Look over the 
+player character files and see what exciting “negative” 
+traits might make for a good subject. Addiction? Long-
+lost uncle? Mysterious past? Unhealthy attitudes toward 
+violence or food or the government? Pick one and see what 
+happens when it becomes the situation.
+FLASHBACK SESSIONS
+Maybe you’ve used flashback scenes in your sessions, but 
+have you ever set the entire session in the past? This is a 
+great way to explore character backstory that up until this 
+point has only been brought up in hindsight. Play out that 
+last pitched battle with the Empire alongside the rebels. 
+Get an insight into that moment the world-threatening 
+supervillain became the terrible threat he is now. See how 
+that faction or org became the influential agency that the 
+PCs know it as—and what the PCs did at the time to help 
+make it that way.
+Flashback sessions are also fun for taking a break from 
+the primary PC group and playing one-shot PCs just for 
+this purpose. Play out the days from when the zombie 
+plague broke out—it’s less of a concern if one-shot PCs 
+die or lose to the overwhelming forces of the past. Make 
+one of the PCs the primary character, while everyone else 
+plays that PC’s hapless former squad, whose fates were 
+never revealed—until now.
+ROTATING GM DUTIES
+After a few sessions as GM, a lot of folks like to jump into 
+the story as a player for a special one-shot episode, and 
+let another player take on the GM role. You can tie this in 
+with a flashback session or you can instead play it out as 
+something that happened at the same time as the previ­
+ous session.
+HAO SHUANG
+This works best once everyone knows enough about the 
+setting that one of the players can take the reins. Rotating 
+GMs can afford a player the chance to get some experi­
+ence running the game when they’re not ready to commit 
+to regularly running sessions.
+When you’re a one-shot GM in a long-running serial, be 
+fair to the regular GM and the other players and don’t 
+uproot the entire setting, wipe out popular locations, 
+or kill off favorite GMCs. By all means, introduce your 
+own GMCs, locations, and motivations. The events that 
+transpire in a session with a new GM can easily be rein­
+corporated to the regular GM’s game, too.
+IT WAS ALL A DREAM
+You can’t pull this too often, but a dream session is a nice 
+way to explore ideas the players might have for the game 
+that didn’t fit in previous sessions. Write up notes for a 
+dream session with the premise that the PCs are dream­
+ing an alternate reality in which their actions had other 
+consequences. Or it’s an illusionary world created by a 
+mystical antagonist GMC, and the PCs spend the whole 
+session in strange garb from another setting (such as 
+pirates or fantasy heroes).
+You can declare that the previous session was the dream 
+as a way to reset things (especially if several PCs died, or 
+horrible things happened to them that were upsetting 
+or discouraging). Used like this, the It Was All A Dream 
+session is damage control that everyone can buy into.
+
+
+=== PAGE 128 ===
+KINIXUKI

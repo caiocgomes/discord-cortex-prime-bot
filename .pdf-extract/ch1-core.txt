@@ -1,0 +1,2402 @@
+
+=== PAGE 19 ===
+15
+CHAPTER 1 PRIME CORE
+CHAPTER 1
+CHAPTER BREAKDOWN
+What’s in this chapter:
+Dice: How the dice work and how to roll them.
+Tests and Contests: How characters deal with the situations
+they’re confronted by.
+Traits: The elements of every character.
+Plot Points: The way players can influence the outcome
+of their actions.
+Assets and Complications: The positive and negative influences
+that can tip the outcome and shape the story.
+This chapter covers the rules and mechanics at the core of Cortex Prime. Everything 
+else builds on these systems and procedures. Once you understand how these rules 
+work—and the mods that change how they work—you can do whatever you want with 
+the system. 
+When this chapter refers to “you,” it’s usually a generic player, not necessarily the GM. 
+In other words, this chapter is for everyone.
+If you haven’t already read the “Cortex Primer” on page 6, go back and do that now.
+PRIME
+CORE
+
+
+=== PAGE 20 ===
+16
+CHAPTER 1 PRIME CORE
+DICE
+Cortex Prime uses five kinds of dice: ④, ⑥, ⑧, ⑩, ⑫. 
+The number tells you how many sides the die has: the 
+more sides, the bigger the numbers. A handful of dice is 
+called a dice pool.
+When you roll a die, the number on the uppermost face is 
+the result. Usually you add results together to get a total. 
+Adding results together is about the only math you need 
+to do in Cortex Prime.
+The dice introduce a random element to play, helping us 
+resolve tests and contests. Bigger dice (more sides) means 
+potentially better outcomes, and more dice means more 
+reliable outcomes.
+DIE RATINGS AND STEPS
+Every trait in the game has a die rating. Whenever you use 
+the trait, you pick up a die of that size for your dice pool. 
+Occasionally, you’re asked to swap out one or more dice 
+for bigger or smaller dice. This is called stepping up or 
+stepping down a die rating. Stepping down a ④ makes it 
+go away. A ⑫ can only be stepped up in certain situations, 
+such as taking out a character.
+To step up a die by one, swap it for a die that’s one step 
+larger than the original. To step down a die by one, swap 
+it out for a die that’s one step smaller.
+Die ratings usually correspond to how much effect that 
+trait has on the outcome of any given test or contest. 
+They’re a useful shorthand for how strong, smart, skilled, 
+or important a character is.
+More sides doesn’t always mean better, so much as it 
+means more important or significant in the story. Having 
+a ⑫ in a trait like Strong vs a ⑫ in a trait like Justice 
+doesn’t mean that strength or valuing justice measure the 
+same things. It just means that being inhumanly strong 
+can affect the outcome just as much as being obsessed 
+with justice does.
+STEPPING
+UP BY 1
+STEPPING
+DOWN BY 1
+STEPPING
+UP BY 2
+ARTUR TREFFNER
+BEATS, SCENES, AND SESSIONS
+Every time you sit down to play Cortex Prime, it’s called a session. The 
+flow of the session can be broken down into scenes. Scenes can be 
+further broken down into chunks called beats, and a test is a character’s 
+attempt to do something (usually involving rolling some dice), typically 
+over the course of a single beat. A contest is an exchange between two 
+or more characters with conflicting goals. These concepts are the basic 
+building blocks for creating a narrative.
+For more on managing and running scenes, see Prime Scenes (page 86). 
+For more on handling sessions of Cortex Prime, including preparing the 
+session and GMCs, see Prime Sessions (page 108).
+
+
+=== PAGE 21 ===
+17
+CHAPTER 1 PRIME CORE
+THE DICE POOL
+Any time you’re called to roll dice for a test or contest, 
+you assemble a dice pool out of relevant trait sets on your 
+character file, plus any bonus dice from other sources. The 
+dice pool represents all of the various things that might 
+contribute to your success. There’s no maximum number 
+of dice in a dice pool, but generally the pool includes 
+anywhere from three to eight dice.
+The GM assembles a dice pool (the opposition pool) 
+based on what your character is up against. For a test, this 
+usually starts with two difficulty dice chosen by the GM.
+You are free to choose any two dice for your total. You don’t 
+need to choose the two highest rolling dice. You may want 
+to save a die with more sides for your effect die, even if it 
+was the highest result. Likewise, the GM may decide to 
+let the dice fall where they may and always keep the two 
+highest rolling dice, or use the choice of two dice as a way 
+to moderate the opposition without simply fudging dice.
+You and the other players make decisions for the group 
+in response to the challenging situations the GM pres­
+ents. Not every decision needs to involve dice. Don’t bother 
+picking up the dice unless the outcome of a roll—success 
+or failure—would be interesting or move the story along, 
+or unless there’s something keeping the player from 
+doing what they want to do. If a particular outcome is 
+guaranteed to happen, the GM might either describe 
+what happens and move on, or have the player narrate 
+the outcome of what their character does.
+HITCHES AND BOTCHES
+If you roll a 1 (a hitch) on a die, it doesn’t count toward 
+your total at all and can’t be used as your effect die. It’s 
+called a hitch because it’s a little obstacle that could lead 
+to an inconvenience—a complication—without ensur­
+ing failure. Set hitches aside for now. The GM has the 
+option to activate those hitches to do things on their 
+side of the table. The GM might also roll hitches—called
+opportunities—which the players can activate.
+If all your dice come up as 1, that’s a botch and it’s a sure 
+sign of trouble, especially since your total is effectively 
+zero. With a typical failed test or contest, not everything is 
+bad. The story still moves forward, just not how the char­
+acter might like. With a botch, there’s no ambiguity about 
+it—things are bad for that character, and sometimes their 
+story hits a brick wall for a moment.
+Game mechanics that allow you to reroll dice can be used 
+to reroll hitches or even a whole botch, so long as they 
+haven’t been used to trigger any other game effect (such 
+as a complication). The GM should ask the player if they 
+have such a mechanic in play before spending the hitches 
+for complications or other effects.
+SFX
+Many characters have exception-based features called 
+SFX (special effects) that can alter or influence the 
+dice pool, dice results, or even the story directly. SFX 
+frequently come in the form of an activating condition, 
+some kind of cost or drawback, and then some kind of 
+benefit or bonus. You can read more about SFX in Prime 
+Characters (page 61).
+YANGTIAN LI
+For a contest, whoever acts first—usually a player—puts 
+together a dice pool. Instead of difficulty dice, the opposi­
+tion puts together their own dice pool once they see how 
+the initiating character does on their roll.
+The doom pool is a mod that does away with difficulty 
+dice and replaces them with a pool of dice that grows 
+and shrinks during play. Any reference to difficulty dice 
+usually applies to games using a doom pool also.
+ROLLING DICE
+Usually when you roll two or more dice, you choose two 
+results to add together for your total, and a third die to 
+use as the effect die. If you’re rolling one die, your total 
+is equal to the result of that die. If you don’t have a third 
+die, your effect die starts at ④. See “Effect Dice” on page 
+20 for more on how effect dice work. 
+All rolls, including the GM’s, are done in the open. After 
+rolling dice, leave them on the table in view of every­
+one. Only pick up the dice once a test or contest has
+been resolved.
+The Child wants to find out 
+where the portal leads.
+Based on the difficulty of the 
+task, the GM assembles a pool 
+of ⑧ ⑧ which is considered 
+challenging.
+Physical
+Mental
+Social
+We differentiate the dice results by the 
+color of the outline, interior, and numbers.
+Red interiors with white 
+numbers is die type.
+DICE RESULTS
+TOTAL
+EFFECT DIE
+8
+17
+13
+Black interiors
+with red outlines
+and white numbers 
+are hitches.
+Green interiors and 
+outlines with white 
+numbers are chosen 
+effect dice.
+Red outlines with 
+white interiors and 
+black numbers 
+show a die result.
+Gray outlines 
+and numbers are 
+unchosen results.
+
+
+=== PAGE 22 ===
+18
+CHAPTER 1 PRIME CORE
+That difficulty is the number you need to beat with your 
+own total when you roll your dice for the test. If you beat 
+it, the test is a success. If you didn’t beat it, the test is a 
+failure. Beating a difficulty means rolling higher than the 
+difficulty total. If your total is the same as the difficulty’s 
+total, you didn’t beat it, so this still counts as a failure.
+The difficulty dice are always two dice of the same number 
+of sides, based on the situation:
+TESTS
+AND CONTESTS
+A test is the central mechanic of rolling dice to resolve a 
+situation by determining if there’s a successful outcome 
+or a challenging failure. Almost always, tests are initiated 
+by the GM asking the player, “What do you do?” 
+When a PC gets into a conflict over something they want, 
+this is called a contest, which determines if any other 
+character can intervene, thwart, or oppose the charac­
+ter. Contests are almost always initiated by a player, who 
+picks up dice and essentially says, “I’m doing this. Who’s 
+stopping me?”
+If the outcome is guaranteed or nothing opposes or acts 
+against the character, tests and contests can be resolved 
+without rolling dice. A player can always choose not to 
+respond to a test and find another way forward. A GM or 
+other player can always respond to a contest by declar­
+ing that they don’t oppose the initiating player, in which 
+case the contest’s outcome is determined as if the player 
+succeeded. In both cases, there’s usually no need for an 
+effect die; if one is needed, use the largest die in the dice 
+pool (the opposition pool for a test, or the player’s dice 
+pool for a contest).
+DIFFICULTY
+AND OPPOSITION
+Whenever you roll dice, you want to get a higher total 
+than your opposition. This is the core principle of Cortex 
+Prime’s dice mechanics. The key difference between tests 
+and contests is who rolls the dice first.
+TESTS: SUCCESS OR FAILURE
+If it’s a test, the GM assembles an opposition pool and rolls 
+it, setting the difficulty by adding together two dice from 
+the roll and announcing the total.
+Very Easy
+Challenging
+Hard
+Very Hard
+Easy
+KEKAI KOTAKI
+In addition to difficulty dice, the GM picks up one or more 
+dice based on appropriate traits from the location, oppos­
+ing GMCs, or the scene itself. When in doubt, the GM can 
+simply add one or more six-siders to represent increasing 
+risk, threats, or challenges.
+Mary Rose calls for Adam to make a test when 
+his Hero sneaks past a lazy watchman. To set the 
+difficulty, she puts together an opposition pool using 
+⑥⑥ (because it’s an easy test) and a ⑧ for the 
+watchman. That’s a pool of three dice: ⑧+⑥+⑥.
+Tests are usually uncomplicated. A success means the 
+character does what they wanted to do, and a failure 
+means they don’t. Occasionally, the player sets the diffi­
+culty for a GMC’s test. In this case, the player rolls first 
+and the GM rolls to beat the difficulty set by the player. 
+Usually, though, the GM sets up scenes where the players 
+roll tests to change the status quo being maintained by 
+the GMCs.
+
+
+=== PAGE 23 ===
+19
+CHAPTER 1 PRIME CORE
+CONTESTS: THE STRUGGLE
+When you engage in a contest, you’re the one initiating 
+it, so you pick up the dice and roll first, adding together 
+two results for a total. If your opposition decides against 
+opposing you after seeing what you rolled, you automat­
+ically get what you want. If your opposition decides to 
+stop you, they assemble a dice pool and try to beat the 
+difficulty you just set.
+If your opposition doesn’t beat your difficulty, you’ve won 
+the contest and you get what you want. If they beat your 
+difficulty, the ball’s back in your court. You can choose 
+to give in, in which case you define the failure on your 
+own terms, you cannot immediately initiate another 
+contest with your opponent, and you get a ●
+Ⓟ. Otherwise, 
+your opposition’s total becomes the new difficulty, and 
+you must roll again to try to beat it. Failing to beat your 
+opposition means your opponent gets to define how they 
+stopped you.
+Contests go back and forth until one side gives in or fails 
+to beat the difficulty. The losing side picks up a compli­
+cation or, if it’s a high stakes scene, is taken out of the 
+scene—they’re beaten, knocked down, or possibly even 
+on their last breath. Players can spend ●
+Ⓟ to avoid being 
+taken out, but they still take a complication.
+Sometimes the GM may initiate a contest when a GMC 
+chooses to do a thing; the GM is essentially asking the 
+players, “What are you going to do about it?” However, 
+because Cortex Prime games are about the PCs more than 
+the GMCs, this shouldn’t happen very 
+often in any given session.
+OUTCOMES
+When you win a test or contest, you get what you want, 
+and you can narrate the outcome. What this means 
+usually depends on what you said you were trying to 
+do. Was your character trying to hack the mainframe? 
+It’s done. Knock out the bad guy? They did that, too. The 
+player describes it and then the story moves on. If the 
+player can’t think of what might happen if they succeed, 
+the GM can do the honors, and remind the player to think 
+about what the consequences of success are before they 
+roll the dice next time.
+When you fail, however, try to be entertaining in how you 
+describe your failure. The only lasting effect is the story 
+heading in a different direction than you wanted, unless 
+you picked up a complication or you rolled all hitches and 
+came up with a total botch. 
+Early in a scene, Adam’s Hero triumphed over a 
+rockslide, leaping to safety with a priceless artifact. 
+However, as Adam rolls to signal a friendly plane 
+overhead with a flare gun, all of his dice come up 
+hitches! Had he simply failed the test, maybe the flare 
+gun jammed and he’d need to change his situation 
+a little—get to higher ground, build a signal fire, or 
+something like that—before trying again. Instead, 
+with this botch, Adam suggests that it wasn’t a 
+friendly plane after all, and maybe he’s called down
+a lot of trouble for his Hero instead.
+OUTCOMES CHANGE
+THE STATUS QUO
+When your character fails, it doesn’t necessarily 
+mean the scene ends and their goals are thwarted 
+permanently. A scene can have many tests and 
+contests in it, involving many characters, some­
+times even several tests or contests going on at 
+the same time. Failure should always mean that 
+the situation has changed in one way or another. 
+Consequences should always come from failure, 
+even if they’re as simple as “You dropped it; now 
+what do you do?”
+In some cases, losing a test or contest can 
+result in your character being taken out of 
+the scene. But in most other cases, your 
+character only needs to revisit their new 
+circumstances and take a different course 
+of action, perhaps with a complication now 
+making their lives a little trickier.
+
+
+=== PAGE 24 ===
+20 CHAPTER 1 PRIME CORE
+Adam’s Roll
+Opposition Roll
+HEROIC SUCCESS
+In a test, if you beat the difficulty by 5 or more on a roll, 
+you’ve got a heroic success. You not only get what you 
+want, your roll produces unexpected beneficial results. 
+In a contest, if your opponent loses by 5 or more, you’ve 
+got a heroic success and are the clear victor. As with any 
+success, the GM should ask you to describe your amazing 
+efforts, but that’s just icing on the cake. There’s an added 
+benefit, as well.
+The effect die (see following section) is stepped up by one 
+for every 5 points you beat the difficulty by.
+Adam’s Hero makes a test and beats the difficulty
+by 10—a heroic success. His effect die is a ⑥.
+The complication or stress created from the test
+is a ⑩: the ⑥ stepped up twice, once for every
+5 points he beat the difficulty by.
+INELIGIBLE DICE
+You can’t choose a die that produced a hitch for an effect 
+die. If you spend ●
+Ⓟ to add more dice to a total beyond 
+the first two, those dice can’t also be used as effect dice. 
+If there are no dice left in the pool once the total is deter­
+mined (or the remaining dice are hitches or otherwise 
+spoken for), the effect die is always a ④.
+CAROL AZEVEDO
+GM’S DIFFICULTY
+12
+TINA’S DICE RESULTS 
+TOTAL EFFECT
+DIE
+ASSET 
+CREATED
+16
+Security 
+System 
+16
+Security 
+System 
+Some SFX might specify a heroic success as the activat­
+ing element. Often, these sorts of SFX create additional 
+assets or complications beyond the one that may have 
+been created from the test or contest, or they change the 
+story in some interesting way by introducing a specific 
+flavor to the outcome.
+EFFECT DICE
+The effect die is chosen from the dice pool after the dice 
+used for the total are taken out and added together. The 
+effect die is used for things like determining the size of an 
+asset or complication, or (if you’re using the mod) stress. 
+Only the size of the effect die (number of sides) matters; 
+the result rolled on the effect die has no further use in the 
+roll. You won’t always need an effect die, especially when 
+you’re only concerned with pass/fail outcomes.
+Tina’s Sage is trying to set up a new security 
+monitoring system in an enemy base. Mary Rose
+has set a difficulty of 12. Tina rolls a pool of five dice: 
+a ⑫, ⑧, ⑧, ⑥, and ④. The ⑧ ⑧ each come up 
+8, which add together for a total of 16, beating the 
+difficulty. The ⑫ comes up 2 so Tina chooses the 
+⑫ as the effect die. This means the Sage’s security 
+system—an asset—is rated at ⑫. Had Tina rolled an 
+8 on the ⑫ and a 2 on one of the ⑧ instead, and 
+she’d chosen a ⑧ effect die, the security system 
+would not have been as strong. In either case, the 
+fact that the die rolled a 2 doesn’t matter. Only the 
+number of sides matters.
+
+
+=== PAGE 25 ===
+SFX AND EFFECT DICE
+SFX may refer to effect dice. Here’s an example: 
+	
+ɬ Lunar Strength: When the moon is full and your dice pool 
+includes your Physical attribute, spend a ●
+Ⓟ to step up the 
+effect die by one. 
+ADAM’S 
+EFFECT DIE
+GMC’S 
+EFFECT DIE
+DOES GM 
+SPEND 
+ ?
+OUTCOME
+NO
+GMC taken out
+YES
+GMC takes 
+complication
+NO
+GMC takes 
+complication
+If the contest isn’t a high stakes scene and there’s no peril­
+ous outcome to worry about, the losing side just takes a 
+complication equal to the effect die of the winning side—
+unless the opponent’s effect die is equal to or larger than 
+yours, in which case your effect die is stepped down by 
+one before being applied as a complication.
+Adam wins a contest between his Hero and a 
+GMC opponent in a standard action scene. This 
+means Adam’s Hero imposes a complication on his 
+opponent. His effect die is a ⑩, and theirs is a ⑫. 
+His ⑩ effect die is smaller than their ⑫ effect die, 
+so it’s stepped down by one before it’s used against 
+them—in this case as a ⑧ complication.
+EFFECT DICE IN AUTOMATIC OUTCOMES
+When a test or contest isn’t opposed and you need an 
+effect die, use the largest die in the opposition pool (for a 
+test) or the initiating dice pool (for a contest). Most of the 
+time, however, you won’t need an effect die if no test or 
+contest is actually rolled.
+Adam declares that his Hero reaches for a priceless 
+artifact and asks, “Who’s going to stop me?” 
+Mary Rose and the other players elect not to
+oppose him, so his Hero takes the artifact. If for 
+some reason Adam needed to know how well his 
+character took hold of the artifact, he would look at 
+the dice pool he just assembled for the contest and 
+choose the largest die in the pool for the effect die.
+RAFAEL SARMENTO
+If any rule or SFX steps up the effect die beyond ⑫, either 
+the effect is an automatic take out or victory, or another 
+die from the pool is turned into a second effect die.
+Some SFX let you choose more than one effect die. You can 
+also spend a ●
+Ⓟ to add an extra effect die. In both cases, 
+you have to choose from the dice left over from your roll. 
+If there are none, use the ④ default. If an SFX tells you to 
+step up or step down an effect die and you have multiple 
+effect dice, only modify one of them for each SFX that 
+you’re using.
+EFFECT DICE IN OPPOSITION
+When rolling dice for tests, the effect die serves as a useful 
+indicator for the scope of the action’s outcome. A ⑫ effect 
+die means the test had a mind-blowing outcome, while a 
+④ means it was marginal at best. There’s usually no need 
+to compare your effect die with the opposition’s effect die.
+The effect die is more important in a contest. If you win 
+a contest, you compare your effect die against the oppo­
+sition’s effect die (from the roll they just made to try to 
+beat you). 
+In a scene that the GM has determined is high stakes, 
+if your effect die is larger than your opponent’s, they’re 
+taken out of the scene. If their effect die is equal to or 
+larger than yours, or they spend a ●
+Ⓟ to avoid it, your 
+opposition isn’t taken out. Instead, they take a compli­
+cation equal to your effect die.
+Adam wins a contest in a high stakes scene between 
+his Hero and a GMC. His effect die is a ⑧, and theirs 
+is a ⑥. Adam’s Hero takes out his opponent, unless 
+Mary Rose spends a ●
+Ⓟ to prevent it. If that happens, 
+the GMC picks up a ⑧ complication because of 
+Adam’s ⑧ effect die. If Mary Rose’s effect die was 
+a ⑧ or higher, Adam’s effect die wouldn’t be larger 
+than hers, so the GMC would take a ⑧ complication 
+without having to spend a ●
+Ⓟ.
+
+
+=== PAGE 26 ===
+22 CHAPTER 1 PRIME CORE
+BEING TAKEN OUT
+Most tests and contests don’t carry the risk of failure so 
+dire that it takes a PC out of the scene. It’s up to the GM to 
+make it clear from the beginning when it’s a high stakes 
+scene where failure may mean being taken out. Some 
+examples include:
+•	 A PC tests to stay awake after being exposed
+to knock-out gas.
+•	 A PC initiates a contest with another PC who
+they want to knock unconscious.
+•	 A deadly trap needs to be overcome before it 
+brings doom to all of the occupants in a room.
+Often, as GM you present the players with a number of 
+options that include some with this potential outcome, 
+usually with a commensurate greater reward. Players can 
+then decide if the risk is worth it.
+Tina’s Sage is presented with two options in a 
+scene where she’s dealing with rogue pharmacists 
+trying to trigger a worldwide epidemic from their 
+computerized lab. She can stay out of sight and try 
+to hack the pharmacists’ server, which might delay 
+them. Or she can charge in and take the pharmacists 
+head-on, which might eliminate their threat entirely, 
+but carries a risk that she’ll be taken out by their 
+armed response.
+When a character is taken out, they may no longer perform 
+any test or contest and no longer participates in the scene. 
+As the GM you may rule that certain tests are still possible, 
+or that a character’s SFX may still be activated. Generally, 
+however, a character that’s taken out of a scene has no 
+further impact on the scene’s outcome.
+BEING TAKEN OUT BY COMPLICATIONS
+If a complication attached to a character is somehow 
+stepped up beyond ⑫, that character is automatically 
+taken out of the scene. Complications that are stepped 
+up beyond ⑫ are such a significant hindrance that they 
+effectively keep the character from being able to act or 
+play any part in the scene.
+See “Complications as Consequence” (page 37) for more 
+on using complications to take out characters.
+RECOVERING IN A SCENE
+It’s possible that being taken out of a scene can be reversed 
+by other characters in that scene, if they have healing abil­
+ities, magic, or the ability to change the circumstances 
+that took the character out in the first place. If a char­
+acter returns from being taken out, they usually come 
+back with at least a ⑥ complication that reflects their 
+traumatic experience. See “Trauma” on page 41.
+LENKA ŠIMEČKOVÁ
+
+
+=== PAGE 27 ===
+23
+CHAPTER 1 PRIME CORE
+INTERFERING IN A CONTEST
+If you want to get involved in a contest between two other 
+characters, your character can attempt to interfere—but it 
+costs a ●
+Ⓟ and comes with a bit of risk. Usually this means 
+your character wants something neither of the other two 
+characters wants, or maybe you want the same thing as 
+one of them but on your own terms. After each side has 
+rolled at least once, you can spend a ●
+Ⓟ and describe how 
+you’re trying to get between the characters. Roll your dice 
+and compare your total to the current total in the contest. 
+If you don’t beat the total, they ignore you and the winner 
+gives you a complication (or stress) for getting in the way. If 
+you beat the total, you’ve stopped the contest in its tracks. 
+No one gives in and no one takes any complications—yet.
+If both sides are committed to continuing the contest, 
+their players (or the GM, if a GMC is one of the contes­
+tants) each hand you a ●
+Ⓟ and describe how they work 
+around, over, or through you to continue their conflict. 
+Neither of them can give in until both have rolled again.
+You may elect to interfere again by spending another ●
+Ⓟ, 
+but if either contestant rolls higher than you, they can 
+inflict a complication (or stress) on you—that means you 
+may get two complications if you don’t roll high enough.
+Amanda’s Engineer is arguing with a major GMC,
+a rival mechanic, over the rights to upgrade a 
+starship. Adam’s Hero decides to interfere, asserting 
+his claim that they should do what’s right for the 
+upcoming mission. Amanda rolls her dice first, 
+getting a total of 12, and Mary Rose rolls next,
+getting a 14. Adam spends his ●
+Ⓟ and rolls as well, 
+beating both of them with a 15. Adam says his Hero 
+stands between the two of them and settles the 
+argument with his inspirational speech.
+Amanda doesn’t want the argument to end, and she 
+asks the GM, Mary Rose, if that’s true for her rival, as 
+well. Mary Rose says yes, this conversation isn’t over, 
+so Amanda and Mary Rose each hand a ●
+Ⓟ to Adam 
+to continue the argument with a new contest. Now, 
+Amanda’s Engineer is yelling past Adam’s Hero to
+the mechanic, and the mechanic is yelling back.
+Adam decides he’ll sit back and let the technicians 
+duke it out, rather than interfering again. Amanda 
+and Mary Rose roll again, and Amanda wins with a 19. 
+The GMC takes a complication.
+If Adam had interfered in the contest between 
+Amanda’s Engineer and Mary Rose’s GMC, but failed 
+to beat either of their totals in the contest, his Hero 
+would just have stood there trying to come between 
+the arguing technicians, utterly ignored by their 
+heated debate, and taking a complication.
+CONTESTS WITH MORE
+THAN TWO CHARACTERS
+You can use contests as a way to represent all-out scram­
+bles for some kind of object, goal, or prize. One player 
+initiates the contest, then any other character that wants 
+to be involved in the contest can join in, one at a time as 
+determined by the GM. The highest roller is the success­
+ful character. After the first roll to enter the contest, 
+any character that chooses to stay in the contest takes a 
+complication if they fail to beat the total. They may other­
+wise give in as normal.
+CONTEST 1
+Adam spends a ●
+Ⓟ to interfere in a contest between
+Amanda’s Engineer and Mary Rose’s rival mechanic GMC.
+AMANDA’S TOTAL 
+GMC’S TOTAL
+ADAM’S TOTAL
+12
+14
+15
+Adam’s Hero beats both of them!
+Adam wants to end the argument with his winning roll.
+CONTEST 2
+Amanda and Mary Rose both decide they don’t want this to be the
+end of it, so they each spend a ●
+Ⓟ to continue the argument.
+AMANDA’S TOTAL 
+GMC’S TOTAL
+19
+16
+Amanda wins! Mary Rose’s GMC takes a complication
+for losing the second contest.
+
+
+=== PAGE 28 ===
+24 CHAPTER 1 PRIME CORE
+TEST AND 
+CONTEST MODS
+By applying mods to test and contest mechanics, you can 
+change how they’re used and implemented. Some of these 
+mods make the rules simpler; others add complication.
+ACTION-BASED 
+RESOLUTION
+This mod takes the rules for tests and contests and sort 
+of smashes them together. Using this mod, anything a 
+player character or GMC does is called an action. If you 
+want to carry out an action, you declare it, gather up 
+your pool, and roll the dice, just as if you were starting a 
+contest. Instead of moving to a back and forth escalation 
+like a contest, the action is opposed by a reaction, which 
+is either the target of the action rolling their own dice, 
+or a difficulty set by the GM rolling difficulty dice. If the 
+reaction beats the action’s total, the action fails.
+An action-based resolution approach places heavier 
+weight on who goes when and the order in which actions 
+take place. The scenes are more structured, each player 
+tends to take their own turn, and an action order (page 
+98) is established to manage this.
+Because the action’s dice are always rolled first, before 
+difficulty dice or opposing reactions are rolled, action-
+based resolution can make actions seem chancy. Players 
+may not know whether they should include more dice 
+into their totals with ●
+Ⓟ. To offset this somewhat, the 
+GM’s difficulty total or the reaction total must exceed the 
+action’s total for the action to fail.
+Amanda’s Engineer and Tina’s Sage are trapped in 
+an elevator shaft by killer robots. On Amanda’s turn, 
+she uses her action to roll an impromptu bot-hack 
+to disable one of the robots, which means she rolls 
+her Mental ⑧ + The World is My Workshop ⑧ 
+distinction + Operate ⑧ skill. She gets a total of 11 
+plus a ⑧ effect die. Mary Rose, the GM, rolls for the 
+killer robot’s reaction using the Killer Robot ⑧ 
+trait + Murderous Machine ⑧ distinction + Servo 
+Motors ⑥ trait and gets a 9 with a ⑥ effect die. 
+Amanda’s action total is higher than Mary Rose’s 
+reaction total, and her ⑧ effect die is higher than 
+the robot’s ⑥ effect die, so the killer robot is taken 
+out. (Mary Rose could hand over a ●
+Ⓟ to have the 
+killer robot take a ⑧ complication instead, but she 
+chooses not to.) Amanda picks Tina to go next in the 
+action order, probably for the Sage to deal with her 
+own killer robot problem.
+NATALIA BACETTI
+PLAYER
+TRAITS USED
+DICE ROLL
+TOTAL
+Amanda
+Mental 
+The World is
+My Workshop 
+Operate 
+11
+Mary Rose
+Killer Robot 
+Murderous Machine 
+Servo Motors 
+9
+Amanda wins! Since Mary Rose declines to use a ●
+Ⓟ to
+take a ⑧ complication, the robot is taken out.
+
+
+=== PAGE 29 ===
+25
+CHAPTER 1 PRIME CORE
+ADD ALL THE DICE
+With this mod, all the dice rolled in the dice pool are 
+added together for the total, then compared to the oppo­
+sition total (which likewise is every die added together). 
+With this mod, use either the No Effect Dice or Reroll for 
+Effect mods, as adding together all of the dice leaves no 
+die for the effect die.
+This mod still keeps the rule about hitches. Any die that 
+comes up as a 1 isn’t included in the total, and counts as a 
+hitch to be activated by the players or the GM, depending 
+on who’s rolling.
+This mod places a much higher value on adding dice to 
+the dice pool, so assets and complications become much 
+more potent. Games using this mod likely have charac­
+ter files with no more than three trait sets to ensure that 
+totals don’t become astronomical.
+NO EFFECT DICE
+In this mod, effect dice are dropped entirely, and all tests 
+and contests have simple success and failure outcomes. 
+The degree of success or the measure of the outcome 
+remains story-driven and descriptive, rather than being 
+represented by a die rating. Any time a test or contest 
+should generate a complication or asset, assign a ⑥ and 
+step it up with heroic successes.
+No effect dice means you can’t compare effect dice to 
+modulate the outcomes of contests. High stakes scenes 
+result in opponents being taken out unless they spend a 
+●
+Ⓟ, and low stakes scenes result in opponents taking ⑥ 
+complications or having existing complications stepped 
+up by one.
+REROLL FOR EFFECT
+This mod doesn’t use the original die roll to generate the 
+effect die; instead the player or GM rerolls their dice pool 
+and takes the highest rolling die as the effect die. SFX that 
+call for choosing more than one effect die or stepping up 
+or down an effect die apply to this new roll. If SFX or other 
+mechanics altered or stepped up dice in the pool after 
+they were rolled, those effects don’t apply when rerolling; 
+pick up the original dice pool and roll it.
+STATIC DIFFICULTY
+With this mod, players only roll against opposition dice 
+pools in a contest, not in a test. When a player rolls in a 
+test, the difficulty is a static target number instead of a 
+difficulty die.
+Static difficulty is based on this difficulty dice chart:
+3
+7
+11
+15
+19
+Very Easy
+Challenging
+Very Hard
+Easy
+Hard
+If the PC has a complication that would add to the oppo­
+sition, the complication die is rolled and added to the
+static difficulty.
+Adam’s Hero is trying to clear away a fallen stone
+slab from the tunnel he’s exploring. Mary Rose, the 
+GM, has determined that this is Hard. Adam’s Hero
+is also suffering from a Broken Leg ⑩ complication.
+Mary Rose rolls the ⑩ and adds it to the Hard 
+difficulty of 15.
+Hard difficulty set by Mary Rose for 
+Adam’s Hero
+Static difficulty set by Mary Rose for 
+Adam’s Hero
+Mary Rose’s roll from the Broken Leg 
+complication suffered by Adam’s Hero 
+from an earlier contest
+15
+20
+CLASSIC CONVERSION NOTE
+This is essentially the same difficulty system presented in Classic 
+Cortex. You may want to experiment with SFX and drawbacks 
+that make static difficulty easier and harder by using them as 
+fixed numbers rather than dice. A quick and easy conversion is 
+to divide the maximum result of the die in half and apply it as a 
+fixed number instead of rolling the die. Thus, a 
+ is a +2, a 
+ is 
+a +3, and so on.
+The Hero Dice mod (page 30) complements this mod, 
+allowing the players to spend hero dice to help over­
+come the impact of complications. With a static difficulty, 
+there’s no option for the GM to roll any hitches, unless 
+you decide that rolling a 1 on a complication die would 
+count. GMs are encouraged to let players spend hero 
+dice to achieve the same outcome; i.e., instead of spend­
+ing a ●
+Ⓟ to activate a 1 on a GM’s dice, you spend a hero 
+die and either eliminate a complication (if the hero die 
+spent is equal to or greater than the complication) or step 
+a complication down by one (if the hero die spent is less 
+than the complication).
+GMs still roll dice for their GMCs as normal and can even 
+roll against a static difficulty if they aren’t opposed by 
+another GMC or a player.
+
+
+=== PAGE 30 ===
+26 CHAPTER 1 PRIME CORE
+TRAITS
+Each PC’s character file is mostly a list of traits and related 
+game stats. Traits define a character and how they interact 
+with the world they live in. Traits paint a picture of who a 
+character is and what they can do, not just in terms of their 
+skills and abilities but also their personality, background, 
+or aspirations.
+Each trait has a die rating, usually between ④ and ⑫. 
+When that trait comes into play, the player rolls that die 
+as part of their dice pool.
+Many different types of traits are used in Cortex Prime 
+games. These include (but are not limited to) attributes, 
+distinctions, skills, affiliations, relationships, powers, 
+roles, and values. Read more about which traits you might 
+use in your own Cortex Prime game in the Prime Characters 
+chapter (page 44). Choosing which traits to use defines
+how a Cortex Prime game is played more than almost 
+anything else.
+TRAIT SETS
+Any collection of traits that belong to the same basic type 
+is assumed to be part of a trait set. Attributes is a trait set, 
+as is skills. The rule of thumb in Cortex Prime is that you 
+may only add one trait from any given trait set to a dice 
+pool without added cost. If you want to include more, it 
+costs a ●
+Ⓟ. Some Cortex Prime games might limit this 
+use of ●
+Ⓟ to specific trait sets, such as skills or attributes.
+Every Cortex Prime game needs at least two prime sets 
+in addition to distinctions. These are the source of almost 
+every dice pool used in tests and contests. Attributes 
+and skills are common prime sets, which means any 
+test or contest must include one attribute and one skill. 
+Resources and specialties, on the other hand, are not 
+generally considered prime sets.
+A character may be defined by as few as three and as many 
+as six or seven trait sets, depending on the game.
+TEMPORARY TRAITS
+In play, characters may gain temporary traits, which last 
+for a short time—a scene, or maybe a session. Temporary 
+traits can also be assigned directly to a scene or to a loca­
+tion, and either go away when circumstances make them 
+irrelevant (like a Flaming Torch ⑥ once it’s doused in a 
+lake) or when some other time limit is reached.
+Assets and complications are the most common examples 
+of temporary traits.
+DISTINCTIONS:
+THE UNIVERSAL TRAIT SET
+Every Cortex Prime game includes distinctions. They’re 
+sort of like your character’s “elevator pitch:” reading all of 
+them should tell anyone a lot about who the character is, 
+whether they describe personality quirks, backgrounds, 
+or the character’s role in the world. Distinctions are 
+considered a universal prime set, so regardless of what 
+sets are used in your game, every character should have 
+three distinctions broad and varied enough that you can 
+narratively justify including one in almost any dice pool. 
+Some Cortex Prime games expand further on their role in 
+the game (or how many of them a character has). Avoid 
+removing them from your game unless you have an equiv­
+alent universal descriptive trait set to take their place and 
+serve their function.
+A NOTE ABOUT EXAMPLES
+Cortex Prime is designed to be modular and customizable, and no prime 
+set, aside from distinctions, is a default for the purposes of playing 
+the game. That said, when providing examples of how the rules work,
+I often default to an action-adventure approach that’s common to most 
+roleplaying games and is the easiest to grasp for players coming from 
+those games.
+The prime sets for examples are attributes, skills, and distinctions. Just 
+because I use these in examples doesn’t mean all Cortex Prime games 
+should or must have those trait sets. In fact, the three Spotlight settings 
+in Prime Settings don’t use all of these trait sets. The only trait set that 
+should belong in every Cortex Prime game is distinctions; even then, 
+it’s your game at the end of the day, so if you’ve got a good equivalent, 
+more power to you.
+ANTHONY
+“ROBOTPENCIL”
+JONES
+
+
+=== PAGE 31 ===
+27
+CHAPTER 1 PRIME CORE
+PLOT POINTS
+Plot points (●
+Ⓟ) are a way for players to affect the plot 
+beyond the roll of the dice. Plot points can be spent to give 
+players more dice, make the dice they have more power­
+ful, or activate certain traits or special effects (SFX) on a 
+character file. You need a way to keep track of ●
+Ⓟ. You can 
+write them as tally marks on your character file, or you 
+can use poker chips or some other kind of token (pennies, 
+paperclips, glass beads… you get the idea).
+Every player starts a game session with at least one ●
+Ⓟ. 
+Unspent ●
+Ⓟ are carried over from session to session, but 
+it’s best to spend ●
+Ⓟ when the opportunity arises—it’s not 
+hard to get more during play.
+In some of the earliest Cortex-powered RPGs, ●
+Ⓟ were 
+mostly used just to add dice to the dice pool or increase 
+the total after the dice were rolled. Cortex Prime uses ●
+Ⓟ 
+more broadly, and mods (page 13) give you the opportu­
+nity to tweak ●
+Ⓟ to make them more or less influential 
+in your game.
+PLOT POINTS
+AND META-REALITY
+For some players, ●
+Ⓟ and other meta-fictional mechanics 
+are a way to step outside of the characters and the setting 
+and impose some authorial control over the unfolding 
+story. Other players struggle with mechanics that don’t 
+seem to have any direct connection to the fictional reality 
+of the game setting. If it helps to think of ●
+Ⓟ as “luck” 
+or “faith” or something else that has a kind of quasi-real 
+existence in the setting, then call them that! ●
+Ⓟ are an 
+extension of the dice mechanics, serving the same kind 
+of role in the game as dice pools and so forth.
+THE GAME MODERATOR 
+AND PLOT POINTS
+Unless mods are applied, the GM has two pools of ●
+Ⓟ: the 
+bank and the pile.
+THE BANK
+At the start of each session, the GM gets a ●
+Ⓟ per player 
+in the game to spend on GMCs. These ●
+Ⓟ are solely for 
+keeping GMCs from being taken out in a fight, for using 
+SFX, or other GMC-related things. The same bank of ●
+Ⓟ 
+is shared by all of the GMCs in play; they don’t each keep 
+track of their own plot points.
+When the GM spends these ●
+Ⓟ, they go to the pile instead 
+of to the player who was affected by the roll, just as if a 
+PC had spent the ●
+Ⓟ on the roll. The GM can add more 
+●
+Ⓟ to the bank by activating GMC SFX, including using 
+distinctions as a ④ instead of a ⑧.
+THE PILE
+In addition to the limited pool of points set aside in the 
+bank, the GM has an unlimited number of ●
+Ⓟ to give to 
+the players when appropriate. The GM uses this pool to 
+purchase complications when the players roll hitches or 
+to hand over ●
+Ⓟ to the players when an SFX calls for it. 
+It’s called the pile because if you’re using physical tokens 
+to keep track of them, it’s best to just make a big pile of 
+those tokens in the middle of the table. Most of the time, 
+when players or the GM spend ●
+Ⓟ, they return to this pile.
+JESSICA FONG
+
+
+=== PAGE 32 ===
+28 CHAPTER 1 PRIME CORE
+SPEND A 
+SPEND 
+ 
+SPEND 
+ 
+ 
+Create a 
+complication
+Create 2 
+complications
+or
+Create a 
+ and
+a 
+ complication
+Create 2 
+complications and
+a 
+ complication
+EARNING PLOT POINTS
+AS A PLAYER
+There are several ways for players to earn ●
+Ⓟ during play. 
+Unless otherwise stated, these ●
+Ⓟ come out of the pile, not 
+the GM’s bank. If you earn a ●
+Ⓟ because of a die roll, such 
+as a hitch, you can’t use it until your die roll is resolved 
+(so you can’t roll a 1, get a ●
+Ⓟ, and then spend it to keep 
+more dice in your total).
+Complications: The GM may hand over a ●
+Ⓟ from the 
+pile to activate a complication when players roll hitches. 
+Complications start at ⑥, but additional hitches in the 
+same roll step up the complication without the GM 
+needing to spend additional ●
+Ⓟ. The GM may choose to 
+create multiple complications if there is more than one 
+hitch, but each new complication requires handing over a 
+●
+Ⓟ. If all your dice are hitches, that’s a botch. Your GM can 
+create a complication without handing over a ●
+Ⓟ, stepped 
+up for each hitch past the first.
+Tina rolls four hitches. Mary Rose could hand over a 
+single ●
+Ⓟ to Tina and create a ⑫ complication
+(⑥ from the activated hitch, stepped up three
+times to ⑫ for the three other hitches).
+Or, she might hand Tina two ●
+Ⓟ and create two ⑧ 
+complications (⑥ from each activated hitch, each 
+one stepped up by one for an additional hitch).
+If Tina had rolled a hitch on all five dice, Mary Rose 
+could have taken her out of the scene entirely with 
+that botch: a free ⑥ complication, stepped up four 
+more times, beyond ⑫.
+Roleplaying: The GM is always free to hand out ●
+Ⓟ for 
+remarkable moments in play, including making everyone 
+laugh, doing something truly heroic and in character, and 
+so forth. This is something that each table agrees to and 
+isn’t mandated by the rules.
+Using ④ in your roll: If you include a ④ complication 
+(or stress, if you’re using those rules) in your dice pool, 
+you get a ●
+Ⓟ, just like you would if you used the Hinder 
+SFX from a distinction. This does not apply when you’re 
+forced to use ④ rated skills, attributes, or other traits in 
+your dice pool. On the plus side, you’re more likely to roll 
+a hitch on a ④, which could lead to a ●
+Ⓟ.
+SPENDING PLOT POINTS
+AS A PLAYER
+You can spend ●
+Ⓟ for a variety of benefits, such as includ­
+ing more dice in your total, activating some SFX, creating 
+new assets, and using hero dice. Remember, you can only 
+spend ●
+Ⓟ you’ve earned from a die roll after your die roll 
+is resolved and the total announced.
+Activate SFX: Some SFX must be activated by spending a 
+●
+Ⓟ. These effects only last for the duration of the roll you’re 
+using it on; once you do something else, the effect must 
+be activated again.
+Add more dice: Before you roll, you can spend a ●
+Ⓟ to 
+include more dice from a trait set in your dice pool, so 
+long as you can give a reasonable explanation as to why. 
+This includes adding more than one skill, more than one 
+attribute, or perhaps another power.
+Activate an Opportunity: If the GM rolls a 1 on their dice, 
+that’s a type of hitch called an opportunity. Players can 
+spend a ●
+Ⓟ to activate opportunities to either step down 
+an existing complication or step up an existing asset. 
+Some SFX may allow other uses for opportunities.
+Create a relationship: When using relationship traits, you 
+can spend a ●
+Ⓟ to create a ⑥ relationship with a charac­
+ter that you don’t already have a relationship with. This 
+relationship goes away at the end of the session unless 
+you use growth or XP to keep it around.
+Create a temporary asset: You can create a ⑥ tempo­
+rary asset by spending a ●
+Ⓟ. This asset lasts for the rest 
+of the scene. If you spend two ●
+Ⓟ, you can keep it for the 
+rest of the session—assuming nothing happens to remove 
+or eliminate it. This allows you to give some dramatic 
+weight to an item (Length of Pipe ⑥) or part of the scenery 
+(Unlocked Door ⑥), or create a new GMC (Handyman ⑥). 
+The temporary asset only helps you, unless you give it to 
+somebody else when you create it, or spend another ●
+Ⓟ 
+to make it free for anyone to use.
+Giving in: If you give in during a contest and let your 
+opponent succeed rather than rolling to beat their total, 
+you earn a ●
+Ⓟ. You only get this ●
+Ⓟ if you’ve already rolled 
+at least once in the contest; you don’t get a ●
+Ⓟ if someone 
+starts a contest and you choose not to oppose it.
+No Bank Mod: If the optional No Bank mod is used, 
+players may earn ●
+Ⓟ when the GM spends a ●
+Ⓟ on a GMC.
+SFX: Some SFX (including the default Hinder SFX for all 
+distinctions) give you a ●
+Ⓟ.
+TINA’S BAD ROLL
+
+
+=== PAGE 33 ===
+29
+CHAPTER 1 PRIME CORE
+PLOT POINT 
+MODS
+These rules alter the way the plot point flow works in the 
+game, including how they’re spent and tracked by players 
+and GMs.
+STARTING PLOT POINTS
+The rule of a single ●
+Ⓟ per character is a reasonable default 
+in all cases, but you can mix it up. You might have players 
+start with more than one ●
+Ⓟ as a default, or you might 
+say that every session, all players get a ●
+Ⓟ on top of any 
+remaining from the last session.
+Alternately, you may decide that at the beginning of each 
+session, all players roll dice to determine how many 
+●
+Ⓟ they start with. For instance, every player could 
+roll ④ and get as many ●
+Ⓟ as the result of that die.
+For a more predictable spread of ●
+Ⓟ around your table, 
+have each player pick up all of the dice in one of their 
+prime sets, such as attributes, relationships, or roles. They 
+roll this dice pool, add two dice together for a total, and 
+compare totals with the other players. The player with the 
+highest total gets three ●
+Ⓟ, the one with the lowest gets a 
+single ●
+Ⓟ, and the rest get two.
+NO BANK
+With this mod, the GM doesn’t have a private supply of 
+●
+Ⓟ. When the players spend ●
+Ⓟ, they go into the big pile 
+in the middle of the table, in front of the GM. When the 
+GM spends ●
+Ⓟ in a roll against a player, they slide a ●
+Ⓟ 
+from the pile to that player. 
+Players can’t use ●
+Ⓟ they just earned when the GMCs 
+spent the ●
+Ⓟ to improve their current rolls or activate 
+SFX, so they should keep those ●
+Ⓟ separate until the end 
+of the current roll.
+Using this mod, a major GMC can’t earn a ●
+Ⓟ when a 
+distinction is used as a ④, so the GM can bank a ⑥ for 
+that character and drop it into a future action as needed. 
+There’s no limit to how many of these dice a major char­
+acter can save up, but regardless of how many are used 
+on a roll, the GM may still only use two dice for a total.
+Include more results: After any roll, you may spend a ●
+Ⓟ 
+to include more results out of the dice pool you just rolled. 
+This way, your total may be three, four, or five dice added 
+together. The only limit to how many results you may add 
+to your total is how many dice you rolled to begin with 
+and how many ●
+Ⓟ you have available.
+Interfere in a contest: If you want to interfere in a contest 
+that’s already underway, you can spend a ●
+Ⓟ to join in.
+If the other contestants lose to you, they can give you ●
+Ⓟ 
+to renew the contest for another round.
+Keep an extra effect die: You can spend a ●
+Ⓟ to keep 
+an extra effect die, using it to create an additional asset, 
+complication, or stress. You can’t use this if you have no 
+dice left over from your roll.
+Roll a hero die: With the Hero Dice mod (page 30), you 
+can spend a ●
+Ⓟ to roll a banked hero die and add it to your 
+total, even if your opponent has already rolled their dice.
+Share an asset: If you’ve created a temporary asset by 
+spending a ●
+Ⓟ or by making a test (page 35), you can 
+spend a ●
+Ⓟ to make it “open” for other characters in the 
+scene to use in their dice pools.
+Stay in the fight: When you would be taken out, you may 
+spend a ●
+Ⓟ to take a complication instead. The size of the 
+complication is equal to the effect die of the opposing dice 
+pool. If you’re using the Life Points mod (page 43), you can 
+spend a ●
+Ⓟ to stay conscious or active in the scene when 
+your life points exceed your threshold.
+SPENDING PLOT POINTS
+AS THE GAME MODERATOR
+●
+Ⓟ can be spent by the GM to include more dice in a 
+GMC’s character’s total, to activate a GMC’s SFX, and to 
+help a GMC avoid being taken out in a conflict. 
+Include more results: After any roll involving a GMC, 
+the GM may spend a ●
+Ⓟ from the bank to include more 
+results out of the dice pool just rolled. This way, the GM’s 
+total may be three, four, or five dice added together. The 
+only limit to how many results the GM may add to the 
+total is how many dice the GM rolled to begin with and 
+how many ●
+Ⓟ are left in the bank.
+Activate SFX: Some of the GMC’s SFX may have effects 
+that must be activated by spending a ●
+Ⓟ from the bank. 
+Any effect that’s activated like this only lasts for the dura­
+tion of the roll; once the GMC does something else, the 
+effect must be activated again.
+Avoid being taken out: The GM may spend a ●
+Ⓟ from the 
+bank to prevent a GMC from being taken out and instead 
+take a complication. The size of the complication is equal 
+to the effect die from the opposing dice pool.
+Note: The more 
+ a player starts out with, the more likely 
+they are to spend them at the beginning of a session, rather 
+than at the end or at a climactic point. This isn’t a good or 
+bad thing, but it’s useful to keep in mind.
+
+
+=== PAGE 34 ===
+30 CHAPTER 1 PRIME CORE
+HERO DICE
+Using this mod, the primary benefit of a heroic success is 
+the creation of hero dice. On a heroic success, you may 
+bank a die equal to the highest rolling die in the opposing 
+dice pool. These banked dice are called hero dice, and 
+players may save as many of them as they like. In games 
+that use this mod, there’s a space on the character file 
+to indicate how many hero dice you’ve earned and what 
+size they are.
+In some Cortex games, the GM might rule that players 
+can only bank one hero die of any given size. In such a 
+game, the character file has spaces to mark off each of the 
+five die sizes (④ through ⑫). You may opt to step down a 
+hero die you earn from a heroic success to the next lowest 
+available die on your sheet if you already banked a hero 
+die of that size.
+Using this mod does not negate the standard function of 
+a heroic success, which is to step up an effect die. In other 
+words, a heroic success not only earns the player a hero 
+die, it steps up their effect die as well.
+USING HERO DICE
+To use a hero die, you spend a ●
+Ⓟ and roll the die, adding it 
+to your total in any test or contest. You may do this at any 
+time after rolling the dice to get a total, even if you rolled 
+first and the opposition rolled their own dice. It must be 
+done before the GM announces the outcome of the roll. 
+You might be so successful that you get another heroic 
+success and earn another hero die. Whatever happens, 
+erase the hero die you used from your character file.
+Tina wants her Sage to translate a mystic scroll using 
+her extensive knowledge of arcane languages. Mary 
+Rose sets the difficulty on this test with a roll of 12. 
+Tina only rolls a 10. That would usually be a failure, 
+but Tina chooses to spend a ●
+Ⓟ to roll a ⑧ hero die 
+she banked earlier. The die comes up a 4, which kicks 
+Tina’s total up to 14. Good enough for a success!
+Hero dice can backfire. If the die comes up 1—a hitch—
+the GM may introduce a complication as if you had rolled 
+a 1 on any other die. However, instead of accepting a ●
+Ⓟ 
+from the GM, you may choose to take back your hero die 
+and not add it to your total. You still lose the ●
+Ⓟ you spent 
+to activate it.
+Hero dice require ●
+Ⓟ to activate them because adding dice 
+after you roll your test or contest is a powerful advantage.
+GIBY JOSEPH
+
+
+=== PAGE 35 ===
+This is one of the few cases in Cortex Prime where you 
+have the ability to roll more dice to add to your total after 
+you’ve rolled your dice pool.
+Hero dice don’t stick around after they’re used for a roll. 
+During a contest, if your opponent beats your total even 
+after you added a hero die to it, you can’t use the same 
+hero die on your next roll.
+THE GM AND HERO DICE
+The GM doesn’t pick up or use hero dice. If the GM rolls 5 
+or more than the player on their rolls, they instead remove 
+a hero die from the PC in question equal to or less than 
+the highest rolling die on the GM’s roll. If the PC had no 
+hero dice banked yet or no hero dice of equal or lesser size, 
+nothing happens. Either way, the GM narrates something 
+to justify the bad guy upstaging the PC in that moment!
+Adam’s Hero has a ⑧ and a ⑩ hero dice banked 
+from previous scenes. During a duel with his nemesis, 
+the Beast, Adam rolls a 6 on his dice so he spends 
+his last remaining ●
+Ⓟ to add the ⑩ hero die to his 
+total, raising it by 6 points to a 12. Mary Rose, playing 
+the Beast as a GMC, beats this with a 17. That’s a 
+heroic success, ending the duel immediately with the 
+Beast as a victor! However, Mary Rose doesn’t get 
+a hero die from this. Instead, she looks at her dice, 
+notes that her highest rolling 
+die was a ⑩, and removes 
+Adam’s banked ⑧ hero
+die instead.
+HERO DICE AS PLOT POINTS
+With this mod, there’s no additional cost to use hero dice 
+if the player chooses to include them in their dice pool 
+before they roll; they simply erase the die from their char­
+acter file and add it into their dice pool like any other trait 
+die. If you go this route, it’s simply another die in your pool 
+that might end up contributing to your total. The hero die 
+may also be spent in place of a ●
+Ⓟ in any situation where a 
+●
+Ⓟ is applicable, and you don’t have any. This also means 
+spending it, so it’s erased from your character file.
+Some SFX may specify the use of hero dice instead of ●
+Ⓟ, 
+usually when the SFX is particularly strong. The size of the 
+hero die doesn’t matter unless specified. You might have 
+an SFX that states: when you are in a tense or dangerous 
+situation, spend a hero die to remove a complication of 
+the same size die or smaller. This is a fairly potent effect, 
+but it’s limited by the use of a hero die (and a contextual 
+requirement) rather than a ●
+Ⓟ.
+HERO DICE AS EFFECT DICE
+With this mod, hero dice may be spent to substitute for 
+low effect dice from dice rolls. Used this way, you spend 
+a ●
+Ⓟ and use the hero die as the effect die instead of one 
+of the dice from the roll. A heroic success does not step up 
+this new effect die. That only applies to effect dice sourced 
+from the die roll itself.
+After Adam wins a later duel with the Beast, he only 
+has a ④ left in his dice pool to use as his effect die. 
+If he had a hero die banked, such as a ⑧, he could 
+spend a ●
+Ⓟ to switch out the ④ with the ⑧.
+If you’ve got some kind of effect active that lets you keep 
+more effect dice from your roll, such as an SFX, you can 
+spend ●
+Ⓟ to switch out any or all of those effect dice with 
+hero dice; it just costs a ●
+Ⓟ for each switch, and you must 
+have enough hero dice banked to do it.
+
+
+=== PAGE 36 ===
+32 CHAPTER 1 PRIME CORE
+DOOM POOL
+The doom pool is a mod that serves as a combination of 
+ambient threat level, GM resource, and pacing mechanic. 
+The doom pool is sometimes called the trouble pool, the 
+danger pool, or some other thematic title.
+When the GM has a doom pool:
+•	 They do not have a bank of ●
+Ⓟ.
+•	 Players earn and spend their ●
+Ⓟ directly into
+and out of a central pile.
+•	 The GM spends dice out of the doom pool
+instead of using their own ●
+Ⓟ.
+At the beginning of each session, the GM starts with a 
+doom pool of at least ⑥⑥. If the session is of global or 
+cosmic scale, the pool may start with 3 or 4 dice. If the 
+session is a major breakpoint in a campaign, the size of 
+these starting dice might be ⑧ or even ⑩.
+The doom pool replaces difficulty dice for all tests. To set 
+the difficulty, the GM picks up some or all the dice in the 
+doom pool and rolls them, taking two of the dice results 
+and adding them together, as normal. The GM can spend a 
+die not used in the total and add its result to the total; this 
+spent die is removed from the doom pool. The remaining 
+dice, including the two that were added together for the 
+total, remain in the doom pool.
+The GM may spend a die from the doom pool to add it to 
+a GMC’s dice pool during a contest, before the dice pool 
+is rolled. This die is removed from the doom pool and 
+doesn’t go back in once the GMC’s roll is resolved.
+Doom dice may also be spent like ●
+Ⓟ, where a ⑥ from 
+the doom pool is equivalent to a single ●
+Ⓟ. This usually 
+happens when activating a GMC SFX or avoiding being 
+taken out of a fight. If the doom pool only has larger dice 
+in it, the next highest die must be spent in place of the ⑥.
+The doom pool increases when the GM activates hitches 
+rolled by players. Instead of adding a complication to the 
+table, the GM adds a die of the same size as the one that 
+rolled the hitch to their doom pool. Alternately, the GM 
+can use a smaller die to step up an equal or larger existing 
+die in the doom pool by one step.
+Amanda rolls a 1 on a ⑩ in her dice pool. Mary Rose 
+adds a ⑩ to the doom pool and Amanda gets a ●
+Ⓟ. 
+Mary Rose could alternately choose to step up a ⑩ 
+that’s already in the doom pool by one step to ⑫.
+The doom pool can be used for additional scene 
+effects, depending on the game. Some of the most 
+common uses are:
+Create a complication, asset, or scene distinc­
+tion: Spend a die from the doom pool and create 
+a complication or asset attached to the scene 
+equal in size to the die spent. Or, spend at least 
+a ⑧ and add a distinction to the scene that may 
+be used by players and GMCs alike.
+Interrupt the action order: Spend a die from the 
+doom pool equal to or greater in size than the 
+largest combat or senses-related trait of the PC 
+whose turn is up next. One of the GM’s own GMCs 
+gets to go instead, and the GM then picks who 
+goes afterward (not necessarily the player who
+was interrupted).
+Add a new extra: Spend a die from the doom pool 
+and create an extra with a single trait rated at the 
+size of the die spent.
+Introduce a minor or major GMC: If a GMC who 
+isn’t present in the scene could conceivably show 
+up, spend a die from the doom pool equal to that 
+GMC’s highest rated trait and drop them into the 
+scene, ready to act when the action order gets to 
+them (which could be right away, if the GM is the 
+one deciding who goes next).
+Split the group: Spend a ⑩ or a ⑫ from the 
+doom pool and some environmental or narrative 
+event takes place that divides the group into two 
+(minimum one PC in each new group). The PCs 
+have to spend time reuniting their group, which 
+may lead to more problems.
+End the scene immediately: Spend ⑫ ⑫ from 
+the doom pool and cut the scene off right there 
+before it’s resolved, with the GM deciding how it 
+ends. Usually, the scenes should play out until 
+there’s a reasonable ending point, but this way 
+the GM can just smash cut to a new scene with 
+plot threads dangling. Or stage an auto-win by
+the villains.
+LIMITED DOOM POOL
+In this mod, the difficulty is determined as usual 
+based on the situation’s overall difficulty and by 
+any GMC traits that factor into it. Doom dice are 
+then spent out of the doom pool to add dice to 
+the difficulty or to include more dice into the 
+total after the dice are rolled, as per the stan­
+dard doom pool rules. In this mod, doom dice 
+continue to replace ●
+Ⓟ for the GM.
+REZA AFSHAR
+DOOM POOL
+OPTION 1
+OPTION 2
+ 
+ 
+ 
+ 
+
+
+=== PAGE 37 ===
+33
+CHAPTER 1 PRIME CORE
+CRISIS POOLS
+With this mod, the doom pool mechanic represents multi­
+ple localized problems. Each of these smaller problems is 
+its own pool of dice and spends dice just like a doom pool 
+would, but only for things that the problem might be able 
+to influence. These are often called crisis pools to distin­
+guish them from the larger, session-wide doom pool.
+Crisis pools can be directly affected by the actions of PCs. 
+In this way, they are a lot like mobs (page 117). To elimi­
+nate a die in a crisis pool, a player makes a test opposed 
+by the crisis pool. If they beat the crisis pool’s difficulty, 
+they can apply an effect die of at least one step larger to 
+the crisis die they want to get rid of. This takes it out of the 
+crisis pool entirely. If they don’t have a die that’s larger, 
+they can use one of the same size or smaller to step down 
+a crisis die instead. Crisis pools reduced to zero dice are 
+no longer problems.
+Mary Rose creates a crisis pool that represents 
+a forest fire, and a crisis pool that represents a 
+runaway train loaded with hazardous materials. She 
+assigns ⑥⑥⑥ to the forest fire and ⑧ ⑧ to 
+the train. Any time the players make tests involving 
+the forest fire, the forest fire crisis pool is used to 
+oppose them. Similarly, if they’re trying to stop the 
+train, they deal with the train’s crisis pool by testing 
+against it and removing those ⑧ with effect dice. 
+If the players roll hitches, Mary Rose can hand over 
+a ●
+Ⓟ to activate the hitch and add a die of the same 
+size to a crisis pool.
+You can use both crisis pools and the doom pool, spend­
+ing dice directly from the doom pool to create a new crisis 
+pool. Dice spent in this manner go from the doom pool 
+to the crisis pool, thus reducing the overall doom of the 
+session but creating specific, localized situations the 
+players can directly affect.
+STARTING 
+RATING
+     
+ 
+DICE ROLL
+FOREST
+TRAIN
+If PC succeeds and 
+effect die is 
+ 
+ 
+If PC succeeds and 
+effect die is 
+ 
+If PC rolls a hitch
+on a 
+     
+ 
+ 
+Note: You can have both crisis pools and mobs, because they 
+perform different functions; mobs can have SFX, or additional 
+traits, whereas crisis pools are just pools of dice. Or, you can 
+have crisis pools replace mobs, and create a crisis pool like
+Angry Villagers ⑧ ⑧ ⑧. For more on mobs, see page 117 
+in Prime Sessions. For more on crisis pools, see Hammerheads 
+on page 158.
+
+
+=== PAGE 38 ===
+34 CHAPTER 1 PRIME CORE
+ASSETS AND 
+COMPLICATIONS
+Not all traits are listed on a PC or GMC’s character file. 
+Some traits are temporary, reflecting conditions, circum­
+stances, or objects that help (assets) or that make things 
+difficult (complications). These, too, are given die ratings 
+and are included in dice pools where appropriate. 
+Both assets and complications are created by the GM and 
+the players on-the-fly, representing the situational advan­
+tages and disadvantages that the group will encounter 
+during a session. Assets are short-lived, lasting only for 
+a scene unless players are willing to spend additional 
+resources to keep them around; complications are sticky 
+and last until the PC has either overcome them or the 
+complication is irrelevant.
+ASSETS
+Assets are included in a player’s dice pool when they’re 
+applicable and helpful. Some examples:
+•	 Press Pass, which helps a PC slip into a restricted 
+location without being stopped.
+•	 Thermal Jacket, which makes surviving in the icy 
+cold much easier.
+They can be environmental, too:
+•	 Footholds Everywhere is an asset that would 
+help a PC climb a cliff face.
+•	 Handy Info Kiosk is an asset that any PC might 
+use to look something up.
+CREATING ASSETS
+During the game, you can spend a ●
+Ⓟ and create a ⑥ 
+asset with a name you come up with.
+Some SFX allow for assets that start with a ⑧ die rating. 
+These are called stunts.
+Assets larger than the standard ⑥ asset or ⑧ stunt can 
+be created by making a test against a difficulty set by the 
+GM, even if the PC has run out of ●
+Ⓟ. See “Test-Created 
+Assets” on the next page.
+Assets last until the end of the scene, unless something 
+in the story makes them no longer relevant, or they’re 
+stepped down or eliminated.
+During play, you can add as many of your fictionally 
+appropriate assets to a dice pool as you’d like. Since you 
+spent a ●
+Ⓟ for the asset itself when you created it, you don’t 
+need to spend a second time to use it.
+Once created, assets are largely static. You can step them 
+up with GM opportunities, or with SFX that permit you to 
+do so. You can also spend a ●
+Ⓟ to make the asset last for 
+the rest of the session. If you don’t spend the additional 
+●
+Ⓟ, the asset goes away at the end of the scene.
+An asset is assumed to belong to the character of the 
+player that created it, and by default can’t be included in 
+anyone else’s pool. If you create an asset to help another 
+character (another PC or a GMC), you can declare the 
+ownership of the asset to be that character instead. In 
+this case, the other player (or the GM) may use it in their 
+character’s dice pool and you may not. You may spend an 
+additional ●
+Ⓟ to declare an asset to be open and usable 
+by any character in the scene (including GMCs); this is 
+in addition to any ●
+Ⓟ used to make it last longer than
+one scene.
+FREEFORM ASSETS AND COMPLICATIONS
+While narrative twists and turns move the story forward 
+after rolls, sometimes successes and failures lead to new 
+assets or complications. When the situation calls for it, 
+the GM may allow a successful test to create a ⑥ asset 
+for free. A player may then spend a ●
+Ⓟ to make that asset 
+last for the session rather than just the scene. 
+Similarly, the GM may rule that a failed test leads to a ⑥ 
+complication. Like other complications, the character can 
+attempt to remove these complications through a recov­
+ery test or wait for the complication to wear off.
+
+
+=== PAGE 39 ===
+TEST-CREATED ASSETS
+Players can create assets greater than ⑥ and without 
+spending ●
+Ⓟ by making a test. The player declares what 
+their character does to create the asset and assembles an 
+appropriate dice pool. The GM rolls to set the difficulty, 
+usually with something average like ⑥⑥. The effect die 
+of the test becomes the die rating of the asset.
+The GM may set a cap on the size of the assets generated in 
+this fashion by setting the difficulty dice to that die rating. 
+The asset created may not be larger than this die cap.
+Mary Rose sets a cap of ⑩ on the die rating for an 
+asset created by Tina’s Sage character, who is trying 
+to discover dirt on a crime boss. This suggests that 
+there simply isn’t enough evidence to justify a ⑫ 
+asset under any circumstances. The difficulty dice 
+are set to ⑩ ⑩, Mary Rose adds a ⑧ for the crime 
+boss’ trait of Plays Cards Close to His Chest ⑧, 
+and the dice are rolled to set the difficulty. If Tina 
+beats the difficulty, even if her effect die is a ⑫, the 
+size of the asset remains capped at ⑩.
+With a successful test (you beat the difficulty), your PC 
+gains some crucial information or gathers some useful 
+intel. If you spend a ●
+Ⓟ after you succeed at your test, 
+you can bank the asset until you need it, give it to another 
+character, or keep it for longer.
+With a failed test, you don’t gain any useful advantage.
+If you don’t beat the difficulty set by the GM, it’s business 
+as normal, essentially. If there are complications, they 
+generally represent the consequences of poking around 
+places trying to find stuff out, such as Enhanced Security, 
+I’m Being Followed, Skittish Bystanders, Tripped Alarms.
+THE LOGIC OF ASSETS
+If a PC picks up a crowbar to beat up some gangsters but 
+doesn’t spend a ●
+Ⓟ, should they still get an asset? After 
+all, they’ve still got a weapon, right?
+Well, no. Here’s the thing—the PC is one of the stars of 
+the story. If they get into a fight, they use whatever’s on 
+hand to their best advantage—that’s just a given. Picking 
+up the crowbar, going after the weakest guy, or looking 
+scary, this is all assumed to be part of kicking ass and 
+taking names—and having a high rating in Fight or Shoot.
+Spending the ●
+Ⓟ doesn’t magically make the crowbar they 
+picked up into something that’s more dangerous than 
+some other weapon. Instead, spending that ●
+Ⓟ makes the 
+statement that “this crowbar matters.” When they tell the 
+story of the fight, it’s “that time I beat up a gangster with a 
+crowbar” rather than just another fight where they picked 
+up whatever was on hand.
+This is equally true for almost any kind of weapon or tool. 
+If it exists in the story, if it’s something the GM or players 
+are using as part of their description, then it should be a 
+part of narrating the outcome of a test or contest, but it 
+doesn’t confer any more dice unless it’s turned into an 
+asset by spending a ●
+Ⓟ or some other way.
+In short: most objects in the game are color, setting, or 
+flavor, until they get a die rating and become an asset.
+CLUES AS ASSETS
+Anytime a PC wants to get a read on somebody, case a 
+scene, spot something out of the ordinary, or generally 
+just use their senses, they’re creating an asset. 
+The GM usually calls for the roll, though it’s just 
+as valid for you to ask for it. The difficulty for an 
+asset test is set by rolling a straight ⑥⑥—unless 
+the GM decides otherwise. Your dice pool for the 
+test is assembled from appropriate traits related 
+to senses or perception.
+GM’S ROLL
+DIFFICULTY
+15
+KINIXUKI
+TINA’S RESULTS 
+TOTAL
+ASSET CREATED
+19
+Evidence Asset 
+17
+Evidence Asset 
+13
+None
+
+
+=== PAGE 40 ===
+36 CHAPTER 1 PRIME CORE
+COMPLICATIONS
+Complications go into the opposition’s dice pool and 
+make it harder to succeed. (Adding dice to the opposi­
+tion is preferred to removing dice from the dice pool.) 
+Complications might include things like:
+•	 Extra-Alert Security
+•	 Slippery Floors
+•	 Broken Leg
+If your opponent has a complication attached to them, 
+you can use it when you oppose them if the complication 
+makes sense as something that would hinder or get in 
+your opponent’s way. Adding a complication to your dice 
+pool doesn’t cost anything. There’s no real limit to how 
+many complications you can add in this way, or how many 
+complications you can be saddled with.
+DOUBLE JEOPARDY
+Generally, only one complication applies to a specific 
+hindrance or problem. You likely wouldn’t suffer from 
+a Broken Leg and a Sore Leg complication at the same 
+time—the first complication assumes the other. If 
+you want to make a complication worse, it should be
+stepped up.
+CREATING COMPLICATIONS
+If you roll a 1—a hitch—on any of your dice, the GM 
+always has the option of introducing a complication. 
+Whether the PC succeeds or fails at the test or contest, 
+a complication means something else has gone wrong, 
+making life difficult.
+When the GM introduces a complication, the player gets a 
+●
+Ⓟ from the GM’s pile; aside from distinctions, this is the 
+main way for players to gain ●
+Ⓟ. The GM notes down the 
+complication, giving it a descriptive name—sticky notes 
+or index cards work well for this—with a ⑥ die rating. 
+For the rest of the session, if that complication comes into 
+play, the GM gets to roll an extra ⑥.
+If more than one hitch comes up on your dice, the GM 
+may choose to step up the complication by one step for 
+each additional hitch.
+Adam rolls three hitches on his dice. The 
+complication he gets when Mary Rose activates
+the hitches starts out as ⑩. However, Mary Rose
+still only pays a single ●
+Ⓟ, even though it was
+stepped up twice for the additional hitches. 
+BURAK KIRK
+ADAM’S ROLL
+GM’S COST
+RESULT
+ complication
+ complication
+ complication
+
+
+=== PAGE 41 ===
+37
+CHAPTER 1 PRIME CORE
+The GM may also choose to step up an existing complica­
+tion instead of introducing a new complication, putting 
+pressure on players who are locked in a fight or trying to 
+escape the authorities.
+Amanda incurs a Wanted by State Police ⑥ 
+complication when she rolls a single hitch, but
+Mary Rose steps that complication up to a ⑩
+when her next roll includes two more hitches.
+These complications should represent the PC’s injury or 
+setback, such as Broken Arm or Identity Theft.
+The die rating of this complication is equal to the effect 
+die of the opposition. So, if the GMC’s attack roll had a ⑩ 
+effect die, then the complication starts out as a ⑩. If the 
+complication comes from something other than a die roll, 
+it begins at a default ⑥.
+The GM can decide that you must step up an existing 
+complication by one when you take this option or when 
+you roll a hitch on a subsequent roll of the dice, if the 
+existing complication is equal to or larger than the die 
+rating of the new complication. Characters may be taken 
+out once the complication is stepped up beyond ⑫. 
+If a complication is ever stepped up beyond a ⑫, it has 
+overwhelmed the PC and keeps them from acting further 
+in the scene until the complication is removed or no 
+longer hinders them. You can overcome this for a single 
+test or contest by spending a ●
+Ⓟ, but you may only keep 
+one die for your total rather than two. This is a severe 
+handicap, but sometimes it’s necessary.
+OPPORTUNITIES
+If the GM rolls a 1 on their dice, this hitch is also known 
+as an opportunity (i.e., an opportunity for the player to 
+do something), and any player can spend a ●
+Ⓟ to step an 
+existing complication down to a smaller size die. A ⑥ 
+becomes a ④, and a ④ goes away. If the GM’s dice include 
+multiple 1s, you may step down existing complications 
+by more than one step. You still only pay a single ●
+Ⓟ per 
+complication affected.
+Players can also spend a ●
+Ⓟ to activate an opportunity 
+to step up an asset—with a maximum of ⑫—for the rest 
+of the scene. Multiple opportunities allow you to step up 
+existing assets by more than one step. Even signature 
+assets can be stepped up, but only for the scene.
+COMPLICATIONS AS CONSEQUENCE
+Complications may also represent those times when char­
+acters are hurt or suffer a debilitating setback—physical, 
+mental, or social. Instead of being taken out, you can 
+choose to spend a ●
+Ⓟ and take a complication. This works 
+just as if you’d rolled a hitch on your dice, but you spend 
+a ●
+Ⓟ instead of gaining a ●
+Ⓟ.
+Amanda’s Engineer fails to stop an assault from a 
+giant mechanical spider, and already has a Battered 
+and Bruised ⑩ complication. Not wanting to be 
+taken out, she spends a ●
+Ⓟ to take a complication 
+instead. Mary Rose’s effect die is a ⑧, so taking this 
+steps up Amanda’s existing complication to ⑫.
+Like the players, the GM may decide to accept complica­
+tions on a GMC instead of allowing that GMC to be taken 
+out. If the GMC loses a contest to a PC that would result 
+in them being taken out (such as being shot or struck in 
+the head) the GM may hand over a ●
+Ⓟ to the player who 
+won the contest and add a complication to the GMC equal 
+to the effect die in the player’s roll. This should be used 
+sparingly and only to drive the story forward, rather than 
+to frustrate the players.
+RECOVERING FROM COMPLICATIONS
+Many complications are simply temporary problems and 
+will go away before the next scene begins. Complications 
+that represent major consequences, however, stick 
+around. To get rid of them, the group must test their traits 
+to recover.
+Getting rid of or reducing a complication is a test vs a dice 
+pool consisting of the complication and a base difficulty 
+of ⑧ ⑧.
+GM’S ROLL
+ADAM’S COST
+RESULT
+⑧ complication steps
+down to ⑥
+⑧ complication steps
+down to ④
+⑧ complication
+is eliminated
+ROUND
+AMANDA’S ROLL
+RESULT
+1
+Wanted by State Police 
+2
+Wanted by State Police 
+PREVIOUS CONDITION
+Amanda’s Engineer incurred a Battered and Bruised ⑩ 
+complication from a previous contest.
+AMANDA’S ROLL 
+SPIDER’S ROLL
+The Engineer’s Battered and Bruised ⑩
+complication steps up from the effect die to
+become Battered and Bruised ⑫.
+
+
+=== PAGE 42 ===
+38 CHAPTER 1 PRIME CORE
+PLAYER’S ROLL 
+TOTAL
+DIFFICULTY
+17
+15
+The Broken Arm ⑩ complication is eliminated.
+If you beat the difficulty and your effect die is 
+greater than the complication, the complication 
+is eliminated.
+Other traits may also affect the roll, as it’s easier to heal 
+a gunshot wound in a Hospital and harder to shake off a 
+concussion in a Noisy Room. In addition, the PC or their 
+circumstances must be capable of improving the situation 
+to make a roll.
+When the test is complete, one of the following happens:
+If you fail to beat the difficulty and roll a hitch, 
+the complication is stepped up by one step for every 
+hitch rolled, which turns a Broken Arm ⑩ into a 
+Broken Arm ⑫.
+PREVIOUS CONDITION
+PC has an existing complication of Broken Arm ⑩.
+PREVIOUS CONDITION
+Existing complication of Broken Arm 
+ 
+stepped down from previous successful rolls; 
+adding the 
+ gains a ●
+Ⓟ for the player.
+PLAYER’S ROLL 
+TOTAL
+DIFFICULTY
+9
+15
+The Broken Arm ⑩ complication remains as is.
+④ COMPLICATIONS
+If a complication is stepped down to a ④, the very next 
+time the complication might affect your character, you 
+add it to your own dice pool and earn a ●
+Ⓟ (much like a 
+distinction being used with the Hinder SFX). Immediately 
+after it’s used this way, it’s stepped down to zero and 
+eliminated—unless the dice come up with one or more 
+hitches, in which case the GM may choose to activate 
+them and step up the complication to ⑥ or more.
+SCENARIO 1
+SCENARIO 2
+PLAYER’S ROLL 
+TOTAL
+DIFFICULTY
+11
+15
+The Broken Arm ⑩ complication is stepped up to ⑫.
+PLAYER’S ROLL 
+TOTAL
+DIFFICULTY
+13
+15
+Option A: The Broken Arm ⑩ complication is stepped up 
+beyond ⑫ thus taking out the character out of the scene.
+Option B: The Broken Arm ⑩ complication is stepped 
+up to ⑫ and the GM can spend a ●
+Ⓟ to create a new 
+complication, Infected Arm ⑥.
+PLAYER’S ROLL 
+TOTAL
+DIFFICULTY
+16
+15
+The Broken Arm ⑩ complication is stepped down to ⑧.
+PLAYER’S ROLL 
+TOTAL
+DIFFICULTY
+18
+15
+The Broken Arm ⑩ complication is eliminated,
+but due to the hitch, the GM spends a ●
+Ⓟ to create
+a new complication, Splinted Arm ⑥.
+SCENARIO 5
+SCENARIO 3
+SCENARIO 4
+This rule keeps the lowest rating of complications from 
+creating more problems for the opposition. The increased 
+chance of rolling a hitch on a ④ means there’s an added 
+chance of a new complication being created or the current 
+complication getting worse as a result of continued activ­
+ity by the player.
+If you beat the difficulty and the effect die is equal 
+to or smaller than the complication, the complica­
+tion is stepped down by one. You can’t try to recover 
+that complication again until time passes.
+If you fail to beat the difficulty, the complication 
+remains as it is.
+If you beat the difficulty but roll a hitch, the GM 
+may hand over a ●
+Ⓟ and introduce a new compli­
+cation related to the one that was just recovered, 
+turning a Broken Arm ⑩ into a Splinted Arm ⑥.
+PC’S ROLL
+RESULT
+No Hitches
+Broken Arm 
+ complication eliminated
+Broken Arm 
+ stepped up to 
+Broken Arm 
+ stepped up twice to 
+
+
+=== PAGE 43 ===
+39
+CHAPTER 1 PRIME CORE
+ASSET AND 
+COMPLICATION 
+MODS
+These mods change the way that assets and 
+complications work in your Cortex Prime game.
+STRESS
+With this mod, instead of using complications to track 
+injury, damage, or other negative personal effects on 
+characters, you implement a distinct trait called stress. 
+Complications can still be in play, but they represent 
+external hindrances, obstacles, or other problems that 
+aren’t direct injury or negative personal conditions like 
+exhaustion or pain.
+Stress replaces the rule about players choosing to spend 
+●
+Ⓟ to take a complication instead of being taken out. 
+Stress doesn’t require players to spend ●
+Ⓟ; any time a 
+failure at a test or contest might take you out or cause 
+harm, you take stress instead.
+Any attack or effect that can take you out:
+•	 Inflicts stress equal to the effect die in the attack 
+(if the PC currently has no stress or a lower die 
+rating of stress than the new stress die).
+•	 Steps up stress (if the PC already has a stress die 
+rating equal to or greater than the new stress die).
+Amanda’s Engineer has ⑧ stress and takes ⑧ 
+additional stress. This steps up the existing stress 
+to ⑩. If she has ⑧ stress and instead takes ⑫ 
+additional stress, this replaces the current ⑧ stress 
+die with ⑫ stress.
+Stress rated at ④ functions just like a complication rated 
+at ④; it goes into a player’s dice pool instead of being 
+added to the opposition dice pool and earns the player 
+a ●
+Ⓟ. Right after that test or contest, it either goes away 
+or—if the player rolls a hitch on one of their dice—gets 
+stepped up as the injury gets worse.
+Only one type of stress can be used against a character 
+at any given time, unless the GM pays the player a ●
+Ⓟ to 
+add an additional stress die to the opposition dice pool. 
+Characters can be affected by both stress and complica­
+tions at the same time, however.
+COEY KUHN
+
+
+=== PAGE 44 ===
+40 CHAPTER 1 PRIME CORE
+TYPES OF STRESS
+Typically, a character can be afflicted by one or more 
+types of stress, depending on the game. Some games 
+simply have a single stress track; others might distinguish 
+between types, such as:
+•	 Physical, Mental, Social
+•	 Afraid, Angry, Exhausted, Injured, Insecure
+Stress is a useful mod to use when you want your SFX or 
+other game mechanics to cause or affect specific types of 
+harm. It reduces the need to track quite so many compli­
+cations at any given time; instead, you just track one or 
+more stress dice. Stress also leads to other mechanical 
+tricks, such as using stress to help the character at the 
+risk of making things worse.
+Characters can still choose to inflict complications on 
+their opponents; these are created in the same manner as 
+stress, but represent such things as deliberately hindering 
+an opponent, creating distractions, and so on.
+RECOVERING STRESS
+All stress die ratings are always stepped down by one 
+during any scene specifically framed to act as a rest 
+period, downtime, or transition between action-heavy 
+scenes. If a character takes stress in one scene from a 
+battle, and the next scene is another battle soon after 
+the first without any time spent resting up, then no stress 
+is recovered. To recover any remaining stress, use the 
+guidelines for recovering complications on page 37.
+STRESSED OUT
+If any stress die rating is ever stepped up past ⑫, the 
+character is taken out (or stressed out) and no longer 
+takes part in the scene. By default, you can’t spend a ●
+Ⓟ 
+to delay this effect, though certain SFX or other rules may 
+be implemented to do that. When you’re stressed out, you 
+are assumed to have ⑫ stress for the purposes of taking 
+any additional stress, even though you can no longer act 
+in the scene.
+PUSHING STRESS
+With this mod, players may choose to have their character 
+shoulder through their pain and suffering and use it as 
+a motivator rather than a setback. To do this, you spend 
+a ●
+Ⓟ and instead of adding the stress to the opposing 
+dice pool, you add it to your own dice pool for that test 
+or contest.
+Using stress in this fashion has an additional cost. After 
+the test or contest is resolved, the stress die included in 
+your dice pool is stepped up by one. This may result in 
+the PC being stressed out if the die is stepped up past ⑫.
+In some games, this rule may be built into an SFX on a 
+distinction or a power set. In this case, the SFX usually 
+doesn’t require a ●
+Ⓟ to activate; the drawback on the SFX 
+is the worsening of the stress die.
+PREVIOUS CONDITION
+PC has an existing stress of Exhausted ⑩.
+PC’S ACTION
+PC’S DICE POOL
+GM’S DICE POOL
+Nothing
+   
+   
+The PC’s stress of Exhausted ⑩ remains the same.
+PC’S ACTION
+PC’S DICE POOL
+GM’S DICE POOL
+Spends a ●
+Ⓟ
+   
+ 
+The PC’s stress of Exhausted ⑩ steps up to ⑫ after the
+contest is resolved (or by more if hitches are rolled).
+
+
+=== PAGE 45 ===
+If you beat the difficulty, the trauma die rating is 
+stepped down by one. 
+TRAUMA
+Trauma is like long-term stress. Any time a PC’s stress is 
+stepped up past ⑫, they’re stressed out of the scene, and 
+they gain ⑥ trauma of the same type of stress that just 
+increased. Trauma functions just like stress but is much 
+harder to recover.
+During any scene in which a character is stressed out and 
+has taken trauma, additional stress to the character goes 
+directly to trauma. Once trauma is stepped up beyond 
+⑫, the character is permanently out of options—they’re 
+dead, hopelessly incoherent, lost to their own psyche, or 
+whatever seems most appropriate.
+If you beat the difficulty but roll a hitch, the GM 
+may hand over a ●
+Ⓟ and introduce either a compli­
+cation that will hinder the PC in the next scene or 
+inflict stress of a different type than the trauma that 
+was being recovered, starting at ⑥ (or stepping up 
+by one if the PC already had stress of that type).
+PREVIOUS CONDITION
+PC has incurred the trauma of Exhausted (see below table 
+for values) from a previous contest. They become stressed 
+out again before recovering their trauma.
+PREVIOUS CONDITION
+PC has incurred a trauma of Exhausted ⑥.
+SCENARIO 1
+SCENARIO 2
+SCENARIO 3
+SCENARIO 4
+PC’S ROLL 
+PC’S TOTAL
+DIFFICULTY
+12
+10
+The Exhausted ⑥ trauma steps down to ④.
+If the next scene is a recovery, transition, or otherwise 
+restful scene in which the PC can be taken care of or 
+allowed to recuperate, the PC’s stress automatically steps 
+down by one, but the trauma remains at the level it was at 
+the end of the previous scene. Recovering trauma requires 
+a test using any appropriate traits vs a base difficulty of 
+⑧ ⑧ plus the trauma die.
+IF TRAUMA IS...
+THEN...
+Exhausted 
+ trauma stepped up to 
+Character is taken out of the
+game permanently
+PC’S ROLL 
+PC’S TOTAL
+DIFFICULTY
+10
+10
+The Exhausted ⑥ trauma is unchanged.
+PC’S ROLL 
+PC’S TOTAL
+DIFFICULTY
+15
+10
+The Exhausted ⑥ trauma steps down to ④ and if the GM 
+spends a ●
+Ⓟ, the PC can incur a new stress starting at ⑥ or 
+step up an existing stress rating different from Exhausted.
+PC’S ROLL 
+PC’S TOTAL
+DIFFICULTY
+0
+10
+The Exhausted ⑥ trauma steps up to ⑫.
+STEPH C.
+If you fail to beat the difficulty, the trauma does 
+not get any better or worse. You can’t try to recover 
+that trauma again until time passes. 
+If you fail to beat the difficulty and roll one or 
+more hitches, the trauma gets worse, stepping up 
+by one for each hitch rolled. If this steps the trauma 
+up past ⑫, that’s all, folks.
+
+
+=== PAGE 46 ===
+42 CHAPTER 1 PRIME CORE
+SHAKEN AND STRICKEN
+This mod applies stress dice directly to specific traits, 
+such as attributes or skills. Determine which trait set 
+before the game starts. Any time a character would take 
+stress, the opponent chooses which trait gets it.
+Adam’s playing a Hero in a Georgian era 
+swashbuckling action game and his Hero gets shot 
+with a blunderbuss. Mary Rose, who is using the 
+Shaken and Stricken mod for this game, takes the ⑧ 
+effect die of the blunderbuss attack and applies it as 
+a ⑧ stress die to Adam’s Physical attribute.
+If the stress applied to a trait is greater than the trait it’s 
+assigned to, the PC is considered shaken. They can only 
+keep one die for their total. If they’re already shaken and 
+take stress to another trait that would make them shaken, 
+they’re considered stricken and are taken out of the scene 
+until they can recover.
+ORIANA MENENDEZ
+YANGTIAN LI
+Stress applied to an attribute is added to the opposition’s 
+dice pool whenever the player uses that attribute in a 
+test or contest. The exception is when the stress is a ④, in 
+which case the player includes the ④ in their own dice 
+pool as per the basic ④ complications rule on page 38.
+SHAKEN!
+PC can only keep one die 
+for any future contests.
+STRICKEN!
+Having another trait 
+shaken takes the PC out 
+of the scene.
+A character also becomes stricken if any of their stress 
+is stepped up beyond ⑫. Stress is recovered in the same 
+way as other stress-based mods.
+GM’S ATTACK
+GM’S TOTAL
+ADAM’S TOTAL
+18
+12
+Physical
+Mental
+Social
+STRESS EFFECT
+Whenever Adam uses 
+Physical ⑩ in a dice pool, 
+the opposition gets to add
+a ⑧ to their own pool
+for the stress applied to 
+that trait.
+Physical
+Mental
+Social
+⑧ STRESS
+Physical
+Mental
+Social
+⑫ STRESS
+⑩ STRESS
+Physical
+Mental
+Social
+⑫ STRESS
+
+
+=== PAGE 47 ===
+LIFE POINTS
+Instead of using complications or stress to reflect harm 
+to characters, some Cortex Prime games might choose 
+to use a system of life points instead. Life points are a 
+classic option that eliminates the hindering aspect of 
+taking damage and instead uses damage as a pacing 
+mechanism for conflict.
+All characters have a number of life points based on two of 
+their traits. The die rating of those traits is added together 
+to get the baseline life point score. Which traits are added 
+together depends on the game and which traits are being 
+used. Using the example trait sets, life points are equal to 
+Physical + the highest of Fight, Focus, and Survive.
+Amanda’s Engineer has Physical ⑧, Fight ④, 
+Focus ⑥, and Survive ⑥. She has 14 life points
+(8 from Physical ⑧, and 6 from either Focus ⑥
+or Survive ⑥).
+If you’re using different prime sets, base life points on two 
+traits that emphasize hardiness, willpower, or stamina.
+Life points can be handled in one of two ways. The first 
+is an ablative method; the second is a threshold method. 
+In either method, rather than adding the effect die as a 
+complication (or stepping up an existing complication), 
+the GM or player takes the difference between what the 
+player needed to roll to beat the difficulty and what the 
+player actually rolled and applies that as damage. Some 
+games may have the damaging character roll an addi­
+tional die from a signature asset, or gear, or some kind of 
+power, and add that to the damage.
+ABLATIVE LIFE POINTS
+With this method, the damage taken from attacks is 
+subtracted from the player’s life point score. If the PC’s 
+life points drop to 0 or a negative amount, they are taken 
+out of the scene and are clinging to life. Without some first 
+aid or intervention, the player must spend a ●
+Ⓟ to keep 
+them alive, and any additional damage taken by the PC 
+forces the same ●
+Ⓟ spend until the total negative amount 
+of damage is equal to the original life point score. If this 
+happens, the PC is dead.
+THRESHOLD LIFE POINTS
+With this method, damage is split evenly into wounds 
+and stun, before any additional damage from weapons 
+or signature assets or powers is rolled; that additional 
+damage is applied either to stun only, wounds only, or 
+evenly split between both. Wounds and stun are marked 
+off on two separate tracks that start at zero and go as high 
+as the life point score.
+If the accumulated wounds and stun, added together, 
+exceed the life point score, the PC is unconscious. This 
+includes having no wounds and stun that exceeds the life 
+point score all by itself.
+If the total wounds (not counting stun) exceed the life 
+point score, the PC is dead.
+GRACE P. FONG
+PC’S LIFE 
+POINTS
+STUN
+WOUNDS
+PC’S STATUS
+14
+8
+7
+Unconscious
+14
+15
+0
+Unconscious
+14
+10
+15
+Dead
+CLASSIC CONVERSION NOTE
+Threshold life points is the method used in Classic Cortex games. 
+When creating Cortex Prime games that approximate the classic 
+approach, pay particular attention to mods that increase the total 
+of dice rolls as these also increase wounds and stun.
+RECOVERING LIFE POINTS
+Characters who have taken damage and need to either 
+recover lost life points (ablative method) or get rid of 
+accumulated damage (threshold method) must make 
+recovery tests. The difficulty is typically the standard 
+difficulty dice of ⑥⑥ plus any relevant complications 
+or other traits that might make it difficult. The amount 
+that the player beats the difficulty by is the number of 
+life points recovered (ablative) or is divided equally into 
+recovered wounds and recovered stun. PCs using the 
+threshold method can recover all stun damage at the end 
+of any scene, assuming they have an opportunity to rest, 
+heal, or seek treatment; proper medical treatment during 
+downtime can eliminate wounds with tests beyond the 
+PC’s own recovery tests.
+
+
+=== PAGE 48 ===
+JASON ENGLE

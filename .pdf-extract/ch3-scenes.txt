@@ -1,0 +1,1559 @@
+
+=== PAGE 91 ===
+87
+CHAPTER 3 PRIME SCENES
+CHAPTER BREAKDOWN
+This chapter covers a number of topics relating to the 
+management of scenes. 
+What Are Scenes? This section explains what scenes and beats 
+are, as well as the six standard types of scenes.
+Running Scenes: This section includes how to frame a scene and 
+how to end it, as well as how to run different types of scenes and 
+which game mechanics are used to do so.
+What Is Conflict? The remainder of the chapter breaks down
+the use of conflict in scenes, specifically how to manage the 
+action order and use tricks like timed tests and scale
+differences to spice up a scene.
+Every session of play is broken down into scenes that involve characters trying to resolve 
+the challenges and obstacles in their path toward success, victory, or character growth. 
+This chapter looks at scenes and explains the different sorts of scenes characters might 
+be involved in, and what goes into each scene from a rules point of view.
+PRIME
+SCENES
+CHAPTER 3
+
+
+=== PAGE 92 ===
+88 CHAPTER 3 PRIME SCENES
+A scene in Cortex Prime is much like a scene in a movie, a 
+novel, or a play: a unit of story in which characters interact 
+with each other and the setting. Scenes are always framed 
+by the GM, which means the GM describes where the 
+scene takes place, which of the PCs is there, and what is 
+going on. We encourage the GM to ask the players leading 
+questions to give them an opportunity to explain why 
+their PC is present, what they’re doing, and so forth. A 
+scene doesn’t need to involve the dice until the back and 
+forth—the GM presenting the situation and the players 
+saying what they’re doing—comes to a point of conflict 
+or decision.
+Breaking a session into scenes allows the GM to skip past 
+otherwise uninteresting periods of time or storyline and 
+get right to a charged situation, a set of circumstances 
+that might reveal interesting developments. Traveling 
+by train from Chicago to Minneapolis isn’t a scene, but 
+the group chatting over bad dining car food right as the 
+bridge ahead gets blown up by explosives is a scene.
+A scene ends when the primary objective or situation 
+of the scene is resolved. There’s no need to wrap up the 
+scene beyond its logical ending point or let conversations 
+between the characters continue to ramble. The GM can 
+just call “Scene!” or something like that, and go immedi­
+ately to “Okay, three hours later…”
+Scenes can be further broken down into beats, which is 
+how we track all of the things that happen in a scene.
+WHAT ARE BEATS?
+A beat is the smallest dramatic unit of the story. If two PCs 
+try to crack a bank vault’s door, that’s a beat. If a PC guides 
+a boat through a harbor filled with mines, that’s a beat. If 
+a PC hides in a closet while a creature stalks through the 
+house, that’s a beat. If a PC spends hours online research­
+ing a corrupt mining conglomerate, that’s a beat. The trick 
+is that it doesn’t matter how long or short the activity is, 
+but how simple it is.
+A PC may spend all night pulling out the guts of a pickup 
+truck’s engine, but it’s one beat because it can be boiled 
+down to “My PC fixes the pickup truck’s engine.” In 
+contrast, within the span of thirty seconds, another PC 
+somersaults through an open window, takes a wild shot 
+at a security guard, shoots out the tires on the security 
+guard’s nearby car, and jumps onto the back of a delivery 
+truck that’s taking off—four separate beats.
+There’s no fixed number of beats in a scene; they’re just a 
+convenient use of time within which you can frame some­
+thing that a player character tries to do—a test. Thinking 
+in terms of beats should give you a gut sense of the tests a 
+player needs to make to do what they want to do.
+A PC makes a test to somersault through the open window 
+(success), then takes one to shoot at the guard (failure), 
+one to shoot the tires (success), and one to jump onto the 
+truck (success).
+WHAT ARE SCENES?
+REZA AFSHAR
+
+
+=== PAGE 93 ===
+89
+CHAPTER 3 PRIME SCENES
+TYPES OF SCENES
+Cortex Prime divides scenes into different types 
+that serve specific functions. This may be useful 
+in pacing out sessions and giving certain char­
+acters more opportunities for using their skills 
+and abilities with some regularity.
+OPENING SCENES
+Opening scenes, also known as establishment 
+scenes, are designed purely to set up the core 
+problem or situation of any given session. They 
+set up what the characters are doing when the 
+session starts, establishes where they are, who 
+they’re with, and what they’ve been doing since 
+the previous session. You can manage bookkeep­
+ing in opening scenes, introduce or foreshadow 
+characters and ideas you plan to confront the 
+players with later, and so forth.
+ACTION SCENES
+Action scenes involve high stakes, cinematic action, and 
+opposing forces in combat or challenge. They typically 
+feature tests and contests, or might use the action order 
+(page 98) to manage beats. Action scenes often make up 
+the bulk of the scenes in a session.
+BRIDGE SCENES
+Bridge scenes, also called transition scenes, represent 
+downtime between action scenes. In some games, they 
+might be the only scenes in which PCs can create, recover, 
+or upgrade assets and eliminate or recover complications 
+without high difficulty. Use bridge scenes when the PCs 
+are regrouping, checking in on contacts or extras, or 
+making plans.
+EXPLORATION SCENES
+Exploration scenes—a variation on bridge scenes—are 
+often reduced to montages or red travel lines drawn across 
+maps. They may feature tests against the environment or 
+even traps and puzzles, but the focus is less on action and 
+more on getting from one place to another, finding the 
+way to the next action scene. They’re similar to bridge 
+scenes in that they link action scenes, but they can serve 
+the specific purpose of passing time without simply hand 
+waving the experience.
+FLASHBACK SCENES
+A flashback scene is often used in tandem with a callback 
+(page 82), but not necessarily. Flashback scenes serve the 
+primary purpose of establishing an asset or relationship 
+and filling in some backstory that the GM or players want 
+to bring up in the current scene. A flashback scene can 
+interrupt another type of scene, but it shouldn’t be drawn 
+out, since flashback scenes often involve only one or two 
+PCs and the GM.
+TAG SCENES
+A tag scene is the last scene in any session and represents 
+the “here’s what we learned” scenes between characters. 
+This type of scene is important in a game that uses growth 
+and trait statements to represent advancement; players 
+can roleplay that growth in tag scenes.
+A tag scene is short, summarizes or ties up loose ends, and 
+each character may be in several tag scenes at the end of 
+a session depending on how many important characters 
+(PCs or GMCs) they might be tangled up with.
+NATALIA BACETTI
+
+
+=== PAGE 94 ===
+90 CHAPTER 3 PRIME SCENES
+RUNNING 
+SCENES
+The primary goal for the GM in any scene is to set 
+it up (frame it) and then see what happens. Often, 
+the GM has no idea what the end of the scene will 
+look like, so there’s as much of a sense of discov­
+ery in framing scenes as there is in playing them.
+FRAMING THE SCENE
+As the GM, one of your primary responsibilities is setting 
+up each scene or framing the scene, to use cinema lingo. 
+Of all of your tools, this one places the most authority on 
+you. It’s a powerful thing, because it means you get to 
+decide the most basic things about the scene: where it 
+is, who’s there, what’s going on, why it’s happening, and 
+when all of this takes place. You’re painting a mental 
+picture for the players, getting them ready to jump right 
+into the story again. You can add distinctions to the 
+scene that any PC or GMC can use, complete with SFX. 
+You can also add predefined assets or complications. See 
+“Locations as GMCs” on page 116 for more.
+Once you’ve framed the scene, this authority shifts back 
+toward the players and the game’s rules; players tell you 
+what they want to do, the rules help you figure out what 
+dice are required if any, and everyone gets to see what 
+happens. Sometimes, the scene is only a couple of beats 
+and it’s done—other times, it can take up a good part of 
+the session! 
+WHERE AND WHEN IS IT?
+First decide where the scene takes place. Is it a location 
+familiar to the players? That’s easy, you won’t need to 
+go into too much detail. Is this somewhere new? Take a 
+moment to set the stage: give the players a quick rundown 
+of the location and what’s there. Then let the players know 
+how long after the last scene this is—is it later in the day? 
+The next day? A week? If a scene happens immediately 
+after another one, make sure you communicate this right 
+up front.
+Don’t spend a lot of time providing them with an inven­
+tory of the location’s contents, but do try to engage at least 
+two senses, like sight and touch, smell and sound. If you 
+can hit the main elements of a scene, like “It’s a smoky 
+bar in a shady part of town, not too far from the river; the 
+ceiling’s covered in years of soot and the furniture’s seen 
+better days,” then you’ve given the players plenty to go on.
+Similarly, you don’t have to tell the players everything 
+that’s happened in the time between this new scene and 
+the last. If it’s been a week since a big fight that the players 
+were involved in and you’re not worrying about a bridge 
+scene, then you can just say “It’s been a week of fruitless 
+searching for the mercenary who escaped you, but you 
+think you’ve got a lead.” Tell them what time of day it is, 
+since that can make a big difference.
+Sometimes it’s okay to let the players take the lead when 
+it comes to the where and when. If the players tell you, 
+“We’re going to go downtown to the club later that night 
+and see if the gang boss is there,” then that’s a good reason 
+to set the scene at the club and at night. On the other 
+hand, you don’t have to abide by that if you don’t want to. 
+You can even redirect that with something like: “The club 
+doesn’t seem to be crowded, and the gang boss is nowhere 
+to be seen. On the way back from the club, however…”
+WHO’S THERE?
+The GM gets to say who’s in a scene and who isn’t, and that 
+includes which PCs start out in the scene and which ones 
+don’t. Sometimes a scene is just between two of the PCs 
+and a GMC contact of theirs, and other times the whole 
+group is present. You can take a hint from the players if 
+they seem really interested in splitting up and going in 
+two different directions—frame a scene with one of the 
+two groups, and then move to another scene with the rest 
+of them after you’re done with the first one.
+You absolutely do not need to put all of the PCs together in 
+every scene. Sometimes the scene only needs a couple of 
+them, for instance if three characters meet up at a restau­
+rant to share information. Other times, the scene might 
+only have one PC in it to start with.
+
+
+=== PAGE 95 ===
+WHAT’S HAPPENING?
+The final element of scene framing is setting up what’s 
+actually going on in the scene when it starts. You want 
+to convey a sense of action so the scene is alive from the 
+beginning; you can do this by setting things in motion—
+trees have the wind in their branches, crowds of people 
+are moving along the street, rain is bouncing off the 
+tin roof, and so on. You’re establishing the mood of the 
+scene with a couple of details, and that helps the players 
+complete that mental picture.
+You also want to figure out what’s happening with the 
+players as the scene starts. It’s one thing to tell them they 
+emerge from the tunnel into a treasure vault filled with 
+coins and gems. It’s quite another thing to describe them 
+tumbling in from the chute above, arguing with each 
+other about who pulled the lever that dumped them here.
+Remember, the players will take their cues from you. If 
+you describe things as static it can take a lot for them to 
+get things moving. If you start things in motion, even just 
+a little, you’re setting up a scene that encourages activity.
+Even a bridge scene intended to be a period of recovery 
+and reflection can be framed as part of a living, breath­
+ing world, rather than a snapshot. Don’t be afraid to use 
+GMCs and other incidental characters or creatures to 
+make it alive, regardless of whether or not the PCs are 
+going to do something.
+SCENE FRAMING TRICKS
+It’s easy to fall into a comfortable but repetitive pattern 
+with scene framing. These techniques, drawn from liter­
+ary and cinematic screenwriting, help you start scenes off 
+with some variety and shake things up a little.
+“WHY ARE YOU HERE?”
+Sometimes you’ve got an idea to put a character some­
+where and you’re not actually sure why they’re there. You 
+might just need a character to be somewhere because it’s 
+about time for them to confront the big bad of the session, 
+or you want to introduce a couple of new GMCs but you 
+haven’t nailed down why the group is at this particular 
+meeting place. Some GMs have the impulse to ask the 
+players if their characters would be there or not. But if 
+you give them a yes or no question, the answer might be 
+“no” and you’re left with an empty scene.
+Instead of if, ask the player why their character is there. 
+Put it on them to suggest a reason, a motivation, or a 
+goal based on their character’s traits. Players know their 
+characters better than you do; by presenting a question 
+of “why?” rather than “would you?” you invite them 
+to fill in the gaps with something that makes sense for
+their character.
+Sometimes I might ask a player not only why they’re there, 
+but why another character is with them. This encourages 
+players to set up fun rivalries or partnerships that they 
+might not pursue otherwise. “Why is your knight here 
+arguing with Amelie’s knight?” for example. Or, “Why did 
+your police detective tell Amelie’s medical examiner to 
+meet you at the docks?”
+ALEXANDRA MIMS COOK
+
+
+=== PAGE 96 ===
+92 CHAPTER 3 PRIME SCENES
+WHEN TO END THE SCENE
+Just as the GM frames the scene, it’s the GM’s job to end it. 
+Cortex Prime works best when scenes are short, punchy, 
+get things done, and cut away to move onto another scene 
+before they become long, dragged-out affairs with char­
+acters sitting around waiting for more things to happen. 
+Here’s a few guidelines about how to determine if your 
+scene has hit the ending point.
+ALWAYS LEAVE THEM WANTING MORE
+It might seem like you should resolve everything before 
+the end of a scene, but the best writers know that keeping 
+some questions unanswered keeps people interested in 
+what will happen next. If a problem surfaces during a 
+scene, it might not be resolved until another scene comes 
+around. It’s important that the status quo changes during 
+a scene—otherwise the game feels static—but you can 
+extend major developments over a number of scenes 
+(and with a number of different characters and locations) 
+before you finally tie the knot in it.
+CUT BEFORE THE SECOND LULL
+It’s natural for some scenes to start out all storm and 
+thunder but slow down somewhere in the middle as the 
+players figure out what’s happened, make some decisions, 
+and contemplate their next moves before the action picks 
+right back up again. The trick is to end the scene before 
+this happens twice. Let players charge back in after a 
+mid-scene pivot, and then cut away before you lose any of
+that momentum.
+IMPASSE
+Sometimes there’s a clear point at which two opponents 
+are trading blows, barbs, or bluster back and forth in a 
+contest for several rolls but nothing meaningful seems 
+to be happening. You’ve reached an impasse, and this 
+drops the mood as other players, eager to jump back into 
+the game, have to deal with the repetition of it all.
+FRAMING AFTER ARRIVAL
+Frequently a scene starts with the PCs showing up some­
+where, especially when you’re following the natural 
+progression of the last scene’s activity. If the players all 
+decide that their characters are heading off to the herbal­
+ist to find a rare herb that’s needed for a ritual, you don’t 
+need to start the next scene with the PCs showing up at 
+that herbalist’s shop. Instead, you can skip ahead, explain 
+that they were there and found the herb without much 
+trouble, and frame the scene with them leaving the shop. 
+Then, you surprise the players with an ambush of assas­
+sins sent from an enemy who wants to keep them from 
+performing the ritual, since that’s the scene you want to 
+play out.
+It’s fine to move things along in this way even if you’d 
+otherwise be calling for a test for the thing that you’re 
+skipping over. Sometimes that sort of test won’t really 
+give you anything interesting anyway, and it’s more inter­
+esting to assume the PCs are successful and get to the
+juicy stuff.
+IN MEDIAS RES
+One of my favorite tricks is to start a scene in medias res, 
+which means “in the middle of things.” With this trick, the 
+scene opens with the action already in progress. Describe 
+the PCs standing back to back, dozens of ninjas with their 
+swords drawn around them. Or describe the carnage of 
+a dozen fallen ninjas, the PCs flicking blood from their 
+own blades as the ninja’s wicked master emerges from 
+his sanctum.
+Beginning a scene in medias res carries a few risks. Some 
+players really don’t want to skip over that action because it 
+assumes choices they wouldn’t have made. Others might 
+want to have done something before the scene went this 
+far, such as set up an ambush or scout around. As terrific 
+a narrative device as this is, you should go into it with a 
+clear understanding of your players’ preferences. 
+
+
+=== PAGE 97 ===
+ALEXANDRA MIMS COOK
+93
+CHAPTER 3 PRIME SCENES
+When this happens, end the scene and return to this very 
+same conflict later in a new scene. You can pick the action 
+right up again and start a new contest with new rolls, even 
+though it’s technically continuing the last one. Unfolding 
+developments in later scenes might give the conflict in the 
+stalled scene more context and meaning, which could 
+invigorate it from whatever state it had fallen to.
+THE BUTTON
+Sometimes it’s obvious when a scene is done. Somebody 
+says something hilarious, somebody delivers a finishing 
+blow, somebody pulls open a door and there’s a monster 
+behind it. That’s your cue to push the big red button and 
+end the scene, while everyone’s nodding in agreement 
+and smiling. Or, for that matter, when everyone’s scream­
+ing and groaning at this new story wrinkle.
+HOW TO END THE SCENE
+Once you know you have to cut away, you actually need to 
+do it. The next scene awaits, after all—even if it’s a bridge 
+scene or a flashback, you have to bring the current one to 
+a close in a manner that’s appropriate to the preceding 
+events. So here are some additional tricks.
+FLEE!
+Yes, that classic “the bad guy’s getting away!” trick. How to 
+end a pitched battle where the villain is on the ropes but 
+it’s just not time for them to drop the final curtain? Have 
+them give the PCs the slip. Somebody important to the 
+PCs is placed in immediate danger, something explodes 
+in a fiery blossom of orange nearby, a wall collapses… 
+These are all fine ways to give another character a means 
+of escaping the scene and ending it. This goes double for 
+players, too. If a player’s in dire straits, it’s not a bad idea 
+to let them narrate their getaway and then smash cut from 
+that scene to the next.
+STARE-OFF
+Remember the impasse? A scene with multiple contests 
+between two characters that’s ended in a stalemate or a 
+major slowdown can be ended with the two characters 
+pacing back and forth, glaring at each other, ready for 
+that next exchange—that you cut away from, leaving it 
+as a cliffhanger.
+The roleplaying between contests is a good place to end a 
+scene if everyone’s ready for a change of pace. Similarly, 
+that heartbeat after the smack-down of an opponent in 
+a scene that involves multiple opponents is the perfect 
+place to end a scene, as the remaining antagonists look 
+from their fallen ally to the PCs with murder (or fear) in 
+their eyes.
+ON A FAILED TEST
+Has a player just failed a test and you don’t know what to 
+do with that outcome right away? Unsure how the char­
+acter’s going to get out of this scrape? Leave the scene 
+hanging and cut away to another. The players can stew 
+on it a bit while you sort out the potential consequences. 
+Even if you already know what will happen (because a 
+good test has you thinking about the potential outcomes 
+before you roll the difficulty dice) the space between a 
+failure and the description of that failure is an ideal place 
+to plant a cliffhanger and maintain the players’ interest.
+INTERRUPTION
+A good place to cut away from a scene can just involve 
+somebody walking in and interrupting the flow of action. 
+Heated exchange between the PCs and the judge who’s 
+overseeing the case? A clerk walks in waving a folder 
+with new evidence. Players despairing after unsuccess­
+fully taking on a gigantic sea monster? A huge armored 
+turtle rises out of the ocean to square off with the beast. 
+Basically, throwing in something that interrupts the flow 
+of action serves as a good way to bring a scene to an end 
+without needing to immediately resolve the situation, and 
+introduces something new to deal with the next time you 
+frame a scene with those characters.
+
+
+=== PAGE 98 ===
+94 CHAPTER 3 PRIME SCENES
+RUNNING
+OPENING SCENES
+Your opening scenes set the stage and introduce the char­
+acters to the sort of storylines you’re hoping to establish 
+in the session. That’s why these are often called estab­
+lishment scenes. You don’t want to soft-pedal these—it’s 
+fine sometimes to start off the game by saying something 
+like “So you’re all in an inn,” but it’s much better to drop 
+them in medias res, setting up something that’s already 
+underway, skipping over the uninteresting stuff.
+What’s uninteresting stuff? That depends on your group. 
+For me, I don’t usually explore the characters waking up 
+in the morning, getting their kit together, setting out for 
+work, catching a ride on the Metro, and so on. Instead, 
+I frame an opening scene at the character’s workplace 
+with a big problem having just landed on their desk, and 
+asking them, “So how do you deal with this?” Opening 
+scenes invite the players to start roleplaying their charac­
+ters’ strengths and flaws right away, confronting anything 
+that’s introduced by you as GM and setting up what they 
+might be doing later in the session.
+OPENING SCENE MECHANICS
+An opening scene doesn’t need to involve tests and 
+contests. They can just be roleplaying and questions 
+asked and answered. Make the opening scenes for all 
+of the players short and sweet, but give them enough to 
+work with so that everyone around the table knows where 
+things stand.
+RUNNING
+ACTION SCENES
+All of the information presented earlier in this section 
+applies for action scenes, which should be framed to be as 
+hard and as punchy as possible. An action scene is often 
+the highlight of the session for many players, one where 
+they can show off a lot of their SFX and skills, and gener­
+ate ●
+Ⓟ or hero dice for later. The big finale of a session is 
+usually an action scene, a showdown between the players 
+and the antagonist they’ve been psyching themselves to 
+confront all session.
+ACTION SCENE MECHANICS
+Action scenes are characterized by conflict, but it’s not 
+always between characters. In settings like Hammerheads 
+(page 150), action scenes are where the PCs engage with 
+the catastrophic disasters and crises that make that 
+setting notable. Thinking of action scenes as “combat 
+encounters” isn’t accurate, but it’s a decent comparison 
+for folks who are used to combat oriented RPGs—you 
+square off against some obstacle or another, roll a bunch 
+of dice, and hope to come out of the scene with a win.
+See “What is Conflict?” on page 97 for more on how to 
+build on conflict in action scenes.
+
+
+=== PAGE 99 ===
+95
+CHAPTER 3 PRIME SCENES
+RUNNING
+EXPLORATION SCENES
+Exploration scenes often set up an action scene or a flash­
+back scene, and they’re a perfect opportunity to give your 
+players details and info. An exploration scene can spread 
+over multiple locations, requiring one or more tests from 
+the players, or you might isolate the scene to a single loca­
+tion with hidden clues, knowledge, or things to discover. I 
+like to use exploration scenes to feature interesting loca­
+tions that the players might not otherwise discover.
+EXPLORATION SCENE MECHANICS
+Exploration scenes in a mystery-themed session will likely 
+focus on investigation—play out the acquisition of clue-
+based assets, pick up one or two complications that persist 
+until later, and introduce GMCs to help you as GM explain 
+one or more situations that are key to the session’s story.
+You can use an exploration scene to map out a setting, 
+as well. In fantasy games, these are the scenes where 
+PCs delve into underground chambers, lost tombs, and 
+ruined temples. In a modern setting, these scenes reveal 
+locations around a city, rooms in a hidden base, or sites 
+around an archaeological dig. In a science fiction setting, 
+these scenes are those where the PCs analyze planetary 
+features, scout out abandoned space stations, and puzzle 
+out computer matrices.
+RUNNING BRIDGE SCENES
+Based on their name, bridge scenes might sound less 
+important than action scenes, but in Cortex Prime a lot 
+of the good stuff happens in the scenes where the char­
+acters are recovering from their wounds, regrouping 
+after a difficult encounter with an antagonist, or doing 
+some important research on something that’s causing 
+the group trouble that session.
+If the PCs aren’t all in the same place, you can link bridge 
+scenes together. Bridge scenes serve some of the same 
+role as opening scenes—they’re establishing the new 
+status quo, setting up the next part of the session. Some 
+players need time to unwind during play, but they don’t 
+want to just sit the game out. Let them roleplay with other 
+characters, share information, and really get into their 
+character’s heads. It’s worth it.
+BRIDGE SCENE MECHANICS
+These scenes use the rules for recovering from complica­
+tions (page 37) and creating assets with tests (page 35). 
+Bridge scenes are also excellent opportunities for PCs 
+with social or personality-focused distinctions to make 
+tests that might not make sense in an action scene, but 
+which allow them to create assets or pick up ●
+Ⓟ necessary 
+for later on.
+In games that use milestones for character growth, bridge 
+scenes are essential. Frame a bridge scene with an eye 
+toward allowing PCs to hit those milestone goals. Players 
+love to get XP for roleplaying something that makes sense 
+for their character and gets them into trouble.
+LINDA LITHÉN
+
+
+=== PAGE 100 ===
+RUNNING
+FLASHBACK SCENES
+Flashbacks are the heart of some Cortex Prime games the 
+way that action scenes are the heart of others. In a game 
+that depends on heists or capers, or on mysteries and 
+relationships, flashback scenes help players prepare and 
+reinforce their characters without needing to frontload 
+the session with such things as shopping or bookkeeping.
+A flashback scene can be inspired by one player asking 
+another player, “Hey, remember that time you did that 
+one thing?” That’s a use of a callback if you’re using that 
+sort of character growth, and it’s an opportunity for you 
+to cut away from a scene that’s ongoing and frame a scene 
+in the past involving the situation the players are talking 
+about. I love to use flashback scenes to unpack something 
+the players are otherwise just riffing on, and it gives them 
+a great way to play out what really happened in the past.
+FLASHBACK SCENE MECHANICS
+An important use of a flashback scene is to cut from an 
+action scene, play out a short scene that lets the player 
+create an appropriate asset, and then cut back to the orig­
+inal scene.
+You can play out conflict in a flashback scene, but a simple 
+test works better than a contest unless it’s important that 
+the players figure out how a showdown in the past actu­
+ally played out. Remember, flashbacks are history; they 
+affect what happens in the “now” of the session, so they 
+can’t usually change something that’s already happened 
+unless it’s to reveal a twist or hidden knowledge that casts 
+what’s already happened in a new light.
+RUNNING
+TAG SCENES
+Nothing makes the end of a session more satisfying than 
+playing out those last scenes that deal with where the PCs 
+end up as the session wraps. It gives you the opportu­
+nity to tie up loose ends that won’t carry over to the next 
+session and to explore what each character thinks about 
+what happened in the session.
+TAG SCENE MECHANICS
+A tag scene is essential for character growth that depends 
+on recovering trait statements. You can use them liberally 
+in other games, too, of course. Go around the table and ask 
+each player what their character is doing and where they 
+are—not something I recommend for framing scenes, but 
+a fun thing to do when wrapping up a session. How are 
+they dealing with what happened? What’s their charac­
+ter’s new perspective in advance of the next session? Did 
+any of their traits or other details change this session from 
+milestones, growth, or earning XP?
+Tag scenes are no place for contests, really. In fact, you 
+might not call for any dice at all, as these scenes are 
+mostly for summarizing the session, setting up the next 
+session, and resolving outstanding questions. In the rare 
+case that you do call for a test, make it quick and short. 
+It’s not really a tag scene if it’s a pitched argument with 
+another character or a fistfight. Imagine the stuff that 
+happens right before the credits roll, not the stuff that 
+happens right before an ad break.
+ANNA “SARIANNE” 
+NEUMANNOVÁ
+
+
+=== PAGE 101 ===
+97
+CHAPTER 3 PRIME SCENES
+The degree to which conflict dominates your Cortex Prime 
+game is up to you as GM and your players. You can manage 
+any kind of struggle between characters and the environ­
+ment or each other using the rules for tests and contests.
+THREE KINDS OF CONFLICT
+Some genres are more traditionally prone to extended 
+battles or fights than others. A game that revolves around 
+interpersonal drama is just as conflict heavy as one that 
+revolves around medieval warfare or resistance to an 
+alien invasion.
+HEROES VS VILLAINS
+If your game is about heroic characters striving against 
+wicked villains, the typical conflict might be a series of 
+scenes in which players test their traits against monsters, 
+minions, and mooks in the form of minor GMCs and 
+extras. A major GMC—such as a warlord or mastermind—
+serves as the climactic contest, one that might shift from 
+location to location, with a chase in between.
+It’s crucial to use an action order (page 98) for larger 
+set-piece scenes with multiple antagonists and every 
+PC doing something different, sharing a spotlight. Use 
+contests occasionally for one-on-one duels.
+INTERPERSONAL DRAMA
+If your game is about a cast of PCs who may work toward 
+conflicting or opposing goals, even if they’re not aggres­
+sive or violent in nature, most scenes are contests. In 
+between these scenes, players might test their traits 
+against GMCs or difficult circumstances, often to estab­
+lish their own storylines. The group doesn’t have to get 
+along. In fact, when emulating television dramas, the PCs 
+don’t even like each other all the time, let alone want to 
+spend time with one another or work toward a single goal.
+Don’t use action order unless necessary. Instead, estab­
+lish who is the dramatic lead and play out contests using 
+a dramatic order (page 98). Use the rules for interfering 
+liberally (page 23). Contests form the bulk of player vs 
+player drama.
+ENVIRONMENTAL CONFLICT
+If your game is an exploration or investigation game, 
+including those with a “sandbox” setting (where the 
+players decide where to go within an open setting filled 
+with story hooks) or one that plays out through a mystery, 
+most of the conflict is the players testing their traits 
+against the environment or an abstract difficulty.
+From time to time, threats such as monsters or henchmen 
+or supernatural phenomena show up as tests. Contests are 
+much less likely but may be used to represent extended 
+chases. Timed tests are common.
+Action order (page 98) comes into play when there are 
+fights with threatening elements, but the pacing of each 
+scene is freeform and organic.
+WHAT IS
+CONFLICT?
+STEPH C.
+
+
+=== PAGE 102 ===
+98 CHAPTER 3 PRIME SCENES
+DRAMATIC ORDER
+If the primary focus of your session is intense conflict 
+between characters, or it plays out over longer periods 
+of time between scenes, dramatic order is your default. 
+In dramatic order the decision about who goes first is 
+determined by a character, usually a player, stating that 
+they want something and another character, sometimes 
+a player but often the GM, saying they want to stop them. 
+The initiating character is called the dramatic lead.
+Play carries on as normal with the dramatic lead starting 
+the contest by rolling dice and their opposition trying to 
+roll higher, just as with the standard rules for contests. 
+Once these contests are resolved they can either transi­
+tion to another contest shortly afterward, with or without 
+a change in location or circumstances, determined by the 
+first contest’s outcome.
+Adam declares that his Hero, a special agent chasing 
+down a terrorist, is going to confront an arms 
+dealer in a border town and shake them down for 
+information. The dealer, Ronnie, in this case a GMC 
+played by Mary Rose as the GM, doesn’t want to get 
+on the terrorist’s bad side, and thus a contest arises 
+with the Hero as the dramatic lead. Adam wins the 
+contest, and a ⑩ complication is imposed on Ronnie 
+to bring pressure against him to spill the beans.
+When there are multiple players active in the same scene 
+and one player starts a contest, the other players can try to 
+aid the dramatic lead, interfere with the contest (because 
+they want something else from the scene), or wait to see 
+what happens.
+If everyone wants to go first and it’s not clear who would, 
+you can call for all the players who want to start the 
+dramatic order to roll their dice for the contests they want 
+to start. The highest rolling player starts and uses that 
+roll for the contest; the other players pick up their dice 
+and can interfere, assist, or sit out the contest as it plays 
+out. Move on to other contests as appropriate, varying the 
+dramatic lead when possible.
+Mary Rose shifts attention to Tina. Her Sage,
+another agent, is now the dramatic lead. She uses
+the previous complication as leverage to force 
+Ronnie to give them access to the terrorist cell’s 
+website. Mary Rose rolls an opportunity, so Tina 
+spends a ●
+Ⓟ to step up the existing complication
+to ⑫, and when she wins the contest with Adam’s 
+help, Ronnie is taken out. He hands over the 
+passwords to Tina’s Sage.
+ACTION ORDER
+If the order in which things happen in a scene matters, 
+it’s often a good idea to shift conversational back and 
+forth between players and GM with the occasional test or 
+contest to an action order. This is especially true of fight 
+scenes or moments when there’s chaos and confusion and 
+it becomes important to know who goes first and when.
+Other names for action order include handoff initiative 
+and elective order.
+ACTIONS AND REACTIONS
+When using an action order to track conflict, tests and 
+contests are replaced with actions and reactions. An 
+action is like the initiating roll of a contest; a reaction 
+is a defensive or reactive roll to avoid it and only defen­
+sive traits apply. The character whose turn it is chooses 
+which character they target with their action. If there is 
+no opposing character, use difficulty dice as the reaction. 
+For more detail, see Action-Based Resolution on page 24.
+WHO GOES FIRST
+The GM decides who goes first in the action order based 
+on a snapshot of the scene at that moment. Often it’s a PC 
+who starts a fight, shouts something insulting, or bursts 
+in on a room full of unpleasant people. If a GMC has the 
+drop on the group, then they go first in the action order. 
+The character who goes first is the action lead.
+All characters—player and GM—get a turn. Play progresses 
+around the table, starting with the first to act, and then 
+that player chooses the next character—either a PC or a 
+GMC—to act. Once everyone has had a chance to do some­
+thing, the last one to go chooses the action lead for the 
+next round (this could include nominating themselves).
+HOW IT ENDS
+As the GM, you can drop the game out of action order at 
+any time. If it’s a fight and one side scores a decisive win, 
+then the action order is obviously over and play carries 
+on as it did before, with a shared spoken narrative. Or it’s 
+possible that nothing interesting can happen any longer 
+and so the scene ends, and with it the action order.
+TRACKING ACTION ORDER
+Using turn markers to clearly show when a player or GMC 
+has taken their turn in the action order is highly recom­
+mended. A turn marker can be something as simple as 
+a two-sided card, with one side showing green and the 
+other red, or a painted miniature of a character where 
+it’s standing up if the character hasn’t acted yet and lying 
+down if they have. 
+
+
+=== PAGE 103 ===
+99
+CHAPTER 3 PRIME SCENES
+TAKING INITIATIVE
+This mod calls back to roleplaying games where the order 
+in which characters act is determined by a die roll or some 
+other mechanic at the beginning of the fight. The order 
+proceeds from the highest rolling total to the lowest, 
+and then either starts over again at the top of the next 
+sequence and repeats, or there’s another die roll to estab­
+lish the order again.
+There are several ways to determine who takes initiative 
+using this mod. They include:
+•	 Each side in a conflict chooses a leader, who 
+assembles a dice pool appropriate to the situation 
+(usually one that includes traits reflecting tactical 
+or strategic know-how) and rolls. The side with 
+the highest total chooses one of its group to go 
+first, then the next highest rolling side chooses 
+one of theirs, and so on.
+•	 Everyone in the conflict rolls dice for 
+themselves, and characters make tests or 
+contests in order from highest rolling total
+to lowest.
+•	 Each character has a fixed initiative rating 
+based on the highest possible total of two traits 
+(such as Physical + Mental) and everyone acts
+in order of that rating.
+•	 Each character has a fixed initiative rating 
+but rolls a die such as a ⑥, or perhaps a ⑧
+if they can justify a distinction that’s appropriate, 
+or a ④ if they can justify a distinction that’s 
+a hindrance. Add the die to an initiative rating 
+derived from two traits and then act in that order. 
+Any hitches rolled do not add to the initiative 
+rating, as usual, and can be activated by the GM 
+once initiative order is settled.
+ADVANTAGE OF SCALE
+In some cases, a conflict might take place between two 
+groups of radically different sizes, scale, or degrees of 
+power. An example might be a lone PC taking on some­
+body in an armored car, or a fighter jet taking on an enemy 
+aircraft carrier. As GM, you may adjudicate a simple scale 
+advantage as being outright impossible (human being 
+tries to punch spaceship) or with a scale die, which is 
+a bonus ⑧ added to whichever side has the advantage. 
+Along with a scale die, that side also adds an extra die 
+result into their total for free (the equivalent of spending 
+a ●
+Ⓟ on their total). This additional die represents a pretty 
+profound advantage.
+You could decide to go with a ⑧ ⑧ scale and keep two 
+additional dice for the total, but this is an overwhelming 
+advantage. Usually it’s best to make a ruling and move on 
+(“The armored car’s machine gun sprays a hail of bullets, 
+you’re a mess and need an ambulance.”).
+As a rule of thumb, when the mismatch is so unfair that 
+it would never work for a normal person, but a PC might 
+be able to pull it off, that’s the cue to go to the extra dice. 
+Players can earn a scale die if they vastly outnumber or 
+outgun their opponents, but usually such odds cause 
+GMC opposition to simply surrender.
+CLASSIC CONVERSION NOTE
+Classic Cortex games used this initiative system. They included SFX 
+that altered initiative rolls to represent those who were especially 
+combat-ready or combat-inept. You can duplicate that using talents 
+or distinction SFX that allow players to add a die to their initiative score 
+or somehow penalize their score by only allowing them to use a single 
+trait instead of two. You can make these persistent SFX or require a 
+ 
+to activate them or, in the case of the combat-inept characters, allow 
+them to earn a 
+ if they choose to act last.
+ANTHONY
+“ROBOTPENCIL”
+JONES
+
+
+=== PAGE 104 ===
+100 CHAPTER 3 PRIME SCENES
+MULTI-LEVEL SCALE
+Using this mod, the scale die may be any size from ④ to 
+⑫, each step representing an increasingly larger target. 
+You can choose to split the scale die up into smaller dice: a 
+⑫ can become ⑩ ⑩ or ⑧ ⑧ ⑧ or ⑥⑥⑥⑥. The larger 
+scale side still only keeps one additional die into their 
+total, rather than an additional die for each additional 
+scale die.
+Mary Rose is using multi-level scale for a giant mecha 
+game she’s running, as well as action order and 
+actions instead of tests and contests. Heavy mechs 
+have a ⑩ scale, while medium mechs have a ⑧ and 
+light mechs have a ⑥. Adam’s Hero pilots a medium 
+mech with a ⑧ scale, so when he assembles his dice 
+pool for an attack action against a light GMC mech 
+target, he can add either a ⑧ or a ⑥⑥ to his 
+pool and may keep an additional die when adding up 
+his total. If the GMC mech was also a medium scale 
+mech, he wouldn’t include an extra die. If the GMC 
+mech was a heavy mech, Mary Rose would keep an 
+additional die in her reaction total.
+If the player beats the difficulty by 5 or more with a heroic 
+success, they can either step up their effect die to take out 
+a single supporting die or they can keep two effect dice 
+and try to knock out two supporting GMC dice of smaller 
+size. Once the PC gets down to a single opponent, though, 
+no more dice get knocked off.
+Amanda’s Engineer is taking on a rival workshop in 
+Steam City’s annual kitbash contest, all by herself. 
+The rivals consist of a Workshop Boss ⑩ and 
+three Roustabouts ⑥ who are helping their boss. 
+Mary Rose plays this out with a simple test, using 
+the Workshop Boss ⑩ plus ⑥⑥⑥ from the 
+Roustabouts as an opposition pool. The rivals set a 
+difficulty of 10, which Amanda beats easily with a 15 
+on her own dice. As that’s a heroic success, Amanda 
+looks at her remaining dice, which are ⑧ ⑧ and ⑥. 
+Her best option is to use her heroic success to pick 
+⑧ ⑧ as effect dice, using them to knock away two 
+of the Roustabout ⑥ dice from the rival’s team. 
+This leaves them with a ⑩ and a ⑥ for the next 
+round. If she’d had a ⑩ available to her, she could 
+have picked that and used the heroic success to step 
+it up to ⑫, taking out the Workshop Boss ⑩.
+ADAM’S OPPONENT
+RESULT
+Light Mech 
+Adam can add 
+ 
+ or 
+ 
+ to his dice 
+pool and keep 3 results for his action.
+Medium Mech 
+Adam gets no advantage.
+Heavy Mech 
+Mary Rose can add 
+ or 
+ 
+ to her 
+dice pool and keep 3 dice results for 
+her reaction.
+GANGING UP
+GMCs, especially antagonistic ones, often gang up in 
+large numbers because they think that’s going to help. 
+Sadly, they’ve never heard of the inverse ninja rule, which 
+states that the more bad guys there are, the weaker they 
+are individually. If they keep doing it, here’s how you 
+handle it.
+Each additional opponent adds a single die to the oppo­
+sition’s dice pool equal to the highest trait they could use 
+in the fight. This doesn’t change the number of dice added 
+together to set or beat the difficulty (it’s still two), just the 
+number of dice rolled. The most common example of this 
+is a gang of six Thugs ⑥ which amounts to a roll of 6x ⑥ 
+(first thug is ⑥, each additional thug adds another ⑥, 
+so it’s 6x ⑥). This is formalized in some games as a mob 
+GMC (see page 117 for more information).
+Every time a player beats the difficulty against a side that 
+has multiple assisting characters, they compare their 
+effect die to the supporting dice and knock away a single 
+supporting die that’s smaller than their effect die. This 
+represents whittling away the opposition, one ugly mug 
+at a time.
+GETTING HELP FROM OTHERS
+A group of PCs can gang up like a horde of mooks can, 
+handing over a single die of the appropriate type to the 
+player whose character is leading the charge. The risk is 
+that if the opponent beats the difficulty, they could use 
+the effect die to take out a helping player’s die (much like 
+with Ganging Up, above), and the helping PC is taken out 
+as if they had lost the fight. You can always choose to drop 
+out before the dice are rolled again. You can also spend a 
+●
+Ⓟ to take a complication instead of being taken out, but 
+regardless you can’t keep helping the primary PC.
+Another way to aid a PC is to use your turn to make a 
+test and create an asset to hand over to the PC (page 
+35). This eliminates the chance that your character gets
+taken out, but it can take some organizing and has a 
+chance of failure.
+CHARACTER
+DICE RESULTS
+TOTALS
+Workshop Boss 
+3x Roustabout 
+10
+Engineer
+15
+Roustabout
+Effect Die 1
+Effect Die 2
+Roustabout
+Roustabout
+
+
+=== PAGE 105 ===
+TIMED TESTS
+Quite often the real challenge comes not from whether a 
+PC can succeed at a task, but whether they can succeed 
+at it fast enough. Timed tests work well for characters like 
+the technician, pilot, or medic when the other members of 
+the group are off doing something like shooting bad guys.
+A timed test is a special kind of test that handles situa­
+tions where there’s a clock counting down or a limited 
+window in which to carry out a task. Timed tests use a 
+series of standard tests, either several of the same kind 
+(Mental + Fix, for instance) or a series of different tests 
+for something that has multiple steps (such as Physical 
++ Sneak, then Mental + Focus, then Social + Influence).
+The time’s measured in beats—the more beats, the longer 
+you have. Each time a player rolls the dice, it uses one 
+beat. Use checkboxes or tokens to keep track of beats. It’s a 
+countdown, because there’s a finite amount of time; once 
+that’s gone, they’re done. 
+As the GM, you set the difficulty for the tests and decide 
+how much time they have. By default, the number of beats 
+is the number of tests—three or four is a good baseline. 
+For an easier timed test, give them one or two additional 
+beats to accomplish it. For a harder test, give them one or 
+even two fewer beats.
+•	 If you beat the difficulty, it only costs you the time 
+you spent, i.e., one beat. A heroic success means 
+you found a shortcut and don’t lose any time at 
+all. You don’t lose a beat for that roll.
+•	 If you fail to beat the difficulty, you succeeded 
+but that part of the test took too long, and an 
+additional beat is lost. Move on to the next stage 
+of the timed test.
+LENKA ŠIMEČKOVÁ
+PLAYER’S TOTAL
+DIFFICULTY
+COST
+12
+10
+one beat
+15
+10
+none
+9
+10
+2 beats
+
+
+=== PAGE 106 ===
+102 CHAPTER 3 PRIME SCENES
+Tina is playing her Sage in one of Mary Rose’s near-
+future superhero games. Mary Rose has just framed 
+a scene in which the Sage, who is a highly skilled 
+mind-scanning telepath and secret agent, arrives at a 
+crowded social function that’s lousy with wealthy city 
+officials, politicians, and celebrities. She tells Tina that 
+her Sage’s contacts revealed that her nemesis, the 
+Crow, has planted hired killers in the crowd, and the 
+Sage only has minutes to locate them telepathically 
+and stop them from staging a deadly attack.
+This is a timed test, using the Sage’s Mental ⑩ 
++ Focus ⑧ + Telepathic Agent distinction and 
+Telepathy ⑧ power die. Mary Rose sets the 
+difficulty at ⑧ ⑧ and puts three poker chips on the 
+table to act as the beat countdown. She says that 
+each roll costs a beat, and requires three successes, 
+one for each killer. If she pulls off all three and uses 
+up all three beats, she’s stopped the attack just in the 
+nick of time. Every killer she doesn’t manage to track 
+down leads to progressively more carnage!
+Mary Rose sets the difficulty on the first roll: it’s 10 
+(8 + 2 on the ⑧ ⑧). Tina rolls her dice pool and 
+gets 7, 6, 2, and 2. The 7 and 6 give her a total of 13, 
+which is enough to identify one killer. This costs her 
+one beat, and Mary Rose removes one poker chip.
+Two more to go!
+On the next roll, the difficulty is 8 (6 + 2 on the 
+⑧ ⑧). Tina spends a ●
+Ⓟ to create a ⑥ asset 
+for her roll; the second killer saw the first one get 
+seized by Tina’s task force, and his mind is loud with 
+alarm. Tina rolls: 10, 5, 4, 2, and 2. That’s 15, a heroic 
+success that doesn’t use up any beats.
+Two killers are down.
+Finally, Mary Rose rolls a 7 (5 + 2). Tina’s Sage scans 
+the room for the last killer, with a die roll of 5, 4, 1, 
+and 1. Two hitches, one on the ⑩ and the other on 
+a ⑧! Luckily, the 5 and 4 give her a 9 total, so she 
+locates the final killer, but in the process Mary Rose 
+says that her telepathic probe goes too far into the 
+killer’s violent mind.
+Handing over a ●
+Ⓟ to activate the hitches, Mary 
+Rose gives Tina’s Sage a Overloaded Psyche ⑧ 
+complication (⑥ from one hitch, stepped up by one 
+for the second). The Sage saved the day with one 
+beat to spare, but might not be in the best mental 
+state to deal with the fallout when the Crow arrives 
+at the gala…
+PLAYER
+DICE RESULTS
+TOTALS
+Mary Rose
+10
+Tina
+13
+Tina’s total beats Mary Rose’s and the Sage locates
+the first killer.
+Physical
+Mental
+Social
+THE SAGE
+Knowledge is the only
+weapon I need.
+⑧ Focus
+⑧ Telepathy
+Telepathic agent ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+DIFFICULTY
+TINA’S DICE POOL
+⑧ ⑧
+Mental ⑩, Focus ⑧,
+Telepathy ⑧, Telepathic Agent ⑧
+FIRST KILLER
+SECOND KILLER
+THIRD KILLER
+Killers Left
+Beats Left
+Killers Left
+Beats Left
+PLAYER
+DICE RESULTS
+TOTALS
+Mary Rose
+7
+Tina
+9
+Mary Rose spends a ●
+Ⓟ to add the complication of
+Overloaded Psyche ⑧ (⑥ hitch stepped up by the
+additional hitch). 
+Killers Left
+Beats Left
+PLAYER
+DICE RESULTS
+TOTALS
+Mary Rose
+8
+Tina
+15
+Tina spends a ●
+Ⓟ to add a ⑥ asset to her pool. Tina’s roll
+beats Mary Rose’s by more than 5 for a heroic success.
+YANGTIAN LI
+
+
+=== PAGE 107 ===
+103
+CHAPTER 3 PRIME SCENES
+COMPLETING THE TIMED TEST
+When you finish with the obstacles planned for that test 
+and the player succeeds with time left on the clock, they’ve 
+achieved their objectives (including a clean getaway, if 
+that’s what they’re looking to do). If they succeed but have 
+zero beats left, they must choose between achieving their 
+objective and a clean getaway (or between achieving their 
+objective and saving some money or between achieving 
+their objective and being proud of their work, etc.). In 
+other words, if you complete the test with no more beats 
+remaining, your success is conditional.
+Tina’s Sage finished the job with a beat still left on the 
+table. Mary Rose says this means the Sage has time 
+to plan for the Crow’s arrival, as well as taking out all 
+three killers. What if she’d used up all three beats? In 
+that case, she’d have to make a choice: take out the 
+final killer, and have no time to prepare for the Crow, 
+or lose track of the killer but learn enough from the 
+minds of the others that she’s ready for the Crow’s 
+entrance minutes later.
+BUYING TIME
+If a PC is running dangerously low on time, the rest of the 
+group might be able to help them out. They can make a 
+test of their own—causing a diversion, trying to delay the 
+bad guys with conversation, eliminating some security 
+guards—and with a success, they give the player back 
+one of the beats they’ve lost. If they get a heroic success, 
+it’s two beats. Failure means that PC can’t help any more 
+for the rest of the timed test. No matter what, only one 
+attempt at buying time can happen in between each beat 
+of the timed test.
+Amanda’s Engineer, sitting out in the tricked-out 
+surveillance van, could probably have helped Tina’s 
+Sage by accessing the closed-circuit TV system that’s 
+monitoring the venue. If Tina had flubbed the first 
+roll, she’d definitely have called in for that kind of 
+assist. Luckily for Amanda, her Engineer didn’t need 
+to get involved and risk being dragged into any crisis. 
+Now that the Crow is about to show up, of course, 
+it’s all hands on deck. 
+FAILING DOESN’T MEAN GAME OVER
+Cortex Prime games frequently feature characters that are 
+some of the best in the world at what they do, so failing a 
+roll doesn’t always mean the character actually screwed 
+up. The timed test is a pacing mechanic. It’s a given that 
+the group’s hacker will break through that firewall. But 
+can she do it before the enemy’s intsec agent notices? How 
+many complications does she create by rolling hitches? 
+Does she grab any opportunities from the GM? Those are 
+the places where major twists and turns happen, not in 
+failing to roll higher than the opposition’s dice.
+Tina’s Sage definitely had the chops to deal with 
+the crowded ballroom infiltrated by assassins, 
+but the hitches she rolled at the end added flavor 
+and thrills to an otherwise routine series of rolls. 
+Alternatively, the Crow could have shown up and 
+caused chaos early in the form of a Murder of 
+Crows complication, making the scene a tempest of 
+screams and fear. Or Mary Rose could have created 
+two separate complications to make things
+really interesting.
+RUNNING OUT OF TIME
+If the player runs out of beats—zero or less—they’re out 
+of time, and whatever bad thing was going to happen 
+happens. They might have a chance to escape, depending 
+on the situation, but they can’t finish their objective. You 
+should have something in mind for when this happens, 
+but the player can also suggest something to the group 
+and see what happens next.
+What if Tina hadn’t been able to succeed at finding 
+all three killers before she ran out of beats? Mary 
+Rose had an actual fight with the killer lined up, if 
+that happened, with the downside that somebody 
+important would have been murdered before Tina’s 
+Sage could get to him. This would have introduced a 
+lot of drama as Tina’s agency loses some respect for 
+her telepathic powers and assigns her an assistant or 
+puts her on less high profile cases.
+
+
+=== PAGE 108 ===
+Mental
+Mental
+Physical
+Physical
+Social
+104 CHAPTER 3 PRIME SCENES
+Let’s look in detail at a series of high stakes contests that make up 
+the climactic battle between two characters: Count Jubatus II, a 
+rocket-pack-wearing feline nobleman from a far-future space opera 
+setting, and his tireless foe, Morza Sorx, a squid-headed duelist 
+and bounty hunter.
+MORZA SORX
+Devil with a Knife ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+	
+ɬ Cruel Cut: When you first draw blood in a duel, spend a ●
+Ⓟ 
+to gain a Bloodmarked ⑧ asset.
+Species: Hashtapamard ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+	
+ɬ Aquatic Recovery: When you are submerged in water,
+spend a ●
+Ⓟ to recover a complication with your Mental 
+attribute die.
+Hunter of the Pride ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+	
+ɬ Fear in their Eyes: When you engage in conflict with one of 
+the Pride, spend a ●
+Ⓟ to double your Social attribute die 
+for that contest.
+AN EXAMPLE 
+THROWDOWN
+Social
+COUNT JUBATUS II
+Noble of the Ådlakatter ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+	
+ɬ Noble Reputation: When you loudly announce your 
+breeding in order to sway a foe, spend a ●
+Ⓟ to double
+your Influence for that contest.
+	
+ɬ Oh, Jeeves: When you engage with your fellow aristocrats, 
+spend a ●
+Ⓟ to create a Loyal Retainer ⑧ asset.
+Species: Rymdenpanter ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+	
+ɬ Feral Fury: When you unleash your feline nature, spend a 
+●
+Ⓟ and double your Fight or Shoot die for that contest.
+Veteran of the Pride Wars ⑧
+	
+ɬ Hinder: Gain a ●
+Ⓟ when you switch out this distinction’s
+⑧ for a ④.
+SIGNATURE ASSETS
+Rocket Pack 
+Mother’s Blaster 
+Pistol 
+My Butler Magnus 
+SIGNATURE ASSETS
+Personal Cruiser 
+Cruel Blade 
+Squid Squad 
+Fight
+Focus
+Notice
+All Other Skills
+Influence
+Fly
+SKILLS
+Know
+Shoot
+Intimidate ⑥
+Politics ⑥
+Blaster ⑥
+Focus
+Influence
+Fight
+Trick
+Shoot
+All Other Skills
+SKILLS
+Cutlass ⑥
+Leadership ⑥
+Notice
+Tracker ⑥
+BETHANY BERG
+
+
+=== PAGE 109 ===
+105
+CHAPTER 3 PRIME SCENES
+ACTIONS
+A ●
+Ⓟ is spent to 
+double Social ⑧
+MEANWHILE...
+Count Jubatus II (played by Lenny), with a price 
+on his head, thinks he has outrun his pursuer, 
+Morza Sorx (played by Josh). However, the 
+tentacle-faced bounty hunter surprises his 
+quarry in the Night Bazaar on Ceti Lambda. 
+Mary Rose, the GM, frames the scene: vendors 
+scatter, clutching their wares and yelling as they 
+trip over each other to clear a space for Jubatus 
+and Morza. Ceti Lambda’s twin moons cast a 
+harsh light on the market square. The stakes are 
+high; only one of them can come out of this the 
+winner, for surely this is the last act?
+Lenny picks up his dice. “I won't let him keep this up,” he 
+says. “Time to settle the score!” Jubatus bares his fangs 
+and bellows a challenge at Morza, hoping to throw the 
+bounty hunter off with a roar. He picks up his Social ⑧, 
+Influence ⑧, a ⑥ for his Intimidate specialty, and a ⑧ 
+for his Noble of the Ådlakatter distinction, and rolls. 
+Lenny gets 13, with a ⑧ effect die.
+MORZA (JOSH)
+Dice Results
+Total
+15
+1
+2
+3
+JUBATUS (LENNY)
+Dice Results
+Total
+13
+Josh describes Morza spreading his arms, revealing his 
+Cruel Blade underneath his greatcoat. “I’ve faced stronger 
+cats than you in the Pride Wars,” the Hashtapamard says. 
+Josh picks up their Social ⑧, Focus ⑥, and Hunter of 
+the Pride ⑧ distinction. They also spend their ●
+Ⓟ to 
+activate their Fear in their Eyes SFX, doubling their Social 
+die. Josh rolls and gets a 15, with a ⑧ effect die.
+Lenny could give in, but decides to keep pushing. He rolls 
+again, this time getting a 12, but Lenny spends his ●
+Ⓟ to 
+add in a third die—a 6 on his ⑥—to make the total 18. 
+Once again, he keeps a ⑧ effect die. Josh knows they 
+can’t beat that, with no remaining ●
+Ⓟ, so they flip their 
+distinction to a ④ for the last roll, picking up a ●
+Ⓟ. They 
+roll and get 14, which isn’t enough. Josh sets aside a ⑧ 
+effect die, which means that Lenny’s roll can’t simply take 
+Morza out of the scene (Lenny’s ⑧ effect die isn’t larger 
+than Josh’s ⑧ effect die).
+ACTIONS
+A ●
+Ⓟ is spent to 
+add a ⑥ to
+the total
+ACTIONS
+A ●
+Ⓟ gained by 
+changing a ⑧ 
+into a ④
+JUBATUS
+Dice Results
+Total
+18
+MORZA
+Dice Results
+Total
+14
+
+
+=== PAGE 110 ===
+106 CHAPTER 3 PRIME SCENES
+JUBATUS
+Dice Results
+Total
+11
+Lenny defines the resulting complication as Rattled ⑧. 
+Josh accepts it, and describes Morza as taking a step 
+back, squid eyes widening with astonishment. Lenny says, 
+“How about Morza books it and runs?” But Josh points 
+out that Morza wasn’t taken out of the scene, so Lenny 
+doesn’t get to describe how Jubatus defeats Morza…yet.
+Mary Rose puts it to Josh: “What does Morza do now?” 
+Josh figures that, even as spooked as the bounty hunter 
+is, Morza Sorx is one of the greatest duelists in the galaxy! 
+So Morza draws his cutlass, the Cruel Blade, and runs at 
+Jubatus, initiating a new contest.
+4
+5
+6
+7
+Josh puts together the dice for their pool: Physical ⑧ +
+Fight ⑩ (Cutlass ⑥ specialty) + Devil with a Knife ⑧ 
+distinction plus the Cruel Blade ⑧. They roll and score 
+only a disappointing 9 with a ⑧ effect die. Not a great 
+initial lunge for Morza, but the duel is on.
+Lenny knows Jubatus isn’t much of a fencer, but he’s
+much stronger and faster than Morza. Lenny picks up
+Physical ⑩ + Fight ⑧ + Veteran of the Pride Wars ⑧ 
+distinction, as well as the Rattled ⑧ complication
+that’s attached to Morza from the last contest. He rolls
+and gets 15 with a ⑩ effect die. Jubatus ducks, weaves,
+and high-kicks at Morza with a growl!
+Josh retaliates, rolling the same dice pool. This time it’s 
+a much better total: 16, with a ⑩ effect die. “I have you 
+now,” Morza says to the Count. Josh mulls over making 
+this definitive by spending their ●
+Ⓟ to keep another die 
+but figures 16 is good enough.
+ACTIONS
+⑧ added due to 
+Morza’s Rattled 
+complication
+ACTIONS
+⑩ stepped up 
+to ⑫ due to the 
+heroic success
+ACTIONS
+A ●
+Ⓟ gained by 
+changing a ⑧ 
+into a ④
+JUBATUS
+Dice Results
+Total
+15
+Lenny’s all out of ●
+Ⓟ, so he decides to do the same thing 
+Josh did: flip his distinction to ④, picking up a ●
+Ⓟ, and 
+just try to roll as well as he can. The dice hit the table…
+and the best Lenny can get is an 11, with a ⑧ effect die. 
+Josh’s 16 is 5 points more than Lenny’s 11, so that’s a 
+heroic success, and steps up Josh’s effect die to a ⑫! 
+Lenny spends his ●
+Ⓟ to keep Jubatus from being taken 
+out, but he takes a Wounded ⑫ complication. The tables 
+have turned!
+MORZA
+Dice Results
+Total
+9
+MORZA
+Dice Results
+Total
+16
+
+
+=== PAGE 111 ===
+BETHANY BERG
+8
+9
+10
+With no ●
+Ⓟ and a huge ⑫ complication, Lenny wonders 
+if it’s time for Jubatus to get the hell out of the Night 
+Bazaar. Mary Rose looks at him, and Lenny says, “The 
+Count clutches his wound, and growls, ‘Another time, 
+Morza!’” He picks up his Physical ⑩ + Fly ⑥ + Noble 
+of the Ådlakatter ⑧ distinction + Rocket Pack ⑧ 
+and the Rattled ⑧ complication from Morza. His total? 
+A reasonable 12 with a ⑧ effect die…but one of his ⑧ 
+came up a 1. He looks at Mary Rose, who shrugs.
+“I could make that ⑫ complication get worse, but I’ll go 
+easy on you.” She hands over a ●
+Ⓟ for the hitch,
+and creates a new complication, Running Scared ⑥.
+Lenny groans. “Thanks.”
+Josh thinks about how Morza will stop the Count from 
+getting away. They invoke Morza’s personal gang of 
+goons, the Squid Squad, describing the band of thugs 
+running from out of the maze of vendors to grab at 
+Jubatus. Josh picks up Social ⑧ + Influence ⑥ (plus 
+⑥ for Leadership) + Hunter of the Pride ⑧ distinction 
++ Running Scared ⑥ + Wounded ⑫ + Squid Squad ⑧. 
+“Seize him, my squad!” The dice fall, and the total is a 15. 
+Josh spends the ●
+Ⓟ they had remaining, adding a 5 from a 
+⑧, for a final total of 20, and a ⑧ effect die.
+“Dang squids!” curses Lenny. All he needs is to win this 
+contest in order to get away. He rerolls and this time 
+gets a total of 16. It’s not enough, but Lenny has a ●
+Ⓟ on 
+hand. He spends it to add in a 5 from a ⑥, pushing the 
+total up to 21. His effect die is a ⑩. Mary Rose looks at 
+Josh, noting that Morza could possibly beat 21 if they 
+switched a distinction for a ④, but it’s a long shot.
+JUBATUS
+Dice Results
+Total
+12
+ACTIONS
+⑥ and ⑫ added 
+for Lenny’s 
+complications,
+●
+Ⓟ used to keep
+an extra die
+ACTIONS
+A ●
+Ⓟ is spent to
+add a ⑥ to
+the total
+MORZA
+Dice Results
+Total
+20
+“This isn’t our final battle, Count!” says Josh.
+They announce that they give in and collect a ●
+Ⓟ from 
+Mary Rose. Lenny leaves Morza and his Squid Squad in 
+the dust as the Count’s rocket pack carries him off into 
+the night sky of Ceti Lambda.
+Mary Rose calls the end of the scene. Count Jubatus 
+needs to shore up his defenses and maybe recruit some 
+goons of his own… Perhaps a Loyal Retainer?
+JUBATUS
+Dice Results
+Total
+21
+
+
+=== PAGE 112 ===
+SABINA LEWIS
