@@ -25,7 +25,7 @@ async def get_campaign_or_error(interaction: Interaction) -> dict | None:
     campaign = await db.get_campaign_by_channel(server_id, channel_id)
     if campaign is None:
         await interaction.response.send_message(
-            "Nenhuma campanha ativa neste canal. Use /setup para criar uma."
+            "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
         )
     return campaign
 
@@ -154,7 +154,12 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             f"GM: {gm_member.display_name}. "
             f"Jogadores: {', '.join(player_names)}. "
             f"Stress: {', '.join(stress_names)}. "
-            f"Modulos ativos: {modules_str}."
+            f"Modulos ativos: {modules_str}.\n"
+            "\n"
+            "Proximos passos: use /scene start para iniciar uma cena. "
+            "Jogadores podem usar /roll para rolar dados. "
+            "/campaign info mostra o estado completo. "
+            "/help para referencia de comandos."
         )
 
     @app_commands.command(name="info", description="Exibir estado completo da campanha.")
@@ -288,10 +293,13 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         description="Encerrar a campanha deste canal (apenas GM).",
     )
     @app_commands.describe(
-        confirm="Digite 'sim' para confirmar o encerramento da campanha.",
+        confirm="Confirmar encerramento da campanha.",
+    )
+    @app_commands.choices(
+        confirm=[app_commands.Choice(name="sim", value="sim")],
     )
     async def campaign_end(
-        self, interaction: Interaction, confirm: str = ""
+        self, interaction: Interaction, confirm: app_commands.Choice[str] | None = None,
     ) -> None:
         campaign = await get_campaign_or_error(interaction)
         if campaign is None:
@@ -300,7 +308,7 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         if not await is_gm_check(interaction, campaign):
             return
 
-        if confirm.lower() not in ("sim", "yes"):
+        if confirm is None or confirm.value != "sim":
             await interaction.response.send_message(
                 f"Para encerrar a campanha '{campaign['name']}', execute novamente "
                 "com confirm:sim. Todos os dados serao removidos permanentemente."

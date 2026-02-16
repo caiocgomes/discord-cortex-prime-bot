@@ -35,7 +35,7 @@ async def _get_campaign(interaction: Interaction) -> dict | None:
     )
     if campaign is None:
         await interaction.response.send_message(
-            "Nenhuma campanha ativa neste canal. Use /setup para criar uma."
+            "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
         )
     return campaign
 
@@ -238,7 +238,7 @@ class AssetGroup(app_commands.Group):
         name="Nome do asset",
         die="Tamanho do dado (ex: d6, d8)",
         duration="Duracao: scene ou session",
-        player="Jogador dono do asset (default: voce). Omitir para asset de cena.",
+        player="Jogador dono do asset (default: voce)",
         scene_asset="Criar como asset de cena, sem dono especifico",
     )
     @app_commands.choices(die=DIE_CHOICES, duration=DURATION_CHOICES)

@@ -107,7 +107,7 @@ class RollingCog(commands.Cog):
         campaign = await self.db.get_campaign_by_channel(server_id, channel_id)
         if campaign is None:
             await interaction.response.send_message(
-                "Nenhuma campanha ativa neste canal. Use /setup para criar uma."
+                "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
             )
             return
 
@@ -248,7 +248,7 @@ class RollingCog(commands.Cog):
         campaign = await self.db.get_campaign_by_channel(server_id, channel_id)
         if campaign is None:
             await interaction.response.send_message(
-                "Nenhuma campanha ativa neste canal. Use /setup para criar uma."
+                "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
             )
             return
 

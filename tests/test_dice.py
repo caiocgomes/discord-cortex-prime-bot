@@ -78,12 +78,16 @@ class TestParseDiceNotation:
         assert parse_dice_notation("1D8 2D6") == [8, 6, 6]
 
     def test_invalid_die_size(self):
-        with pytest.raises(ValueError, match="d20"):
+        with pytest.raises(ValueError, match="d20 nao e um dado Cortex valido"):
             parse_dice_notation("1d20")
 
     def test_no_dice(self):
-        with pytest.raises(ValueError, match="No valid dice"):
+        with pytest.raises(ValueError, match="Notacao de dado invalida"):
             parse_dice_notation("hello")
+
+    def test_zero_count(self):
+        with pytest.raises(ValueError, match="pelo menos 1"):
+            parse_dice_notation("0d8")
 
 
 class TestParseSingleDie:
@@ -100,5 +104,5 @@ class TestParseSingleDie:
         assert parse_single_die("  d6  ") == 6
 
     def test_invalid(self):
-        with pytest.raises(ValueError):
+        with pytest.raises(ValueError, match="d20 nao e um dado Cortex valido"):
             parse_single_die("d20")

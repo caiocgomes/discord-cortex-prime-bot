@@ -36,13 +36,17 @@ def parse_dice_notation(text: str) -> list[int]:
     dice: list[int] = []
     for match in DICE_PATTERN.finditer(text):
         count = int(match.group(1)) if match.group(1) else 1
+        if count < 1:
+            raise ValueError(
+                f"Quantidade de dados precisa ser pelo menos 1, recebido {count}."
+            )
         size = int(match.group(2))
         if not is_valid_die(size):
-            raise ValueError(f"d{size} is not a valid Cortex die. Use d4, d6, d8, d10, or d12.")
+            raise ValueError(f"d{size} nao e um dado Cortex valido. Use d4, d6, d8, d10 ou d12.")
         dice.extend([size] * count)
     if not dice:
         raise ValueError(
-            "No valid dice found. Use notation like '1d8 2d6' (valid sizes: d4, d6, d8, d10, d12)."
+            "Notacao de dado invalida: " + text.strip()
         )
     return dice
 
@@ -54,5 +58,5 @@ def parse_single_die(text: str) -> int:
         text = text[1:]
     size = int(text)
     if not is_valid_die(size):
-        raise ValueError(f"d{size} is not a valid Cortex die. Use d4, d6, d8, d10, or d12.")
+        raise ValueError(f"d{size} nao e um dado Cortex valido. Use d4, d6, d8, d10 ou d12.")
     return size

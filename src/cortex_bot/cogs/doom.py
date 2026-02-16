@@ -60,7 +60,7 @@ class DoomCog(commands.Cog):
         campaign = await self.db.get_campaign_by_channel(server_id, channel_id)
         if campaign is None:
             await interaction.response.send_message(
-                "Nenhuma campanha registrada neste canal."
+                "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
             )
         return campaign
 

@@ -9,19 +9,15 @@ from cortex_bot.services.formatter import (
 
 
 class TestFormatRollResult:
-    def test_basic_roll_no_special(self):
+    def test_basic_roll_total_first(self):
         results = [(8, 5), (6, 3), (10, 7)]
         output = format_roll_result("Alice", results)
         assert "Alice rolou 3 dados." in output
-        assert "d8: 5" in output
-        assert "d6: 3" in output
-        assert "d10: 7" in output
-
-    def test_default_total_two_best(self):
-        results = [(8, 5), (6, 3), (10, 7)]
-        output = format_roll_result("Alice", results)
-        # Best two values: 7 and 5, total=12, effect d6
-        assert "igual a 12." in output
+        # Total-first format: total comes before dice detail
+        assert "Total 12" in output
+        assert "d8 tirou 5" in output
+        assert "d6 tirou 3" in output
+        assert "d10 tirou 7" in output
         assert "Effect die: d6." in output
 
     def test_single_non_hitch_die(self):
@@ -38,18 +34,16 @@ class TestFormatRollResult:
         )
         assert "Botch" in output
         assert "Total zero" in output
-        # Botch should return early, no total line
-        assert "igual a" not in output
 
     def test_hitches(self):
         results = [(8, 5), (6, 1), (10, 7)]
         hitches = [(6, 1)]
         output = format_roll_result("Alice", results, hitches=hitches)
-        assert "d6: 1 (hitch)" in output
+        assert "d6 tirou 1 (hitch)" in output
         assert "Hitches: d6." in output
         assert "GM pode dar PP" in output
 
-    def test_best_options_no_difficulty(self):
+    def test_best_options_label_first(self):
         results = [(8, 5), (6, 3), (10, 7)]
         best_options = [
             {
@@ -60,10 +54,10 @@ class TestFormatRollResult:
             }
         ]
         output = format_roll_result("Alice", results, best_options=best_options)
-        assert "Melhor total:" in output
-        assert "igual a 12." in output
+        assert "Melhor total: 12" in output
+        assert "d10 tirou 7" in output
+        assert "d8 tirou 5" in output
         assert "Effect die: d6." in output
-        # No difficulty, no success/failure status
         assert "Sucesso" not in output
         assert "Falha" not in output
 
@@ -95,7 +89,7 @@ class TestFormatRollResult:
             "Alice", [(6, 3), (4, 2)],
             best_options=best_options, difficulty=8,
         )
-        assert "Falha por 3." in output
+        assert "Falha, faltou 3." in output
 
     def test_best_options_heroic_success(self):
         best_options = [
@@ -113,6 +107,18 @@ class TestFormatRollResult:
         assert "Heroic success" in output
         assert "margem 10" in output
         assert "step up 2 vez(es)" in output
+
+    def test_no_best_with_difficulty_success(self):
+        results = [(8, 5), (6, 3), (10, 7)]
+        output = format_roll_result("Alice", results, difficulty=9)
+        assert "Total 12" in output
+        assert "Sucesso, margem 3." in output
+
+    def test_no_best_with_difficulty_failure(self):
+        results = [(8, 3), (6, 2), (10, 4)]
+        output = format_roll_result("Alice", results, difficulty=9)
+        assert "Total 7" in output
+        assert "Falha, faltou 2." in output
 
     def test_included_assets(self):
         results = [(8, 5), (6, 3)]
@@ -253,6 +259,30 @@ class TestFormatCampaignInfo:
             campaign, players, player_states={}, scene=None, doom_pool=None
         )
         assert "PP 5, XP 2." in output
+
+    def test_separator_between_players(self):
+        campaign = {"name": "Test"}
+        players = [
+            self._make_player(pid=1, name="Alice"),
+            self._make_player(pid=2, name="Bob"),
+        ]
+        output = format_campaign_info(
+            campaign, players, player_states={}, scene=None, doom_pool=None
+        )
+        assert "---" in output
+        lines = output.split("\n")
+        alice_idx = next(i for i, l in enumerate(lines) if "Alice" in l)
+        sep_idx = next(i for i, l in enumerate(lines) if l.strip() == "---")
+        bob_idx = next(i for i, l in enumerate(lines) if "Bob" in l)
+        assert alice_idx < sep_idx < bob_idx
+
+    def test_no_separator_single_player(self):
+        campaign = {"name": "Test"}
+        players = [self._make_player()]
+        output = format_campaign_info(
+            campaign, players, player_states={}, scene=None, doom_pool=None
+        )
+        assert "---" not in output
 
     def test_doom_pool_empty(self):
         campaign = {"name": "Test"}

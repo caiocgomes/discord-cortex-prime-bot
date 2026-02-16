@@ -53,7 +53,7 @@ class SceneCog(commands.Cog):
         campaign = await self.bot.db.get_campaign_by_channel(server_id, channel_id)
         if campaign is None:
             await interaction.response.send_message(
-                "Nenhuma campanha registrada neste canal."
+                "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
             )
         return campaign
 
@@ -97,7 +97,19 @@ class SceneCog(commands.Cog):
             await conn.commit()
 
         label = name or "sem nome"
-        await interaction.response.send_message(f"Cena iniciada: {label}.")
+
+        doom_enabled = campaign["config"].get("doom_pool", False)
+        guide = (
+            "\n"
+            "Comandos de jogo: /roll para rolar, /asset add para criar assets, "
+            "/campaign info para ver estado."
+        )
+        if doom_enabled:
+            guide += " GM: /stress add, /complication add, /doom."
+        else:
+            guide += " GM: /stress add, /complication add."
+
+        await interaction.response.send_message(f"Cena iniciada: {label}.{guide}")
 
     async def _end(
         self, interaction: discord.Interaction, bridge: bool
@@ -215,6 +227,10 @@ class SceneCog(commands.Cog):
             removed_crisis_pools,
             stress_changes=stress_changes or None,
             persistent_state=persistent_state,
+        )
+        summary += (
+            "\n\nUse /scene start para iniciar nova cena, "
+            "ou /campaign info para ver estado persistente."
         )
         await interaction.followup.send(summary)
 

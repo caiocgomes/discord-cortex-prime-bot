@@ -16,6 +16,7 @@ COGS = [
     "cortex_bot.cogs.rolling",
     "cortex_bot.cogs.doom",
     "cortex_bot.cogs.undo",
+    "cortex_bot.cogs.help",
 ]
 
 

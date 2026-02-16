@@ -7,6 +7,17 @@ Screen reader friendly.
 from cortex_bot.models.dice import die_label
 
 
+def _format_dice_detail(results: list[tuple[int, int]], hitches: list[tuple[int, int]] | None) -> str:
+    """Format individual dice results as parenthetical detail."""
+    parts = []
+    for size, value in results:
+        part = f"{die_label(size)} tirou {value}"
+        if hitches and (size, value) in hitches:
+            part += " (hitch)"
+        parts.append(part)
+    return ", ".join(parts)
+
+
 def format_roll_result(
     player_name: str,
     results: list[tuple[int, int]],
@@ -22,20 +33,13 @@ def format_roll_result(
 
     lines.append(f"{player_name} rolou {len(results)} dados.")
 
-    dice_parts = []
-    for size, value in results:
-        label = f"{die_label(size)}: {value}"
-        if hitches and (size, value) in hitches:
-            label += " (hitch)"
-        dice_parts.append(label)
-    lines.append(", ".join(dice_parts) + ".")
-
     if included_assets:
         lines.append(f"Incluidos: {', '.join(included_assets)}.")
 
     if is_botch:
+        detail = _format_dice_detail(results, hitches)
         lines.append(
-            "Botch. Total zero. "
+            f"Botch. Total zero ({detail}). "
             "GM cria complication d6 gratis, step up por hitch adicional."
         )
         return "\n".join(lines)
@@ -47,45 +51,59 @@ def format_roll_result(
             "GM pode dar PP e criar complication d6, ou adicionar dado ao Doom Pool."
         )
 
+    detail = _format_dice_detail(results, hitches)
+
     if best_options:
         for opt in best_options:
+            opt_detail = (
+                f"{die_label(opt['dice'][0][0])} tirou {opt['dice'][0][1]}, "
+                f"{die_label(opt['dice'][1][0])} tirou {opt['dice'][1][1]}"
+            )
             status = ""
             if difficulty is not None:
                 margin = opt["total"] - difficulty
                 if margin > 0:
-                    status = f" Sucesso, margem {margin}."
                     if margin >= 5:
                         step_ups = margin // 5
                         status = (
                             f" Heroic success, margem {margin}. "
                             f"Effect die faz step up {step_ups} vez(es)."
                         )
+                    else:
+                        status = f" Sucesso, margem {margin}."
                 else:
-                    status = f" Falha por {abs(margin)}."
+                    status = f" Falha, faltou {abs(margin)}."
             lines.append(
-                f"{opt['label']}: "
-                f"{die_label(opt['dice'][0][0])} com {opt['dice'][0][1]} "
-                f"mais {die_label(opt['dice'][1][0])} com {opt['dice'][1][1]}, "
-                f"igual a {opt['total']}. "
+                f"{opt['label']}: {opt['total']} ({opt_detail}). "
                 f"Effect die: {die_label(opt['effect_size'])}.{status}"
             )
-    elif not is_botch:
+    else:
         non_hitch = [(s, v) for s, v in results if v != 1]
         if len(non_hitch) >= 2:
             non_hitch.sort(key=lambda x: x[1], reverse=True)
             total = non_hitch[0][1] + non_hitch[1][1]
             effect = non_hitch[2] if len(non_hitch) > 2 else None
-            total_str = (
-                f"Total: {die_label(non_hitch[0][0])} com {non_hitch[0][1]} "
-                f"mais {die_label(non_hitch[1][0])} com {non_hitch[1][1]}, "
-                f"igual a {total}."
-            )
+            status = ""
+            if difficulty is not None:
+                margin = total - difficulty
+                if margin > 0:
+                    if margin >= 5:
+                        step_ups = margin // 5
+                        status = (
+                            f" Heroic success, margem {margin}. "
+                            f"Effect die faz step up {step_ups} vez(es)."
+                        )
+                    else:
+                        status = f" Sucesso, margem {margin}."
+                else:
+                    status = f" Falha, faltou {abs(margin)}."
+            total_str = f"Total {total} ({detail}).{status}"
             if effect:
                 total_str += f" Effect die: {die_label(effect[0])}."
             lines.append(total_str)
         elif len(non_hitch) == 1:
             lines.append(
-                f"Total: {non_hitch[0][1]} ({die_label(non_hitch[0][0])}). "
+                f"Total {non_hitch[0][1]} ({detail}). "
                 "Sem effect die disponivel, default d4."
             )
 
@@ -117,7 +135,9 @@ def format_campaign_info(
     lines.append(f"Campanha: {campaign['name']}. Cena atual: {scene_name}.")
     lines.append("")
 
-    for p in players:
+    for i, p in enumerate(players):
+        if i > 0:
+            lines.append("---")
         pid = p["id"]
         state = player_states.get(pid, {})
         parts = [f"{p['name']}"]
