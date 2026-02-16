@@ -50,40 +50,28 @@ uv run pytest
 
 ## Deploy with systemd
 
-The repository includes a `cortex-bot.service` unit file for running as a systemd service.
+The repository includes an install script that handles everything: creates the service user, clones the repo, installs dependencies, configures systemd, and sets permissions.
 
-1. Create a dedicated user:
-   ```bash
-   sudo useradd -r -s /usr/sbin/nologin cortex-bot
-   ```
+```bash
+curl -sSL https://raw.githubusercontent.com/caiocgomes/discord-cortex-prime-bot/main/install.sh | sudo bash
+```
 
-2. Clone the repository to `/opt/cortex-bot` and install dependencies:
-   ```bash
-   sudo git clone https://github.com/caiocgomes/discord-cortex-prime-bot.git /opt/cortex-bot
-   cd /opt/cortex-bot
-   sudo -u cortex-bot uv sync
-   ```
+Or, if the repo is already cloned:
 
-3. Create the environment file:
-   ```bash
-   sudo mkdir -p /etc/cortex-bot
-   sudo cp .env.example /etc/cortex-bot/env
-   sudo chmod 600 /etc/cortex-bot/env
-   ```
-   Edit `/etc/cortex-bot/env` and set `CORTEX_BOT_TOKEN`.
+```bash
+sudo bash install.sh
+```
 
-4. Install and start the service:
-   ```bash
-   sudo cp cortex-bot.service /etc/systemd/system/
-   sudo systemctl daemon-reload
-   sudo systemctl enable --now cortex-bot
-   ```
+The script will prompt you to configure `CORTEX_BOT_TOKEN` in `/etc/cortex-bot/env` if it hasn't been set.
 
-5. Check status:
-   ```bash
-   sudo systemctl status cortex-bot
-   sudo journalctl -u cortex-bot -f
-   ```
+To update an existing installation, run the script again. It pulls the latest code and restarts the service.
+
+To check status:
+
+```bash
+sudo systemctl status cortex-bot
+sudo journalctl -u cortex-bot -f
+```
 
 ## License
 
