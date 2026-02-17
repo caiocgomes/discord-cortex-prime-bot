@@ -516,7 +516,8 @@ class ComplicationNameModal(discord.ui.Modal, title="Nome da complicacao"):
         )
         pp_msg = f"{player_name} recebeu 1 PP (agora {pp_result['to']})."
 
-        await interaction.response.send_message(f"{comp_msg} {pp_msg}")
+        view = PostRollView(self.campaign_id)
+        await interaction.response.send_message(f"{comp_msg} {pp_msg}", view=view)
 
 
 class HitchDoomButton(
@@ -566,8 +567,9 @@ class HitchDoomButton(
         pool = await db.get_doom_pool(self.campaign_id)
         labels = [die_label(d["die_size"]) for d in pool]
         pool_str = ", ".join(labels) if labels else "vazio"
+        view = PostRollView(self.campaign_id)
         await interaction.response.send_message(
-            f"Adicionado d6 ao Doom Pool. Doom Pool: {pool_str}."
+            f"Adicionado d6 ao Doom Pool. Doom Pool: {pool_str}.", view=view
         )
 
 

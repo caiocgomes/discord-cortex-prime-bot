@@ -206,6 +206,14 @@ class MenuButton(
         await interaction.response.send_message(text, view=view, ephemeral=True)
 
 
+class MenuOnlyView(CortexView):
+    """Minimal view with just a Menu button, for messages without a specific post-action view."""
+
+    def __init__(self, campaign_id: int) -> None:
+        super().__init__()
+        self.add_item(MenuButton(campaign_id))
+
+
 class PostUndoView(CortexView):
     """View shown after an undo action: Undo (another) + Campaign Info + Menu."""
 

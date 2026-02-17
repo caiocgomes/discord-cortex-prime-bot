@@ -16,6 +16,7 @@ from cortex_bot.models.dice import (
 )
 from cortex_bot.services.roller import roll_pool, calculate_best_options
 from cortex_bot.utils import has_gm_permission
+from cortex_bot.views.common import MenuOnlyView
 
 log = logging.getLogger(__name__)
 
@@ -671,7 +672,7 @@ class DoomCog(commands.Cog):
                     f"Effect die: {die_label(opt['effect_size'])}."
                 )
 
-        await interaction.response.send_message("\n".join(lines))
+        await interaction.response.send_message("\n".join(lines), view=MenuOnlyView(campaign_id))
 
 
 async def setup(bot: commands.Bot) -> None:

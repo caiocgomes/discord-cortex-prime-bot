@@ -10,6 +10,7 @@ from discord.ext import commands
 
 from cortex_bot.services.formatter import format_campaign_info
 from cortex_bot.models.dice import die_label
+from cortex_bot.views.common import MenuOnlyView
 from discord import Member
 
 log = logging.getLogger(__name__)
@@ -256,7 +257,8 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             await conn.commit()
 
         await interaction.response.send_message(
-            f"{target['name']} agora e delegado. Possui acesso a comandos de GM."
+            f"{target['name']} agora e delegado. Possui acesso a comandos de GM.",
+            view=MenuOnlyView(campaign["id"]),
         )
 
     @app_commands.command(name="undelegate", description="Revogar delegacao de um jogador (apenas GM).")
@@ -291,7 +293,8 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             await conn.commit()
 
         await interaction.response.send_message(
-            f"Delegacao de {target['name']} revogada."
+            f"Delegacao de {target['name']} revogada.",
+            view=MenuOnlyView(campaign["id"]),
         )
 
     @app_commands.command(

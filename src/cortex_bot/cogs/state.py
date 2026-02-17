@@ -11,6 +11,7 @@ from cortex_bot.models.dice import parse_single_die, die_label, is_valid_die, st
 from cortex_bot.services.state_manager import StateManager
 from cortex_bot.services.formatter import format_action_confirm
 from cortex_bot.utils import has_gm_permission
+from cortex_bot.views.common import MenuOnlyView
 
 log = logging.getLogger(__name__)
 
@@ -990,7 +991,7 @@ class TraumaGroup(app_commands.Group):
                             f"{target['name']} trauma {stress_type['name']} ja era d12 e recebeu step up. "
                             f"Personagem sofre remocao permanente.",
                         )
-                        await interaction.response.send_message(msg)
+                        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
                         return
                     await conn.execute(
                         "UPDATE trauma SET die_size = ? WHERE id = ?",
@@ -1027,7 +1028,7 @@ class TraumaGroup(app_commands.Group):
                     f"{target['name']} recebe trauma {stress_type['name']} {die_label(die_size)}.",
                 )
 
-        await interaction.response.send_message(msg)
+        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
     @app_commands.command(name="stepup", description="Step up de trauma de um jogador (GM only).")
     @app_commands.describe(player="Jogador", type="Tipo de trauma")
@@ -1077,7 +1078,7 @@ class TraumaGroup(app_commands.Group):
                     "Remocao permanente",
                     f"{target['name']} trauma {stress_type['name']} ja era d12, step up indica remocao permanente do personagem.",
                 )
-                await interaction.response.send_message(msg)
+                await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
                 return
 
             await conn.execute(
@@ -1097,7 +1098,7 @@ class TraumaGroup(app_commands.Group):
             "Trauma step up",
             f"{target['name']} {stress_type['name']} de {die_label(existing['die_size'])} para {die_label(new_size)}.",
         )
-        await interaction.response.send_message(msg)
+        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
     @app_commands.command(name="stepdown", description="Step down de trauma de um jogador.")
     @app_commands.describe(player="Jogador", type="Tipo de trauma")
@@ -1164,7 +1165,7 @@ class TraumaGroup(app_commands.Group):
                     "Trauma eliminado",
                     f"{stress_type['name']} de {label} era d4, step down remove o trauma.",
                 )
-                await interaction.response.send_message(msg)
+                await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
                 return
 
             await conn.execute(
@@ -1185,7 +1186,7 @@ class TraumaGroup(app_commands.Group):
             "Trauma step down",
             f"{label} {stress_type['name']} de {die_label(existing['die_size'])} para {die_label(new_size)}.",
         )
-        await interaction.response.send_message(msg)
+        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
     @app_commands.command(name="remove", description="Remover trauma de um jogador.")
     @app_commands.describe(player="Jogador", type="Tipo de trauma")
@@ -1250,7 +1251,7 @@ class TraumaGroup(app_commands.Group):
             "Trauma removido",
             f"{stress_type['name']} {die_label(existing['die_size'])} de {label}.",
         )
-        await interaction.response.send_message(msg)
+        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
 
 # ---------------------------------------------------------------------------
@@ -1552,7 +1553,7 @@ class PPGroup(app_commands.Group):
             "PP adicionado",
             f"{label}: {result['from']} para {result['to']} PP (+{amount}).",
         )
-        await interaction.response.send_message(msg)
+        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
     @app_commands.command(name="remove", description="Gastar plot points.")
     @app_commands.describe(
@@ -1602,7 +1603,7 @@ class PPGroup(app_commands.Group):
             "PP gasto",
             f"{label}: {result['from']} para {result['to']} PP (-{amount}).",
         )
-        await interaction.response.send_message(msg)
+        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
 
 # ---------------------------------------------------------------------------
@@ -1656,7 +1657,7 @@ class XPGroup(app_commands.Group):
             "XP adicionado",
             f"{label}: {result['from']} para {result['to']} XP (+{amount}).",
         )
-        await interaction.response.send_message(msg)
+        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
     @app_commands.command(name="remove", description="Remover XP.")
     @app_commands.describe(
@@ -1706,7 +1707,7 @@ class XPGroup(app_commands.Group):
             "XP removido",
             f"{label}: {result['from']} para {result['to']} XP (-{amount}).",
         )
-        await interaction.response.send_message(msg)
+        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
 
 # ---------------------------------------------------------------------------
@@ -1769,7 +1770,7 @@ class HeroGroup(app_commands.Group):
             f"{die_label(die_size)} adicionado ao banco.",
             f"Banco atual: {', '.join(bank_strs)}.",
         )
-        await interaction.response.send_message(msg)
+        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
     @app_commands.command(name="use", description="Usar um hero die do banco.")
     @app_commands.describe(die="Tamanho do dado a usar")
@@ -1825,7 +1826,7 @@ class HeroGroup(app_commands.Group):
             f"{die_label(die_size)} removido do banco. Role e some ao total.",
             bank_info,
         )
-        await interaction.response.send_message(msg)
+        await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
 
 # ---------------------------------------------------------------------------

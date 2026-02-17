@@ -153,7 +153,19 @@ class HelpCog(commands.Cog):
     ) -> None:
         key = topic.value if topic else "geral"
         text = HELP_TOPICS[key]
-        await interaction.response.send_message(text)
+
+        # Attach MenuButton if there's an active campaign in this channel
+        view = None
+        db = interaction.client.db
+        campaign = await db.get_campaign(
+            str(interaction.guild_id), str(interaction.channel_id)
+        )
+        if campaign:
+            from cortex_bot.views.common import MenuOnlyView
+
+            view = MenuOnlyView(campaign["id"])
+
+        await interaction.response.send_message(text, view=view)
 
 
 async def setup(bot: commands.Bot) -> None:
