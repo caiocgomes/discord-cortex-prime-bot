@@ -151,19 +151,75 @@ class CampaignInfoButton(
         await interaction.response.send_message(text, view=view)
 
 
+class MenuButton(
+    discord.ui.DynamicItem[discord.ui.Button],
+    template=r"cortex:menu:(?P<campaign_id>\d+)",
+):
+    """Persistent Menu button that sends contextual menu as ephemeral."""
+
+    def __init__(self, campaign_id: int) -> None:
+        self.campaign_id = campaign_id
+        super().__init__(
+            discord.ui.Button(
+                label="Menu",
+                style=discord.ButtonStyle.secondary,
+                custom_id=make_custom_id("menu", campaign_id),
+            )
+        )
+
+    @classmethod
+    async def from_custom_id(
+        cls,
+        interaction: discord.Interaction,
+        item: discord.ui.Button,
+        match: re.Match,
+    ) -> "MenuButton":
+        return cls(int(match["campaign_id"]))
+
+    async def callback(self, interaction: discord.Interaction) -> None:
+        db = interaction.client.db
+        campaign = await db.get_campaign_by_id(self.campaign_id)
+        if campaign is None:
+            await interaction.response.send_message(
+                "Campanha nao encontrada.", ephemeral=True
+            )
+            return
+
+        scene = await db.get_active_scene(self.campaign_id)
+        has_active_scene = scene is not None
+        config = campaign.get("config", {})
+        doom_enabled = config.get("doom_pool", False)
+
+        from cortex_bot.cogs.menu import MenuView
+
+        view = MenuView(
+            self.campaign_id,
+            has_active_scene=has_active_scene,
+            doom_enabled=doom_enabled,
+        )
+
+        if has_active_scene:
+            text = "Painel de acoes. Use os botoes abaixo."
+        else:
+            text = "Nenhuma cena ativa. Inicie uma cena para acessar mais acoes."
+
+        await interaction.response.send_message(text, view=view, ephemeral=True)
+
+
 class PostUndoView(CortexView):
-    """View shown after an undo action: Undo (another) + Campaign Info."""
+    """View shown after an undo action: Undo (another) + Campaign Info + Menu."""
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
         self.add_item(UndoButton(campaign_id))
         self.add_item(CampaignInfoButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))
 
 
 class PostInfoView(CortexView):
     """View shown after campaign/scene info.
 
-    Shows Roll if scene active, Scene Start if not.
+    Shows Roll if scene active, Scene Start if not. Always includes Menu.
     """
 
     def __init__(self, campaign_id: int, has_active_scene: bool = False) -> None:
@@ -176,3 +232,4 @@ class PostInfoView(CortexView):
             from cortex_bot.views.scene_views import SceneStartButton
 
             self.add_item(SceneStartButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))

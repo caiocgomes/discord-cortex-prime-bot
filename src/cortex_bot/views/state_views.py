@@ -912,56 +912,61 @@ class XPAmountModal(discord.ui.Modal, title="Adicionar XP"):
 
 
 class PostStressView(CortexView):
-    """View after stress action: Stress Add + Undo."""
+    """View after stress action: Stress Add + Undo + Menu."""
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
-        from cortex_bot.views.common import UndoButton, CampaignInfoButton
+        from cortex_bot.views.common import UndoButton, CampaignInfoButton, MenuButton
 
         self.add_item(StressAddStartButton(campaign_id))
         self.add_item(UndoButton(campaign_id))
         self.add_item(CampaignInfoButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))
 
 
 class PostAssetView(CortexView):
-    """View after asset action: Asset Add + Undo."""
+    """View after asset action: Asset Add + Undo + Menu."""
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
-        from cortex_bot.views.common import UndoButton
+        from cortex_bot.views.common import UndoButton, MenuButton
 
         self.add_item(AssetAddStartButton(campaign_id))
         self.add_item(UndoButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))
 
 
 class PostComplicationView(CortexView):
-    """View after complication action: Complication Add + Undo."""
+    """View after complication action: Complication Add + Undo + Menu."""
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
-        from cortex_bot.views.common import UndoButton
+        from cortex_bot.views.common import UndoButton, MenuButton
 
         self.add_item(ComplicationAddStartButton(campaign_id))
         self.add_item(UndoButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))
 
 
 class PostPPView(CortexView):
-    """View after PP action: PP + Undo."""
+    """View after PP action: PP + Undo + Menu."""
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
-        from cortex_bot.views.common import UndoButton
+        from cortex_bot.views.common import UndoButton, MenuButton
 
         self.add_item(PPStartButton(campaign_id))
         self.add_item(UndoButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))
 
 
 class PostXPView(CortexView):
-    """View after XP action: XP + Undo."""
+    """View after XP action: XP + Undo + Menu."""
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
-        from cortex_bot.views.common import UndoButton
+        from cortex_bot.views.common import UndoButton, MenuButton
 
         self.add_item(XPStartButton(campaign_id))
         self.add_item(UndoButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))

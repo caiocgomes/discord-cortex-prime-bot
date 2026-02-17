@@ -8,9 +8,13 @@ def register_persistent_views(bot) -> None:
 
     Must be called in setup_hook before loading cogs.
     """
-    from cortex_bot.views.common import UndoButton, CampaignInfoButton
+    from cortex_bot.views.common import UndoButton, CampaignInfoButton, MenuButton
     from cortex_bot.views.scene_views import SceneStartButton
-    from cortex_bot.views.rolling_views import RollStartButton
+    from cortex_bot.views.rolling_views import (
+        RollStartButton,
+        HitchComplicationButton,
+        HitchDoomButton,
+    )
     from cortex_bot.views.state_views import (
         StressAddStartButton,
         AssetAddStartButton,
@@ -23,8 +27,11 @@ def register_persistent_views(bot) -> None:
     bot.add_dynamic_items(
         UndoButton,
         CampaignInfoButton,
+        MenuButton,
         SceneStartButton,
         RollStartButton,
+        HitchComplicationButton,
+        HitchDoomButton,
         StressAddStartButton,
         AssetAddStartButton,
         ComplicationAddStartButton,

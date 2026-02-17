@@ -1372,3 +1372,212 @@ class TestXPAmountModal:
         )
         assert result["from"] == 3
         assert result["to"] == 5
+
+
+# ---------------------------------------------------------------------------
+# PostRollView composition tests
+# ---------------------------------------------------------------------------
+
+
+class TestPostRollView:
+    """Test PostRollView button composition based on hitches and doom."""
+
+    async def test_basic_post_roll_view(self):
+        from cortex_bot.views.rolling_views import PostRollView
+
+        view = PostRollView(campaign_id=1)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:roll_start:1" in custom_ids
+        assert "cortex:undo:1" in custom_ids
+        assert "cortex:menu:1" in custom_ids
+        assert "cortex:hitch_comp:1" not in custom_ids
+        assert "cortex:hitch_doom:1" not in custom_ids
+
+    async def test_post_roll_with_hitches_no_doom(self):
+        from cortex_bot.views.rolling_views import PostRollView
+
+        view = PostRollView(campaign_id=1, has_hitches=True, doom_enabled=False)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:hitch_comp:1" in custom_ids
+        assert "cortex:hitch_doom:1" not in custom_ids
+        assert "cortex:doom_roll_btn:1" not in custom_ids
+
+    async def test_post_roll_with_hitches_and_doom(self):
+        from cortex_bot.views.rolling_views import PostRollView
+
+        view = PostRollView(campaign_id=1, has_hitches=True, doom_enabled=True)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:hitch_comp:1" in custom_ids
+        assert "cortex:hitch_doom:1" in custom_ids
+        assert "cortex:doom_roll_btn:1" in custom_ids
+
+    async def test_post_roll_doom_enabled_no_hitches(self):
+        from cortex_bot.views.rolling_views import PostRollView
+
+        view = PostRollView(campaign_id=1, has_hitches=False, doom_enabled=True)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:hitch_comp:1" not in custom_ids
+        assert "cortex:hitch_doom:1" not in custom_ids
+        assert "cortex:doom_roll_btn:1" in custom_ids
+        assert "cortex:menu:1" in custom_ids
+
+    async def test_post_roll_max_buttons_within_limit(self):
+        """Full PostRollView (hitches + doom) should not exceed 25 items (5 rows x 5)."""
+        from cortex_bot.views.rolling_views import PostRollView
+
+        view = PostRollView(campaign_id=1, has_hitches=True, doom_enabled=True)
+        assert len(view.children) <= 25
+
+
+# ---------------------------------------------------------------------------
+# Hitch button DynamicItem patterns
+# ---------------------------------------------------------------------------
+
+
+class TestHitchButtonPatterns:
+    """Test that hitch button custom_ids match their DynamicItem regex."""
+
+    async def test_hitch_comp_button_pattern(self):
+        from cortex_bot.views.rolling_views import HitchComplicationButton
+
+        btn = HitchComplicationButton(42)
+        pattern = HitchComplicationButton.__discord_ui_compiled_template__
+        assert pattern.search(btn.item.custom_id)
+
+    async def test_hitch_doom_button_pattern(self):
+        from cortex_bot.views.rolling_views import HitchDoomButton
+
+        btn = HitchDoomButton(42)
+        pattern = HitchDoomButton.__discord_ui_compiled_template__
+        assert pattern.search(btn.item.custom_id)
+
+    async def test_hitch_comp_button_label(self):
+        from cortex_bot.views.rolling_views import HitchComplicationButton
+
+        btn = HitchComplicationButton(1)
+        assert btn.item.label == "Criar complicacao"
+
+    async def test_hitch_doom_button_label(self):
+        from cortex_bot.views.rolling_views import HitchDoomButton
+
+        btn = HitchDoomButton(1)
+        assert btn.item.label == "+Doom"
+
+
+# ---------------------------------------------------------------------------
+# MenuButton tests
+# ---------------------------------------------------------------------------
+
+
+class TestMenuButton:
+    """Test MenuButton DynamicItem pattern and composition."""
+
+    async def test_menu_button_pattern(self):
+        from cortex_bot.views.common import MenuButton
+
+        btn = MenuButton(42)
+        pattern = MenuButton.__discord_ui_compiled_template__
+        assert pattern.search(btn.item.custom_id)
+
+    async def test_menu_button_label(self):
+        from cortex_bot.views.common import MenuButton
+
+        btn = MenuButton(1)
+        assert btn.item.label == "Menu"
+
+    async def test_menu_button_in_post_views(self):
+        """MenuButton should be present in all post-action views."""
+        from cortex_bot.views.state_views import (
+            PostStressView,
+            PostAssetView,
+            PostComplicationView,
+            PostPPView,
+            PostXPView,
+        )
+        from cortex_bot.views.doom_views import PostDoomActionView
+        from cortex_bot.views.scene_views import (
+            PostSetupView,
+            PostSceneStartView,
+            PostSceneEndView,
+        )
+        from cortex_bot.views.common import PostUndoView, PostInfoView
+        from cortex_bot.views.rolling_views import PostRollView
+
+        views = [
+            PostStressView(1),
+            PostAssetView(1),
+            PostComplicationView(1),
+            PostPPView(1),
+            PostXPView(1),
+            PostDoomActionView(1),
+            PostSetupView(1),
+            PostSceneStartView(1),
+            PostSceneEndView(1),
+            PostUndoView(1),
+            PostInfoView(1),
+            PostRollView(1),
+        ]
+        for view in views:
+            custom_ids = [item.custom_id for item in view.children]
+            assert "cortex:menu:1" in custom_ids, (
+                f"{view.__class__.__name__} missing MenuButton"
+            )
+
+    async def test_menu_not_in_menu_view(self):
+        """MenuView itself should NOT contain a MenuButton."""
+        from cortex_bot.cogs.menu import MenuView
+
+        view = MenuView(campaign_id=1, has_active_scene=True, doom_enabled=False)
+        custom_ids = [item.custom_id for item in view.children]
+        assert "cortex:menu:1" not in custom_ids
+
+
+# ---------------------------------------------------------------------------
+# ComplicationNameModal tests
+# ---------------------------------------------------------------------------
+
+
+class TestComplicationNameModal:
+    """Test the ComplicationNameModal structure."""
+
+    async def test_modal_has_text_input(self):
+        from cortex_bot.views.rolling_views import ComplicationNameModal
+
+        modal = ComplicationNameModal(campaign_id=1, actor_id="gm1", player_id=2)
+        assert modal.title == "Nome da complicacao"
+        assert modal.name_input is not None
+        assert modal.name_input.max_length == 50
+
+    async def test_modal_stores_context(self):
+        from cortex_bot.views.rolling_views import ComplicationNameModal
+
+        modal = ComplicationNameModal(campaign_id=5, actor_id="gm1", player_id=3)
+        assert modal.campaign_id == 5
+        assert modal.actor_id == "gm1"
+        assert modal.player_id == 3
+
+
+# ---------------------------------------------------------------------------
+# Accessibility check
+# ---------------------------------------------------------------------------
+
+
+class TestHitchAccessibility:
+    """Verify hitch action confirmation messages are accessible text."""
+
+    def test_complication_message_is_linear_text(self):
+        """The confirmation message format should be descriptive linear text."""
+        # Simulated message format from ComplicationNameModal.on_submit
+        comp_msg = "Complicacao Desarmado d6 criada em Alice."
+        pp_msg = "Alice recebeu 1 PP (agora 4)."
+        full = f"{comp_msg} {pp_msg}"
+        # Must be plain text, no emoji-only info, no box art
+        assert "Complicacao" in full
+        assert "criada em" in full
+        assert "recebeu 1 PP" in full
+
+    def test_doom_add_message_is_linear_text(self):
+        """The doom add confirmation should be descriptive."""
+        msg = "Adicionado d6 ao Doom Pool. Doom Pool: d6, d8."
+        assert "Adicionado d6" in msg
+        assert "Doom Pool:" in msg

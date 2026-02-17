@@ -6,7 +6,14 @@ from collections import Counter
 
 import discord
 
-from cortex_bot.views.base import CortexView, make_custom_id, add_die_buttons, DIE_SIZES
+from cortex_bot.views.base import (
+    CortexView,
+    make_custom_id,
+    check_gm_permission,
+    add_die_buttons,
+    add_player_options,
+    DIE_SIZES,
+)
 from cortex_bot.models.dice import die_label
 from cortex_bot.utils import has_gm_permission
 from cortex_bot.services.roller import (
@@ -68,7 +75,13 @@ async def execute_player_roll(
         best_options=best_options,
         opposition_elements=opposition_elements,
     )
-    view = PostRollView(campaign_id)
+    has_hitches = bool(hitches) and not botch
+    doom_enabled = config.get("doom_pool", False)
+    view = PostRollView(
+        campaign_id,
+        has_hitches=has_hitches,
+        doom_enabled=doom_enabled,
+    )
     return text, view
 
 
@@ -356,12 +369,234 @@ class PoolBuilderView(CortexView):
         await interaction.response.edit_message(content=content, view=self)
 
 
-class PostRollView(CortexView):
-    """View shown after a roll: Roll, Undo."""
+class HitchComplicationButton(
+    discord.ui.DynamicItem[discord.ui.Button],
+    template=r"cortex:hitch_comp:(?P<campaign_id>\d+)",
+):
+    """Persistent button to create a complication from a hitch."""
 
     def __init__(self, campaign_id: int) -> None:
-        super().__init__()
-        from cortex_bot.views.common import UndoButton
+        self.campaign_id = campaign_id
+        super().__init__(
+            discord.ui.Button(
+                label="Criar complicacao",
+                style=discord.ButtonStyle.danger,
+                custom_id=make_custom_id("hitch_comp", campaign_id),
+            )
+        )
 
+    @classmethod
+    async def from_custom_id(cls, interaction, item, match):
+        return cls(int(match["campaign_id"]))
+
+    async def callback(self, interaction: discord.Interaction) -> None:
+        gm = await check_gm_permission(interaction, self.campaign_id)
+        if gm is None:
+            return
+
+        db = interaction.client.db
+        players = await db.get_players(self.campaign_id)
+        non_gm = [p for p in players if not p["is_gm"]]
+
+        if not non_gm:
+            await interaction.response.send_message(
+                "Nenhum jogador registrado.", ephemeral=True
+            )
+            return
+
+        view = HitchPlayerSelectView(self.campaign_id, str(interaction.user.id))
+
+        async def on_player(interaction: discord.Interaction, value: str) -> None:
+            await view._on_player_selected(interaction, int(value))
+
+        add_player_options(view, non_gm, on_player)
+        await interaction.response.send_message(
+            "Selecione o jogador que recebe a complicacao.",
+            view=view,
+            ephemeral=True,
+        )
+
+
+class HitchPlayerSelectView(CortexView):
+    """Select player to receive hitch complication."""
+
+    def __init__(self, campaign_id: int, actor_id: str) -> None:
+        super().__init__()
+        self.campaign_id = campaign_id
+        self.actor_id = actor_id
+
+    async def _on_player_selected(
+        self, interaction: discord.Interaction, player_id: int
+    ) -> None:
+        modal = ComplicationNameModal(
+            self.campaign_id, self.actor_id, player_id
+        )
+        await interaction.response.send_modal(modal)
+
+
+class ComplicationNameModal(discord.ui.Modal, title="Nome da complicacao"):
+    """Modal to input complication name for hitch resolution."""
+
+    name_input = discord.ui.TextInput(
+        label="Nome da complicacao",
+        placeholder="Ex: Desarmado, Cego, Confuso",
+        max_length=50,
+    )
+
+    def __init__(self, campaign_id: int, actor_id: str, player_id: int) -> None:
+        super().__init__()
+        self.campaign_id = campaign_id
+        self.actor_id = actor_id
+        self.player_id = player_id
+
+    async def on_submit(self, interaction: discord.Interaction) -> None:
+        db = interaction.client.db
+        comp_name = self.name_input.value.strip()
+        if not comp_name:
+            await interaction.response.send_message(
+                "Nome da complicacao nao pode ser vazio.", ephemeral=True
+            )
+            return
+
+        player = await db.get_player_by_id(self.player_id)
+        if player is None:
+            await interaction.response.send_message(
+                "Jogador nao encontrado.", ephemeral=True
+            )
+            return
+
+        player_name = player["name"]
+        scene = await db.get_active_scene(self.campaign_id)
+        scene_id = scene["id"] if scene else None
+
+        from cortex_bot.services.state_manager import StateManager
+
+        state_mgr = StateManager(db)
+
+        # Check for existing complication with same name on this player
+        existing_comps = await db.get_player_complications(
+            self.campaign_id, self.player_id
+        )
+        existing = next(
+            (c for c in existing_comps if c["name"].lower() == comp_name.lower()),
+            None,
+        )
+
+        if existing:
+            result = await state_mgr.step_up_complication(
+                self.campaign_id, self.actor_id, existing["id"]
+            )
+            if result and result.get("taken_out"):
+                comp_msg = (
+                    f"Complicacao {comp_name} ja estava em d12 em {player_name}. "
+                    "Taken out."
+                )
+            elif result:
+                comp_msg = (
+                    f"Complicacao {comp_name} em {player_name} fez step up: "
+                    f"{die_label(result['from'])} para {die_label(result['to'])}."
+                )
+            else:
+                comp_msg = "Erro ao fazer step up da complicacao."
+        else:
+            await state_mgr.add_complication(
+                self.campaign_id,
+                self.actor_id,
+                comp_name,
+                6,
+                player_id=self.player_id,
+                scene_id=scene_id,
+                player_name=player_name,
+            )
+            comp_msg = f"Complicacao {comp_name} d6 criada em {player_name}."
+
+        # Give 1 PP to the target player
+        pp_result = await state_mgr.update_pp(
+            self.campaign_id, self.actor_id, self.player_id, 1, player_name
+        )
+        pp_msg = f"{player_name} recebeu 1 PP (agora {pp_result['to']})."
+
+        await interaction.response.send_message(f"{comp_msg} {pp_msg}")
+
+
+class HitchDoomButton(
+    discord.ui.DynamicItem[discord.ui.Button],
+    template=r"cortex:hitch_doom:(?P<campaign_id>\d+)",
+):
+    """Persistent button to add d6 to doom pool from a hitch."""
+
+    def __init__(self, campaign_id: int) -> None:
+        self.campaign_id = campaign_id
+        super().__init__(
+            discord.ui.Button(
+                label="+Doom",
+                style=discord.ButtonStyle.danger,
+                custom_id=make_custom_id("hitch_doom", campaign_id),
+            )
+        )
+
+    @classmethod
+    async def from_custom_id(cls, interaction, item, match):
+        return cls(int(match["campaign_id"]))
+
+    async def callback(self, interaction: discord.Interaction) -> None:
+        gm = await check_gm_permission(interaction, self.campaign_id)
+        if gm is None:
+            return
+
+        db = interaction.client.db
+        actor_id = str(interaction.user.id)
+
+        async with db.connect() as conn:
+            cursor = await conn.execute(
+                "INSERT INTO doom_pool_dice (campaign_id, die_size) VALUES (?, ?)",
+                (self.campaign_id, 6),
+            )
+            doom_die_id = cursor.lastrowid
+            await conn.commit()
+
+        await db.log_action(
+            self.campaign_id,
+            actor_id,
+            "doom_add",
+            {"die_size": 6},
+            {"action": "delete", "table": "doom_pool_dice", "id": doom_die_id},
+        )
+
+        pool = await db.get_doom_pool(self.campaign_id)
+        labels = [die_label(d["die_size"]) for d in pool]
+        pool_str = ", ".join(labels) if labels else "vazio"
+        await interaction.response.send_message(
+            f"Adicionado d6 ao Doom Pool. Doom Pool: {pool_str}."
+        )
+
+
+class PostRollView(CortexView):
+    """View shown after a roll: Roll, Undo, plus conditional hitch/doom/menu buttons."""
+
+    def __init__(
+        self,
+        campaign_id: int,
+        has_hitches: bool = False,
+        doom_enabled: bool = False,
+    ) -> None:
+        super().__init__()
+        from cortex_bot.views.common import UndoButton, MenuButton
+
+        # Row 0: core actions
         self.add_item(RollStartButton(campaign_id))
         self.add_item(UndoButton(campaign_id))
+
+        # Hitch actions (GM-only buttons, visible to all but permission-checked on click)
+        if has_hitches:
+            self.add_item(HitchComplicationButton(campaign_id))
+            if doom_enabled:
+                self.add_item(HitchDoomButton(campaign_id))
+
+        # Doom Roll (when doom enabled, even without hitches)
+        if doom_enabled:
+            from cortex_bot.views.doom_views import DoomRollButton
+
+            self.add_item(DoomRollButton(campaign_id))
+
+        self.add_item(MenuButton(campaign_id))

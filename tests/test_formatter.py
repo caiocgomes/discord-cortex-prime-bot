@@ -43,6 +43,48 @@ class TestFormatRollResult:
         assert "Hitches: d6." in output
         assert "GM pode dar PP" in output
 
+    def test_best_options_shows_all_dice_before_options(self):
+        results = [(8, 5), (6, 3), (10, 7), (6, 2)]
+        best_options = [
+            {
+                "label": "Melhor total",
+                "dice": [(10, 7), (8, 5)],
+                "total": 12,
+                "effect_size": 6,
+            }
+        ]
+        output = format_roll_result("Alice", results, best_options=best_options)
+        lines = output.strip().split("\n")
+        # All individual dice should appear on their own line before the best options
+        detail_line = next(l for l in lines if "d8 tirou 5" in l and "d6 tirou 3" in l)
+        best_line = next(l for l in lines if "Melhor total" in l)
+        assert lines.index(detail_line) < lines.index(best_line)
+        # All 4 dice must appear in the detail line
+        assert "d8 tirou 5" in detail_line
+        assert "d6 tirou 3" in detail_line
+        assert "d10 tirou 7" in detail_line
+        assert "d6 tirou 2" in detail_line
+
+    def test_best_options_with_hitch_shows_all_dice(self):
+        results = [(8, 5), (6, 1), (10, 7)]
+        hitches = [(6, 1)]
+        best_options = [
+            {
+                "label": "Melhor total",
+                "dice": [(10, 7), (8, 5)],
+                "total": 12,
+                "effect_size": 4,
+            }
+        ]
+        output = format_roll_result(
+            "Alice", results, hitches=hitches, best_options=best_options
+        )
+        # Hitch die should appear in individual results marked as hitch
+        assert "d6 tirou 1 (hitch)" in output
+        # Non-hitch dice also shown
+        assert "d8 tirou 5" in output
+        assert "d10 tirou 7" in output
+
     def test_best_options_label_first(self):
         results = [(8, 5), (6, 3), (10, 7)]
         best_options = [

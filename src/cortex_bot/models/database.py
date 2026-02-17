@@ -201,6 +201,14 @@ class Database:
             row = await cursor.fetchone()
             return dict(row) if row else None
 
+    async def get_player_by_id(self, player_id: int) -> dict | None:
+        async with self.connect() as conn:
+            cursor = await conn.execute(
+                "SELECT * FROM players WHERE id = ?", (player_id,)
+            )
+            row = await cursor.fetchone()
+            return dict(row) if row else None
+
     async def get_players(self, campaign_id: int) -> list[dict]:
         async with self.connect() as conn:
             cursor = await conn.execute(

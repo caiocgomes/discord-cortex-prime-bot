@@ -261,13 +261,16 @@ class DoomRollButton(discord.ui.Button):
 
 
 class PostDoomActionView(CortexView):
-    """View after doom action: Doom Add, Doom Remove, Doom Roll."""
+    """View after doom action: Doom Add, Doom Remove, Doom Roll, Menu."""
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
+        from cortex_bot.views.common import MenuButton
+
         self.add_item(DoomAddStartButton(campaign_id))
         self.add_item(DoomRemoveButton(campaign_id))
         self.add_item(DoomRollButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))
 
 
 class PostCrisisActionView(CortexView):
@@ -275,6 +278,7 @@ class PostCrisisActionView(CortexView):
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
-        from cortex_bot.views.common import CampaignInfoButton
+        from cortex_bot.views.common import CampaignInfoButton, MenuButton
 
         self.add_item(CampaignInfoButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))

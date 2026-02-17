@@ -74,15 +74,18 @@ class SceneStartButton(
 
 
 class PostSetupView(CortexView):
-    """View shown after campaign setup: Scene Start button."""
+    """View shown after campaign setup: Scene Start + Menu."""
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
+        from cortex_bot.views.common import MenuButton
+
         self.add_item(SceneStartButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))
 
 
 class PostSceneStartView(CortexView):
-    """View after scene start: Roll, Stress Add, Asset Add, Complication Add, Doom Add (conditional)."""
+    """View after scene start: Roll, Stress Add, Asset Add, Complication Add, Doom Add (conditional), Menu."""
 
     def __init__(self, campaign_id: int, doom_enabled: bool = False) -> None:
         super().__init__()
@@ -93,6 +96,7 @@ class PostSceneStartView(CortexView):
             ComplicationAddStartButton,
         )
         from cortex_bot.views.doom_views import DoomAddStartButton
+        from cortex_bot.views.common import MenuButton
 
         self.add_item(RollStartButton(campaign_id))
         self.add_item(StressAddStartButton(campaign_id))
@@ -100,14 +104,16 @@ class PostSceneStartView(CortexView):
         self.add_item(ComplicationAddStartButton(campaign_id))
         if doom_enabled:
             self.add_item(DoomAddStartButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))
 
 
 class PostSceneEndView(CortexView):
-    """View after scene end: Scene Start, Campaign Info."""
+    """View after scene end: Scene Start, Campaign Info, Menu."""
 
     def __init__(self, campaign_id: int) -> None:
         super().__init__()
-        from cortex_bot.views.common import CampaignInfoButton
+        from cortex_bot.views.common import CampaignInfoButton, MenuButton
 
         self.add_item(SceneStartButton(campaign_id))
         self.add_item(CampaignInfoButton(campaign_id))
+        self.add_item(MenuButton(campaign_id))

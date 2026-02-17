@@ -54,6 +54,7 @@ def format_roll_result(
     detail = _format_dice_detail(results, hitches)
 
     if best_options:
+        lines.append(detail + ".")
         for opt in best_options:
             opt_detail = (
                 f"{die_label(opt['dice'][0][0])} tirou {opt['dice'][0][1]}, "
