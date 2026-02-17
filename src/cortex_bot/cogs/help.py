@@ -58,7 +58,7 @@ HELP_GM = (
     "- /scene end bridge:True - bridge scene: step down all stress\n"
     "\n"
     "Administration:\n"
-    "- /campaign campaign_end confirm:sim - end campaign permanently\n"
+    "- /campaign end confirm:yes - end campaign permanently\n"
     "- /campaign info - view full state\n"
     "- /undo - undo last action (GM can undo any player's action)"
 )

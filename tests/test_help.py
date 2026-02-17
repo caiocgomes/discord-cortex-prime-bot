@@ -32,7 +32,7 @@ class TestHelpContent:
         assert "/campaign setup" not in HELP_PLAYER
         assert "/stress add" not in HELP_PLAYER
         assert "/doom" not in HELP_PLAYER
-        assert "/campaign campaign_end" not in HELP_PLAYER
+        assert "/campaign end" not in HELP_PLAYER
 
     def test_player_includes_player_commands(self):
         assert "/roll" in HELP_PLAYER

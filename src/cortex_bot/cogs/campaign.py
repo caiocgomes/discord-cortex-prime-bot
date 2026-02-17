@@ -80,7 +80,7 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         if existing is not None:
             await interaction.response.send_message(
                 "A campaign already exists in this channel. "
-                "Use /campaign campaign_end to close it before creating another."
+                "Use /campaign end to close it before creating another."
             )
             return
 
@@ -298,14 +298,14 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         )
 
     @app_commands.command(
-        name="campaign_end",
+        name="end",
         description="End the campaign in this channel (GM only).",
     )
     @app_commands.describe(
         confirm="Confirm campaign end.",
     )
     @app_commands.choices(
-        confirm=[app_commands.Choice(name="sim", value="sim")],
+        confirm=[app_commands.Choice(name="yes", value="yes")],
     )
     async def campaign_end(
         self, interaction: Interaction, confirm: app_commands.Choice[str] | None = None,
@@ -317,10 +317,10 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         if not await is_gm_check(interaction, campaign):
             return
 
-        if confirm is None or confirm.value != "sim":
+        if confirm is None or confirm.value != "yes":
             await interaction.response.send_message(
                 f"To end campaign '{campaign['name']}', run again "
-                "with confirm:sim. All data will be permanently removed."
+                "with confirm:yes. All data will be permanently removed."
             )
             return
 
