@@ -1,7 +1,7 @@
 import re
 
 VALID_SIZES = (4, 6, 8, 10, 12)
-DICE_PATTERN = re.compile(r"(\d+)?d(\d+)", re.IGNORECASE)
+DICE_PATTERN = re.compile(r"(\d+)?\s*d(\d+)", re.IGNORECASE)
 
 
 def is_valid_die(size: int) -> bool:

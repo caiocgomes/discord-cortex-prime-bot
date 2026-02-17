@@ -77,6 +77,13 @@ class TestParseDiceNotation:
     def test_case_insensitive(self):
         assert parse_dice_notation("1D8 2D6") == [8, 6, 6]
 
+    def test_space_between_count_and_d(self):
+        assert parse_dice_notation("12 d4") == [4] * 12
+
+    def test_space_in_mixed_notation(self):
+        result = parse_dice_notation("2 d8 3 d6")
+        assert sorted(result) == [6, 6, 6, 8, 8]
+
     def test_invalid_die_size(self):
         with pytest.raises(ValueError, match="d20 nao e um dado Cortex valido"):
             parse_dice_notation("1d20")
