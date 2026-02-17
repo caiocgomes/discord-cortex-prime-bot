@@ -4,37 +4,40 @@
 
 Toda resposta de sucesso do bot SHALL incluir uma View com botões representando as ações mais prováveis como próximo passo, determinadas pelo contexto da ação que acabou de ser executada. Respostas de erro SHALL NOT incluir botões.
 
+#### Scenario: Botões após rolagem
+
+- **WHEN** jogador ou GM executa roll ou gmroll com sucesso
+- **THEN** resposta inclui botões: Roll, Undo
+- **AND** se a rolagem produziu hitches, inclui botões: Criar complicação, +Doom (se doom habilitado)
+- **AND** se doom_pool habilitado, inclui botão Doom Roll
+- **AND** inclui botão Menu
+
 #### Scenario: Botões após scene start
 
 - **WHEN** GM executa scene start com sucesso
-- **THEN** resposta inclui botões: Roll, Stress Add, Asset Add, Complication Add
+- **THEN** resposta inclui botões: Roll, Stress Add, Asset Add, Complication Add, Menu
 - **AND** se doom_pool habilitado, inclui botão Doom Add
 
 #### Scenario: Botões após scene end
 
 - **WHEN** GM encerra uma cena com sucesso
-- **THEN** resposta inclui botões: Scene Start, Campaign Info
-
-#### Scenario: Botões após rolagem
-
-- **WHEN** jogador ou GM executa roll ou gmroll com sucesso
-- **THEN** resposta inclui botões: Roll, Undo
+- **THEN** resposta inclui botões: Scene Start, Campaign Info, Menu
 
 #### Scenario: Botões após ação de state (stress/asset/complication)
 
 - **WHEN** GM executa stress add, asset add, ou complication add com sucesso
-- **THEN** resposta inclui botão Undo e botão para repetir a mesma categoria de ação
+- **THEN** resposta inclui botão Undo, botão para repetir a mesma categoria de ação, e botão Menu
 
 #### Scenario: Botões após campaign setup
 
 - **WHEN** GM cria campanha com sucesso
-- **THEN** resposta inclui botão Scene Start
+- **THEN** resposta inclui botão Scene Start e botão Menu
 
 #### Scenario: Botões após campaign/scene info
 
 - **WHEN** usuário consulta campaign info ou scene info
-- **THEN** se há cena ativa, resposta inclui botão Roll
-- **AND** se não há cena ativa, resposta inclui botão Scene Start
+- **THEN** se há cena ativa, resposta inclui botão Roll e botão Menu
+- **AND** se não há cena ativa, resposta inclui botão Scene Start e botão Menu
 
 #### Scenario: Sem botões em respostas de erro
 
@@ -155,7 +158,7 @@ O botão Undo SHALL executar a operação de undo diretamente, sem confirmação
 
 ### Requirement: Doom pool via botoes
 
-Botoes de doom (add, remove, roll) SHALL estar disponiveis apenas quando o modulo doom_pool esta habilitado na campanha. Doom add via botao SHALL apresentar 5 botoes de dado (d4-d12) em vez de select. Doom remove SHALL apresentar botoes com dados presentes no pool (deduplicados por tamanho). Doom roll SHALL executar diretamente.
+Botoes de doom (add, remove, roll) SHALL estar disponiveis apenas quando o modulo doom_pool esta habilitado na campanha. Doom add via botao SHALL apresentar 5 botoes de dado (d4-d12) em vez de select. Doom remove SHALL apresentar botoes com dados presentes no pool (deduplicados por tamanho). Doom roll SHALL executar diretamente. Doom Roll SHALL estar disponivel tambem na PostRollView quando doom_pool esta habilitado, permitindo o GM rolar oposicao diretamente apos uma rolagem de jogador.
 
 #### Scenario: Doom add via botao
 
@@ -172,7 +175,124 @@ Botoes de doom (add, remove, roll) SHALL estar disponiveis apenas quando o modul
 - **WHEN** GM clica d8
 - **THEN** bot remove um d8 do pool e exibe resultado
 
+#### Scenario: Doom Roll na PostRollView
+
+- **WHEN** doom_pool habilitado e jogador executa roll com sucesso
+- **THEN** PostRollView inclui botao "Doom Roll"
+- **WHEN** GM clica "Doom Roll"
+- **THEN** bot rola todo o doom pool e exibe resultado com best options e sugestao de dificuldade
+
 #### Scenario: Botoes de doom nao aparecem sem modulo
 
 - **WHEN** campanha nao tem doom_pool habilitado
 - **THEN** nenhuma resposta SHALL incluir botoes relacionados a doom
+
+### Requirement: PP via botoes com up/down
+
+O botao PP SHALL iniciar um flow de ajuste de plot points. GM/delegate SHALL selecionar jogador primeiro; jogador comum SHALL operar no proprio estado sem selecao intermediaria. Apos selecao, bot SHALL apresentar dois botoes: PP +1 e PP -1. Cada clique SHALL executar a operacao, editar a mensagem ephemeral com o resultado atualizado, enviar followup publico, e manter os botoes para novo ajuste. PP -1 SHALL respeitar a regra de PP nunca negativo.
+
+#### Scenario: GM clica PP e seleciona jogador
+
+- **WHEN** GM clica botao "PP"
+- **AND** campanha tem 4 jogadores (excluindo GM)
+- **THEN** bot apresenta botoes com nomes dos jogadores para selecao
+- **WHEN** GM clica botao do jogador
+- **THEN** bot apresenta dois botoes: "PP +1" e "PP -1"
+
+#### Scenario: Jogador clica PP (auto-selecao)
+
+- **WHEN** jogador (nao-GM) clica botao "PP"
+- **THEN** bot pula selecao de jogador e apresenta diretamente dois botoes: "PP +1" e "PP -1" para o proprio jogador
+
+#### Scenario: PP +1 executado
+
+- **WHEN** usuario clica "PP +1"
+- **THEN** bot adiciona 1 PP ao jogador alvo
+- **AND** edita mensagem ephemeral com resultado (ex: "Alice: 2 para 3 PP (+1)")
+- **AND** envia followup publico com confirmacao
+- **AND** mantém botoes PP +1 e PP -1 ativos na mensagem ephemeral para novo ajuste
+
+#### Scenario: PP -1 com PP suficiente
+
+- **WHEN** usuario clica "PP -1" e jogador alvo tem pelo menos 1 PP
+- **THEN** bot remove 1 PP do jogador alvo
+- **AND** edita mensagem ephemeral com resultado
+- **AND** envia followup publico com confirmacao
+- **AND** mantém botoes ativos
+
+#### Scenario: PP -1 com PP insuficiente
+
+- **WHEN** usuario clica "PP -1" e jogador alvo tem 0 PP
+- **THEN** bot edita mensagem ephemeral informando que PP nao pode ficar negativo
+- **AND** mantém botoes ativos (usuario pode clicar +1 em seguida)
+
+#### Scenario: PP com > 5 jogadores usa select
+
+- **WHEN** GM clica botao "PP"
+- **AND** campanha tem 7 jogadores (excluindo GM)
+- **THEN** bot apresenta select menu com jogadores como opcoes
+
+### Requirement: XP via botoes com modal
+
+O botao XP SHALL iniciar um flow de adicao de XP. GM/delegate SHALL selecionar jogador primeiro; jogador comum SHALL operar no proprio estado sem selecao intermediaria. Apos selecao, bot SHALL abrir um discord.ui.Modal com campo numerico para digitar quantidade. Bot SHALL executar add de XP com a quantidade informada.
+
+#### Scenario: GM clica XP e seleciona jogador
+
+- **WHEN** GM clica botao "XP"
+- **AND** campanha tem 4 jogadores (excluindo GM)
+- **THEN** bot apresenta botoes com nomes dos jogadores para selecao
+- **WHEN** GM clica botao do jogador
+- **THEN** bot abre modal com campo "Quantidade de XP"
+
+#### Scenario: Jogador clica XP (auto-selecao)
+
+- **WHEN** jogador (nao-GM) clica botao "XP"
+- **THEN** bot pula selecao de jogador e abre modal diretamente com campo "Quantidade de XP"
+
+#### Scenario: XP adicionado via modal
+
+- **WHEN** usuario submete modal com quantidade "5"
+- **THEN** bot adiciona 5 XP ao jogador alvo
+- **AND** edita mensagem ephemeral (ou envia nova) com confirmacao
+- **AND** envia followup publico com resultado
+
+#### Scenario: Quantidade invalida no modal
+
+- **WHEN** usuario submete modal com valor nao-numerico ou <= 0
+- **THEN** bot responde com mensagem ephemeral de erro informando que quantidade deve ser um numero positivo
+
+#### Scenario: XP com > 5 jogadores usa select
+
+- **WHEN** GM clica botao "XP"
+- **AND** campanha tem 7 jogadores (excluindo GM)
+- **THEN** bot apresenta select menu com jogadores como opcoes
+
+### Requirement: PP e XP DynamicItems persistentes
+
+Os botoes PP e XP SHALL usar DynamicItem com custom_ids estaveis parseaveis por regex, seguindo o padrao `cortex:{action}:{params}`. Botoes SHALL sobreviver restart do bot. Botoes intermediarios (player select, up/down) SHALL usar custom_ids efemeros.
+
+#### Scenario: PP botao funciona apos restart
+
+- **WHEN** bot reinicia
+- **AND** usuario clica botao "PP" em mensagem anterior ao restart
+- **THEN** bot processa a interacao normalmente
+
+#### Scenario: XP botao funciona apos restart
+
+- **WHEN** bot reinicia
+- **AND** usuario clica botao "XP" em mensagem anterior ao restart
+- **THEN** bot processa a interacao normalmente
+
+### Requirement: Verificacao de permissao em PP e XP via botoes
+
+PP e XP via botoes SHALL verificar que o usuario e jogador registrado na campanha. PP -1 SHALL verificar que o jogador alvo tem PP suficiente. Nenhuma verificacao adicional de papel e necessaria porque jogador opera em si mesmo e GM seleciona target.
+
+#### Scenario: Usuario nao registrado clica PP
+
+- **WHEN** usuario nao registrado na campanha clica botao "PP"
+- **THEN** bot responde com mensagem ephemeral informando que nao esta registrado
+
+#### Scenario: Usuario nao registrado clica XP
+
+- **WHEN** usuario nao registrado na campanha clica botao "XP"
+- **THEN** bot responde com mensagem ephemeral informando que nao esta registrado
