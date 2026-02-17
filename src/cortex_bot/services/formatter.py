@@ -211,7 +211,8 @@ def format_campaign_info(
             hero_strs = [die_label(h["die_size"]) for h in hero_list]
             lines.append(f"Hero dice: {', '.join(hero_strs)}")
 
-        lines.append(f"PP {p['pp']}, XP {p['xp']}")
+        if not p["is_gm"]:
+            lines.append(f"PP {p['pp']}, XP {p['xp']}")
 
     has_scene_elements = scene_assets or scene_complications or crisis_pools
     if has_scene_elements:

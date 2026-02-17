@@ -350,6 +350,16 @@ class TestFormatCampaignInfo:
         )
         assert "PP 5, XP 2" in output
 
+    def test_gm_no_pp_xp(self):
+        campaign = {"name": "Test"}
+        players = [self._make_player(name="Carlos", is_gm=1, pp=5, xp=2)]
+        output = format_campaign_info(
+            campaign, players, player_states={}, scene=None, doom_pool=None
+        )
+        assert "CARLOS (GM)" in output
+        assert "PP" not in output
+        assert "XP" not in output
+
     def test_blank_line_between_players(self):
         campaign = {"name": "Test"}
         players = [
