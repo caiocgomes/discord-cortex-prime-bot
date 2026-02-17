@@ -40,9 +40,9 @@ class SceneStartButton(
         db = interaction.client.db
         active = await db.get_active_scene(self.campaign_id)
         if active is not None:
-            label = active["name"] or "sem nome"
+            label = active["name"] or "unnamed"
             await interaction.response.send_message(
-                f"Ja existe uma cena ativa: {label}. Encerre-a antes de iniciar outra.",
+                f"There is already an active scene: {label}. End it before starting another.",
                 ephemeral=True,
             )
             return
@@ -59,8 +59,8 @@ class SceneStartButton(
 
         guide = (
             "\n"
-            "Comandos de jogo: /roll para rolar, /asset add para criar assets, "
-            "/campaign info para ver estado."
+            "Game commands: /roll to roll dice, /asset add to create assets, "
+            "/campaign info to view state."
         )
         if doom_enabled:
             guide += " GM: /stress add, /complication add, /doom."
@@ -69,7 +69,7 @@ class SceneStartButton(
 
         view = PostSceneStartView(self.campaign_id, doom_enabled=doom_enabled)
         await interaction.response.send_message(
-            f"Cena iniciada: sem nome.{guide}", view=view
+            f"Scene started: unnamed.{guide}", view=view
         )
 
 

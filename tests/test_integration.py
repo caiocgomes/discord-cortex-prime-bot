@@ -130,7 +130,7 @@ async def test_full_game_flow(db):
         best_options=best_options if best_options else None,
         difficulty=11,
     )
-    assert "Alice rolou 4 dados" in output
+    assert "Alice rolled 4 dice" in output
     assert "Improvised Torch d6" in output
 
     # 8. Verify info output
@@ -155,9 +155,9 @@ async def test_full_game_flow(db):
     )
     assert "Test Game" in info
     assert "Dark Dungeon" in info
-    assert "Alice" in info
+    assert "ALICE" in info
     assert "Physical d8" in info
-    assert "Doom Pool" in info
+    assert "DOOM POOL" in info
 
     # 9. GM adds Mental stress d6 to Bob
     await sm.add_stress(
@@ -230,7 +230,7 @@ async def test_full_game_flow(db):
         stress_changes,
     )
     assert "Dark Dungeon" in end_summary
-    assert "Improvised Torch" in end_summary or "removid" in end_summary.lower()
+    assert "Improvised Torch" in end_summary or "REMOVED" in end_summary
 
     # 11. Verify doom pool persists after scene end
     doom_after = await db.get_doom_pool(campaign_id)

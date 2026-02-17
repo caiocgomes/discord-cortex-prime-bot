@@ -10,7 +10,7 @@ from discord.ext import commands
 from cortex_bot.models.dice import parse_single_die, die_label, is_valid_die, step_up, step_down
 from cortex_bot.services.state_manager import StateManager
 from cortex_bot.services.formatter import format_action_confirm
-from cortex_bot.utils import has_gm_permission
+from cortex_bot.utils import has_gm_permission, NO_CAMPAIGN_MSG
 from cortex_bot.views.common import MenuOnlyView
 
 log = logging.getLogger(__name__)
@@ -35,9 +35,7 @@ async def _get_campaign(interaction: Interaction) -> dict | None:
         str(interaction.guild_id), str(interaction.channel_id)
     )
     if campaign is None:
-        await interaction.response.send_message(
-            "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
-        )
+        await interaction.response.send_message(NO_CAMPAIGN_MSG)
     return campaign
 
 
@@ -46,7 +44,7 @@ async def _get_player(interaction: Interaction, campaign_id: int) -> dict | None
     player = await db.get_player(campaign_id, str(interaction.user.id))
     if player is None:
         await interaction.response.send_message(
-            "Voce nao esta registrado nesta campanha."
+            "You are not registered in this campaign. Ask the GM to add you via /campaign setup."
         )
     return player
 
@@ -69,14 +67,14 @@ async def _resolve_target_player(
 
     if require_gm_for_others and not has_gm_permission(actor):
         await interaction.response.send_message(
-            "Apenas o GM pode executar este comando em outros jogadores."
+            "Only the GM can execute this command on other players."
         )
         return None
 
     target = await db.get_player(campaign_id, str(member.id))
     if target is None:
         await interaction.response.send_message(
-            f"{member.display_name} nao esta registrado nesta campanha."
+            f"{member.display_name} is not registered in this campaign. Ask the GM to add them via /campaign setup."
         )
         return None
     return target
@@ -131,7 +129,7 @@ async def _find_stress_type_by_name(db, campaign_id: int, name: str) -> dict | N
 
 def _player_label(player: dict, is_self: bool) -> str:
     if is_self:
-        return "Voce"
+        return "You"
     return player["name"]
 
 
@@ -228,19 +226,19 @@ async def _autocomplete_complication(
 # ---------------------------------------------------------------------------
 
 class AssetGroup(app_commands.Group):
-    """Comandos para gerenciar assets."""
+    """Commands for managing assets."""
 
     def __init__(self, cog: "StateCog") -> None:
-        super().__init__(name="asset", description="Gerenciar assets.")
+        super().__init__(name="asset", description="Manage assets.")
         self.cog = cog
 
-    @app_commands.command(name="add", description="Adicionar um asset.")
+    @app_commands.command(name="add", description="Add an asset.")
     @app_commands.describe(
-        name="Nome do asset",
-        die="Tamanho do dado (ex: d6, d8)",
-        duration="Duracao: scene ou session",
-        player="Jogador dono do asset (default: voce)",
-        scene_asset="Criar como asset de cena, sem dono especifico",
+        name="Asset name",
+        die="Die size (e.g. d6, d8)",
+        duration="Duration: scene or session",
+        player="Asset owner (default: you)",
+        scene_asset="Create as a scene asset with no specific owner",
     )
     @app_commands.choices(die=DIE_CHOICES, duration=DURATION_CHOICES)
     async def add(
@@ -273,7 +271,7 @@ class AssetGroup(app_commands.Group):
         if scene_asset:
             if not has_gm_permission(actor):
                 await interaction.response.send_message(
-                    "Apenas o GM pode criar assets de cena."
+                    "Only the GM can create scene assets."
                 )
                 return
             result = await sm.add_asset(
@@ -281,8 +279,8 @@ class AssetGroup(app_commands.Group):
                 player_id=None, scene_id=scene_id, duration=duration,
             )
             msg = format_action_confirm(
-                "Asset de cena criado",
-                f"{name} {die_label(die_size)}, duracao {duration}.",
+                "Scene asset created",
+                f"{name} {die_label(die_size)}, duration {duration}.",
             )
         else:
             target = await _resolve_target_player(
@@ -296,8 +294,8 @@ class AssetGroup(app_commands.Group):
             )
             label = _player_label(target, target["id"] == actor["id"])
             msg = format_action_confirm(
-                "Asset adicionado",
-                f"{name} {die_label(die_size)} para {label}, duracao {duration}.",
+                "Asset added",
+                f"{name} {die_label(die_size)} for {label}, duration {duration}.",
             )
 
         from cortex_bot.views.state_views import PostAssetView
@@ -305,10 +303,10 @@ class AssetGroup(app_commands.Group):
         view = PostAssetView(campaign["id"])
         await interaction.response.send_message(msg, view=view)
 
-    @app_commands.command(name="stepup", description="Step up de um asset.")
+    @app_commands.command(name="stepup", description="Step up an asset.")
     @app_commands.describe(
-        name="Nome do asset",
-        player="Jogador dono do asset (default: voce)",
+        name="Asset name",
+        player="Asset owner (default: you)",
     )
     @app_commands.autocomplete(name=_autocomplete_asset)
     async def stepup(
@@ -336,36 +334,36 @@ class AssetGroup(app_commands.Group):
         if asset is None:
             label = _player_label(target, target["id"] == actor["id"])
             await interaction.response.send_message(
-                f"Asset '{name}' nao encontrado para {label}."
+                f"Asset '{name}' not found for {label}. Check the name and try again."
             )
             return
 
         sm = StateManager(interaction.client.db)
         result = await sm.step_up_asset(campaign["id"], str(interaction.user.id), asset["id"])
         if result is None:
-            await interaction.response.send_message("Erro ao processar step up do asset.")
+            await interaction.response.send_message("Error processing asset step up.")
             return
 
         if result.get("error") == "already_max":
             await interaction.response.send_message(
-                f"Asset '{result['name']}' ja esta em d12, nao pode fazer step up."
+                f"Asset '{result['name']}' is already at d12. Cannot step up."
             )
             return
 
         label = _player_label(target, target["id"] == actor["id"])
         msg = format_action_confirm(
-            "Asset step up",
-            f"{result['name']} de {die_label(result['from'])} para {die_label(result['to'])} ({label}).",
+            "Asset stepped up",
+            f"{result['name']} from {die_label(result['from'])} to {die_label(result['to'])} ({label}).",
         )
         from cortex_bot.views.state_views import PostAssetView
 
         view = PostAssetView(campaign["id"])
         await interaction.response.send_message(msg, view=view)
 
-    @app_commands.command(name="stepdown", description="Step down de um asset.")
+    @app_commands.command(name="stepdown", description="Step down an asset.")
     @app_commands.describe(
-        name="Nome do asset",
-        player="Jogador dono do asset (default: voce)",
+        name="Asset name",
+        player="Asset owner (default: you)",
     )
     @app_commands.autocomplete(name=_autocomplete_asset)
     async def stepdown(
@@ -393,36 +391,36 @@ class AssetGroup(app_commands.Group):
         if asset is None:
             label = _player_label(target, target["id"] == actor["id"])
             await interaction.response.send_message(
-                f"Asset '{name}' nao encontrado para {label}."
+                f"Asset '{name}' not found for {label}. Check the name and try again."
             )
             return
 
         sm = StateManager(interaction.client.db)
         result = await sm.step_down_asset(campaign["id"], str(interaction.user.id), asset["id"])
         if result is None:
-            await interaction.response.send_message("Erro ao processar step down do asset.")
+            await interaction.response.send_message("Error processing asset step down.")
             return
 
         label = _player_label(target, target["id"] == actor["id"])
         if result.get("eliminated"):
             msg = format_action_confirm(
-                "Asset eliminado",
-                f"{result['name']} era {die_label(result['was'])}, step down de d4 remove o asset ({label}).",
+                "Asset eliminated",
+                f"{result['name']} was {die_label(result['was'])}, step down from d4 removes the asset ({label}).",
             )
         else:
             msg = format_action_confirm(
-                "Asset step down",
-                f"{result['name']} de {die_label(result['from'])} para {die_label(result['to'])} ({label}).",
+                "Asset stepped down",
+                f"{result['name']} from {die_label(result['from'])} to {die_label(result['to'])} ({label}).",
             )
         from cortex_bot.views.state_views import PostAssetView
 
         view = PostAssetView(campaign["id"])
         await interaction.response.send_message(msg, view=view)
 
-    @app_commands.command(name="remove", description="Remover um asset.")
+    @app_commands.command(name="remove", description="Remove an asset.")
     @app_commands.describe(
-        name="Nome do asset",
-        player="Jogador dono do asset (default: voce)",
+        name="Asset name",
+        player="Asset owner (default: you)",
     )
     @app_commands.autocomplete(name=_autocomplete_asset)
     async def remove(
@@ -450,20 +448,20 @@ class AssetGroup(app_commands.Group):
         if asset is None:
             label = _player_label(target, target["id"] == actor["id"])
             await interaction.response.send_message(
-                f"Asset '{name}' nao encontrado para {label}."
+                f"Asset '{name}' not found for {label}. Check the name and try again."
             )
             return
 
         sm = StateManager(interaction.client.db)
         result = await sm.remove_asset(campaign["id"], str(interaction.user.id), asset["id"])
         if result is None:
-            await interaction.response.send_message("Erro ao remover asset.")
+            await interaction.response.send_message("Error removing asset.")
             return
 
         label = _player_label(target, target["id"] == actor["id"])
         msg = format_action_confirm(
-            "Asset removido",
-            f"{result['name']} {die_label(result['die_size'])} de {label}.",
+            "Asset removed",
+            f"{result['name']} {die_label(result['die_size'])} from {label}.",
         )
         from cortex_bot.views.state_views import PostAssetView
 
@@ -476,17 +474,17 @@ class AssetGroup(app_commands.Group):
 # ---------------------------------------------------------------------------
 
 class StressGroup(app_commands.Group):
-    """Comandos para gerenciar stress."""
+    """Commands for managing stress."""
 
     def __init__(self, cog: "StateCog") -> None:
-        super().__init__(name="stress", description="Gerenciar stress.")
+        super().__init__(name="stress", description="Manage stress.")
         self.cog = cog
 
-    @app_commands.command(name="add", description="Adicionar stress a um jogador (GM only).")
+    @app_commands.command(name="add", description="Add stress to a player (GM only).")
     @app_commands.describe(
-        player="Jogador que recebe o stress",
-        type="Tipo de stress (ex: Physical, Mental)",
-        die="Tamanho do dado de stress (ex: d6, d8)",
+        player="Player receiving the stress",
+        type="Stress type (e.g. Physical, Mental)",
+        die="Stress die size (e.g. d6, d8)",
     )
     @app_commands.choices(die=DIE_CHOICES)
     @app_commands.autocomplete(type=_autocomplete_stress_type)
@@ -505,7 +503,7 @@ class StressGroup(app_commands.Group):
             return
         if not has_gm_permission(actor):
             await interaction.response.send_message(
-                "Apenas o GM pode adicionar stress a outros jogadores."
+                "Only the GM can add stress to players."
             )
             return
 
@@ -526,7 +524,7 @@ class StressGroup(app_commands.Group):
         )
         if stress_type is None:
             await interaction.response.send_message(
-                f"Tipo de stress '{type}' nao encontrado nesta campanha."
+                f"Stress type '{type}' not found in this campaign. Check the name and try again."
             )
             return
 
@@ -540,25 +538,25 @@ class StressGroup(app_commands.Group):
         action = result.get("action")
         if action == "added":
             msg = format_action_confirm(
-                "Stress adicionado",
-                f"{target['name']} recebe {stress_type['name']} {die_label(die_size)}.",
+                "Stress added",
+                f"{target['name']} receives {stress_type['name']} {die_label(die_size)}.",
             )
         elif action == "replaced":
             msg = format_action_confirm(
-                "Stress substituido",
-                f"{target['name']} {stress_type['name']} de {die_label(result['from'])} para {die_label(result['to'])}. "
-                f"Dado recebido ({die_label(die_size)}) era maior que o existente, substituiu.",
+                "Stress replaced",
+                f"{target['name']} {stress_type['name']} from {die_label(result['from'])} to {die_label(result['to'])}. "
+                f"Incoming die ({die_label(die_size)}) was larger than existing, replaced.",
             )
         elif action == "stepped_up":
             msg = format_action_confirm(
-                "Stress step up",
-                f"{target['name']} {stress_type['name']} de {die_label(result['from'])} para {die_label(result['to'])}. "
-                f"Dado recebido ({die_label(die_size)}) era igual ou menor, step up aplicado.",
+                "Stress stepped up",
+                f"{target['name']} {stress_type['name']} from {die_label(result['from'])} to {die_label(result['to'])}. "
+                f"Incoming die ({die_label(die_size)}) was equal or smaller, step up applied.",
             )
         elif action == "stressed_out":
             stressed_msg = (
-                f"{target['name']} stressed out em {stress_type['name']}. "
-                f"Stress ja era d12 e recebeu step up."
+                f"{target['name']} stressed out on {stress_type['name']}. "
+                f"Stress was already d12 and received step up."
             )
             if campaign["config"].get("trauma"):
                 trauma_result = await _create_trauma_from_stress_out(
@@ -568,21 +566,21 @@ class StressGroup(app_commands.Group):
                 )
                 if trauma_result:
                     stressed_msg += (
-                        f" Trauma {stress_type['name']} {die_label(trauma_result['die_size'])} criado para {target['name']}."
+                        f" Trauma {stress_type['name']} {die_label(trauma_result['die_size'])} created for {target['name']}."
                     )
             msg = format_action_confirm("Stressed out", stressed_msg)
         else:
-            msg = f"Stress processado para {target['name']}."
+            msg = f"Stress processed for {target['name']}."
 
         from cortex_bot.views.state_views import PostStressView
 
         view = PostStressView(campaign["id"])
         await interaction.response.send_message(msg, view=view)
 
-    @app_commands.command(name="stepup", description="Step up do stress de um jogador (GM only).")
+    @app_commands.command(name="stepup", description="Step up a player's stress (GM only).")
     @app_commands.describe(
-        player="Jogador",
-        type="Tipo de stress",
+        player="Player",
+        type="Stress type",
     )
     @app_commands.autocomplete(type=_autocomplete_stress_type)
     async def stepup(
@@ -599,7 +597,7 @@ class StressGroup(app_commands.Group):
             return
         if not has_gm_permission(actor):
             await interaction.response.send_message(
-                "Apenas o GM pode fazer step up de stress."
+                "Only the GM can step up stress."
             )
             return
 
@@ -614,7 +612,7 @@ class StressGroup(app_commands.Group):
         )
         if stress_type is None:
             await interaction.response.send_message(
-                f"Tipo de stress '{type}' nao encontrado nesta campanha."
+                f"Stress type '{type}' not found in this campaign. Check the name and try again."
             )
             return
 
@@ -627,15 +625,15 @@ class StressGroup(app_commands.Group):
             existing = await cursor.fetchone()
             if not existing:
                 await interaction.response.send_message(
-                    f"{target['name']} nao tem stress {stress_type['name']} para fazer step up."
+                    f"{target['name']} has no {stress_type['name']} stress to step up."
                 )
                 return
             existing = dict(existing)
             new_size = step_up(existing["die_size"])
             if new_size is None:
                 stressed_msg = (
-                    f"{target['name']} stressed out em {stress_type['name']}. "
-                    f"Stress ja era d12 e nao pode fazer step up."
+                    f"{target['name']} stressed out on {stress_type['name']}. "
+                    f"Stress was already d12, cannot step up."
                 )
                 if campaign["config"].get("trauma"):
                     trauma_result = await _create_trauma_from_stress_out(
@@ -645,7 +643,7 @@ class StressGroup(app_commands.Group):
                     )
                     if trauma_result:
                         stressed_msg += (
-                            f" Trauma {stress_type['name']} {die_label(trauma_result['die_size'])} criado."
+                            f" Trauma {stress_type['name']} {die_label(trauma_result['die_size'])} created."
                         )
                 await interaction.response.send_message(
                     format_action_confirm("Stressed out", stressed_msg)
@@ -666,18 +664,18 @@ class StressGroup(app_commands.Group):
              "field": "die_size", "value": existing["die_size"]},
         )
         msg = format_action_confirm(
-            "Stress step up",
-            f"{target['name']} {stress_type['name']} de {die_label(existing['die_size'])} para {die_label(new_size)}.",
+            "Stress stepped up",
+            f"{target['name']} {stress_type['name']} from {die_label(existing['die_size'])} to {die_label(new_size)}.",
         )
         from cortex_bot.views.state_views import PostStressView
 
         view = PostStressView(campaign["id"])
         await interaction.response.send_message(msg, view=view)
 
-    @app_commands.command(name="stepdown", description="Step down do stress de um jogador.")
+    @app_commands.command(name="stepdown", description="Step down a player's stress.")
     @app_commands.describe(
-        player="Jogador",
-        type="Tipo de stress",
+        player="Player",
+        type="Stress type",
     )
     @app_commands.autocomplete(type=_autocomplete_stress_type)
     async def stepdown(
@@ -702,7 +700,7 @@ class StressGroup(app_commands.Group):
         is_self = target["id"] == actor["id"]
         if not is_self and not has_gm_permission(actor):
             await interaction.response.send_message(
-                "Apenas o GM ou o proprio jogador pode fazer step down de stress."
+                "Only the GM or the player themselves can step down stress."
             )
             return
 
@@ -711,7 +709,7 @@ class StressGroup(app_commands.Group):
         )
         if stress_type is None:
             await interaction.response.send_message(
-                f"Tipo de stress '{type}' nao encontrado nesta campanha."
+                f"Stress type '{type}' not found in this campaign. Check the name and try again."
             )
             return
 
@@ -725,7 +723,7 @@ class StressGroup(app_commands.Group):
             if not existing:
                 label = _player_label(target, is_self)
                 await interaction.response.send_message(
-                    f"{label} nao tem stress {stress_type['name']} para fazer step down."
+                    f"{label} has no {stress_type['name']} stress to step down."
                 )
                 return
             existing = dict(existing)
@@ -744,8 +742,8 @@ class StressGroup(app_commands.Group):
                 )
                 label = _player_label(target, is_self)
                 msg = format_action_confirm(
-                    "Stress eliminado",
-                    f"{stress_type['name']} de {label} era d4, step down remove o stress.",
+                    "Stress eliminated",
+                    f"{stress_type['name']} for {label} was d4, step down removes the stress.",
                 )
                 from cortex_bot.views.state_views import PostStressView
 
@@ -768,18 +766,18 @@ class StressGroup(app_commands.Group):
         )
         label = _player_label(target, is_self)
         msg = format_action_confirm(
-            "Stress step down",
-            f"{label} {stress_type['name']} de {die_label(existing['die_size'])} para {die_label(new_size)}.",
+            "Stress stepped down",
+            f"{label} {stress_type['name']} from {die_label(existing['die_size'])} to {die_label(new_size)}.",
         )
         from cortex_bot.views.state_views import PostStressView
 
         view = PostStressView(campaign["id"])
         await interaction.response.send_message(msg, view=view)
 
-    @app_commands.command(name="remove", description="Remover stress de um jogador.")
+    @app_commands.command(name="remove", description="Remove stress from a player.")
     @app_commands.describe(
-        player="Jogador",
-        type="Tipo de stress",
+        player="Player",
+        type="Stress type",
     )
     @app_commands.autocomplete(type=_autocomplete_stress_type)
     async def remove(
@@ -804,7 +802,7 @@ class StressGroup(app_commands.Group):
         is_self = target["id"] == actor["id"]
         if not is_self and not has_gm_permission(actor):
             await interaction.response.send_message(
-                "Apenas o GM ou o proprio jogador pode remover stress."
+                "Only the GM or the player themselves can remove stress."
             )
             return
 
@@ -813,7 +811,7 @@ class StressGroup(app_commands.Group):
         )
         if stress_type is None:
             await interaction.response.send_message(
-                f"Tipo de stress '{type}' nao encontrado nesta campanha."
+                f"Stress type '{type}' not found in this campaign. Check the name and try again."
             )
             return
 
@@ -826,14 +824,14 @@ class StressGroup(app_commands.Group):
         if result is None:
             label = _player_label(target, is_self)
             await interaction.response.send_message(
-                f"{label} nao tem stress {stress_type['name']} para remover."
+                f"{label} has no {stress_type['name']} stress to remove."
             )
             return
 
         label = _player_label(target, is_self)
         msg = format_action_confirm(
-            "Stress removido",
-            f"{stress_type['name']} {die_label(result['die_size'])} de {label}.",
+            "Stress removed",
+            f"{stress_type['name']} {die_label(result['die_size'])} from {label}.",
         )
         from cortex_bot.views.state_views import PostStressView
 
@@ -892,25 +890,25 @@ async def _create_trauma_from_stress_out(
 
 
 class TraumaGroup(app_commands.Group):
-    """Comandos para gerenciar trauma."""
+    """Commands for managing trauma."""
 
     def __init__(self, cog: "StateCog") -> None:
-        super().__init__(name="trauma", description="Gerenciar trauma.")
+        super().__init__(name="trauma", description="Manage trauma.")
         self.cog = cog
 
     async def _check_trauma_enabled(self, interaction: Interaction, campaign: dict) -> bool:
         if not campaign["config"].get("trauma"):
             await interaction.response.send_message(
-                "Modulo de trauma nao esta habilitado nesta campanha."
+                "Trauma module is not enabled in this campaign."
             )
             return False
         return True
 
-    @app_commands.command(name="add", description="Adicionar trauma a um jogador (GM only).")
+    @app_commands.command(name="add", description="Add trauma to a player (GM only).")
     @app_commands.describe(
-        player="Jogador que recebe o trauma",
-        type="Tipo de trauma (mesmo que stress type)",
-        die="Tamanho do dado de trauma",
+        player="Player receiving the trauma",
+        type="Trauma type (same as stress type)",
+        die="Trauma die size",
     )
     @app_commands.choices(die=DIE_CHOICES)
     @app_commands.autocomplete(type=_autocomplete_stress_type)
@@ -931,7 +929,7 @@ class TraumaGroup(app_commands.Group):
             return
         if not has_gm_permission(actor):
             await interaction.response.send_message(
-                "Apenas o GM pode adicionar trauma."
+                "Only the GM can add trauma."
             )
             return
 
@@ -952,7 +950,7 @@ class TraumaGroup(app_commands.Group):
         )
         if stress_type is None:
             await interaction.response.send_message(
-                f"Tipo '{type}' nao encontrado nesta campanha."
+                f"Type '{type}' not found in this campaign. Check the name and try again."
             )
             return
 
@@ -980,16 +978,16 @@ class TraumaGroup(app_commands.Group):
                          "field": "die_size", "value": old_size},
                     )
                     msg = format_action_confirm(
-                        "Trauma substituido",
-                        f"{target['name']} {stress_type['name']} de {die_label(old_size)} para {die_label(die_size)}.",
+                        "Trauma replaced",
+                        f"{target['name']} {stress_type['name']} from {die_label(old_size)} to {die_label(die_size)}.",
                     )
                 else:
                     new_size = step_up(existing["die_size"])
                     if new_size is None:
                         msg = format_action_confirm(
-                            "Remocao permanente",
-                            f"{target['name']} trauma {stress_type['name']} ja era d12 e recebeu step up. "
-                            f"Personagem sofre remocao permanente.",
+                            "Permanent removal",
+                            f"{target['name']} trauma {stress_type['name']} was already d12 and received step up. "
+                            f"Character suffers permanent removal.",
                         )
                         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
                         return
@@ -1006,9 +1004,9 @@ class TraumaGroup(app_commands.Group):
                          "field": "die_size", "value": existing["die_size"]},
                     )
                     msg = format_action_confirm(
-                        "Trauma step up",
-                        f"{target['name']} {stress_type['name']} de {die_label(existing['die_size'])} para {die_label(new_size)}. "
-                        f"Dado recebido ({die_label(die_size)}) era igual ou menor, step up aplicado.",
+                        "Trauma stepped up",
+                        f"{target['name']} {stress_type['name']} from {die_label(existing['die_size'])} to {die_label(new_size)}. "
+                        f"Incoming die ({die_label(die_size)}) was equal or smaller, step up applied.",
                     )
             else:
                 cursor = await conn.execute(
@@ -1024,14 +1022,14 @@ class TraumaGroup(app_commands.Group):
                     {"action": "delete", "table": "trauma", "id": trauma_id},
                 )
                 msg = format_action_confirm(
-                    "Trauma adicionado",
-                    f"{target['name']} recebe trauma {stress_type['name']} {die_label(die_size)}.",
+                    "Trauma added",
+                    f"{target['name']} receives trauma {stress_type['name']} {die_label(die_size)}.",
                 )
 
         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
-    @app_commands.command(name="stepup", description="Step up de trauma de um jogador (GM only).")
-    @app_commands.describe(player="Jogador", type="Tipo de trauma")
+    @app_commands.command(name="stepup", description="Step up a player's trauma (GM only).")
+    @app_commands.describe(player="Player", type="Trauma type")
     @app_commands.autocomplete(type=_autocomplete_stress_type)
     async def stepup(
         self, interaction: Interaction, player: Member, type: str,
@@ -1045,7 +1043,7 @@ class TraumaGroup(app_commands.Group):
         if actor is None:
             return
         if not has_gm_permission(actor):
-            await interaction.response.send_message("Apenas o GM pode fazer step up de trauma.")
+            await interaction.response.send_message("Only the GM can step up trauma.")
             return
 
         target = await _resolve_target_player(
@@ -1056,7 +1054,7 @@ class TraumaGroup(app_commands.Group):
 
         stress_type = await _find_stress_type_by_name(interaction.client.db, campaign["id"], type)
         if stress_type is None:
-            await interaction.response.send_message(f"Tipo '{type}' nao encontrado nesta campanha.")
+            await interaction.response.send_message(f"Type '{type}' not found in this campaign. Check the name and try again.")
             return
 
         db = interaction.client.db
@@ -1068,15 +1066,15 @@ class TraumaGroup(app_commands.Group):
             existing = await cursor.fetchone()
             if not existing:
                 await interaction.response.send_message(
-                    f"{target['name']} nao tem trauma {stress_type['name']}."
+                    f"{target['name']} has no {stress_type['name']} trauma."
                 )
                 return
             existing = dict(existing)
             new_size = step_up(existing["die_size"])
             if new_size is None:
                 msg = format_action_confirm(
-                    "Remocao permanente",
-                    f"{target['name']} trauma {stress_type['name']} ja era d12, step up indica remocao permanente do personagem.",
+                    "Permanent removal",
+                    f"{target['name']} trauma {stress_type['name']} was already d12, step up indicates permanent character removal.",
                 )
                 await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
                 return
@@ -1095,13 +1093,13 @@ class TraumaGroup(app_commands.Group):
              "field": "die_size", "value": existing["die_size"]},
         )
         msg = format_action_confirm(
-            "Trauma step up",
-            f"{target['name']} {stress_type['name']} de {die_label(existing['die_size'])} para {die_label(new_size)}.",
+            "Trauma stepped up",
+            f"{target['name']} {stress_type['name']} from {die_label(existing['die_size'])} to {die_label(new_size)}.",
         )
         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
-    @app_commands.command(name="stepdown", description="Step down de trauma de um jogador.")
-    @app_commands.describe(player="Jogador", type="Tipo de trauma")
+    @app_commands.command(name="stepdown", description="Step down a player's trauma.")
+    @app_commands.describe(player="Player", type="Trauma type")
     @app_commands.autocomplete(type=_autocomplete_stress_type)
     async def stepdown(
         self, interaction: Interaction, player: Member, type: str,
@@ -1124,13 +1122,13 @@ class TraumaGroup(app_commands.Group):
         is_self = target["id"] == actor["id"]
         if not is_self and not has_gm_permission(actor):
             await interaction.response.send_message(
-                "Apenas o GM ou o proprio jogador pode fazer step down de trauma."
+                "Only the GM or the player themselves can step down trauma."
             )
             return
 
         stress_type = await _find_stress_type_by_name(interaction.client.db, campaign["id"], type)
         if stress_type is None:
-            await interaction.response.send_message(f"Tipo '{type}' nao encontrado nesta campanha.")
+            await interaction.response.send_message(f"Type '{type}' not found in this campaign. Check the name and try again.")
             return
 
         db = interaction.client.db
@@ -1143,7 +1141,7 @@ class TraumaGroup(app_commands.Group):
             if not existing:
                 label = _player_label(target, is_self)
                 await interaction.response.send_message(
-                    f"{label} nao tem trauma {stress_type['name']}."
+                    f"{label} has no {stress_type['name']} trauma."
                 )
                 return
             existing = dict(existing)
@@ -1162,8 +1160,8 @@ class TraumaGroup(app_commands.Group):
                 )
                 label = _player_label(target, is_self)
                 msg = format_action_confirm(
-                    "Trauma eliminado",
-                    f"{stress_type['name']} de {label} era d4, step down remove o trauma.",
+                    "Trauma eliminated",
+                    f"{stress_type['name']} for {label} was d4, step down removes the trauma.",
                 )
                 await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
                 return
@@ -1183,13 +1181,13 @@ class TraumaGroup(app_commands.Group):
         )
         label = _player_label(target, is_self)
         msg = format_action_confirm(
-            "Trauma step down",
-            f"{label} {stress_type['name']} de {die_label(existing['die_size'])} para {die_label(new_size)}.",
+            "Trauma stepped down",
+            f"{label} {stress_type['name']} from {die_label(existing['die_size'])} to {die_label(new_size)}.",
         )
         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
-    @app_commands.command(name="remove", description="Remover trauma de um jogador.")
-    @app_commands.describe(player="Jogador", type="Tipo de trauma")
+    @app_commands.command(name="remove", description="Remove trauma from a player.")
+    @app_commands.describe(player="Player", type="Trauma type")
     @app_commands.autocomplete(type=_autocomplete_stress_type)
     async def remove(
         self, interaction: Interaction, player: Member, type: str,
@@ -1212,13 +1210,13 @@ class TraumaGroup(app_commands.Group):
         is_self = target["id"] == actor["id"]
         if not is_self and not has_gm_permission(actor):
             await interaction.response.send_message(
-                "Apenas o GM ou o proprio jogador pode remover trauma."
+                "Only the GM or the player themselves can remove trauma."
             )
             return
 
         stress_type = await _find_stress_type_by_name(interaction.client.db, campaign["id"], type)
         if stress_type is None:
-            await interaction.response.send_message(f"Tipo '{type}' nao encontrado nesta campanha.")
+            await interaction.response.send_message(f"Type '{type}' not found in this campaign. Check the name and try again.")
             return
 
         db = interaction.client.db
@@ -1231,7 +1229,7 @@ class TraumaGroup(app_commands.Group):
             if not existing:
                 label = _player_label(target, is_self)
                 await interaction.response.send_message(
-                    f"{label} nao tem trauma {stress_type['name']} para remover."
+                    f"{label} has no {stress_type['name']} trauma to remove."
                 )
                 return
             existing = dict(existing)
@@ -1248,8 +1246,8 @@ class TraumaGroup(app_commands.Group):
         )
         label = _player_label(target, is_self)
         msg = format_action_confirm(
-            "Trauma removido",
-            f"{stress_type['name']} {die_label(existing['die_size'])} de {label}.",
+            "Trauma removed",
+            f"{stress_type['name']} {die_label(existing['die_size'])} from {label}.",
         )
         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
@@ -1259,18 +1257,18 @@ class TraumaGroup(app_commands.Group):
 # ---------------------------------------------------------------------------
 
 class ComplicationGroup(app_commands.Group):
-    """Comandos para gerenciar complications."""
+    """Commands for managing complications."""
 
     def __init__(self, cog: "StateCog") -> None:
-        super().__init__(name="complication", description="Gerenciar complications.")
+        super().__init__(name="complication", description="Manage complications.")
         self.cog = cog
 
-    @app_commands.command(name="add", description="Adicionar uma complication.")
+    @app_commands.command(name="add", description="Add a complication.")
     @app_commands.describe(
-        name="Nome da complication",
-        die="Tamanho do dado",
-        player="Jogador afetado (default: voce)",
-        scene="Criar como complication de cena (removida ao encerrar cena)",
+        name="Complication name",
+        die="Die size",
+        player="Affected player (default: you)",
+        scene="Create as a scene complication (removed when scene ends)",
     )
     @app_commands.choices(die=DIE_CHOICES)
     async def add(
@@ -1302,7 +1300,7 @@ class ComplicationGroup(app_commands.Group):
         if scene:
             if not has_gm_permission(actor):
                 await interaction.response.send_message(
-                    "Apenas o GM pode criar complications de cena."
+                    "Only the GM can create scene complications."
                 )
                 return
             result = await sm.add_complication(
@@ -1310,7 +1308,7 @@ class ComplicationGroup(app_commands.Group):
                 player_id=None, scene_id=scene_id, scope="scene",
             )
             msg = format_action_confirm(
-                "Complication de cena criada",
+                "Scene complication created",
                 f"{name} {die_label(die_size)}.",
             )
         else:
@@ -1327,8 +1325,8 @@ class ComplicationGroup(app_commands.Group):
             )
             label = _player_label(target, target["id"] == actor["id"])
             msg = format_action_confirm(
-                "Complication adicionada",
-                f"{name} {die_label(die_size)} para {label}.",
+                "Complication added",
+                f"{name} {die_label(die_size)} for {label}.",
             )
 
         from cortex_bot.views.state_views import PostComplicationView
@@ -1336,10 +1334,10 @@ class ComplicationGroup(app_commands.Group):
         view = PostComplicationView(campaign["id"])
         await interaction.response.send_message(msg, view=view)
 
-    @app_commands.command(name="stepup", description="Step up de uma complication.")
+    @app_commands.command(name="stepup", description="Step up a complication.")
     @app_commands.describe(
-        name="Nome da complication",
-        player="Jogador afetado (default: voce)",
+        name="Complication name",
+        player="Affected player (default: you)",
     )
     @app_commands.autocomplete(name=_autocomplete_complication)
     async def stepup(
@@ -1367,36 +1365,36 @@ class ComplicationGroup(app_commands.Group):
         if comp is None:
             label = _player_label(target, target["id"] == actor["id"])
             await interaction.response.send_message(
-                f"Complication '{name}' nao encontrada para {label}."
+                f"Complication '{name}' not found for {label}. Check the name and try again."
             )
             return
 
         sm = StateManager(interaction.client.db)
         result = await sm.step_up_complication(campaign["id"], str(interaction.user.id), comp["id"])
         if result is None:
-            await interaction.response.send_message("Erro ao processar step up da complication.")
+            await interaction.response.send_message("Error processing complication step up.")
             return
 
         label = _player_label(target, target["id"] == actor["id"])
         if result.get("taken_out"):
             msg = format_action_confirm(
                 "Taken out",
-                f"Complication '{result['name']}' ja era d12, step up indica que {label} esta taken out.",
+                f"Complication '{result['name']}' was already d12, step up means {label} is taken out.",
             )
         else:
             msg = format_action_confirm(
-                "Complication step up",
-                f"{result['name']} de {die_label(result['from'])} para {die_label(result['to'])} ({label}).",
+                "Complication stepped up",
+                f"{result['name']} from {die_label(result['from'])} to {die_label(result['to'])} ({label}).",
             )
         from cortex_bot.views.state_views import PostComplicationView
 
         view = PostComplicationView(campaign["id"])
         await interaction.response.send_message(msg, view=view)
 
-    @app_commands.command(name="stepdown", description="Step down de uma complication.")
+    @app_commands.command(name="stepdown", description="Step down a complication.")
     @app_commands.describe(
-        name="Nome da complication",
-        player="Jogador afetado (default: voce)",
+        name="Complication name",
+        player="Affected player (default: you)",
     )
     @app_commands.autocomplete(name=_autocomplete_complication)
     async def stepdown(
@@ -1424,36 +1422,36 @@ class ComplicationGroup(app_commands.Group):
         if comp is None:
             label = _player_label(target, target["id"] == actor["id"])
             await interaction.response.send_message(
-                f"Complication '{name}' nao encontrada para {label}."
+                f"Complication '{name}' not found for {label}. Check the name and try again."
             )
             return
 
         sm = StateManager(interaction.client.db)
         result = await sm.step_down_complication(campaign["id"], str(interaction.user.id), comp["id"])
         if result is None:
-            await interaction.response.send_message("Erro ao processar step down da complication.")
+            await interaction.response.send_message("Error processing complication step down.")
             return
 
         label = _player_label(target, target["id"] == actor["id"])
         if result.get("eliminated"):
             msg = format_action_confirm(
-                "Complication eliminada",
-                f"{result['name']} era {die_label(result['was'])}, step down de d4 remove a complication ({label}).",
+                "Complication eliminated",
+                f"{result['name']} was {die_label(result['was'])}, step down from d4 removes the complication ({label}).",
             )
         else:
             msg = format_action_confirm(
-                "Complication step down",
-                f"{result['name']} de {die_label(result['from'])} para {die_label(result['to'])} ({label}).",
+                "Complication stepped down",
+                f"{result['name']} from {die_label(result['from'])} to {die_label(result['to'])} ({label}).",
             )
         from cortex_bot.views.state_views import PostComplicationView
 
         view = PostComplicationView(campaign["id"])
         await interaction.response.send_message(msg, view=view)
 
-    @app_commands.command(name="remove", description="Remover uma complication.")
+    @app_commands.command(name="remove", description="Remove a complication.")
     @app_commands.describe(
-        name="Nome da complication",
-        player="Jogador afetado (default: voce)",
+        name="Complication name",
+        player="Affected player (default: you)",
     )
     @app_commands.autocomplete(name=_autocomplete_complication)
     async def remove(
@@ -1481,20 +1479,20 @@ class ComplicationGroup(app_commands.Group):
         if comp is None:
             label = _player_label(target, target["id"] == actor["id"])
             await interaction.response.send_message(
-                f"Complication '{name}' nao encontrada para {label}."
+                f"Complication '{name}' not found for {label}. Check the name and try again."
             )
             return
 
         sm = StateManager(interaction.client.db)
         result = await sm.remove_complication(campaign["id"], str(interaction.user.id), comp["id"])
         if result is None:
-            await interaction.response.send_message("Erro ao remover complication.")
+            await interaction.response.send_message("Error removing complication.")
             return
 
         label = _player_label(target, target["id"] == actor["id"])
         msg = format_action_confirm(
-            "Complication removida",
-            f"{result['name']} {die_label(result['die_size'])} de {label}.",
+            "Complication removed",
+            f"{result['name']} {die_label(result['die_size'])} from {label}.",
         )
         from cortex_bot.views.state_views import PostComplicationView
 
@@ -1507,16 +1505,16 @@ class ComplicationGroup(app_commands.Group):
 # ---------------------------------------------------------------------------
 
 class PPGroup(app_commands.Group):
-    """Comandos para gerenciar plot points."""
+    """Commands for managing plot points."""
 
     def __init__(self, cog: "StateCog") -> None:
-        super().__init__(name="pp", description="Gerenciar plot points.")
+        super().__init__(name="pp", description="Manage plot points.")
         self.cog = cog
 
-    @app_commands.command(name="add", description="Adicionar plot points.")
+    @app_commands.command(name="add", description="Add plot points.")
     @app_commands.describe(
-        amount="Quantidade de PP a adicionar",
-        player="Jogador (default: voce, GM pode dar para outros)",
+        amount="Amount of PP to add",
+        player="Player (default: you, GM can give to others)",
     )
     async def add(
         self,
@@ -1532,7 +1530,7 @@ class PPGroup(app_commands.Group):
             return
 
         if amount <= 0:
-            await interaction.response.send_message("Quantidade deve ser positiva. Use /pp remove para gastar PP.")
+            await interaction.response.send_message("Amount must be positive. Use /pp remove to spend PP.")
             return
 
         target = await _resolve_target_player(
@@ -1550,15 +1548,15 @@ class PPGroup(app_commands.Group):
         is_self = target["id"] == actor["id"]
         label = _player_label(target, is_self)
         msg = format_action_confirm(
-            "PP adicionado",
-            f"{label}: {result['from']} para {result['to']} PP (+{amount}).",
+            "PP added",
+            f"{label}: {result['from']} to {result['to']} PP (+{amount}).",
         )
         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
-    @app_commands.command(name="remove", description="Gastar plot points.")
+    @app_commands.command(name="remove", description="Spend plot points.")
     @app_commands.describe(
-        amount="Quantidade de PP a gastar",
-        player="Jogador (default: voce, GM pode remover de outros)",
+        amount="Amount of PP to spend",
+        player="Player (default: you, GM can remove from others)",
     )
     async def remove(
         self,
@@ -1574,7 +1572,7 @@ class PPGroup(app_commands.Group):
             return
 
         if amount <= 0:
-            await interaction.response.send_message("Quantidade deve ser positiva. Use /pp add para ganhar PP.")
+            await interaction.response.send_message("Amount must be positive. Use /pp add to earn PP.")
             return
 
         target = await _resolve_target_player(
@@ -1593,15 +1591,15 @@ class PPGroup(app_commands.Group):
             is_self = target["id"] == actor["id"]
             label = _player_label(target, is_self)
             await interaction.response.send_message(
-                f"{label} tem apenas {result['current']} PP, nao pode gastar {result['requested']}."
+                f"{label} only has {result['current']} PP, cannot spend {result['requested']}."
             )
             return
 
         is_self = target["id"] == actor["id"]
         label = _player_label(target, is_self)
         msg = format_action_confirm(
-            "PP gasto",
-            f"{label}: {result['from']} para {result['to']} PP (-{amount}).",
+            "PP spent",
+            f"{label}: {result['from']} to {result['to']} PP (-{amount}).",
         )
         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
@@ -1611,16 +1609,16 @@ class PPGroup(app_commands.Group):
 # ---------------------------------------------------------------------------
 
 class XPGroup(app_commands.Group):
-    """Comandos para gerenciar XP."""
+    """Commands for managing XP."""
 
     def __init__(self, cog: "StateCog") -> None:
-        super().__init__(name="xp", description="Gerenciar experience points.")
+        super().__init__(name="xp", description="Manage experience points.")
         self.cog = cog
 
-    @app_commands.command(name="add", description="Adicionar XP.")
+    @app_commands.command(name="add", description="Add XP.")
     @app_commands.describe(
-        amount="Quantidade de XP a adicionar",
-        player="Jogador (default: voce)",
+        amount="Amount of XP to add",
+        player="Player (default: you)",
     )
     async def add(
         self,
@@ -1636,7 +1634,7 @@ class XPGroup(app_commands.Group):
             return
 
         if amount <= 0:
-            await interaction.response.send_message("Quantidade deve ser positiva. Use /xp remove para remover XP.")
+            await interaction.response.send_message("Amount must be positive. Use /xp remove to remove XP.")
             return
 
         target = await _resolve_target_player(
@@ -1654,15 +1652,15 @@ class XPGroup(app_commands.Group):
         is_self = target["id"] == actor["id"]
         label = _player_label(target, is_self)
         msg = format_action_confirm(
-            "XP adicionado",
-            f"{label}: {result['from']} para {result['to']} XP (+{amount}).",
+            "XP added",
+            f"{label}: {result['from']} to {result['to']} XP (+{amount}).",
         )
         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
-    @app_commands.command(name="remove", description="Remover XP.")
+    @app_commands.command(name="remove", description="Remove XP.")
     @app_commands.describe(
-        amount="Quantidade de XP a remover",
-        player="Jogador (default: voce)",
+        amount="Amount of XP to remove",
+        player="Player (default: you)",
     )
     async def remove(
         self,
@@ -1678,7 +1676,7 @@ class XPGroup(app_commands.Group):
             return
 
         if amount <= 0:
-            await interaction.response.send_message("Quantidade deve ser positiva.")
+            await interaction.response.send_message("Amount must be positive.")
             return
 
         target = await _resolve_target_player(
@@ -1697,15 +1695,15 @@ class XPGroup(app_commands.Group):
             is_self = target["id"] == actor["id"]
             label = _player_label(target, is_self)
             await interaction.response.send_message(
-                f"{label} tem apenas {result['current']} XP, nao pode remover {result['requested']}."
+                f"{label} only has {result['current']} XP, cannot remove {result['requested']}."
             )
             return
 
         is_self = target["id"] == actor["id"]
         label = _player_label(target, is_self)
         msg = format_action_confirm(
-            "XP removido",
-            f"{label}: {result['from']} para {result['to']} XP (-{amount}).",
+            "XP removed",
+            f"{label}: {result['from']} to {result['to']} XP (-{amount}).",
         )
         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
@@ -1715,22 +1713,22 @@ class XPGroup(app_commands.Group):
 # ---------------------------------------------------------------------------
 
 class HeroGroup(app_commands.Group):
-    """Comandos para gerenciar hero dice."""
+    """Commands for managing hero dice."""
 
     def __init__(self, cog: "StateCog") -> None:
-        super().__init__(name="hero", description="Gerenciar hero dice.")
+        super().__init__(name="hero", description="Manage hero dice.")
         self.cog = cog
 
     async def _check_hero_enabled(self, interaction: Interaction, campaign: dict) -> bool:
         if not campaign["config"].get("hero_dice"):
             await interaction.response.send_message(
-                "Modulo de hero dice nao esta habilitado nesta campanha."
+                "Hero dice module is not enabled in this campaign."
             )
             return False
         return True
 
-    @app_commands.command(name="bank", description="Bancar um hero die.")
-    @app_commands.describe(die="Tamanho do dado a bancar")
+    @app_commands.command(name="bank", description="Bank a hero die.")
+    @app_commands.describe(die="Die size to bank")
     @app_commands.choices(die=DIE_CHOICES)
     async def bank(self, interaction: Interaction, die: str) -> None:
         campaign = await _get_campaign(interaction)
@@ -1766,14 +1764,14 @@ class HeroGroup(app_commands.Group):
         hero_dice = await db.get_hero_dice(campaign["id"], actor["id"])
         bank_strs = [die_label(h["die_size"]) for h in hero_dice]
         msg = format_action_confirm(
-            "Hero die bancado",
-            f"{die_label(die_size)} adicionado ao banco.",
-            f"Banco atual: {', '.join(bank_strs)}.",
+            "Hero die banked",
+            f"{die_label(die_size)} added to bank.",
+            f"Current bank: {', '.join(bank_strs)}.",
         )
         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))
 
-    @app_commands.command(name="use", description="Usar um hero die do banco.")
-    @app_commands.describe(die="Tamanho do dado a usar")
+    @app_commands.command(name="use", description="Use a hero die from the bank.")
+    @app_commands.describe(die="Die size to use")
     @app_commands.choices(die=DIE_CHOICES)
     async def use(self, interaction: Interaction, die: str) -> None:
         campaign = await _get_campaign(interaction)
@@ -1800,7 +1798,7 @@ class HeroGroup(app_commands.Group):
             hero = await cursor.fetchone()
             if not hero:
                 await interaction.response.send_message(
-                    f"Voce nao tem um hero die {die_label(die_size)} no banco."
+                    f"You don't have a hero die {die_label(die_size)} in the bank."
                 )
                 return
             hero = dict(hero)
@@ -1817,13 +1815,13 @@ class HeroGroup(app_commands.Group):
         hero_dice = await db.get_hero_dice(campaign["id"], actor["id"])
         if hero_dice:
             bank_strs = [die_label(h["die_size"]) for h in hero_dice]
-            bank_info = f"Banco restante: {', '.join(bank_strs)}."
+            bank_info = f"Remaining bank: {', '.join(bank_strs)}."
         else:
-            bank_info = "Banco vazio."
+            bank_info = "Bank empty."
 
         msg = format_action_confirm(
-            "Hero die usado",
-            f"{die_label(die_size)} removido do banco. Role e some ao total.",
+            "Hero die used",
+            f"{die_label(die_size)} removed from bank. Roll and add to total.",
             bank_info,
         )
         await interaction.response.send_message(msg, view=MenuOnlyView(campaign["id"]))

@@ -13,41 +13,41 @@ from cortex_bot.utils import has_gm_permission
 log = logging.getLogger(__name__)
 
 ACTION_LABELS = {
-    "add_asset": "Asset '{name}' {die_label} adicionado para {player}",
-    "remove_asset": "Asset '{name}' removido de {player}",
-    "step_up_asset": "Step up de asset '{name}' ({from_label} para {to_label})",
-    "step_down_asset": "Step down de asset '{name}' ({from_label} para {to_label})",
-    "step_down_asset_eliminated": "Asset '{name}' eliminado (era {was_label})",
-    "add_stress": "Stress {type} {die_label} adicionado a {player}",
-    "replace_stress": "Stress {type} substituido ({from_label} para {to_label}) em {player}",
-    "step_up_stress": "Step up de stress {type} ({from_label} para {to_label}) em {player}",
-    "stressed_out": "Stressed out: {player} em {type}",
-    "step_down_stress": "Step down de stress {type} ({from_label} para {to_label}) em {player}",
-    "step_down_stress_eliminated": "Stress {type} eliminado de {player} (era {was_label})",
-    "remove_stress": "Stress {type} removido de {player}",
-    "add_complication": "Complication '{name}' {die_label} adicionada",
-    "remove_complication": "Complication '{name}' removida",
-    "step_up_complication": "Step up de complication '{name}' ({from_label} para {to_label})",
-    "step_down_complication": "Step down de complication '{name}' ({from_label} para {to_label})",
-    "step_down_complication_eliminated": "Complication '{name}' eliminada (era {was_label})",
-    "update_pp": "PP de {player}: {from} para {to}",
-    "update_xp": "XP de {player}: {from} para {to}",
-    "doom_add": "Doom Pool: {die_label} adicionado",
-    "doom_remove": "Doom Pool: {die_label} removido",
-    "doom_stepup": "Doom Pool: step up ({from_label} para {to_label})",
-    "doom_stepdown": "Doom Pool: step down ({from_label} para {to_label})",
-    "doom_stepdown_eliminated": "Doom Pool: {was_label} eliminado",
-    "doom_spend": "Doom Pool: {die_label} gasto",
-    "bank_hero_die": "Hero die {die_label} bancado por {player}",
-    "use_hero_die": "Hero die {die_label} usado por {player}",
-    "add_trauma": "Trauma {type} {die_label} adicionado a {player}",
-    "add_trauma_from_stress_out": "Trauma {type} {die_label} criado (stress out) para {player}",
-    "step_up_trauma": "Step up de trauma {type} ({from_label} para {to_label}) em {player}",
-    "step_up_trauma_from_stress_out": "Step up de trauma {type} ({from_label} para {to_label}) em {player}",
-    "replace_trauma": "Trauma {type} substituido ({from_label} para {to_label}) em {player}",
-    "step_down_trauma": "Step down de trauma {type} ({from_label} para {to_label}) em {player}",
-    "step_down_trauma_eliminated": "Trauma {type} eliminado de {player} (era {was_label})",
-    "remove_trauma": "Trauma {type} removido de {player}",
+    "add_asset": "Asset '{name}' {die_label} added to {player}",
+    "remove_asset": "Asset '{name}' removed from {player}",
+    "step_up_asset": "Asset '{name}' stepped up ({from_label} to {to_label})",
+    "step_down_asset": "Asset '{name}' stepped down ({from_label} to {to_label})",
+    "step_down_asset_eliminated": "Asset '{name}' eliminated (was {was_label})",
+    "add_stress": "Stress {type} {die_label} added to {player}",
+    "replace_stress": "Stress {type} replaced ({from_label} to {to_label}) on {player}",
+    "step_up_stress": "Stress {type} stepped up ({from_label} to {to_label}) on {player}",
+    "stressed_out": "Stressed out: {player} on {type}",
+    "step_down_stress": "Stress {type} stepped down ({from_label} to {to_label}) on {player}",
+    "step_down_stress_eliminated": "Stress {type} eliminated from {player} (was {was_label})",
+    "remove_stress": "Stress {type} removed from {player}",
+    "add_complication": "Complication '{name}' {die_label} added",
+    "remove_complication": "Complication '{name}' removed",
+    "step_up_complication": "Complication '{name}' stepped up ({from_label} to {to_label})",
+    "step_down_complication": "Complication '{name}' stepped down ({from_label} to {to_label})",
+    "step_down_complication_eliminated": "Complication '{name}' eliminated (was {was_label})",
+    "update_pp": "{player} PP: {from} to {to}",
+    "update_xp": "{player} XP: {from} to {to}",
+    "doom_add": "Doom Pool: {die_label} added",
+    "doom_remove": "Doom Pool: {die_label} removed",
+    "doom_stepup": "Doom Pool: stepped up ({from_label} to {to_label})",
+    "doom_stepdown": "Doom Pool: stepped down ({from_label} to {to_label})",
+    "doom_stepdown_eliminated": "Doom Pool: {was_label} eliminated",
+    "doom_spend": "Doom Pool: {die_label} spent",
+    "bank_hero_die": "Hero die {die_label} banked by {player}",
+    "use_hero_die": "Hero die {die_label} used by {player}",
+    "add_trauma": "Trauma {type} {die_label} added to {player}",
+    "add_trauma_from_stress_out": "Trauma {type} {die_label} created (stress out) for {player}",
+    "step_up_trauma": "Trauma {type} stepped up ({from_label} to {to_label}) on {player}",
+    "step_up_trauma_from_stress_out": "Trauma {type} stepped up ({from_label} to {to_label}) on {player}",
+    "replace_trauma": "Trauma {type} replaced ({from_label} to {to_label}) on {player}",
+    "step_down_trauma": "Trauma {type} stepped down ({from_label} to {to_label}) on {player}",
+    "step_down_trauma_eliminated": "Trauma {type} eliminated from {player} (was {was_label})",
+    "remove_trauma": "Trauma {type} removed from {player}",
 }
 
 
@@ -85,14 +85,14 @@ class UndoCog(commands.Cog):
     def db(self):
         return self.bot.db
 
-    @app_commands.command(name="undo", description="Desfazer a ultima acao registrada.")
+    @app_commands.command(name="undo", description="Undo the last action.")
     async def undo(self, interaction: Interaction) -> None:
         server_id = str(interaction.guild_id)
         channel_id = str(interaction.channel_id)
         campaign = await self.db.get_campaign_by_channel(server_id, channel_id)
         if campaign is None:
             await interaction.response.send_message(
-                "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
+                "No active campaign in this channel. Use /campaign setup to create one."
             )
             return
 
@@ -110,7 +110,7 @@ class UndoCog(commands.Cog):
             )
 
         if action is None:
-            await interaction.response.send_message("Nada para desfazer.")
+            await interaction.response.send_message("Nothing to undo.")
             return
 
         state_manager = StateManager(self.db)
@@ -121,7 +121,7 @@ class UndoCog(commands.Cog):
         from cortex_bot.views.common import PostUndoView
 
         view = PostUndoView(campaign_id)
-        await interaction.response.send_message(f"Desfeito: {msg}", view=view)
+        await interaction.response.send_message(f"Undone: {msg}", view=view)
 
 
 async def setup(bot: commands.Bot) -> None:

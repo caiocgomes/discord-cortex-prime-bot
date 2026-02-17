@@ -61,7 +61,7 @@ class TestCalculateBestOptions:
         options = calculate_best_options(results)
         assert len(options) >= 1
         best = options[0]
-        assert best["label"] == "Melhor total"
+        assert best["label"] == "Best total"
         assert best["total"] == 12  # 7 + 5
 
     def test_excludes_hitches(self):
@@ -87,9 +87,9 @@ class TestCalculateBestOptions:
         results = [(12, 7), (10, 6), (8, 5), (4, 4)]
         options = calculate_best_options(results)
         totals = {o["label"]: o for o in options}
-        if "Melhor total" in totals and "Maior effect" in totals:
-            assert totals["Melhor total"]["total"] >= totals["Maior effect"]["total"]
-            assert totals["Maior effect"]["effect_size"] >= totals["Melhor total"]["effect_size"]
+        if "Best total" in totals and "Best effect" in totals:
+            assert totals["Best total"]["total"] >= totals["Best effect"]["total"]
+            assert totals["Best effect"]["effect_size"] >= totals["Best total"]["effect_size"]
 
 
 class TestEvaluateDifficulty:

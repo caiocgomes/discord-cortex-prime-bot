@@ -68,7 +68,39 @@ Campaign `config` JSON toggles optional features: `doom_pool`, `hero_dice`, `tra
 
 ### Accessibility
 
-All output is linear text, no box art, no emoji-only information. The primary user is a blind GM using a screen reader, so every piece of information must be conveyed through text.
+All output is linear text, no box art, no emoji-only information. The primary user is a blind GM using a screen reader, so every piece of information must be conveyed through text. New interactive features (PP, XP, menu) use buttons instead of selects for screen reader accessibility.
+
+### Views layer (`views/`)
+
+Discord UI components live in `views/`, separate from cogs. This is a substantial subsystem (~1500 lines across 6 files).
+
+**Custom ID convention**: All persistent buttons use `cortex:action_name:param1:param2` format. `make_custom_id()` and `parse_custom_id()` in `views/base.py` handle construction/parsing. Ephemeral buttons append `uuid.uuid4().hex[:8]` to prevent collisions.
+
+**DynamicItem pattern**: Persistent buttons that survive bot restarts extend `discord.ui.DynamicItem[discord.ui.Button]` with a regex `template` attribute and a `from_custom_id()` classmethod. 12 persistent button classes are registered via `bot.add_dynamic_items()` in `views/__init__.py` during `setup_hook()`.
+
+**Post-action view composition**: Every game action responds with a view containing contextual buttons (typically: next action + undo + menu). `MenuButton` appears on all public views for always-available navigation. Key post-action views: `PostRollView`, `PostStressView`, `PostAssetView`, `PostComplicationView`, `PostPPView`, `PostXPView`, `PostDoomActionView`.
+
+**View files**:
+- `base.py`: `CortexView` base class (timeout=None), custom ID helpers, `add_die_buttons()`, `add_player_options()`, permission checks
+- `common.py`: Shared persistent buttons (`UndoButton`, `CampaignInfoButton`, `MenuButton`) and their post-action views
+- `rolling_views.py`: `PoolBuilderView` (interactive pool construction), `PostRollView` with conditional hitch buttons
+- `state_views.py`: Action chains for stress/asset/complication/PP/XP. PP uses interactive +1/-1 buttons; XP uses modal input
+- `scene_views.py`: Scene start/end lifecycle buttons
+- `doom_views.py`: Doom add/remove/roll and crisis pool management
+
+**Startup registration flow**: `bot.setup_hook()` calls `register_persistent_views(bot)` which registers all DynamicItem classes, then loads cogs, then syncs the command tree.
+
+### Hitch handling
+
+When a roll produces hitches, `PostRollView` shows `HitchComplicationButton` and `HitchDoomButton`. Die size scales with hitch count: 1→d6, 2→d8, 3→d10, 4→d12 (RAW p.17). Complications check for existing ones on the target player and step up if found. Doom button adds `hitch_count` d6s to the doom pool. Exactly 1 PP is awarded per hitch resolution regardless of count.
+
+### Menu system
+
+`/menu` command and `MenuButton` (persistent, on all views) show a contextual action panel. With an active scene: Roll, Stress, Asset, Complication, PP, XP, Undo, CampaignInfo, and Doom (if enabled). Without a scene: SceneStart and CampaignInfo.
+
+### Configuration
+
+`config.py` uses Pydantic settings with `CORTEX_BOT_` env prefix. Variables: `CORTEX_BOT_TOKEN` (SecretStr), `CORTEX_BOT_DB`. Loads from `.env` file.
 
 ## Testing
 

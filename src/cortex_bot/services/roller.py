@@ -60,11 +60,11 @@ def calculate_best_options(
             best_effect_option = option
 
     if best_total_option:
-        best_total_option["label"] = "Melhor total"
+        best_total_option["label"] = "Best total"
         options.append(best_total_option)
 
     if best_effect_option and best_effect_option != best_total_option:
-        best_effect_option["label"] = "Maior effect"
+        best_effect_option["label"] = "Best effect"
         options.append(best_effect_option)
 
     return options

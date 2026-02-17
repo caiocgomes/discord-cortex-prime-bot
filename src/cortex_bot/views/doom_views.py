@@ -39,7 +39,7 @@ class DoomAddStartButton(
         campaign = await db.get_campaign_by_id(self.campaign_id)
         if campaign is None or not campaign["config"].get("doom_pool", False):
             await interaction.response.send_message(
-                "Doom Pool nao esta habilitado nesta campanha.", ephemeral=True
+                "Doom Pool is not enabled in this campaign.", ephemeral=True
             )
             return
 
@@ -50,7 +50,7 @@ class DoomAddStartButton(
 
         add_die_buttons(view, on_die)
         await interaction.response.send_message(
-            "Selecione o dado para adicionar ao Doom Pool.",
+            "Select the die to add to the Doom Pool.",
             view=view,
             ephemeral=True,
         )
@@ -87,8 +87,8 @@ class DoomDieSelectView(CortexView):
 
         pool = await db.get_doom_pool(self.campaign_id)
         labels = [die_label(d["die_size"]) for d in pool]
-        pool_str = ", ".join(labels) if labels else "vazio"
-        msg = f"Adicionado {die_label(die_size)} ao Doom Pool. Doom Pool: {pool_str}."
+        pool_str = ", ".join(labels) if labels else "empty"
+        msg = f"Added {die_label(die_size)} to Doom Pool. Doom Pool: {pool_str}."
 
         view = PostDoomActionView(self.campaign_id)
         await interaction.response.edit_message(content=msg, view=None)
@@ -115,7 +115,7 @@ class DoomRemoveButton(discord.ui.Button):
         pool = await db.get_doom_pool(self.campaign_id)
         if not pool:
             await interaction.response.send_message(
-                "Doom Pool esta vazio.", ephemeral=True
+                "Doom Pool is empty.", ephemeral=True
             )
             return
 
@@ -148,7 +148,7 @@ class DoomRemoveButton(discord.ui.Button):
             view.add_item(btn)
 
         await interaction.response.send_message(
-            "Selecione o dado para remover do Doom Pool.",
+            "Select the die to remove from the Doom Pool.",
             view=view,
             ephemeral=True,
         )
@@ -176,7 +176,7 @@ class DoomRemoveSelectView(CortexView):
 
         if target is None:
             await interaction.response.edit_message(
-                content=f"Nenhum {die_label(size)} no Doom Pool.", view=None
+                content=f"No {die_label(size)} in the Doom Pool.", view=None
             )
             return
 
@@ -200,8 +200,8 @@ class DoomRemoveSelectView(CortexView):
 
         pool = await db.get_doom_pool(self.campaign_id)
         labels = [die_label(d["die_size"]) for d in pool]
-        pool_str = ", ".join(labels) if labels else "vazio"
-        msg = f"Removido {die_label(size)} do Doom Pool. Doom Pool: {pool_str}."
+        pool_str = ", ".join(labels) if labels else "empty"
+        msg = f"Removed {die_label(size)} from Doom Pool. Doom Pool: {pool_str}."
 
         view = PostDoomActionView(self.campaign_id)
         await interaction.response.edit_message(content=msg, view=None)
@@ -228,7 +228,7 @@ class DoomRollButton(discord.ui.Button):
         pool = await db.get_doom_pool(self.campaign_id)
         if not pool:
             await interaction.response.send_message(
-                "Doom Pool esta vazio.", ephemeral=True
+                "Doom Pool is empty.", ephemeral=True
             )
             return
 
@@ -236,7 +236,7 @@ class DoomRollButton(discord.ui.Button):
         results = roll_pool(roll_sizes)
 
         lines: list[str] = []
-        lines.append(f"Doom Pool rolado: {len(results)} dados.")
+        lines.append(f"Doom Pool rolled: {len(results)} dice.")
 
         dice_parts = []
         for size, value in results:
@@ -248,13 +248,13 @@ class DoomRollButton(discord.ui.Button):
             for opt in best_options:
                 lines.append(
                     f"{opt['label']}: "
-                    f"{die_label(opt['dice'][0][0])} com {opt['dice'][0][1]} "
-                    f"mais {die_label(opt['dice'][1][0])} com {opt['dice'][1][1]}, "
-                    f"igual a {opt['total']}. "
+                    f"{die_label(opt['dice'][0][0])} with {opt['dice'][0][1]} "
+                    f"plus {die_label(opt['dice'][1][0])} with {opt['dice'][1][1]}, "
+                    f"total {opt['total']}. "
                     f"Effect die: {die_label(opt['effect_size'])}."
                 )
             top = best_options[0]
-            lines.append(f"Sugestao de dificuldade: {top['total']}.")
+            lines.append(f"Suggested difficulty: {top['total']}.")
 
         view = PostDoomActionView(self.campaign_id)
         await interaction.response.send_message("\n".join(lines), view=view)

@@ -6,7 +6,7 @@ from discord.ext import commands
 
 from cortex_bot.models.dice import die_label, step_down
 from cortex_bot.services.formatter import format_scene_end, format_campaign_info
-from cortex_bot.utils import has_gm_permission
+from cortex_bot.utils import has_gm_permission, NO_CAMPAIGN_MSG
 
 log = logging.getLogger(__name__)
 
@@ -15,7 +15,7 @@ class SceneGroup(app_commands.Group):
     """Scene management commands."""
 
     def __init__(self) -> None:
-        super().__init__(name="scene", description="Gerenciamento de cenas.")
+        super().__init__(name="scene", description="Scene management.")
 
 
 class SceneCog(commands.Cog):
@@ -28,17 +28,17 @@ class SceneCog(commands.Cog):
     def _register_commands(self) -> None:
         group = self.scene_group
 
-        @group.command(name="start", description="Iniciar uma nova cena.")
-        @app_commands.describe(name="Nome da cena (opcional).")
+        @group.command(name="start", description="Start a new scene.")
+        @app_commands.describe(name="Scene name (optional).")
         async def scene_start(interaction: discord.Interaction, name: str | None = None) -> None:
             await self._start(interaction, name)
 
-        @group.command(name="end", description="Encerrar a cena ativa.")
-        @app_commands.describe(bridge="Bridge scene: step down all stress (d4 eliminado).")
+        @group.command(name="end", description="End the active scene.")
+        @app_commands.describe(bridge="Bridge scene: step down all stress (d4 eliminated).")
         async def scene_end(interaction: discord.Interaction, bridge: bool = False) -> None:
             await self._end(interaction, bridge)
 
-        @group.command(name="info", description="Mostrar estado da cena atual.")
+        @group.command(name="info", description="Show current scene state.")
         async def scene_info(interaction: discord.Interaction) -> None:
             await self._info(interaction)
 
@@ -52,9 +52,7 @@ class SceneCog(commands.Cog):
         channel_id = str(interaction.channel_id)
         campaign = await self.bot.db.get_campaign_by_channel(server_id, channel_id)
         if campaign is None:
-            await interaction.response.send_message(
-                "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
-            )
+            await interaction.response.send_message(NO_CAMPAIGN_MSG)
         return campaign
 
     async def _require_gm(
@@ -65,7 +63,7 @@ class SceneCog(commands.Cog):
         )
         if player is None or not has_gm_permission(player):
             await interaction.response.send_message(
-                "Apenas o GM pode usar este comando."
+                "Only the GM or delegates can use this command."
             )
             return None
         return player
@@ -83,9 +81,9 @@ class SceneCog(commands.Cog):
 
         active = await self.bot.db.get_active_scene(campaign["id"])
         if active is not None:
-            label = active["name"] or "sem nome"
+            label = active["name"] or "unnamed"
             await interaction.response.send_message(
-                f"Ja existe uma cena ativa: {label}. Encerre-a antes de iniciar outra."
+                f"A scene is already active: {label}. End it before starting another."
             )
             return
 
@@ -96,13 +94,13 @@ class SceneCog(commands.Cog):
             )
             await conn.commit()
 
-        label = name or "sem nome"
+        label = name or "unnamed"
 
         doom_enabled = campaign["config"].get("doom_pool", False)
         guide = (
             "\n"
-            "Comandos de jogo: /roll para rolar, /asset add para criar assets, "
-            "/campaign info para ver estado."
+            "Game commands: /roll to roll, /asset add to create assets, "
+            "/campaign info to see state."
         )
         if doom_enabled:
             guide += " GM: /stress add, /complication add, /doom."
@@ -113,7 +111,7 @@ class SceneCog(commands.Cog):
 
         view = PostSceneStartView(campaign["id"], doom_enabled=doom_enabled)
         await interaction.response.send_message(
-            f"Cena iniciada: {label}.{guide}", view=view
+            f"Scene started: {label}.{guide}", view=view
         )
 
     async def _end(
@@ -129,7 +127,7 @@ class SceneCog(commands.Cog):
 
         scene = await self.bot.db.get_active_scene(campaign["id"])
         if scene is None:
-            await interaction.response.send_message("Nenhuma cena ativa.")
+            await interaction.response.send_message("No active scene.")
             return
 
         await interaction.response.defer()
@@ -234,8 +232,8 @@ class SceneCog(commands.Cog):
             persistent_state=persistent_state,
         )
         summary += (
-            "\n\nUse /scene start para iniciar nova cena, "
-            "ou /campaign info para ver estado persistente."
+            "\n\nUse /scene start to begin a new scene, "
+            "or /campaign info to see persistent state."
         )
         from cortex_bot.views.scene_views import PostSceneEndView
 
@@ -249,7 +247,7 @@ class SceneCog(commands.Cog):
 
         scene = await self.bot.db.get_active_scene(campaign["id"])
         if scene is None:
-            await interaction.response.send_message("Nenhuma cena ativa.")
+            await interaction.response.send_message("No active scene.")
             return
 
         campaign_id = campaign["id"]
@@ -288,6 +286,7 @@ class SceneCog(commands.Cog):
             scene_assets=scene_assets,
             scene_complications=scene_complications,
             crisis_pools=crisis_pools,
+            config=campaign["config"],
         )
         from cortex_bot.views.common import PostInfoView
 

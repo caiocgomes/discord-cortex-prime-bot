@@ -15,7 +15,7 @@ from cortex_bot.models.dice import (
     step_down,
 )
 from cortex_bot.services.roller import roll_pool, calculate_best_options
-from cortex_bot.utils import has_gm_permission
+from cortex_bot.utils import has_gm_permission, NO_CAMPAIGN_MSG
 from cortex_bot.views.common import MenuOnlyView
 
 log = logging.getLogger(__name__)
@@ -25,14 +25,14 @@ class DoomGroup(app_commands.Group):
     """Doom pool commands (GM only)."""
 
     def __init__(self) -> None:
-        super().__init__(name="doom", description="Gerenciamento do Doom Pool.")
+        super().__init__(name="doom", description="Doom Pool management.")
 
 
 class CrisisGroup(app_commands.Group):
     """Crisis pool commands (GM only)."""
 
     def __init__(self) -> None:
-        super().__init__(name="crisis", description="Gerenciamento de Crisis Pools.")
+        super().__init__(name="crisis", description="Crisis Pool management.")
 
 
 class DoomCog(commands.Cog):
@@ -60,9 +60,7 @@ class DoomCog(commands.Cog):
         channel_id = str(interaction.channel_id)
         campaign = await self.db.get_campaign_by_channel(server_id, channel_id)
         if campaign is None:
-            await interaction.response.send_message(
-                "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
-            )
+            await interaction.response.send_message(NO_CAMPAIGN_MSG)
         return campaign
 
     async def _require_gm(
@@ -71,7 +69,7 @@ class DoomCog(commands.Cog):
         player = await self.db.get_player(campaign_id, str(interaction.user.id))
         if player is None or not has_gm_permission(player):
             await interaction.response.send_message(
-                "Apenas o GM pode usar este comando."
+                "Only the GM or delegates can use this command."
             )
             return None
         return player
@@ -81,14 +79,14 @@ class DoomCog(commands.Cog):
     ) -> bool:
         if not campaign["config"].get("doom_pool", False):
             await interaction.response.send_message(
-                "Doom Pool nao esta habilitado nesta campanha."
+                "Doom Pool is not enabled in this campaign."
             )
             return False
         return True
 
     def _format_doom_pool(self, doom_dice: list[dict]) -> str:
         if not doom_dice:
-            return "Doom Pool: vazio."
+            return "Doom Pool: empty."
         labels = [die_label(d["die_size"]) for d in doom_dice]
         return f"Doom Pool: {', '.join(labels)}."
 
@@ -97,33 +95,33 @@ class DoomCog(commands.Cog):
     def _register_doom_commands(self) -> None:
         group = self.doom_group
 
-        @group.command(name="add", description="Adicionar dado ao Doom Pool.")
-        @app_commands.describe(die="Dado para adicionar (ex: d6, d8).")
+        @group.command(name="add", description="Add a die to the Doom Pool.")
+        @app_commands.describe(die="Die to add (e.g. d6, d8).")
         async def doom_add(interaction: Interaction, die: str) -> None:
             await self._doom_add(interaction, die)
 
-        @group.command(name="remove", description="Remover um dado do Doom Pool.")
-        @app_commands.describe(die="Dado para remover (ex: d6).")
+        @group.command(name="remove", description="Remove a die from the Doom Pool.")
+        @app_commands.describe(die="Die to remove (e.g. d6).")
         async def doom_remove(interaction: Interaction, die: str) -> None:
             await self._doom_remove(interaction, die)
 
-        @group.command(name="stepup", description="Step up de um dado no Doom Pool.")
-        @app_commands.describe(die="Dado para fazer step up (ex: d6 vira d8).")
+        @group.command(name="stepup", description="Step up a die in the Doom Pool.")
+        @app_commands.describe(die="Die to step up (e.g. d6 becomes d8).")
         async def doom_stepup(interaction: Interaction, die: str) -> None:
             await self._doom_stepup(interaction, die)
 
-        @group.command(name="stepdown", description="Step down de um dado no Doom Pool.")
-        @app_commands.describe(die="Dado para fazer step down (ex: d8 vira d6).")
+        @group.command(name="stepdown", description="Step down a die in the Doom Pool.")
+        @app_commands.describe(die="Die to step down (e.g. d8 becomes d6).")
         async def doom_stepdown(interaction: Interaction, die: str) -> None:
             await self._doom_stepdown(interaction, die)
 
-        @group.command(name="roll", description="Rolar o Doom Pool.")
-        @app_commands.describe(dice="Dados especificos para rolar (opcional, ex: d8 d6). Sem argumento rola todos.")
+        @group.command(name="roll", description="Roll the Doom Pool.")
+        @app_commands.describe(dice="Specific dice to roll (optional, e.g. d8 d6). No argument rolls all.")
         async def doom_roll(interaction: Interaction, dice: Optional[str] = None) -> None:
             await self._doom_roll(interaction, dice)
 
-        @group.command(name="spend", description="Gastar um dado do Doom Pool.")
-        @app_commands.describe(die="Dado para gastar (ex: d8).")
+        @group.command(name="spend", description="Spend a die from the Doom Pool.")
+        @app_commands.describe(die="Die to spend (e.g. d8).")
         async def doom_spend(interaction: Interaction, die: str) -> None:
             await self._doom_spend(interaction, die)
 
@@ -165,7 +163,7 @@ class DoomCog(commands.Cog):
 
         view = PostDoomActionView(campaign_id)
         await interaction.response.send_message(
-            f"Adicionado {die_label(size)} ao Doom Pool. {self._format_doom_pool(pool)}",
+            f"Added {die_label(size)} to Doom Pool. {self._format_doom_pool(pool)}",
             view=view,
         )
 
@@ -197,7 +195,7 @@ class DoomCog(commands.Cog):
 
         if target is None:
             await interaction.response.send_message(
-                f"Nenhum {die_label(size)} no Doom Pool."
+                f"No {die_label(size)} in the Doom Pool."
             )
             return
 
@@ -221,7 +219,7 @@ class DoomCog(commands.Cog):
 
         view = PostDoomActionView(campaign_id)
         await interaction.response.send_message(
-            f"Removido {die_label(size)} do Doom Pool. {self._format_doom_pool(pool)}",
+            f"Removed {die_label(size)} from Doom Pool. {self._format_doom_pool(pool)}",
             view=view,
         )
 
@@ -253,14 +251,14 @@ class DoomCog(commands.Cog):
 
         if target is None:
             await interaction.response.send_message(
-                f"Nenhum {die_label(size)} no Doom Pool."
+                f"No {die_label(size)} in the Doom Pool."
             )
             return
 
         new_size = step_up(size)
         if new_size is None:
             await interaction.response.send_message(
-                f"{die_label(size)} ja esta no maximo. Nao e possivel fazer step up."
+                f"{die_label(size)} is already at maximum. Cannot step up."
             )
             return
 
@@ -282,7 +280,7 @@ class DoomCog(commands.Cog):
 
         view = PostDoomActionView(campaign_id)
         await interaction.response.send_message(
-            f"Step up no Doom Pool: {die_label(size)} para {die_label(new_size)}. {self._format_doom_pool(pool)}",
+            f"Doom Pool step up: {die_label(size)} to {die_label(new_size)}. {self._format_doom_pool(pool)}",
             view=view,
         )
 
@@ -314,7 +312,7 @@ class DoomCog(commands.Cog):
 
         if target is None:
             await interaction.response.send_message(
-                f"Nenhum {die_label(size)} no Doom Pool."
+                f"No {die_label(size)} in the Doom Pool."
             )
             return
 
@@ -341,7 +339,7 @@ class DoomCog(commands.Cog):
 
             view = PostDoomActionView(campaign_id)
             await interaction.response.send_message(
-                f"Step down no Doom Pool: {die_label(size)} eliminado. {self._format_doom_pool(pool)}",
+                f"Doom Pool step down: {die_label(size)} eliminated. {self._format_doom_pool(pool)}",
                 view=view,
             )
             return
@@ -364,7 +362,7 @@ class DoomCog(commands.Cog):
 
         view = PostDoomActionView(campaign_id)
         await interaction.response.send_message(
-            f"Step down no Doom Pool: {die_label(size)} para {die_label(new_size)}. {self._format_doom_pool(pool)}",
+            f"Doom Pool step down: {die_label(size)} to {die_label(new_size)}. {self._format_doom_pool(pool)}",
             view=view,
         )
 
@@ -382,7 +380,7 @@ class DoomCog(commands.Cog):
         pool = await self.db.get_doom_pool(campaign_id)
 
         if not pool:
-            await interaction.response.send_message("Doom Pool esta vazio.")
+            await interaction.response.send_message("Doom Pool is empty.")
             return
 
         if dice is not None:
@@ -398,7 +396,7 @@ class DoomCog(commands.Cog):
         results = roll_pool(roll_sizes)
 
         lines: list[str] = []
-        lines.append(f"Doom Pool rolado: {len(results)} dados.")
+        lines.append(f"Doom Pool rolled: {len(results)} dice.")
 
         dice_parts = []
         for size, value in results:
@@ -410,22 +408,22 @@ class DoomCog(commands.Cog):
             for opt in best_options:
                 lines.append(
                     f"{opt['label']}: "
-                    f"{die_label(opt['dice'][0][0])} com {opt['dice'][0][1]} "
-                    f"mais {die_label(opt['dice'][1][0])} com {opt['dice'][1][1]}, "
-                    f"igual a {opt['total']}. "
+                    f"{die_label(opt['dice'][0][0])} rolled {opt['dice'][0][1]} "
+                    f"plus {die_label(opt['dice'][1][0])} rolled {opt['dice'][1][1]}, "
+                    f"equals {opt['total']}. "
                     f"Effect die: {die_label(opt['effect_size'])}."
                 )
             top = best_options[0]
-            lines.append(f"Sugestao de dificuldade: {top['total']}.")
+            lines.append(f"Suggested difficulty: {top['total']}.")
         else:
             non_hitch = [v for _, v in results if v != 1]
             if non_hitch:
                 non_hitch.sort(reverse=True)
                 if len(non_hitch) >= 2:
                     total = non_hitch[0] + non_hitch[1]
-                    lines.append(f"Sugestao de dificuldade (soma dos 2 maiores): {total}.")
+                    lines.append(f"Suggested difficulty (sum of top 2): {total}.")
                 else:
-                    lines.append(f"Sugestao de dificuldade: {non_hitch[0]}.")
+                    lines.append(f"Suggested difficulty: {non_hitch[0]}.")
 
         from cortex_bot.views.doom_views import PostDoomActionView
 
@@ -459,7 +457,7 @@ class DoomCog(commands.Cog):
 
         if target is None:
             await interaction.response.send_message(
-                f"Nenhum {die_label(size)} no Doom Pool para gastar."
+                f"No {die_label(size)} in the Doom Pool to spend."
             )
             return
 
@@ -474,7 +472,7 @@ class DoomCog(commands.Cog):
 
         view = PostDoomActionView(campaign_id)
         await interaction.response.send_message(
-            f"Gasto {die_label(size)} do Doom Pool. {self._format_doom_pool(pool)}",
+            f"Spent {die_label(size)} from Doom Pool. {self._format_doom_pool(pool)}",
             view=view,
         )
 
@@ -483,24 +481,24 @@ class DoomCog(commands.Cog):
     def _register_crisis_commands(self) -> None:
         group = self.crisis_group
 
-        @group.command(name="add", description="Criar uma Crisis Pool na cena ativa.")
+        @group.command(name="add", description="Create a Crisis Pool in the active scene.")
         @app_commands.describe(
-            name="Nome da crisis pool.",
-            dice="Dados iniciais (ex: d8 d6 d10).",
+            name="Crisis pool name.",
+            dice="Initial dice (e.g. d8 d6 d10).",
         )
         async def crisis_add(interaction: Interaction, name: str, dice: str) -> None:
             await self._crisis_add(interaction, name, dice)
 
-        @group.command(name="remove", description="Remover um dado de uma Crisis Pool.")
+        @group.command(name="remove", description="Remove a die from a Crisis Pool.")
         @app_commands.describe(
-            name="Nome da crisis pool.",
-            die="Dado para remover (ex: d8).",
+            name="Crisis pool name.",
+            die="Die to remove (e.g. d8).",
         )
         async def crisis_remove(interaction: Interaction, name: str, die: str) -> None:
             await self._crisis_remove(interaction, name, die)
 
-        @group.command(name="roll", description="Rolar uma Crisis Pool.")
-        @app_commands.describe(name="Nome da crisis pool.")
+        @group.command(name="roll", description="Roll a Crisis Pool.")
+        @app_commands.describe(name="Crisis pool name.")
         async def crisis_roll(interaction: Interaction, name: str) -> None:
             await self._crisis_roll(interaction, name)
 
@@ -518,7 +516,7 @@ class DoomCog(commands.Cog):
         scene = await self.db.get_active_scene(campaign_id)
         if scene is None:
             await interaction.response.send_message(
-                "Nenhuma cena ativa. Inicie uma cena antes de criar crisis pools."
+                "No active scene. Start a scene before creating crisis pools."
             )
             return
 
@@ -543,7 +541,7 @@ class DoomCog(commands.Cog):
 
         dice_labels = [die_label(s) for s in die_sizes]
         await interaction.response.send_message(
-            f"Crisis Pool '{name}' criada com {', '.join(dice_labels)}."
+            f"Crisis Pool '{name}' created with {', '.join(dice_labels)}."
         )
 
     async def _crisis_remove(
@@ -559,7 +557,7 @@ class DoomCog(commands.Cog):
         campaign_id = campaign["id"]
         scene = await self.db.get_active_scene(campaign_id)
         if scene is None:
-            await interaction.response.send_message("Nenhuma cena ativa.")
+            await interaction.response.send_message("No active scene.")
             return
 
         try:
@@ -577,7 +575,7 @@ class DoomCog(commands.Cog):
 
         if target_pool is None:
             await interaction.response.send_message(
-                f"Crisis Pool '{name}' nao encontrada na cena atual."
+                f"Crisis Pool '{name}' not found in the current scene."
             )
             return
 
@@ -589,7 +587,7 @@ class DoomCog(commands.Cog):
 
         if target_die is None:
             await interaction.response.send_message(
-                f"Nenhum {die_label(size)} na Crisis Pool '{name}'."
+                f"No {die_label(size)} in Crisis Pool '{name}'."
             )
             return
 
@@ -608,13 +606,13 @@ class DoomCog(commands.Cog):
                 )
                 await conn.commit()
             await interaction.response.send_message(
-                f"Removido {die_label(size)} da Crisis Pool '{name}'. Pool vazia, crisis resolvida."
+                f"Removed {die_label(size)} from Crisis Pool '{name}'. Pool empty, crisis resolved."
             )
         else:
             remaining_labels = [die_label(d["die_size"]) for d in remaining]
             await interaction.response.send_message(
-                f"Removido {die_label(size)} da Crisis Pool '{name}'. "
-                f"Restante: {', '.join(remaining_labels)}."
+                f"Removed {die_label(size)} from Crisis Pool '{name}'. "
+                f"Remaining: {', '.join(remaining_labels)}."
             )
 
     async def _crisis_roll(self, interaction: Interaction, name: str) -> None:
@@ -628,7 +626,7 @@ class DoomCog(commands.Cog):
         campaign_id = campaign["id"]
         scene = await self.db.get_active_scene(campaign_id)
         if scene is None:
-            await interaction.response.send_message("Nenhuma cena ativa.")
+            await interaction.response.send_message("No active scene.")
             return
 
         pools = await self.db.get_crisis_pools(scene["id"])
@@ -640,13 +638,13 @@ class DoomCog(commands.Cog):
 
         if target_pool is None:
             await interaction.response.send_message(
-                f"Crisis Pool '{name}' nao encontrada na cena atual."
+                f"Crisis Pool '{name}' not found in the current scene."
             )
             return
 
         if not target_pool["dice"]:
             await interaction.response.send_message(
-                f"Crisis Pool '{name}' esta vazia."
+                f"Crisis Pool '{name}' is empty."
             )
             return
 
@@ -654,7 +652,7 @@ class DoomCog(commands.Cog):
         results = roll_pool(roll_sizes)
 
         lines: list[str] = []
-        lines.append(f"Crisis Pool '{name}' rolada: {len(results)} dados.")
+        lines.append(f"Crisis Pool '{name}' rolled: {len(results)} dice.")
 
         dice_parts = []
         for size, value in results:
@@ -666,9 +664,9 @@ class DoomCog(commands.Cog):
             for opt in best_options:
                 lines.append(
                     f"{opt['label']}: "
-                    f"{die_label(opt['dice'][0][0])} com {opt['dice'][0][1]} "
-                    f"mais {die_label(opt['dice'][1][0])} com {opt['dice'][1][1]}, "
-                    f"igual a {opt['total']}. "
+                    f"{die_label(opt['dice'][0][0])} rolled {opt['dice'][0][1]} "
+                    f"plus {die_label(opt['dice'][1][0])} rolled {opt['dice'][1][1]}, "
+                    f"equals {opt['total']}. "
                     f"Effect die: {die_label(opt['effect_size'])}."
                 )
 

@@ -4,6 +4,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
+from cortex_bot.utils import NO_CAMPAIGN_MSG
 from cortex_bot.views.base import CortexView
 
 
@@ -54,7 +55,7 @@ class MenuCog(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
 
-    @app_commands.command(name="menu", description="Painel de acoes da campanha")
+    @app_commands.command(name="menu", description="Campaign action panel")
     @app_commands.checks.cooldown(1, 10.0)
     async def menu(self, interaction: discord.Interaction) -> None:
         db = self.bot.db
@@ -64,7 +65,7 @@ class MenuCog(commands.Cog):
 
         if campaign is None:
             await interaction.response.send_message(
-                "Nenhuma campanha ativa neste canal.", ephemeral=True
+                NO_CAMPAIGN_MSG, ephemeral=True
             )
             return
 
@@ -80,9 +81,9 @@ class MenuCog(commands.Cog):
         )
 
         if has_active_scene:
-            text = "Painel de acoes. Use os botoes abaixo."
+            text = "Action panel. Use the buttons below."
         else:
-            text = "Nenhuma cena ativa. Inicie uma cena para acessar mais acoes."
+            text = "No active scene. Start a scene to access more actions."
 
         await interaction.response.send_message(text, view=view)
 
@@ -92,7 +93,7 @@ class MenuCog(commands.Cog):
     ) -> None:
         if isinstance(error, app_commands.CommandOnCooldown):
             await interaction.response.send_message(
-                f"Cooldown ativo. Tente novamente em {error.retry_after:.0f} segundos.",
+                f"Cooldown active. Try again in {error.retry_after:.0f} seconds.",
                 ephemeral=True,
             )
         else:

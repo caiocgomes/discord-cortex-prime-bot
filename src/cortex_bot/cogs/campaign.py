@@ -10,6 +10,7 @@ from discord.ext import commands
 
 from cortex_bot.services.formatter import format_campaign_info
 from cortex_bot.models.dice import die_label
+from cortex_bot.utils import NO_CAMPAIGN_MSG
 from cortex_bot.views.common import MenuOnlyView
 from discord import Member
 
@@ -25,9 +26,7 @@ async def get_campaign_or_error(interaction: Interaction) -> dict | None:
     channel_id = str(interaction.channel_id)
     campaign = await db.get_campaign_by_channel(server_id, channel_id)
     if campaign is None:
-        await interaction.response.send_message(
-            "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
-        )
+        await interaction.response.send_message(NO_CAMPAIGN_MSG)
     return campaign
 
 
@@ -37,7 +36,7 @@ async def is_gm_check(interaction: Interaction, campaign: dict) -> bool:
     player = await db.get_player(campaign["id"], str(interaction.user.id))
     if player is None or not player["is_gm"]:
         await interaction.response.send_message(
-            "Apenas o GM pode executar este comando."
+            "Only the GM can execute this command."
         )
         return False
     return True
@@ -51,16 +50,16 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
     def db(self):
         return self.bot.db
 
-    @app_commands.command(name="setup", description="Criar uma nova campanha neste canal.")
+    @app_commands.command(name="setup", description="Create a new campaign in this channel.")
     @app_commands.describe(
-        name="Nome da campanha",
-        players="Jogadores (mencoes separadas por espaco, ex: @Alice @Bob)",
-        stress_types="Tipos de stress separados por virgula (ex: Physical,Mental,Social)",
-        gm="Mestre da campanha (default: quem executa o comando)",
-        doom_pool="Habilitar Doom Pool (default: nao)",
-        hero_dice="Habilitar Hero Dice (default: nao)",
-        trauma="Habilitar Trauma (default: nao)",
-        best_mode="Habilitar Best Mode com opcoes pre-calculadas (default: sim)",
+        name="Campaign name",
+        players="Players (mentions separated by space, e.g. @Alice @Bob)",
+        stress_types="Stress types separated by comma (e.g. Physical,Mental,Social)",
+        gm="Game master (default: whoever runs the command)",
+        doom_pool="Enable Doom Pool (default: no)",
+        hero_dice="Enable Hero Dice (default: no)",
+        trauma="Enable Trauma (default: no)",
+        best_mode="Enable Best Mode with pre-calculated options (default: yes)",
     )
     async def setup(
         self,
@@ -80,23 +79,23 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         existing = await self.db.get_campaign_by_channel(server_id, channel_id)
         if existing is not None:
             await interaction.response.send_message(
-                "Ja existe uma campanha ativa neste canal. "
-                "Use /campaign campaign_end para encerrar antes de criar outra."
+                "A campaign already exists in this channel. "
+                "Use /campaign campaign_end to close it before creating another."
             )
             return
 
         player_ids = MENTION_PATTERN.findall(players)
         if not player_ids:
             await interaction.response.send_message(
-                "Nenhum jogador identificado. Mencione pelo menos um jogador "
-                "(ex: @Alice @Bob)."
+                "No players identified. Mention at least one player "
+                "(e.g. @Alice @Bob)."
             )
             return
 
         stress_names = [s.strip() for s in stress_types.split(",") if s.strip()]
         if not stress_names:
             await interaction.response.send_message(
-                "Informe pelo menos um tipo de stress separado por virgula."
+                "Provide at least one stress type separated by comma."
             )
             return
 
@@ -148,25 +147,25 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         registered = await self.db.get_players(campaign_id)
         player_names = [p["name"] for p in registered]
         modules_on = [k for k, v in config.items() if v]
-        modules_str = ", ".join(modules_on) if modules_on else "nenhum modulo extra"
+        modules_str = ", ".join(modules_on) if modules_on else "no extra modules"
 
         from cortex_bot.views.scene_views import PostSetupView
 
         await interaction.response.send_message(
-            f"Campanha '{name}' criada. "
+            f"Campaign '{name}' created. "
             f"GM: {gm_member.display_name}. "
-            f"Jogadores: {', '.join(player_names)}. "
+            f"Players: {', '.join(player_names)}. "
             f"Stress: {', '.join(stress_names)}. "
-            f"Modulos ativos: {modules_str}.\n"
+            f"Active modules: {modules_str}.\n"
             "\n"
-            "Proximos passos: use /scene start para iniciar uma cena. "
-            "Jogadores podem usar /roll para rolar dados. "
-            "/campaign info mostra o estado completo. "
-            "/help para referencia de comandos.",
+            "Next steps: use /scene start to begin a scene. "
+            "Players can use /roll to roll dice. "
+            "/campaign info shows full state. "
+            "/help for command reference.",
             view=PostSetupView(campaign_id),
         )
 
-    @app_commands.command(name="info", description="Exibir estado completo da campanha.")
+    @app_commands.command(name="info", description="Show full campaign state.")
     async def info(self, interaction: Interaction) -> None:
         campaign = await get_campaign_or_error(interaction)
         if campaign is None:
@@ -211,14 +210,15 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             scene_assets=scene_assets,
             scene_complications=scene_complications,
             crisis_pools=crisis_pools,
+            config=config,
         )
         from cortex_bot.views.common import PostInfoView
 
         view = PostInfoView(campaign_id, has_active_scene=scene is not None)
         await interaction.response.send_message(text, view=view)
 
-    @app_commands.command(name="delegate", description="Promover um jogador a delegado (apenas GM).")
-    @app_commands.describe(player="Jogador para promover a delegado")
+    @app_commands.command(name="delegate", description="Promote a player to delegate (GM only).")
+    @app_commands.describe(player="Player to promote to delegate")
     async def delegate(self, interaction: Interaction, player: Member) -> None:
         campaign = await get_campaign_or_error(interaction)
         if campaign is None:
@@ -232,20 +232,20 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
 
         if target_id == gm_id:
             await interaction.response.send_message(
-                "O GM ja possui todas as permissoes."
+                "The GM already has all permissions."
             )
             return
 
         target = await self.db.get_player(campaign["id"], target_id)
         if target is None:
             await interaction.response.send_message(
-                f"{player.display_name} nao esta registrado nesta campanha."
+                f"{player.display_name} is not registered in this campaign. Add them via /campaign setup."
             )
             return
 
         if target["is_delegate"]:
             await interaction.response.send_message(
-                f"{target['name']} ja e delegado."
+                f"{target['name']} is already a delegate."
             )
             return
 
@@ -257,12 +257,12 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             await conn.commit()
 
         await interaction.response.send_message(
-            f"{target['name']} agora e delegado. Possui acesso a comandos de GM.",
+            f"{target['name']} is now a delegate. Has access to GM commands.",
             view=MenuOnlyView(campaign["id"]),
         )
 
-    @app_commands.command(name="undelegate", description="Revogar delegacao de um jogador (apenas GM).")
-    @app_commands.describe(player="Jogador para revogar delegacao")
+    @app_commands.command(name="undelegate", description="Revoke a player's delegate status (GM only).")
+    @app_commands.describe(player="Player to revoke delegate status from")
     async def undelegate(self, interaction: Interaction, player: Member) -> None:
         campaign = await get_campaign_or_error(interaction)
         if campaign is None:
@@ -275,13 +275,13 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
         target = await self.db.get_player(campaign["id"], target_id)
         if target is None:
             await interaction.response.send_message(
-                f"{player.display_name} nao esta registrado nesta campanha."
+                f"{player.display_name} is not registered in this campaign. Add them via /campaign setup."
             )
             return
 
         if not target["is_delegate"]:
             await interaction.response.send_message(
-                f"{target['name']} nao e delegado."
+                f"{target['name']} is not a delegate."
             )
             return
 
@@ -293,16 +293,16 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             await conn.commit()
 
         await interaction.response.send_message(
-            f"Delegacao de {target['name']} revogada.",
+            f"{target['name']}'s delegate status revoked.",
             view=MenuOnlyView(campaign["id"]),
         )
 
     @app_commands.command(
         name="campaign_end",
-        description="Encerrar a campanha deste canal (apenas GM).",
+        description="End the campaign in this channel (GM only).",
     )
     @app_commands.describe(
-        confirm="Confirmar encerramento da campanha.",
+        confirm="Confirm campaign end.",
     )
     @app_commands.choices(
         confirm=[app_commands.Choice(name="sim", value="sim")],
@@ -319,8 +319,8 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
 
         if confirm is None or confirm.value != "sim":
             await interaction.response.send_message(
-                f"Para encerrar a campanha '{campaign['name']}', execute novamente "
-                "com confirm:sim. Todos os dados serao removidos permanentemente."
+                f"To end campaign '{campaign['name']}', run again "
+                "with confirm:sim. All data will be permanently removed."
             )
             return
 
@@ -331,7 +331,7 @@ class CampaignCog(commands.GroupCog, group_name="campaign"):
             await conn.commit()
 
         await interaction.response.send_message(
-            f"Campanha '{campaign['name']}' encerrada. Todos os dados foram removidos."
+            f"Campaign '{campaign['name']}' ended. All data has been removed."
         )
 
 

@@ -8,38 +8,31 @@ from cortex_bot.services.formatter import format_scene_end
 
 
 class TestSceneEndGuide:
-    """The scene end guide is appended to format_scene_end output in the cog."""
+    """The scene end guide is now built into format_scene_end output."""
 
-    SCENE_END_GUIDE = (
-        "\n\nUse /scene start para iniciar nova cena, "
-        "ou /campaign info para ver estado persistente."
-    )
-
-    def test_guide_appended_to_scene_end(self):
+    def test_guide_included_in_scene_end(self):
         summary = format_scene_end("Tavern Fight", [], [], [])
-        full = summary + self.SCENE_END_GUIDE
-        assert "Cena encerrada: Tavern Fight." in full
-        assert "/scene start" in full
-        assert "/campaign info" in full
+        assert "SCENE ENDED: Tavern Fight" in summary
+        assert "/scene start" in summary
+        assert "/campaign info" in summary
 
-    def test_guide_appended_to_bridge_scene(self):
+    def test_guide_included_with_bridge_scene(self):
         changes = [
             {"player": "Alice", "type": "Physical", "from": 8, "to": 6},
         ]
         summary = format_scene_end("Fight", [], [], [], stress_changes=changes)
-        full = summary + self.SCENE_END_GUIDE
-        assert "Mudancas de stress (bridge):" in full
-        assert "/scene start" in full
+        assert "STRESS CHANGES (bridge)" in summary
+        assert "/scene start" in summary
 
 
 class TestSetupGuideContent:
     """The setup guide is appended inline in campaign.py setup method."""
 
     SETUP_GUIDE = (
-        "Proximos passos: use /scene start para iniciar uma cena. "
-        "Jogadores podem usar /roll para rolar dados. "
-        "/campaign info mostra o estado completo. "
-        "/help para referencia de comandos."
+        "Next steps: use /scene start to begin a scene. "
+        "Players can use /roll to roll dice. "
+        "/campaign info shows full state. "
+        "/help for command reference."
     )
 
     def test_guide_mentions_scene_start(self):
@@ -59,8 +52,8 @@ class TestSceneStartGuideContent:
     """The scene start guide is appended inline in scene.py _start method."""
 
     SCENE_START_GUIDE_BASE = (
-        "Comandos de jogo: /roll para rolar, /asset add para criar assets, "
-        "/campaign info para ver estado."
+        "Game commands: /roll to roll, /asset add to create assets, "
+        "/campaign info to see state."
     )
 
     def test_guide_mentions_roll(self):

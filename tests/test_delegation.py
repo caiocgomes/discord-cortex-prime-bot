@@ -145,9 +145,9 @@ class TestGmRoll:
             player_name="GM",
             results=results,
         )
-        assert "GM rolou 3 dados." in output
-        assert "Assets disponiveis" not in output
-        assert "Pool da oposicao" not in output
+        assert "GM rolled 3 dice." in output
+        assert "Available assets" not in output
+        assert "Opposition pool" not in output
 
     def test_roll_with_npc_name(self):
         results = [(8, 5), (10, 7)]
@@ -155,7 +155,7 @@ class TestGmRoll:
             player_name="Guarda da Torre",
             results=results,
         )
-        assert "Guarda da Torre rolou 2 dados." in output
+        assert "Guarda da Torre rolled 2 dice." in output
 
     def test_roll_default_gm_name(self):
         results = [(8, 5)]
@@ -165,7 +165,7 @@ class TestGmRoll:
             player_name=player_name,
             results=results,
         )
-        assert "GM rolou 1 dados." in output
+        assert "GM rolled 1 dice." in output
 
     def test_roll_with_best_mode(self):
         results = [(8, 5), (10, 7), (6, 3)]
@@ -176,7 +176,7 @@ class TestGmRoll:
             best_options=best_options if best_options else None,
         )
         if best_options:
-            assert "Melhor total:" in output
+            assert "Best total:" in output
 
     def test_roll_with_difficulty(self):
         results = [(8, 5), (10, 7), (6, 3)]
@@ -195,7 +195,7 @@ class TestGmRoll:
             player_name="GM",
             results=results,
         )
-        assert "Assets disponiveis" not in output
+        assert "Available assets" not in output
 
     def test_roll_no_opposition_elements(self):
         results = [(8, 5), (10, 7)]
@@ -203,7 +203,7 @@ class TestGmRoll:
             player_name="GM",
             results=results,
         )
-        assert "Pool da oposicao" not in output
+        assert "Opposition pool" not in output
 
 
 # ---------------------------------------------------------------------------
@@ -220,7 +220,7 @@ class TestFormatterDelegate:
         output = format_campaign_info(
             campaign, players, player_states={}, scene=None, doom_pool=None
         )
-        assert "Alice (delegado):" in output
+        assert "ALICE (delegate)" in output
 
     def test_gm_label_not_delegate(self):
         campaign = {"name": "Test"}
@@ -228,8 +228,8 @@ class TestFormatterDelegate:
         output = format_campaign_info(
             campaign, players, player_states={}, scene=None, doom_pool=None
         )
-        assert "(GM):" in output
-        assert "(delegado)" not in output
+        assert "(GM)" in output
+        assert "(delegate)" not in output
 
     def test_normal_player_no_label(self):
         campaign = {"name": "Test"}
@@ -237,8 +237,8 @@ class TestFormatterDelegate:
         output = format_campaign_info(
             campaign, players, player_states={}, scene=None, doom_pool=None
         )
-        assert "Alice:" in output
-        assert "(delegado)" not in output
+        assert "ALICE" in output
+        assert "(delegate)" not in output
         assert "(GM)" not in output
 
     def test_multiple_players_mixed(self):
@@ -251,10 +251,10 @@ class TestFormatterDelegate:
         output = format_campaign_info(
             campaign, players, player_states={}, scene=None, doom_pool=None
         )
-        assert "Carlos (GM):" in output
-        assert "Alice (delegado):" in output
-        assert "Bob:" in output
-        assert "Bob (delegado)" not in output
+        assert "CARLOS (GM)" in output
+        assert "ALICE (delegate)" in output
+        assert "BOB" in output
+        assert "BOB (delegate)" not in output
 
 
 # ---------------------------------------------------------------------------

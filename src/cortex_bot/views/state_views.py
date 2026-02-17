@@ -54,7 +54,7 @@ class StressAddStartButton(
 
         if not non_gm:
             await interaction.response.send_message(
-                "Nenhum jogador registrado na campanha.", ephemeral=True
+                "No players registered in this campaign.", ephemeral=True
             )
             return
 
@@ -65,7 +65,7 @@ class StressAddStartButton(
 
         add_player_options(view, non_gm, on_player)
         await interaction.response.send_message(
-            "Selecione o jogador para receber stress.",
+            "Select the player to receive stress.",
             view=view,
             ephemeral=True,
         )
@@ -87,7 +87,7 @@ class StressPlayerSelectView(CortexView):
 
         if not stress_types:
             await interaction.response.edit_message(
-                content="Nenhum tipo de stress configurado.", view=None
+                content="No stress types configured for this campaign.", view=None
             )
             return
 
@@ -114,7 +114,7 @@ class StressPlayerSelectView(CortexView):
             view.add_item(btn)
 
         await interaction.response.edit_message(
-            content="Selecione o tipo de stress.", view=view
+            content="Select the stress type.", view=view
         )
 
 
@@ -139,7 +139,7 @@ class StressTypeSelectView(CortexView):
 
         add_die_buttons(view, on_die)
         await interaction.response.edit_message(
-            content="Selecione o dado de stress.", view=view
+            content="Select the stress die.", view=view
         )
 
 
@@ -165,7 +165,7 @@ class StressDieSelectView(CortexView):
                 "SELECT name FROM players WHERE id = ?", (self.player_id,)
             )
             row = await cursor.fetchone()
-            player_name = row["name"] if row else "Jogador"
+            player_name = row["name"] if row else "Player"
 
             cursor = await conn.execute(
                 "SELECT name FROM stress_types WHERE id = ?", (self.stress_type_id,)
@@ -187,26 +187,26 @@ class StressDieSelectView(CortexView):
         action = result.get("action")
         if action == "added":
             msg = format_action_confirm(
-                "Stress adicionado",
-                f"{player_name} recebe {type_name} {die_label(die_size)}.",
+                "Stress added",
+                f"{player_name} receives {type_name} {die_label(die_size)}.",
             )
         elif action == "replaced":
             msg = format_action_confirm(
-                "Stress substituido",
-                f"{player_name} {type_name} de {die_label(result['from'])} para {die_label(result['to'])}.",
+                "Stress replaced",
+                f"{player_name} {type_name} from {die_label(result['from'])} to {die_label(result['to'])}.",
             )
         elif action == "stepped_up":
             msg = format_action_confirm(
                 "Stress step up",
-                f"{player_name} {type_name} de {die_label(result['from'])} para {die_label(result['to'])}.",
+                f"{player_name} {type_name} from {die_label(result['from'])} to {die_label(result['to'])}.",
             )
         elif action == "stressed_out":
             msg = format_action_confirm(
                 "Stressed out",
-                f"{player_name} stressed out em {type_name}.",
+                f"{player_name} stressed out on {type_name}.",
             )
         else:
-            msg = f"Stress processado para {player_name}."
+            msg = f"Stress processed for {player_name}."
 
         view = PostStressView(self.campaign_id)
         await interaction.response.edit_message(content=msg, view=None)
@@ -243,7 +243,7 @@ class AssetAddStartButton(
         player = await db.get_player(self.campaign_id, str(interaction.user.id))
         if player is None:
             await interaction.response.send_message(
-                "Voce nao esta registrado nesta campanha.", ephemeral=True
+                "You are not registered in this campaign. Use /campaign join to register.", ephemeral=True
             )
             return
 
@@ -260,10 +260,10 @@ class AssetAddStartButton(
             view,
             players,
             on_owner,
-            extra_buttons=[("Asset de Cena", "scene")],
+            extra_buttons=[("Scene Asset", "scene")],
         )
         await interaction.response.send_message(
-            "Para quem e o asset?", view=view, ephemeral=True
+            "Who is the asset for?", view=view, ephemeral=True
         )
 
 
@@ -287,7 +287,7 @@ class AssetOwnerSelectView(CortexView):
 
             if not has_gm_permission(self.actor):
                 await interaction.response.edit_message(
-                    content="Apenas o GM pode criar assets de cena.", view=None
+                    content="Only the GM can create scene assets.", view=None
                 )
                 return
 
@@ -304,7 +304,7 @@ class AssetOwnerSelectView(CortexView):
         )
         view.add_name_select(options)
         await interaction.response.edit_message(
-            content="Selecione um nome para o asset ou use /asset add para nome customizado.",
+            content="Select a name for the asset or use /asset add for a custom name.",
             view=view,
         )
 
@@ -327,7 +327,7 @@ class AssetNameSelectView(CortexView):
 
     def add_name_select(self, options: list[discord.SelectOption]) -> None:
         select = discord.ui.Select(
-            placeholder="Nome do asset",
+            placeholder="Asset name",
             options=options,
             custom_id=f"ephemeral:asset_name_sel:{uuid.uuid4().hex[:8]}",
         )
@@ -345,7 +345,7 @@ class AssetNameSelectView(CortexView):
 
         add_die_buttons(view, on_die)
         await interaction.response.edit_message(
-            content=f"Asset: {name}. Selecione o dado.", view=view
+            content=f"Asset: {name}. Select the die.", view=view
         )
 
 
@@ -387,8 +387,8 @@ class AssetDieSelectView(CortexView):
                 duration="scene",
             )
             msg = format_action_confirm(
-                "Asset de cena criado",
-                f"{self.name} {die_label(die_size)}, duracao scene.",
+                "Scene asset created",
+                f"{self.name} {die_label(die_size)}, duration scene.",
             )
         else:
             result = await sm.add_asset(
@@ -401,7 +401,7 @@ class AssetDieSelectView(CortexView):
                 duration="scene",
             )
             msg = format_action_confirm(
-                "Asset adicionado",
+                "Asset added",
                 f"{self.name} {die_label(die_size)}.",
             )
 
@@ -440,7 +440,7 @@ class ComplicationAddStartButton(
         player = await db.get_player(self.campaign_id, str(interaction.user.id))
         if player is None:
             await interaction.response.send_message(
-                "Voce nao esta registrado nesta campanha.", ephemeral=True
+                "You are not registered in this campaign. Use /campaign join to register.", ephemeral=True
             )
             return
 
@@ -457,10 +457,10 @@ class ComplicationAddStartButton(
             view,
             players,
             on_target,
-            extra_buttons=[("Complicacao de Cena", "scene")],
+            extra_buttons=[("Scene Complication", "scene")],
         )
         await interaction.response.send_message(
-            "Quem recebe a complication?", view=view, ephemeral=True
+            "Who receives the complication?", view=view, ephemeral=True
         )
 
 
@@ -484,7 +484,7 @@ class CompTargetSelectView(CortexView):
 
             if not has_gm_permission(self.actor):
                 await interaction.response.edit_message(
-                    content="Apenas o GM pode criar complications de cena.",
+                    content="Only the GM can create scene complications.",
                     view=None,
                 )
                 return
@@ -501,7 +501,7 @@ class CompTargetSelectView(CortexView):
         )
         view.add_name_select(options)
         await interaction.response.edit_message(
-            content="Selecione um nome para a complication ou use /complication add para nome customizado.",
+            content="Select a name for the complication or use /complication add for a custom name.",
             view=view,
         )
 
@@ -524,7 +524,7 @@ class CompNameSelectView(CortexView):
 
     def add_name_select(self, options: list[discord.SelectOption]) -> None:
         select = discord.ui.Select(
-            placeholder="Nome da complication",
+            placeholder="Complication name",
             options=options,
             custom_id=f"ephemeral:comp_name_sel:{uuid.uuid4().hex[:8]}",
         )
@@ -542,7 +542,7 @@ class CompNameSelectView(CortexView):
 
         add_die_buttons(view, on_die)
         await interaction.response.edit_message(
-            content=f"Complication: {name}. Selecione o dado.", view=view
+            content=f"Complication: {name}. Select the die.", view=view
         )
 
 
@@ -596,12 +596,12 @@ class CompDieSelectView(CortexView):
 
         if self.is_scene:
             msg = format_action_confirm(
-                "Complication de cena criada",
+                "Scene complication created",
                 f"{self.name} {die_label(die_size)}.",
             )
         else:
             msg = format_action_confirm(
-                "Complication adicionada",
+                "Complication added",
                 f"{self.name} {die_label(die_size)}.",
             )
 
@@ -640,7 +640,7 @@ class PPStartButton(
         player = await db.get_player(self.campaign_id, str(interaction.user.id))
         if player is None:
             await interaction.response.send_message(
-                "Voce nao esta registrado nesta campanha.", ephemeral=True
+                "You are not registered in this campaign. Use /campaign join to register.", ephemeral=True
             )
             return
 
@@ -650,7 +650,7 @@ class PPStartButton(
 
             if not non_gm:
                 await interaction.response.send_message(
-                    "Nenhum jogador registrado na campanha.", ephemeral=True
+                    "No players registered in this campaign.", ephemeral=True
                 )
                 return
 
@@ -661,7 +661,7 @@ class PPStartButton(
 
             add_player_options(view, non_gm, on_player)
             await interaction.response.send_message(
-                "Selecione o jogador para PP.", view=view, ephemeral=True
+                "Select the player for PP.", view=view, ephemeral=True
             )
         else:
             view = PPAdjustView(
@@ -671,7 +671,7 @@ class PPStartButton(
                 player["name"],
             )
             await interaction.response.send_message(
-                f"Ajustar PP de {player['name']}.",
+                f"Adjust PP for {player['name']}.",
                 view=view,
                 ephemeral=True,
             )
@@ -694,13 +694,13 @@ class PPPlayerSelectView(CortexView):
                 "SELECT name FROM players WHERE id = ?", (player_id,)
             )
             row = await cursor.fetchone()
-            player_name = row["name"] if row else "Jogador"
+            player_name = row["name"] if row else "Player"
 
         view = PPAdjustView(
             self.campaign_id, self.actor_id, player_id, player_name
         )
         await interaction.response.edit_message(
-            content=f"Ajustar PP de {player_name}.", view=view
+            content=f"Adjust PP for {player_name}.", view=view
         )
 
 
@@ -740,8 +740,8 @@ class PPAdjustView(CortexView):
             player_name=self.player_name,
         )
         msg = format_action_confirm(
-            "PP adicionado",
-            f"{self.player_name}: {result['from']} para {result['to']} PP (+1).",
+            "PP added",
+            f"{self.player_name}: {result['from']} to {result['to']} PP (+1).",
         )
         await interaction.response.edit_message(content=msg, view=self)
         post_view = PostPPView(self.campaign_id)
@@ -756,13 +756,13 @@ class PPAdjustView(CortexView):
         )
         if result.get("error") == "insufficient":
             await interaction.response.edit_message(
-                content=f"{self.player_name} tem 0 PP, nao pode remover.",
+                content=f"{self.player_name} has 0 PP, cannot remove.",
                 view=self,
             )
             return
         msg = format_action_confirm(
-            "PP removido",
-            f"{self.player_name}: {result['from']} para {result['to']} PP (-1).",
+            "PP removed",
+            f"{self.player_name}: {result['from']} to {result['to']} PP (-1).",
         )
         await interaction.response.edit_message(content=msg, view=self)
         post_view = PostPPView(self.campaign_id)
@@ -799,7 +799,7 @@ class XPStartButton(
         player = await db.get_player(self.campaign_id, str(interaction.user.id))
         if player is None:
             await interaction.response.send_message(
-                "Voce nao esta registrado nesta campanha.", ephemeral=True
+                "You are not registered in this campaign. Use /campaign join to register.", ephemeral=True
             )
             return
 
@@ -809,7 +809,7 @@ class XPStartButton(
 
             if not non_gm:
                 await interaction.response.send_message(
-                    "Nenhum jogador registrado na campanha.", ephemeral=True
+                    "No players registered in this campaign.", ephemeral=True
                 )
                 return
 
@@ -820,7 +820,7 @@ class XPStartButton(
 
             add_player_options(view, non_gm, on_player)
             await interaction.response.send_message(
-                "Selecione o jogador para XP.", view=view, ephemeral=True
+                "Select the player for XP.", view=view, ephemeral=True
             )
         else:
             modal = XPAmountModal(
@@ -849,7 +849,7 @@ class XPPlayerSelectView(CortexView):
                 "SELECT name FROM players WHERE id = ?", (player_id,)
             )
             row = await cursor.fetchone()
-            player_name = row["name"] if row else "Jogador"
+            player_name = row["name"] if row else "Player"
 
         modal = XPAmountModal(
             self.campaign_id, self.actor_id, player_id, player_name
@@ -857,12 +857,12 @@ class XPPlayerSelectView(CortexView):
         await interaction.response.send_modal(modal)
 
 
-class XPAmountModal(discord.ui.Modal, title="Adicionar XP"):
+class XPAmountModal(discord.ui.Modal, title="Add XP"):
     """Modal for entering XP amount."""
 
     amount = discord.ui.TextInput(
-        label="Quantidade de XP",
-        placeholder="Ex: 5",
+        label="XP amount",
+        placeholder="e.g. 5",
         required=True,
         max_length=4,
     )
@@ -887,7 +887,7 @@ class XPAmountModal(discord.ui.Modal, title="Adicionar XP"):
                 raise ValueError
         except ValueError:
             await interaction.response.send_message(
-                "Quantidade deve ser um numero positivo.", ephemeral=True
+                "Amount must be a positive number.", ephemeral=True
             )
             return
 
@@ -898,8 +898,8 @@ class XPAmountModal(discord.ui.Modal, title="Adicionar XP"):
             player_name=self.player_name,
         )
         msg = format_action_confirm(
-            "XP adicionado",
-            f"{self.player_name}: {result['from']} para {result['to']} XP (+{value}).",
+            "XP added",
+            f"{self.player_name}: {result['from']} to {result['to']} XP (+{value}).",
         )
         post_view = PostXPView(self.campaign_id)
         await interaction.response.send_message(msg, ephemeral=True)

@@ -113,7 +113,7 @@ async def _build_gm_toggles(db, campaign_id: int) -> list[dict]:
             if c.get("player_name") is None:
                 toggle_items.append({
                     "id": f"comp:{c['id']}",
-                    "label": f"Cena: {c['name']} {die_label(c['die_size'])}",
+                    "label": f"Scene: {c['name']} {die_label(c['die_size'])}",
                     "die_size": c["die_size"],
                 })
 
@@ -150,7 +150,7 @@ class RollStartButton(
         player = await db.get_player(self.campaign_id, str(interaction.user.id))
         if player is None:
             await interaction.response.send_message(
-                "Voce nao esta registrado nesta campanha.", ephemeral=True
+                "You are not registered in this campaign. Use /campaign join to register.", ephemeral=True
             )
             return
 
@@ -205,13 +205,13 @@ class PoolBuilderView(CortexView):
     def build_status_text(self) -> str:
         lines = []
         if not self.pool:
-            lines.append("Pool vazio. Clique nos dados para montar o pool.")
+            lines.append("Pool empty. Click the dice buttons to build your pool.")
         else:
             counts = Counter(self.pool)
             parts = [f"{count}x {die_label(size)}" for size, count in sorted(counts.items())]
             lines.append(f"Pool: {', '.join(parts)}.")
         if len(self.toggle_items) > 15:
-            lines.append(f"Mostrando 15 de {len(self.toggle_items)} itens disponiveis.")
+            lines.append(f"Showing 15 of {len(self.toggle_items)} available items.")
         return "\n".join(lines)
 
     def _build_components(self) -> None:
@@ -258,7 +258,7 @@ class PoolBuilderView(CortexView):
             control_row = 1 + min((len(visible_toggles) - 1) // 5 + 1, 3)
 
         total = len(self.pool)
-        roll_label = f"Rolar {total} dado{'s' if total != 1 else ''}" if total > 0 else "Rolar"
+        roll_label = f"Roll {total} {'dice' if total != 1 else 'die'}" if total > 0 else "Roll"
         roll_btn = discord.ui.Button(
             label=roll_label,
             style=discord.ButtonStyle.success,
@@ -269,7 +269,7 @@ class PoolBuilderView(CortexView):
         self.add_item(roll_btn)
 
         clear_btn = discord.ui.Button(
-            label="Limpar",
+            label="Clear",
             style=discord.ButtonStyle.secondary,
             custom_id=f"ephemeral:pb_clear:{self._uid}",
             row=control_row,
@@ -279,7 +279,7 @@ class PoolBuilderView(CortexView):
 
         if self.history:
             undo_btn = discord.ui.Button(
-                label="Remover ultimo",
+                label="Remove last",
                 style=discord.ButtonStyle.secondary,
                 custom_id=f"ephemeral:pb_undo:{self._uid}",
                 row=control_row,
@@ -313,7 +313,7 @@ class PoolBuilderView(CortexView):
     async def _on_roll(self, interaction: discord.Interaction) -> None:
         if not self.pool:
             await interaction.response.send_message(
-                "Pool vazio. Adicione dados antes de rolar.", ephemeral=True
+                "Pool empty. Add dice before rolling.", ephemeral=True
             )
             return
 
@@ -385,9 +385,9 @@ class HitchComplicationButton(
         comp_die_index = min(hitch_count, len(VALID_SIZES) - 1)
         comp_die_size = VALID_SIZES[comp_die_index]
         if hitch_count == 1:
-            label = f"Complicacao {die_label(comp_die_size)}"
+            label = f"Complication {die_label(comp_die_size)}"
         else:
-            label = f"Complicacao {die_label(comp_die_size)} ({hitch_count}h)"
+            label = f"Complication {die_label(comp_die_size)} ({hitch_count}h)"
         super().__init__(
             discord.ui.Button(
                 label=label,
@@ -411,7 +411,7 @@ class HitchComplicationButton(
 
         if not non_gm:
             await interaction.response.send_message(
-                "Nenhum jogador registrado.", ephemeral=True
+                "No players registered in this campaign.", ephemeral=True
             )
             return
 
@@ -424,7 +424,7 @@ class HitchComplicationButton(
 
         add_player_options(view, non_gm, on_player)
         await interaction.response.send_message(
-            "Selecione o jogador que recebe a complicacao.",
+            "Select the player who receives the complication.",
             view=view,
             ephemeral=True,
         )
@@ -448,12 +448,12 @@ class HitchPlayerSelectView(CortexView):
         await interaction.response.send_modal(modal)
 
 
-class ComplicationNameModal(discord.ui.Modal, title="Nome da complicacao"):
+class ComplicationNameModal(discord.ui.Modal, title="Complication name"):
     """Modal to input complication name for hitch resolution."""
 
     name_input = discord.ui.TextInput(
-        label="Nome da complicacao",
-        placeholder="Ex: Desarmado, Cego, Confuso",
+        label="Complication name",
+        placeholder="e.g. Disarmed, Blinded, Confused",
         max_length=50,
     )
 
@@ -471,14 +471,14 @@ class ComplicationNameModal(discord.ui.Modal, title="Nome da complicacao"):
         comp_name = self.name_input.value.strip()
         if not comp_name:
             await interaction.response.send_message(
-                "Nome da complicacao nao pode ser vazio.", ephemeral=True
+                "Complication name cannot be empty.", ephemeral=True
             )
             return
 
         player = await db.get_player_by_id(self.player_id)
         if player is None:
             await interaction.response.send_message(
-                "Jogador nao encontrado.", ephemeral=True
+                "Player not found.", ephemeral=True
             )
             return
 
@@ -524,13 +524,13 @@ class ComplicationNameModal(discord.ui.Modal, title="Nome da complicacao"):
 
             if taken_out:
                 comp_msg = (
-                    f"Complicacao {comp_name} em {player_name}: "
-                    f"{die_label(existing['die_size'])} ultrapassou d12. Taken out."
+                    f"Complication {comp_name} on {player_name}: "
+                    f"{die_label(existing['die_size'])} exceeded d12. Taken out."
                 )
             else:
                 comp_msg = (
-                    f"Complicacao {comp_name} em {player_name}: "
-                    f"{die_label(existing['die_size'])} para {die_label(new_size)}"
+                    f"Complication {comp_name} on {player_name}: "
+                    f"{die_label(existing['die_size'])} to {die_label(new_size)}"
                 )
                 if self.hitch_count > 1:
                     comp_msg += f" ({self.hitch_count} hitches)."
@@ -553,13 +553,13 @@ class ComplicationNameModal(discord.ui.Modal, title="Nome da complicacao"):
             )
 
             comp_msg = (
-                f"Complicacao {comp_name} {die_label(die_size)} criada em {player_name}."
+                f"Complication {comp_name} {die_label(die_size)} created on {player_name}."
             )
             if taken_out:
-                comp_msg += " Ultrapassou d12, taken out."
+                comp_msg += " Exceeded d12, taken out."
             elif self.hitch_count > 1:
                 comp_msg = (
-                    f"Complicacao {comp_name} {die_label(die_size)} criada em {player_name} "
+                    f"Complication {comp_name} {die_label(die_size)} created on {player_name} "
                     f"({self.hitch_count} hitches, d6 + {self.hitch_count - 1} step ups)."
                 )
 
@@ -567,7 +567,7 @@ class ComplicationNameModal(discord.ui.Modal, title="Nome da complicacao"):
         pp_result = await state_mgr.update_pp(
             self.campaign_id, self.actor_id, self.player_id, 1, player_name
         )
-        pp_msg = f"{player_name} recebeu 1 PP (agora {pp_result['to']})."
+        pp_msg = f"{player_name} received 1 PP (now {pp_result['to']})."
 
         view = PostRollView(self.campaign_id)
         await interaction.response.send_message(f"{comp_msg} {pp_msg}", view=view)
@@ -627,11 +627,11 @@ class HitchDoomButton(
 
         pool = await db.get_doom_pool(self.campaign_id)
         labels = [die_label(d["die_size"]) for d in pool]
-        pool_str = ", ".join(labels) if labels else "vazio"
+        pool_str = ", ".join(labels) if labels else "empty"
         count_str = f"{self.hitch_count}d6" if self.hitch_count > 1 else "d6"
         view = PostRollView(self.campaign_id)
         await interaction.response.send_message(
-            f"Adicionado {count_str} ao Doom Pool ({self.hitch_count} hitches). "
+            f"Added {count_str} to Doom Pool ({self.hitch_count} hitches). "
             f"Doom Pool: {pool_str}.",
             view=view,
         )

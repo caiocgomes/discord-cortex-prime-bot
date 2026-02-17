@@ -55,7 +55,7 @@ class UndoButton(
 
         if action is None:
             await interaction.response.send_message(
-                "Nada para desfazer.", ephemeral=True
+                "Nothing to undo.", ephemeral=True
             )
             return
 
@@ -67,7 +67,7 @@ class UndoButton(
 
         msg = _format_undo_message(action["action_type"], action["action_data"])
         view = PostUndoView(self.campaign_id)
-        await interaction.response.send_message(f"Desfeito: {msg}", view=view)
+        await interaction.response.send_message(f"Undone: {msg}", view=view)
 
 
 class CampaignInfoButton(
@@ -100,7 +100,7 @@ class CampaignInfoButton(
         campaign = await db.get_campaign_by_id(self.campaign_id)
         if campaign is None:
             await interaction.response.send_message(
-                "Campanha nao encontrada.", ephemeral=True
+                "Campaign not found.", ephemeral=True
             )
             return
 
@@ -181,7 +181,7 @@ class MenuButton(
         campaign = await db.get_campaign_by_id(self.campaign_id)
         if campaign is None:
             await interaction.response.send_message(
-                "Campanha nao encontrada.", ephemeral=True
+                "Campaign not found.", ephemeral=True
             )
             return
 
@@ -199,9 +199,9 @@ class MenuButton(
         )
 
         if has_active_scene:
-            text = "Painel de acoes. Use os botoes abaixo."
+            text = "Action panel. Use the buttons below."
         else:
-            text = "Nenhuma cena ativa. Inicie uma cena para acessar mais acoes."
+            text = "No active scene. Start a scene to access more actions."
 
         await interaction.response.send_message(text, view=view, ephemeral=True)
 

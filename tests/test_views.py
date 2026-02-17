@@ -408,7 +408,7 @@ class TestPoolBuilderView:
         )
         assert view.pool == []
         assert view.included_toggles == set()
-        assert view.build_status_text() == "Pool vazio. Clique nos dados para montar o pool."
+        assert view.build_status_text() == "Pool empty. Click the dice buttons to build your pool."
 
     async def test_add_die_updates_pool(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
@@ -490,7 +490,7 @@ class TestPoolBuilderView:
         assert view.pool == []
         assert view.included_toggles == set()
         assert view.history == []
-        assert "Pool vazio" in view.build_status_text()
+        assert "Pool empty" in view.build_status_text()
 
     async def test_die_buttons_present(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
@@ -535,9 +535,9 @@ class TestPoolBuilderView:
             campaign_id=1, player_id=1, player_name="Alice", toggle_items=[]
         )
         labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
-        assert "Rolar" in labels
-        assert "Limpar" in labels
-        assert "Remover ultimo" not in labels
+        assert "Roll" in labels
+        assert "Clear" in labels
+        assert "Remove last" not in labels
 
     async def test_remover_ultimo_appears_with_history(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
@@ -549,7 +549,7 @@ class TestPoolBuilderView:
         view.history.append(("die", 8))
         view._build_components()
         labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
-        assert "Remover ultimo" in labels
+        assert "Remove last" in labels
 
     async def test_roll_button_label_updates_with_pool_size(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
@@ -560,7 +560,7 @@ class TestPoolBuilderView:
         view.pool.extend([8, 6, 8])
         view._build_components()
         labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
-        assert "Rolar 3 dados" in labels
+        assert "Roll 3 dice" in labels
 
     async def test_ephemeral_custom_ids_use_uuid(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
@@ -679,11 +679,11 @@ class TestStateViewButtonChains:
         async def cb(interaction, val):
             pass
 
-        add_player_options(view, players, cb, extra_buttons=[("Complicacao de Cena", "scene")])
+        add_player_options(view, players, cb, extra_buttons=[("Scene Complication", "scene")])
         buttons = [c for c in view.children if isinstance(c, discord.ui.Button)]
         labels = [b.label for b in buttons]
         assert "Alice" in labels
-        assert "Complicacao de Cena" in labels
+        assert "Scene Complication" in labels
 
 
 class TestMenuView:
@@ -964,14 +964,14 @@ class TestPoolBuilderToggleItems:
 
         toggles = [
             {"id": "stress:1", "label": "Alice: Physical d8", "die_size": 8},
-            {"id": "comp:5", "label": "Cena: Trapped d6", "die_size": 6},
+            {"id": "comp:5", "label": "Scene: Trapped d6", "die_size": 6},
         ]
         view = PoolBuilderView(
             campaign_id=1, player_id=1, player_name="GM", toggle_items=toggles
         )
         labels = [c.label for c in view.children if isinstance(c, discord.ui.Button)]
         assert "Alice: Physical d8" in labels
-        assert "Cena: Trapped d6" in labels
+        assert "Scene: Trapped d6" in labels
 
     async def test_toggle_on_adds_to_pool_and_shows_in_pool_label(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
@@ -1024,7 +1024,7 @@ class TestGMPoolBuilderToggles:
         # Player complication label
         assert any("Alice: Wounded d6" in l for l in labels)
         # Scene complication label
-        assert any("Cena: Trapped d6" in l for l in labels)
+        assert any("Scene: Trapped d6" in l for l in labels)
         # IDs use correct prefixes
         assert any(i.startswith("stress:") for i in ids)
         assert any(i.startswith("comp:") for i in ids)
@@ -1084,14 +1084,14 @@ class TestGMRollResult:
         text, _view = await execute_player_roll(
             db, gm_campaign, gm["id"], gm["name"],
             pool=[8, 6],
-            included_assets=["Alice: Physical d8", "Cena: Trapped d6"],
+            included_assets=["Alice: Physical d8", "Scene: Trapped d6"],
             is_gm_roll=True,
         )
-        assert "Incluidos:" in text
+        assert "Included:" in text
         assert "Alice: Physical d8" in text
-        assert "Cena: Trapped d6" in text
+        assert "Scene: Trapped d6" in text
         # GM roll has no opposition_elements
-        assert "Pool da oposicao" not in text
+        assert "Opposition pool" not in text
 
     async def test_gm_roll_without_toggles_no_incluidos(self, db, gm_campaign):
         from cortex_bot.views.rolling_views import execute_player_roll
@@ -1102,8 +1102,8 @@ class TestGMRollResult:
             pool=[8, 10],
             is_gm_roll=True,
         )
-        assert "Incluidos:" not in text
-        assert "Pool da oposicao" not in text
+        assert "Included:" not in text
+        assert "Opposition pool" not in text
 
 
 class TestToggleTruncation:
@@ -1128,7 +1128,7 @@ class TestToggleTruncation:
 
         # Status text should mention truncation
         status = view.build_status_text()
-        assert "15 de 20" in status
+        assert "15 of 20" in status
 
     async def test_no_truncation_message_under_15(self):
         from cortex_bot.views.rolling_views import PoolBuilderView
@@ -1141,7 +1141,7 @@ class TestToggleTruncation:
             campaign_id=1, player_id=1, player_name="GM", toggle_items=toggles
         )
         status = view.build_status_text()
-        assert "de" not in status or "dados" in status
+        assert "of" not in status or "available" in status
 
 
 # ---------------------------------------------------------------------------
@@ -1330,7 +1330,7 @@ class TestXPAmountModal:
         modal = XPAmountModal(
             campaign_id=1, actor_id="123", player_id=1, player_name="Alice"
         )
-        assert modal.title == "Adicionar XP"
+        assert modal.title == "Add XP"
 
     async def test_modal_has_text_input(self):
         from cortex_bot.views.state_views import XPAmountModal
@@ -1338,7 +1338,7 @@ class TestXPAmountModal:
         modal = XPAmountModal(
             campaign_id=1, actor_id="123", player_id=1, player_name="Alice"
         )
-        assert modal.amount.label == "Quantidade de XP"
+        assert modal.amount.label == "XP amount"
         assert modal.amount.required is True
 
     async def test_modal_stores_context(self):
@@ -1468,13 +1468,13 @@ class TestHitchButtonPatterns:
         from cortex_bot.views.rolling_views import HitchComplicationButton
 
         btn = HitchComplicationButton(1, hitch_count=1)
-        assert btn.item.label == "Complicacao d6"
+        assert btn.item.label == "Complication d6"
 
     async def test_hitch_comp_multi_label(self):
         from cortex_bot.views.rolling_views import HitchComplicationButton
 
         btn = HitchComplicationButton(1, hitch_count=3)
-        assert btn.item.label == "Complicacao d10 (3h)"
+        assert btn.item.label == "Complication d10 (3h)"
 
     async def test_hitch_doom_single_label(self):
         from cortex_bot.views.rolling_views import HitchDoomButton
@@ -1569,7 +1569,7 @@ class TestComplicationNameModal:
         from cortex_bot.views.rolling_views import ComplicationNameModal
 
         modal = ComplicationNameModal(campaign_id=1, actor_id="gm1", player_id=2, hitch_count=1)
-        assert modal.title == "Nome da complicacao"
+        assert modal.title == "Complication name"
         assert modal.name_input is not None
         assert modal.name_input.max_length == 50
 
@@ -1594,16 +1594,16 @@ class TestHitchAccessibility:
     def test_complication_message_is_linear_text(self):
         """The confirmation message format should be descriptive linear text."""
         # Simulated message format from ComplicationNameModal.on_submit
-        comp_msg = "Complicacao Desarmado d6 criada em Alice."
-        pp_msg = "Alice recebeu 1 PP (agora 4)."
+        comp_msg = "Complication Disarmed d6 created on Alice."
+        pp_msg = "Alice received 1 PP (now 4)."
         full = f"{comp_msg} {pp_msg}"
         # Must be plain text, no emoji-only info, no box art
-        assert "Complicacao" in full
-        assert "criada em" in full
-        assert "recebeu 1 PP" in full
+        assert "Complication" in full
+        assert "created on" in full
+        assert "received 1 PP" in full
 
     def test_doom_add_message_is_linear_text(self):
         """The doom add confirmation should be descriptive."""
-        msg = "Adicionado d6 ao Doom Pool. Doom Pool: d6, d8."
-        assert "Adicionado d6" in msg
+        msg = "Added d6 to Doom Pool. Doom Pool: d6, d8."
+        assert "Added d6" in msg
         assert "Doom Pool:" in msg

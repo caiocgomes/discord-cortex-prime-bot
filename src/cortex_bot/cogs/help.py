@@ -7,128 +7,128 @@ from discord.ext import commands
 
 log = logging.getLogger(__name__)
 
-HELP_GERAL = (
-    "Cortex Bot: gerenciador de sessao para Cortex Prime.\n"
+HELP_GENERAL = (
+    "Cortex Bot: session manager for Cortex Prime RPG.\n"
     "\n"
-    "Fluxo basico: /campaign setup para criar campanha, "
-    "/scene start para iniciar cena, /roll para rolar dados.\n"
+    "Core lifecycle: /campaign setup to create a campaign, "
+    "/scene start to begin a scene, /roll to roll dice.\n"
     "\n"
-    "Grupos de comandos:\n"
-    "- /campaign: criar, encerrar, ver info da campanha, delegar\n"
-    "- /scene: iniciar, encerrar, ver info da cena\n"
-    "- /roll: rolar dados com assets e extras\n"
-    "- /gmroll: rolagem do GM/NPC sem estado pessoal\n"
-    "- /asset: adicionar, step up, step down, remover assets\n"
-    "- /stress: adicionar, step up, step down, remover stress\n"
-    "- /complication: adicionar, step up, step down, remover complications\n"
-    "- /pp: adicionar e gastar plot points\n"
-    "- /xp: adicionar e remover experience points\n"
-    "- /doom: doom pool (se habilitado)\n"
-    "- /crisis: crisis pools (se habilitado)\n"
-    "- /hero: hero dice (se habilitado)\n"
-    "- /trauma: trauma (se habilitado)\n"
-    "- /undo: desfazer ultima acao\n"
+    "Command groups:\n"
+    "- /campaign: create, end, view campaign info, delegate\n"
+    "- /scene: start, end, view scene info\n"
+    "- /roll: roll dice with assets and extras\n"
+    "- /gmroll: GM/NPC roll without personal state\n"
+    "- /asset: add, step up, step down, remove assets\n"
+    "- /stress: add, step up, step down, remove stress\n"
+    "- /complication: add, step up, step down, remove complications\n"
+    "- /pp: add and spend plot points\n"
+    "- /xp: add and remove experience points\n"
+    "- /doom: doom pool (if enabled)\n"
+    "- /crisis: crisis pools (if enabled)\n"
+    "- /hero: hero dice (if enabled)\n"
+    "- /trauma: trauma (if enabled)\n"
+    "- /undo: undo last action\n"
     "\n"
-    "Use /help topic:gm para comandos de GM, "
-    "/help topic:jogador para comandos de jogador, "
-    "/help topic:rolagem para referencia de dados."
+    "Use /help topic:gm for GM commands, "
+    "/help topic:player for player commands, "
+    "/help topic:rolling for dice reference."
 )
 
 HELP_GM = (
-    "Comandos de GM, organizados por momento.\n"
+    "GM commands, organized by phase.\n"
     "\n"
-    "Setup da campanha:\n"
-    "- /campaign setup name:\"Nome\" players:@Alice @Bob stress_types:\"Physical,Mental\"\n"
-    "  Cria campanha no canal. Voce se torna GM automaticamente.\n"
-    "- /campaign delegate player:@Alice - promover jogador a delegado\n"
-    "- /campaign undelegate player:@Alice - revogar delegacao\n"
+    "Campaign setup:\n"
+    "- /campaign setup name:\"Name\" players:@Alice @Bob stress_types:\"Physical,Mental\"\n"
+    "  Creates a campaign in this channel. You become the GM automatically.\n"
+    "- /campaign delegate player:@Alice - promote a player to delegate\n"
+    "- /campaign undelegate player:@Alice - revoke delegation\n"
     "\n"
-    "Durante a cena:\n"
-    "- /stress add player:@Alice type:Physical die:d8 - adicionar stress\n"
-    "- /stress stepup player:@Alice type:Physical - step up de stress\n"
-    "- /complication add name:\"On Fire\" die:d6 player:@Alice - criar complication\n"
-    "- /asset add name:\"Cover\" die:d8 scene_asset:True - criar asset de cena\n"
-    "- /doom add die:d6 - adicionar dado ao doom pool\n"
-    "- /doom roll - rolar o doom pool\n"
-    "- /gmroll dice:2d8 1d10 - rolar como GM/NPC\n"
+    "During a scene:\n"
+    "- /stress add player:@Alice type:Physical die:d8 - add stress\n"
+    "- /stress stepup player:@Alice type:Physical - step up stress\n"
+    "- /complication add name:\"On Fire\" die:d6 player:@Alice - create complication\n"
+    "- /asset add name:\"Cover\" die:d8 scene_asset:True - create scene asset\n"
+    "- /doom add die:d6 - add die to doom pool (if Doom Pool is enabled)\n"
+    "- /doom roll - roll the doom pool\n"
+    "- /gmroll dice:2d8 1d10 - roll as GM/NPC\n"
     "\n"
-    "Entre cenas:\n"
-    "- /scene start name:\"Tavern Fight\" - iniciar nova cena\n"
-    "- /scene end - encerrar cena (remove assets e complications de cena)\n"
-    "- /scene end bridge:True - bridge scene: step down de todo stress\n"
+    "Between scenes:\n"
+    "- /scene start name:\"Tavern Fight\" - start a new scene\n"
+    "- /scene end - end scene (removes scene assets and complications)\n"
+    "- /scene end bridge:True - bridge scene: step down all stress\n"
     "\n"
-    "Administracao:\n"
-    "- /campaign campaign_end confirm:sim - encerrar campanha permanentemente\n"
-    "- /campaign info - ver estado completo\n"
-    "- /undo - desfazer ultima acao (GM pode desfazer acoes de qualquer jogador)"
+    "Administration:\n"
+    "- /campaign campaign_end confirm:sim - end campaign permanently\n"
+    "- /campaign info - view full state\n"
+    "- /undo - undo last action (GM can undo any player's action)"
 )
 
-HELP_JOGADOR = (
-    "Comandos de jogador.\n"
+HELP_PLAYER = (
+    "Player commands.\n"
     "\n"
-    "Rolagem:\n"
-    "- /roll dice:1d8 1d10 1d6 - rolar pool de dados\n"
-    "- /roll dice:1d8 1d10 include:\"Big Wrench\" - incluir asset na pool\n"
-    "- /roll dice:1d8 1d10 extra:1d6 - comprar dado extra com PP (custa 1 PP por dado)\n"
-    "- /roll dice:1d8 1d10 difficulty:12 - rolar contra dificuldade\n"
+    "Rolling:\n"
+    "- /roll dice:1d8 1d10 1d6 - roll a dice pool\n"
+    "- /roll dice:1d8 1d10 include:\"Big Wrench\" - include an asset in the pool\n"
+    "- /roll dice:1d8 1d10 extra:1d6 - buy extra dice with PP (costs 1 PP per die)\n"
+    "- /roll dice:1d8 1d10 difficulty:12 - roll against a difficulty\n"
     "\n"
     "Assets:\n"
-    "- /asset add name:\"Big Wrench\" die:d6 - criar asset para voce\n"
-    "- /asset stepup name:\"Big Wrench\" - step up do asset\n"
-    "- /asset stepdown name:\"Big Wrench\" - step down do asset\n"
-    "- /asset remove name:\"Big Wrench\" - remover asset\n"
+    "- /asset add name:\"Big Wrench\" die:d6 - create an asset for yourself\n"
+    "- /asset stepup name:\"Big Wrench\" - step up the asset\n"
+    "- /asset stepdown name:\"Big Wrench\" - step down the asset\n"
+    "- /asset remove name:\"Big Wrench\" - remove the asset\n"
     "\n"
     "Plot Points:\n"
-    "- /pp add amount:1 - ganhar PP\n"
-    "- /pp remove amount:1 - gastar PP\n"
+    "- /pp add amount:1 - gain PP\n"
+    "- /pp remove amount:1 - spend PP\n"
     "\n"
     "Complications:\n"
-    "- /complication add name:\"Broken Arm\" die:d6 - criar complication\n"
+    "- /complication add name:\"Broken Arm\" die:d6 - create a complication\n"
     "- /complication stepdown name:\"Broken Arm\" - step down\n"
     "\n"
-    "Informacao:\n"
-    "- /campaign info - ver estado da campanha e seus dados\n"
-    "- /scene info - ver estado da cena atual"
+    "Information:\n"
+    "- /campaign info - view campaign state and your data\n"
+    "- /scene info - view current scene state"
 )
 
-HELP_ROLAGEM = (
-    "Referencia de rolagem Cortex Prime.\n"
+HELP_ROLLING = (
+    "Cortex Prime rolling reference.\n"
     "\n"
-    "Notacao de dados: use dX ou NdX onde X e 4, 6, 8, 10 ou 12.\n"
-    "Exemplos: d8, 1d10, 2d6. Separe dados por espaco: 1d8 1d10 2d6.\n"
+    "Dice notation: use dX or NdX where X is 4, 6, 8, 10, or 12.\n"
+    "Examples: d8, 1d10, 2d6. Separate dice with spaces: 1d8 1d10 2d6.\n"
     "\n"
-    "Include: adicione assets a pool pelo nome.\n"
-    "Exemplo: /roll dice:1d8 1d10 include:\"Sword\"\n"
-    "O dado do asset e adicionado automaticamente a pool.\n"
+    "Include: add assets to the pool by name.\n"
+    "Example: /roll dice:1d8 1d10 include:\"Sword\"\n"
+    "The asset die is added to the pool automatically.\n"
     "\n"
-    "Extra: compre dados extras gastando PP (1 PP por dado).\n"
-    "Exemplo: /roll dice:1d8 1d10 extra:1d6\n"
+    "Extra: buy extra dice by spending PP (1 PP per die).\n"
+    "Example: /roll dice:1d8 1d10 extra:1d6\n"
     "\n"
-    "Dificuldade: compare o total contra um numero alvo.\n"
-    "Exemplo: /roll dice:1d8 1d10 difficulty:10\n"
-    "Resultado indica sucesso (margem) ou falha (quanto faltou).\n"
+    "Difficulty: compare the total against a target number.\n"
+    "Example: /roll dice:1d8 1d10 difficulty:10\n"
+    "Result shows success (margin) or failure (how much was missing).\n"
     "\n"
-    "Hitches: dados que tiram 1 sao hitches. Nao contam para o total.\n"
-    "GM pode dar 1 PP ao jogador e criar complication d6, ou adicionar dado ao Doom Pool.\n"
+    "Hitches: dice that roll 1 are hitches. They do not count toward the total.\n"
+    "GM may award 1 PP and create a d6 complication, or add dice to the Doom Pool.\n"
     "\n"
-    "Botch: se todos os dados forem 1, e botch. Total zero.\n"
-    "GM cria complication d6 gratis, step up por hitch adicional.\n"
+    "Botch: if all dice roll 1, it is a botch. Total is zero.\n"
+    "GM creates a free d6 complication, stepped up per additional hitch.\n"
     "\n"
-    "Best mode: quando habilitado, o bot calcula as melhores combinacoes de 2 dados.\n"
-    "Mostra melhor total e melhor effect die como opcoes pre-calculadas.\n"
+    "Best mode: when enabled, the bot calculates the best combinations of 2 dice.\n"
+    "Shows best total and best effect die as pre-calculated options.\n"
     "\n"
-    "Effect die: o terceiro maior dado (nao usado no total) define o effect die.\n"
-    "Se nao houver terceiro dado, default e d4.\n"
+    "Effect die: the third highest die (not used in the total) defines the effect die.\n"
+    "If there is no third die, default is d4.\n"
     "\n"
-    "Heroic success: margem de 5+ sobre a dificuldade.\n"
-    "Effect die faz step up uma vez a cada 5 pontos de margem."
+    "Heroic success: margin of 5+ over the difficulty.\n"
+    "Effect die steps up once for every 5 points of margin."
 )
 
 HELP_TOPICS = {
-    "geral": HELP_GERAL,
+    "general": HELP_GENERAL,
     "gm": HELP_GM,
-    "jogador": HELP_JOGADOR,
-    "rolagem": HELP_ROLAGEM,
+    "player": HELP_PLAYER,
+    "rolling": HELP_ROLLING,
 }
 
 
@@ -136,14 +136,14 @@ class HelpCog(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
 
-    @app_commands.command(name="help", description="Referencia de comandos do bot.")
-    @app_commands.describe(topic="Topico de ajuda")
+    @app_commands.command(name="help", description="Bot command reference.")
+    @app_commands.describe(topic="Help topic")
     @app_commands.choices(
         topic=[
-            app_commands.Choice(name="geral", value="geral"),
-            app_commands.Choice(name="gm", value="gm"),
-            app_commands.Choice(name="jogador", value="jogador"),
-            app_commands.Choice(name="rolagem", value="rolagem"),
+            app_commands.Choice(name="General", value="general"),
+            app_commands.Choice(name="GM", value="gm"),
+            app_commands.Choice(name="Player", value="player"),
+            app_commands.Choice(name="Rolling", value="rolling"),
         ],
     )
     async def help_command(
@@ -151,7 +151,7 @@ class HelpCog(commands.Cog):
         interaction: Interaction,
         topic: app_commands.Choice[str] | None = None,
     ) -> None:
-        key = topic.value if topic else "geral"
+        key = topic.value if topic else "general"
         text = HELP_TOPICS[key]
 
         # Attach MenuButton if there's an active campaign in this channel

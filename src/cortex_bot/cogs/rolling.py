@@ -16,7 +16,7 @@ from cortex_bot.services.roller import (
 )
 from cortex_bot.services.formatter import format_roll_result
 from cortex_bot.services.state_manager import StateManager
-from cortex_bot.utils import has_gm_permission
+from cortex_bot.utils import has_gm_permission, NO_CAMPAIGN_MSG
 
 log = logging.getLogger(__name__)
 
@@ -83,13 +83,13 @@ class RollingCog(commands.Cog):
 
     @app_commands.command(
         name="roll",
-        description="Rolar dados no Cortex Prime. Ex: /roll dice:1d8 1d10 1d6",
+        description="Roll dice in Cortex Prime. E.g. /roll dice:1d8 1d10 1d6",
     )
     @app_commands.describe(
-        dice="Notacao de dados separados por espaco, ex: 1d8 1d10 2d6",
-        include="Nomes de assets para incluir na pool (separados por virgula)",
-        difficulty="Numero alvo para comparar o total",
-        extra="Dados extras comprados com PP, ex: 1d6",
+        dice="Dice notation separated by space, e.g. 1d8 1d10 2d6",
+        include="Asset names to include in the pool (comma separated)",
+        difficulty="Target number to compare the total against",
+        extra="Extra dice bought with PP, e.g. 1d6",
     )
     @app_commands.autocomplete(include=_include_autocomplete)
     async def roll(
@@ -106,9 +106,7 @@ class RollingCog(commands.Cog):
 
         campaign = await self.db.get_campaign_by_channel(server_id, channel_id)
         if campaign is None:
-            await interaction.response.send_message(
-                "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
-            )
+            await interaction.response.send_message(NO_CAMPAIGN_MSG)
             return
 
         campaign_id = campaign["id"]
@@ -117,7 +115,7 @@ class RollingCog(commands.Cog):
         player = await self.db.get_player(campaign_id, actor_id)
         if player is None:
             await interaction.response.send_message(
-                "Voce nao esta registrado nesta campanha."
+                "You are not registered in this campaign. Ask the GM to add you via /campaign setup."
             )
             return
 
@@ -153,8 +151,8 @@ class RollingCog(commands.Cog):
                     )
             if not_found:
                 await interaction.response.send_message(
-                    f"Assets nao encontrados: {', '.join(not_found)}. "
-                    "Verifique os nomes e tente novamente."
+                    f"Assets not found: {', '.join(not_found)}. "
+                    "Check the names and try again."
                 )
                 return
             included_names_lower = set(requested_names)
@@ -169,7 +167,7 @@ class RollingCog(commands.Cog):
             try:
                 extra_dice = parse_dice_notation(extra)
             except ValueError as exc:
-                await interaction.response.send_message(f"Dados extras invalidos: {exc}")
+                await interaction.response.send_message(f"Invalid extra dice: {exc}")
                 return
 
             pp_cost = len(extra_dice)
@@ -179,8 +177,8 @@ class RollingCog(commands.Cog):
             )
             if "error" in pp_result:
                 await interaction.response.send_message(
-                    f"PP insuficiente. Voce tem {pp_result['current']}, "
-                    f"precisa de {pp_result['requested']}."
+                    f"Not enough PP. You have {pp_result['current']}, "
+                    f"need {pp_result['requested']}."
                 )
                 return
 
@@ -212,6 +210,7 @@ class RollingCog(commands.Cog):
             )
 
         # 8. Format and send.
+        doom_enabled = config.get("doom_pool", False)
         text = format_roll_result(
             player_name=player_name,
             results=results,
@@ -222,11 +221,11 @@ class RollingCog(commands.Cog):
             difficulty=difficulty,
             available_assets=available_assets or None,
             opposition_elements=opposition_elements or None,
+            doom_enabled=doom_enabled,
         )
         from cortex_bot.views.rolling_views import PostRollView
 
         hitch_count = len(hitches) if hitches and not botch else 0
-        doom_enabled = config.get("doom_pool", False)
         view = PostRollView(
             campaign_id,
             hitch_count=hitch_count,
@@ -237,12 +236,12 @@ class RollingCog(commands.Cog):
 
     @app_commands.command(
         name="gmroll",
-        description="Rolar dados como GM/NPC, sem estado pessoal.",
+        description="Roll dice as GM/NPC, no personal state.",
     )
     @app_commands.describe(
-        dice="Notacao de dados separados por espaco, ex: 2d8 1d10",
-        name="Nome do NPC (default: GM)",
-        difficulty="Numero alvo para comparar o total",
+        dice="Dice notation separated by space, e.g. 2d8 1d10",
+        name="NPC name (default: GM)",
+        difficulty="Target number to compare the total against",
     )
     async def gmroll(
         self,
@@ -256,15 +255,13 @@ class RollingCog(commands.Cog):
 
         campaign = await self.db.get_campaign_by_channel(server_id, channel_id)
         if campaign is None:
-            await interaction.response.send_message(
-                "Nenhuma campanha ativa neste canal. Use /campaign setup para criar uma."
-            )
+            await interaction.response.send_message(NO_CAMPAIGN_MSG)
             return
 
         player = await self.db.get_player(campaign["id"], str(interaction.user.id))
         if player is None or not has_gm_permission(player):
             await interaction.response.send_message(
-                "Apenas o GM ou delegados podem usar este comando."
+                "Only the GM or delegates can use this command."
             )
             return
 
@@ -283,6 +280,7 @@ class RollingCog(commands.Cog):
             best_options = calculate_best_options(results)
 
         player_name = name or "GM"
+        doom_enabled = campaign["config"].get("doom_pool", False)
         text = format_roll_result(
             player_name=player_name,
             results=results,
@@ -290,11 +288,11 @@ class RollingCog(commands.Cog):
             is_botch=botch,
             best_options=best_options,
             difficulty=difficulty,
+            doom_enabled=doom_enabled,
         )
         from cortex_bot.views.rolling_views import PostRollView
 
         hitch_count = len(hitches) if hitches and not botch else 0
-        doom_enabled = campaign["config"].get("doom_pool", False)
         view = PostRollView(
             campaign["id"],
             hitch_count=hitch_count,

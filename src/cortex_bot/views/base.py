@@ -56,7 +56,7 @@ async def check_gm_permission(
     player = await db.get_player(campaign_id, str(interaction.user.id))
     if player is None or not has_gm_permission(player):
         await interaction.response.send_message(
-            "Apenas o GM pode usar este comando.",
+            "Only the GM or delegates can use this command.",
             ephemeral=True,
         )
         return None
@@ -76,7 +76,7 @@ async def get_campaign_from_channel(
     campaign = await db.get_campaign_by_channel(server_id, channel_id)
     if campaign is None:
         await interaction.response.send_message(
-            "Nenhuma campanha ativa neste canal.",
+            "No active campaign in this channel. Use /campaign setup to create one.",
             ephemeral=True,
         )
     return campaign
@@ -172,7 +172,7 @@ def add_player_options(
             options.append(discord.SelectOption(label=label, value=value))
 
         select = discord.ui.Select(
-            placeholder="Selecione jogador",
+            placeholder="Select player",
             options=options[:25],
             custom_id=f"ephemeral:player_sel:{uuid.uuid4().hex[:8]}",
         )
