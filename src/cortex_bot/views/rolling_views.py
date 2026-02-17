@@ -14,7 +14,7 @@ from cortex_bot.views.base import (
     add_player_options,
     DIE_SIZES,
 )
-from cortex_bot.models.dice import die_label
+from cortex_bot.models.dice import die_label, VALID_SIZES
 from cortex_bot.utils import has_gm_permission
 from cortex_bot.services.roller import (
     roll_pool,
@@ -75,11 +75,11 @@ async def execute_player_roll(
         best_options=best_options,
         opposition_elements=opposition_elements,
     )
-    has_hitches = bool(hitches) and not botch
+    hitch_count = len(hitches) if hitches and not botch else 0
     doom_enabled = config.get("doom_pool", False)
     view = PostRollView(
         campaign_id,
-        has_hitches=has_hitches,
+        hitch_count=hitch_count,
         doom_enabled=doom_enabled,
     )
     return text, view
@@ -371,23 +371,34 @@ class PoolBuilderView(CortexView):
 
 class HitchComplicationButton(
     discord.ui.DynamicItem[discord.ui.Button],
-    template=r"cortex:hitch_comp:(?P<campaign_id>\d+)",
+    template=r"cortex:hitch_comp:(?P<campaign_id>\d+):(?P<hitch_count>\d+)",
 ):
-    """Persistent button to create a complication from a hitch."""
+    """Persistent button to create a complication from hitches.
 
-    def __init__(self, campaign_id: int) -> None:
+    With multiple hitches the complication starts at d6 and steps up per
+    additional hitch (RAW p.17): 1h→d6, 2h→d8, 3h→d10, 4h→d12.
+    """
+
+    def __init__(self, campaign_id: int, hitch_count: int = 1) -> None:
         self.campaign_id = campaign_id
+        self.hitch_count = hitch_count
+        comp_die_index = min(hitch_count, len(VALID_SIZES) - 1)
+        comp_die_size = VALID_SIZES[comp_die_index]
+        if hitch_count == 1:
+            label = f"Complicacao {die_label(comp_die_size)}"
+        else:
+            label = f"Complicacao {die_label(comp_die_size)} ({hitch_count}h)"
         super().__init__(
             discord.ui.Button(
-                label="Criar complicacao",
+                label=label,
                 style=discord.ButtonStyle.danger,
-                custom_id=make_custom_id("hitch_comp", campaign_id),
+                custom_id=make_custom_id("hitch_comp", campaign_id, hitch_count),
             )
         )
 
     @classmethod
     async def from_custom_id(cls, interaction, item, match):
-        return cls(int(match["campaign_id"]))
+        return cls(int(match["campaign_id"]), int(match["hitch_count"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
         gm = await check_gm_permission(interaction, self.campaign_id)
@@ -404,7 +415,9 @@ class HitchComplicationButton(
             )
             return
 
-        view = HitchPlayerSelectView(self.campaign_id, str(interaction.user.id))
+        view = HitchPlayerSelectView(
+            self.campaign_id, str(interaction.user.id), self.hitch_count
+        )
 
         async def on_player(interaction: discord.Interaction, value: str) -> None:
             await view._on_player_selected(interaction, int(value))
@@ -420,16 +433,17 @@ class HitchComplicationButton(
 class HitchPlayerSelectView(CortexView):
     """Select player to receive hitch complication."""
 
-    def __init__(self, campaign_id: int, actor_id: str) -> None:
+    def __init__(self, campaign_id: int, actor_id: str, hitch_count: int = 1) -> None:
         super().__init__()
         self.campaign_id = campaign_id
         self.actor_id = actor_id
+        self.hitch_count = hitch_count
 
     async def _on_player_selected(
         self, interaction: discord.Interaction, player_id: int
     ) -> None:
         modal = ComplicationNameModal(
-            self.campaign_id, self.actor_id, player_id
+            self.campaign_id, self.actor_id, player_id, self.hitch_count
         )
         await interaction.response.send_modal(modal)
 
@@ -443,11 +457,14 @@ class ComplicationNameModal(discord.ui.Modal, title="Nome da complicacao"):
         max_length=50,
     )
 
-    def __init__(self, campaign_id: int, actor_id: str, player_id: int) -> None:
+    def __init__(
+        self, campaign_id: int, actor_id: str, player_id: int, hitch_count: int = 1,
+    ) -> None:
         super().__init__()
         self.campaign_id = campaign_id
         self.actor_id = actor_id
         self.player_id = player_id
+        self.hitch_count = hitch_count
 
     async def on_submit(self, interaction: discord.Interaction) -> None:
         db = interaction.client.db
@@ -483,34 +500,70 @@ class ComplicationNameModal(discord.ui.Modal, title="Nome da complicacao"):
         )
 
         if existing:
-            result = await state_mgr.step_up_complication(
-                self.campaign_id, self.actor_id, existing["id"]
-            )
-            if result and result.get("taken_out"):
-                comp_msg = (
-                    f"Complicacao {comp_name} ja estava em d12 em {player_name}. "
-                    "Taken out."
+            # Step up existing complication by hitch_count steps (RAW p.17)
+            current_idx = VALID_SIZES.index(existing["die_size"])
+            target_idx = current_idx + self.hitch_count
+            taken_out = target_idx >= len(VALID_SIZES)
+            new_size = VALID_SIZES[min(target_idx, len(VALID_SIZES) - 1)]
+
+            if new_size != existing["die_size"]:
+                async with db.connect() as conn:
+                    await conn.execute(
+                        "UPDATE complications SET die_size = ? WHERE id = ?",
+                        (new_size, existing["id"]),
+                    )
+                    await conn.commit()
+                await db.log_action(
+                    self.campaign_id, self.actor_id, "step_up_complication",
+                    {"id": existing["id"], "name": comp_name,
+                     "from": existing["die_size"], "to": new_size},
+                    {"action": "update", "table": "complications",
+                     "id": existing["id"], "field": "die_size",
+                     "value": existing["die_size"]},
                 )
-            elif result:
+
+            if taken_out:
                 comp_msg = (
-                    f"Complicacao {comp_name} em {player_name} fez step up: "
-                    f"{die_label(result['from'])} para {die_label(result['to'])}."
+                    f"Complicacao {comp_name} em {player_name}: "
+                    f"{die_label(existing['die_size'])} ultrapassou d12. Taken out."
                 )
             else:
-                comp_msg = "Erro ao fazer step up da complicacao."
+                comp_msg = (
+                    f"Complicacao {comp_name} em {player_name}: "
+                    f"{die_label(existing['die_size'])} para {die_label(new_size)}"
+                )
+                if self.hitch_count > 1:
+                    comp_msg += f" ({self.hitch_count} hitches)."
+                else:
+                    comp_msg += "."
         else:
+            # New complication: d6 stepped up by (hitch_count - 1) additional hitches
+            final_index = min(self.hitch_count, len(VALID_SIZES) - 1)
+            die_size = VALID_SIZES[final_index]
+            taken_out = self.hitch_count >= len(VALID_SIZES)
+
             await state_mgr.add_complication(
                 self.campaign_id,
                 self.actor_id,
                 comp_name,
-                6,
+                die_size,
                 player_id=self.player_id,
                 scene_id=scene_id,
                 player_name=player_name,
             )
-            comp_msg = f"Complicacao {comp_name} d6 criada em {player_name}."
 
-        # Give 1 PP to the target player
+            comp_msg = (
+                f"Complicacao {comp_name} {die_label(die_size)} criada em {player_name}."
+            )
+            if taken_out:
+                comp_msg += " Ultrapassou d12, taken out."
+            elif self.hitch_count > 1:
+                comp_msg = (
+                    f"Complicacao {comp_name} {die_label(die_size)} criada em {player_name} "
+                    f"({self.hitch_count} hitches, d6 + {self.hitch_count - 1} step ups)."
+                )
+
+        # Give 1 PP to the target player (only 1 regardless of hitch count, RAW p.17)
         pp_result = await state_mgr.update_pp(
             self.campaign_id, self.actor_id, self.player_id, 1, player_name
         )
@@ -522,23 +575,28 @@ class ComplicationNameModal(discord.ui.Modal, title="Nome da complicacao"):
 
 class HitchDoomButton(
     discord.ui.DynamicItem[discord.ui.Button],
-    template=r"cortex:hitch_doom:(?P<campaign_id>\d+)",
+    template=r"cortex:hitch_doom:(?P<campaign_id>\d+):(?P<hitch_count>\d+)",
 ):
-    """Persistent button to add d6 to doom pool from a hitch."""
+    """Persistent button to add dice to doom pool from hitches.
 
-    def __init__(self, campaign_id: int) -> None:
+    Adds one d6 per hitch to the doom pool.
+    """
+
+    def __init__(self, campaign_id: int, hitch_count: int = 1) -> None:
         self.campaign_id = campaign_id
+        self.hitch_count = hitch_count
+        label = f"+Doom {hitch_count}d6" if hitch_count > 1 else "+Doom d6"
         super().__init__(
             discord.ui.Button(
-                label="+Doom",
+                label=label,
                 style=discord.ButtonStyle.danger,
-                custom_id=make_custom_id("hitch_doom", campaign_id),
+                custom_id=make_custom_id("hitch_doom", campaign_id, hitch_count),
             )
         )
 
     @classmethod
     async def from_custom_id(cls, interaction, item, match):
-        return cls(int(match["campaign_id"]))
+        return cls(int(match["campaign_id"]), int(match["hitch_count"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
         gm = await check_gm_permission(interaction, self.campaign_id)
@@ -548,28 +606,34 @@ class HitchDoomButton(
         db = interaction.client.db
         actor_id = str(interaction.user.id)
 
+        doom_die_ids = []
         async with db.connect() as conn:
-            cursor = await conn.execute(
-                "INSERT INTO doom_pool_dice (campaign_id, die_size) VALUES (?, ?)",
-                (self.campaign_id, 6),
-            )
-            doom_die_id = cursor.lastrowid
+            for _ in range(self.hitch_count):
+                cursor = await conn.execute(
+                    "INSERT INTO doom_pool_dice (campaign_id, die_size) VALUES (?, ?)",
+                    (self.campaign_id, 6),
+                )
+                doom_die_ids.append(cursor.lastrowid)
             await conn.commit()
 
-        await db.log_action(
-            self.campaign_id,
-            actor_id,
-            "doom_add",
-            {"die_size": 6},
-            {"action": "delete", "table": "doom_pool_dice", "id": doom_die_id},
-        )
+        for doom_die_id in doom_die_ids:
+            await db.log_action(
+                self.campaign_id,
+                actor_id,
+                "doom_add",
+                {"die_size": 6},
+                {"action": "delete", "table": "doom_pool_dice", "id": doom_die_id},
+            )
 
         pool = await db.get_doom_pool(self.campaign_id)
         labels = [die_label(d["die_size"]) for d in pool]
         pool_str = ", ".join(labels) if labels else "vazio"
+        count_str = f"{self.hitch_count}d6" if self.hitch_count > 1 else "d6"
         view = PostRollView(self.campaign_id)
         await interaction.response.send_message(
-            f"Adicionado d6 ao Doom Pool. Doom Pool: {pool_str}.", view=view
+            f"Adicionado {count_str} ao Doom Pool ({self.hitch_count} hitches). "
+            f"Doom Pool: {pool_str}.",
+            view=view,
         )
 
 
@@ -579,7 +643,7 @@ class PostRollView(CortexView):
     def __init__(
         self,
         campaign_id: int,
-        has_hitches: bool = False,
+        hitch_count: int = 0,
         doom_enabled: bool = False,
     ) -> None:
         super().__init__()
@@ -590,10 +654,10 @@ class PostRollView(CortexView):
         self.add_item(UndoButton(campaign_id))
 
         # Hitch actions (GM-only buttons, visible to all but permission-checked on click)
-        if has_hitches:
-            self.add_item(HitchComplicationButton(campaign_id))
+        if hitch_count > 0:
+            self.add_item(HitchComplicationButton(campaign_id, hitch_count))
             if doom_enabled:
-                self.add_item(HitchDoomButton(campaign_id))
+                self.add_item(HitchDoomButton(campaign_id, hitch_count))
 
         # Doom Roll (when doom enabled, even without hitches)
         if doom_enabled:

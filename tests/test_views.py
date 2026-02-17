@@ -1390,34 +1390,34 @@ class TestPostRollView:
         assert "cortex:roll_start:1" in custom_ids
         assert "cortex:undo:1" in custom_ids
         assert "cortex:menu:1" in custom_ids
-        assert "cortex:hitch_comp:1" not in custom_ids
-        assert "cortex:hitch_doom:1" not in custom_ids
+        assert not any("hitch_comp" in cid for cid in custom_ids)
+        assert not any("hitch_doom" in cid for cid in custom_ids)
 
     async def test_post_roll_with_hitches_no_doom(self):
         from cortex_bot.views.rolling_views import PostRollView
 
-        view = PostRollView(campaign_id=1, has_hitches=True, doom_enabled=False)
+        view = PostRollView(campaign_id=1, hitch_count=2, doom_enabled=False)
         custom_ids = [item.custom_id for item in view.children]
-        assert "cortex:hitch_comp:1" in custom_ids
-        assert "cortex:hitch_doom:1" not in custom_ids
+        assert "cortex:hitch_comp:1:2" in custom_ids
+        assert not any("hitch_doom" in cid for cid in custom_ids)
         assert "cortex:doom_roll_btn:1" not in custom_ids
 
     async def test_post_roll_with_hitches_and_doom(self):
         from cortex_bot.views.rolling_views import PostRollView
 
-        view = PostRollView(campaign_id=1, has_hitches=True, doom_enabled=True)
+        view = PostRollView(campaign_id=1, hitch_count=3, doom_enabled=True)
         custom_ids = [item.custom_id for item in view.children]
-        assert "cortex:hitch_comp:1" in custom_ids
-        assert "cortex:hitch_doom:1" in custom_ids
+        assert "cortex:hitch_comp:1:3" in custom_ids
+        assert "cortex:hitch_doom:1:3" in custom_ids
         assert "cortex:doom_roll_btn:1" in custom_ids
 
     async def test_post_roll_doom_enabled_no_hitches(self):
         from cortex_bot.views.rolling_views import PostRollView
 
-        view = PostRollView(campaign_id=1, has_hitches=False, doom_enabled=True)
+        view = PostRollView(campaign_id=1, hitch_count=0, doom_enabled=True)
         custom_ids = [item.custom_id for item in view.children]
-        assert "cortex:hitch_comp:1" not in custom_ids
-        assert "cortex:hitch_doom:1" not in custom_ids
+        assert not any("hitch_comp" in cid for cid in custom_ids)
+        assert not any("hitch_doom" in cid for cid in custom_ids)
         assert "cortex:doom_roll_btn:1" in custom_ids
         assert "cortex:menu:1" in custom_ids
 
@@ -1425,8 +1425,21 @@ class TestPostRollView:
         """Full PostRollView (hitches + doom) should not exceed 25 items (5 rows x 5)."""
         from cortex_bot.views.rolling_views import PostRollView
 
-        view = PostRollView(campaign_id=1, has_hitches=True, doom_enabled=True)
+        view = PostRollView(campaign_id=1, hitch_count=3, doom_enabled=True)
         assert len(view.children) <= 25
+
+    async def test_hitch_count_affects_complication_label(self):
+        """Hitch count determines the complication die size shown on button."""
+        from cortex_bot.views.rolling_views import PostRollView
+
+        view1 = PostRollView(campaign_id=1, hitch_count=1)
+        view3 = PostRollView(campaign_id=1, hitch_count=3)
+        comp_btn1 = next(c for c in view1.children if "hitch_comp" in c.custom_id)
+        comp_btn3 = next(c for c in view3.children if "hitch_comp" in c.custom_id)
+        label1 = comp_btn1.item.label if hasattr(comp_btn1, "item") else comp_btn1.label
+        label3 = comp_btn3.item.label if hasattr(comp_btn3, "item") else comp_btn3.label
+        assert "d6" in label1
+        assert "d10" in label3
 
 
 # ---------------------------------------------------------------------------
@@ -1440,28 +1453,40 @@ class TestHitchButtonPatterns:
     async def test_hitch_comp_button_pattern(self):
         from cortex_bot.views.rolling_views import HitchComplicationButton
 
-        btn = HitchComplicationButton(42)
+        btn = HitchComplicationButton(42, hitch_count=2)
         pattern = HitchComplicationButton.__discord_ui_compiled_template__
         assert pattern.search(btn.item.custom_id)
 
     async def test_hitch_doom_button_pattern(self):
         from cortex_bot.views.rolling_views import HitchDoomButton
 
-        btn = HitchDoomButton(42)
+        btn = HitchDoomButton(42, hitch_count=2)
         pattern = HitchDoomButton.__discord_ui_compiled_template__
         assert pattern.search(btn.item.custom_id)
 
-    async def test_hitch_comp_button_label(self):
+    async def test_hitch_comp_single_label(self):
         from cortex_bot.views.rolling_views import HitchComplicationButton
 
-        btn = HitchComplicationButton(1)
-        assert btn.item.label == "Criar complicacao"
+        btn = HitchComplicationButton(1, hitch_count=1)
+        assert btn.item.label == "Complicacao d6"
 
-    async def test_hitch_doom_button_label(self):
+    async def test_hitch_comp_multi_label(self):
+        from cortex_bot.views.rolling_views import HitchComplicationButton
+
+        btn = HitchComplicationButton(1, hitch_count=3)
+        assert btn.item.label == "Complicacao d10 (3h)"
+
+    async def test_hitch_doom_single_label(self):
         from cortex_bot.views.rolling_views import HitchDoomButton
 
-        btn = HitchDoomButton(1)
-        assert btn.item.label == "+Doom"
+        btn = HitchDoomButton(1, hitch_count=1)
+        assert btn.item.label == "+Doom d6"
+
+    async def test_hitch_doom_multi_label(self):
+        from cortex_bot.views.rolling_views import HitchDoomButton
+
+        btn = HitchDoomButton(1, hitch_count=3)
+        assert btn.item.label == "+Doom 3d6"
 
 
 # ---------------------------------------------------------------------------
@@ -1543,7 +1568,7 @@ class TestComplicationNameModal:
     async def test_modal_has_text_input(self):
         from cortex_bot.views.rolling_views import ComplicationNameModal
 
-        modal = ComplicationNameModal(campaign_id=1, actor_id="gm1", player_id=2)
+        modal = ComplicationNameModal(campaign_id=1, actor_id="gm1", player_id=2, hitch_count=1)
         assert modal.title == "Nome da complicacao"
         assert modal.name_input is not None
         assert modal.name_input.max_length == 50
@@ -1551,10 +1576,11 @@ class TestComplicationNameModal:
     async def test_modal_stores_context(self):
         from cortex_bot.views.rolling_views import ComplicationNameModal
 
-        modal = ComplicationNameModal(campaign_id=5, actor_id="gm1", player_id=3)
+        modal = ComplicationNameModal(campaign_id=5, actor_id="gm1", player_id=3, hitch_count=2)
         assert modal.campaign_id == 5
         assert modal.actor_id == "gm1"
         assert modal.player_id == 3
+        assert modal.hitch_count == 2
 
 
 # ---------------------------------------------------------------------------

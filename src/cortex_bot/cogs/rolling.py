@@ -225,11 +225,11 @@ class RollingCog(commands.Cog):
         )
         from cortex_bot.views.rolling_views import PostRollView
 
-        has_hitches = bool(hitches) and not botch
+        hitch_count = len(hitches) if hitches and not botch else 0
         doom_enabled = config.get("doom_pool", False)
         view = PostRollView(
             campaign_id,
-            has_hitches=has_hitches,
+            hitch_count=hitch_count,
             doom_enabled=doom_enabled,
         )
         await interaction.response.send_message(text, view=view)
@@ -293,11 +293,11 @@ class RollingCog(commands.Cog):
         )
         from cortex_bot.views.rolling_views import PostRollView
 
-        has_hitches = bool(hitches) and not botch
+        hitch_count = len(hitches) if hitches and not botch else 0
         doom_enabled = campaign["config"].get("doom_pool", False)
         view = PostRollView(
             campaign["id"],
-            has_hitches=has_hitches,
+            hitch_count=hitch_count,
             doom_enabled=doom_enabled,
         )
         await interaction.response.send_message(text, view=view)
