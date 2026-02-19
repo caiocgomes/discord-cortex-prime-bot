@@ -5,6 +5,18 @@ import json
 from cortex_bot.models.database import Database
 from cortex_bot.models.dice import die_label, step_up, step_down
 
+# Allowlists for the undo system — only these identifiers may appear
+# in inverse_data used by execute_undo.  Anything else is rejected.
+UNDO_ALLOWED_TABLES = frozenset({
+    "assets", "stress", "trauma", "complications", "players",
+    "hero_dice", "doom_pool_dice", "crisis_pool_dice",
+})
+UNDO_ALLOWED_FIELDS = frozenset({"die_size", "pp", "xp"})
+UNDO_ALLOWED_COLUMNS = frozenset({
+    "campaign_id", "player_id", "scene_id", "name", "die_size",
+    "duration", "stress_type_id", "scope",
+})
+
 
 class StateManager:
     def __init__(self, db: Database) -> None:
@@ -397,10 +409,13 @@ class StateManager:
 
     async def execute_undo(self, inverse_data: dict) -> None:
         """Execute an inverse action to undo a previous operation."""
-        async with self.db.connect() as conn:
-            action = inverse_data["action"]
-            table = inverse_data["table"]
+        action = inverse_data["action"]
+        table = inverse_data["table"]
 
+        if table not in UNDO_ALLOWED_TABLES:
+            raise ValueError(f"Undo blocked: invalid table '{table}'")
+
+        async with self.db.connect() as conn:
             if action == "delete":
                 await conn.execute(
                     f"DELETE FROM {table} WHERE id = ?",
@@ -408,6 +423,9 @@ class StateManager:
                 )
             elif action == "insert":
                 data = inverse_data["data"]
+                bad_cols = set(data.keys()) - UNDO_ALLOWED_COLUMNS
+                if bad_cols:
+                    raise ValueError(f"Undo blocked: invalid columns {bad_cols}")
                 columns = ", ".join(data.keys())
                 placeholders = ", ".join("?" for _ in data)
                 await conn.execute(
@@ -415,8 +433,13 @@ class StateManager:
                     tuple(data.values()),
                 )
             elif action == "update":
+                field = inverse_data["field"]
+                if field not in UNDO_ALLOWED_FIELDS:
+                    raise ValueError(f"Undo blocked: invalid field '{field}'")
                 await conn.execute(
-                    f"UPDATE {table} SET {inverse_data['field']} = ? WHERE id = ?",
+                    f"UPDATE {table} SET {field} = ? WHERE id = ?",
                     (inverse_data["value"], inverse_data["id"]),
                 )
+            else:
+                raise ValueError(f"Undo blocked: invalid action '{action}'")
             await conn.commit()

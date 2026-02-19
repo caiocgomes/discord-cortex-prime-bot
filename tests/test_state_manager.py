@@ -232,6 +232,54 @@ class TestXP:
         assert result["current"] == 0
 
 
+class TestUndoAllowlist:
+    """Tests for the C-1 security fix: undo allowlist validation."""
+
+    async def test_rejects_invalid_table(self, sm):
+        with pytest.raises(ValueError, match="invalid table"):
+            await sm.execute_undo({"action": "delete", "table": "users; DROP TABLE players--", "id": 1})
+
+    async def test_rejects_invalid_field(self, sm):
+        with pytest.raises(ValueError, match="invalid field"):
+            await sm.execute_undo({
+                "action": "update", "table": "players",
+                "id": 1, "field": "is_gm", "value": 1,
+            })
+
+    async def test_rejects_invalid_column(self, sm):
+        with pytest.raises(ValueError, match="invalid columns"):
+            await sm.execute_undo({
+                "action": "insert", "table": "assets",
+                "data": {"campaign_id": 1, "evil_col": "payload"},
+            })
+
+    async def test_rejects_invalid_action(self, sm):
+        with pytest.raises(ValueError, match="invalid action"):
+            await sm.execute_undo({"action": "drop", "table": "assets"})
+
+    async def test_allows_valid_delete(self, sm, db, campaign, alice):
+        result = await sm.add_asset(campaign, "user1", "Valid", 6, player_id=alice["id"])
+        action = await db.get_last_undoable_action(campaign, "user1")
+        await sm.execute_undo(action["inverse_data"])
+        assets = await db.get_player_assets(campaign, alice["id"])
+        assert len(assets) == 0
+
+    async def test_allows_valid_insert(self, sm, db, campaign, alice):
+        result = await sm.add_asset(campaign, "user1", "Restore", 8, player_id=alice["id"])
+        await sm.remove_asset(campaign, "user1", result["id"])
+        action = await db.get_last_undoable_action(campaign, "user1")
+        await sm.execute_undo(action["inverse_data"])
+        assets = await db.get_player_assets(campaign, alice["id"])
+        assert len(assets) == 1
+
+    async def test_allows_valid_update(self, sm, db, campaign, alice):
+        await sm.update_pp(campaign, "user1", alice["id"], 2, "Alice")
+        action = await db.get_last_undoable_action(campaign, "user1")
+        await sm.execute_undo(action["inverse_data"])
+        player = await db.get_player(campaign, "user1")
+        assert player["pp"] == 3
+
+
 class TestUndo:
     async def test_undo_add_asset(self, sm, db, campaign, alice):
         result = await sm.add_asset(campaign, "user1", "Undo Test", 8, player_id=alice["id"])

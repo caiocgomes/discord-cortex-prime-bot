@@ -5,7 +5,7 @@ import uuid
 
 import discord
 
-from cortex_bot.views.base import CortexView, make_custom_id, check_gm_permission, add_die_buttons
+from cortex_bot.views.base import CortexView, make_custom_id, check_gm_permission, validate_campaign_channel, add_die_buttons
 from cortex_bot.models.dice import die_label, parse_single_die
 from cortex_bot.services.roller import roll_pool, calculate_best_options
 
@@ -31,13 +31,15 @@ class DoomAddStartButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        campaign = await validate_campaign_channel(interaction, self.campaign_id)
+        if campaign is None:
+            return
+
         gm = await check_gm_permission(interaction, self.campaign_id)
         if gm is None:
             return
 
-        db = interaction.client.db
-        campaign = await db.get_campaign_by_id(self.campaign_id)
-        if campaign is None or not campaign["config"].get("doom_pool", False):
+        if not campaign["config"].get("doom_pool", False):
             await interaction.response.send_message(
                 "Doom Pool is not enabled in this campaign.", ephemeral=True
             )

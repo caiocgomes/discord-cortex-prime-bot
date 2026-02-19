@@ -10,6 +10,7 @@ from cortex_bot.views.base import (
     CortexView,
     make_custom_id,
     check_gm_permission,
+    validate_campaign_channel,
     add_die_buttons,
     add_player_options,
     DIE_SIZES,
@@ -146,6 +147,9 @@ class RollStartButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        if await validate_campaign_channel(interaction, self.campaign_id) is None:
+            return
+
         db = interaction.client.db
         player = await db.get_player(self.campaign_id, str(interaction.user.id))
         if player is None:
@@ -401,6 +405,9 @@ class HitchComplicationButton(
         return cls(int(match["campaign_id"]), int(match["hitch_count"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        if await validate_campaign_channel(interaction, self.campaign_id) is None:
+            return
+
         gm = await check_gm_permission(interaction, self.campaign_id)
         if gm is None:
             return
@@ -599,6 +606,9 @@ class HitchDoomButton(
         return cls(int(match["campaign_id"]), int(match["hitch_count"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        if await validate_campaign_channel(interaction, self.campaign_id) is None:
+            return
+
         gm = await check_gm_permission(interaction, self.campaign_id)
         if gm is None:
             return

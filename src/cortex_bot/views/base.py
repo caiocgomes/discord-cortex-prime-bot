@@ -82,6 +82,34 @@ async def get_campaign_from_channel(
     return campaign
 
 
+async def validate_campaign_channel(
+    interaction: discord.Interaction, campaign_id: int
+) -> dict | None:
+    """Validate that a campaign belongs to the current channel.
+
+    Persistent buttons embed campaign_id in their custom_id.  Without
+    this check, a user who obtains a button targeting a foreign campaign
+    (via message links, shared channels, or crafted webhooks) could read
+    or mutate state from another server/channel.
+
+    Returns the campaign dict on success, or None after sending an
+    ephemeral error to the interaction.
+    """
+    db = interaction.client.db
+    campaign = await db.get_campaign_by_id(campaign_id)
+    if campaign is None:
+        await interaction.response.send_message(
+            "Campaign not found.", ephemeral=True
+        )
+        return None
+    if campaign["channel_id"] != str(interaction.channel_id):
+        await interaction.response.send_message(
+            "Campaign not found in this channel.", ephemeral=True
+        )
+        return None
+    return campaign
+
+
 # Type alias for button callbacks: async fn(interaction, value) -> None
 ButtonCallback = Callable[
     [discord.Interaction, int], Coroutine[Any, Any, None]

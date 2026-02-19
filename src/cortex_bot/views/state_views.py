@@ -9,6 +9,7 @@ from cortex_bot.views.base import (
     CortexView,
     make_custom_id,
     check_gm_permission,
+    validate_campaign_channel,
     add_die_buttons,
     add_player_options,
 )
@@ -44,6 +45,9 @@ class StressAddStartButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        if await validate_campaign_channel(interaction, self.campaign_id) is None:
+            return
+
         gm = await check_gm_permission(interaction, self.campaign_id)
         if gm is None:
             return
@@ -239,6 +243,9 @@ class AssetAddStartButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        if await validate_campaign_channel(interaction, self.campaign_id) is None:
+            return
+
         db = interaction.client.db
         player = await db.get_player(self.campaign_id, str(interaction.user.id))
         if player is None:
@@ -436,6 +443,9 @@ class ComplicationAddStartButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        if await validate_campaign_channel(interaction, self.campaign_id) is None:
+            return
+
         db = interaction.client.db
         player = await db.get_player(self.campaign_id, str(interaction.user.id))
         if player is None:
@@ -636,6 +646,9 @@ class PPStartButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        if await validate_campaign_channel(interaction, self.campaign_id) is None:
+            return
+
         db = interaction.client.db
         player = await db.get_player(self.campaign_id, str(interaction.user.id))
         if player is None:
@@ -795,6 +808,9 @@ class XPStartButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        if await validate_campaign_channel(interaction, self.campaign_id) is None:
+            return
+
         db = interaction.client.db
         player = await db.get_player(self.campaign_id, str(interaction.user.id))
         if player is None:

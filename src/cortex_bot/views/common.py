@@ -9,6 +9,7 @@ from cortex_bot.views.base import (
     make_custom_id,
     check_gm_permission,
     get_campaign_from_channel,
+    validate_campaign_channel,
 )
 from cortex_bot.services.state_manager import StateManager
 from cortex_bot.utils import has_gm_permission
@@ -40,6 +41,9 @@ class UndoButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        if await validate_campaign_channel(interaction, self.campaign_id) is None:
+            return
+
         db = interaction.client.db
         user_id = str(interaction.user.id)
         player = await db.get_player(self.campaign_id, user_id)
@@ -96,13 +100,11 @@ class CampaignInfoButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
-        db = interaction.client.db
-        campaign = await db.get_campaign_by_id(self.campaign_id)
+        campaign = await validate_campaign_channel(interaction, self.campaign_id)
         if campaign is None:
-            await interaction.response.send_message(
-                "Campaign not found.", ephemeral=True
-            )
             return
+
+        db = interaction.client.db
 
         from cortex_bot.services.formatter import format_campaign_info
 
@@ -177,14 +179,11 @@ class MenuButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
-        db = interaction.client.db
-        campaign = await db.get_campaign_by_id(self.campaign_id)
+        campaign = await validate_campaign_channel(interaction, self.campaign_id)
         if campaign is None:
-            await interaction.response.send_message(
-                "Campaign not found.", ephemeral=True
-            )
             return
 
+        db = interaction.client.db
         scene = await db.get_active_scene(self.campaign_id)
         has_active_scene = scene is not None
         config = campaign.get("config", {})

@@ -4,7 +4,7 @@ import re
 
 import discord
 
-from cortex_bot.views.base import CortexView, make_custom_id, check_gm_permission
+from cortex_bot.views.base import CortexView, make_custom_id, check_gm_permission, validate_campaign_channel
 
 
 class SceneStartButton(
@@ -33,6 +33,9 @@ class SceneStartButton(
         return cls(int(match["campaign_id"]))
 
     async def callback(self, interaction: discord.Interaction) -> None:
+        if await validate_campaign_channel(interaction, self.campaign_id) is None:
+            return
+
         gm = await check_gm_permission(interaction, self.campaign_id)
         if gm is None:
             return
